@@ -13,6 +13,8 @@
 		8827389727FEAF4800423E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8827389527FEAF4800423E14 /* Main.storyboard */; };
 		8827389927FEAF4900423E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8827389827FEAF4900423E14 /* Assets.xcassets */; };
 		8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */; };
+		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
+		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8827389827FEAF4900423E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8827389B27FEAF4900423E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8827389D27FEAF4900423E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				8827389827FEAF4900423E14 /* Assets.xcassets */,
 				8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */,
 				8827389D27FEAF4900423E14 /* Info.plist */,
+				BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */,
+				BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */,
 			);
 			path = VirtualLearnApp;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 				8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */,
 				8827389927FEAF4900423E14 /* Assets.xcassets in Resources */,
 				8827389727FEAF4800423E14 /* Main.storyboard in Resources */,
+				BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 				8827389427FEAF4800423E14 /* ViewController.swift in Sources */,
 				8827389027FEAF4800423E14 /* AppDelegate.swift in Sources */,
 				8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */,
+				BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
