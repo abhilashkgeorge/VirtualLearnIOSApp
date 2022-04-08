@@ -92,12 +92,12 @@
 				8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */,
 				8827389D27FEAF4900423E14 /* Info.plist */,
 				F5C3166B27FF268F00F30001 /* Unfinished */,
-<<<<<<< HEAD
+
 				F5C3166C27FFEE4400F30001 /* RegisterPart2.storyboard */,
 				F5C3166E2800064700F30001 /* CustomClasses */,
-=======
+
 				BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */,
->>>>>>> features/newAccount
+				
 			);
 			path = VirtualLearnApp;
 			sourceTree = "<group>";
