@@ -18,6 +18,7 @@
 		88A17E3127FEF91E00CD1328 /* WelcomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E3027FEF91E00CD1328 /* WelcomeScreenButton.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
+		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
 		F5C3166627FEBCDA00F30001 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */; };
 		F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3166727FEBD4A00F30001 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		88A17E3027FEF91E00CD1328 /* WelcomeScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenButton.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
 		F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
 		F5C3166727FEBD4A00F30001 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */,
 				8827389D27FEAF4900423E14 /* Info.plist */,
 				F5C3166B27FF268F00F30001 /* Unfinished */,
+				BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */,
 			);
 			path = VirtualLearnApp;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */,
+				BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */,
 				F5C3166627FEBCDA00F30001 /* SearchStoryboard.storyboard in Resources */,
 				88A17E2627FEEA1800CD1328 /* Login.storyboard in Resources */,
 				8827389927FEAF4900423E14 /* Assets.xcassets in Resources */,
