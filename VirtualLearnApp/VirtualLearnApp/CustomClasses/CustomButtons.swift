@@ -37,3 +37,27 @@ class WelcomeScreenButton: UIButton {
     }
 }
 
+class FacebookButton: UIButton {
+
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setupFacebookButton()
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setupFacebookButton()
+    }
+    
+    
+    func setupFacebookButton() -> Void {
+
+        self.layer.cornerRadius = 6
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor(red: 119/255, green: 134/255, blue: 158/255,alpha: 0.3).cgColor
+        
+
+    }
+}
