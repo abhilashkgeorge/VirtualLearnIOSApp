@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGq-p7-PUc">
+                                <rect key="frame" x="24" y="64" width="196" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill out the fields below so we can learn some information about you." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz5-6B-YEE">
+                                <rect key="frame" x="24" y="105.5" width="327" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-pD-7Gd">
+                                <rect key="frame" x="24" y="178.5" width="131.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+919876543211" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-On-lZW">
+                                <rect key="frame" x="24" y="209.5" width="145" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.70980392156862748" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-l1-EZ2">
+                                <rect key="frame" x="24" y="266.5" width="62" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYS-jj-AL8">
+                                <rect key="frame" x="319" y="293.5" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvh-84-Q6i">
+                                <rect key="frame" x="40" y="337.5" width="295" height="1"/>
+                                <color key="backgroundColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hDQ-Yb-A6g"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ts3-On-lZW" firstAttribute="top" secondItem="7OD-pD-7Gd" secondAttribute="bottom" constant="7" id="0u8-cH-1EB"/>
+                            <constraint firstItem="Vz5-6B-YEE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="AEz-Vh-tRc"/>
+                            <constraint firstItem="7OD-pD-7Gd" firstAttribute="top" secondItem="Vz5-6B-YEE" secondAttribute="bottom" constant="30" id="FCr-p1-8Ac"/>
+                            <constraint firstItem="Kar-l1-EZ2" firstAttribute="top" secondItem="ts3-On-lZW" secondAttribute="bottom" constant="33" id="KpH-nT-BvI"/>
+                            <constraint firstItem="cvh-84-Q6i" firstAttribute="top" secondItem="sYS-jj-AL8" secondAttribute="bottom" constant="10" id="NEM-qo-v7s"/>
+                            <constraint firstItem="Vz5-6B-YEE" firstAttribute="top" secondItem="CGq-p7-PUc" secondAttribute="bottom" constant="10" id="QRA-i8-QKh"/>
+                            <constraint firstItem="cvh-84-Q6i" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="24" id="YcX-hW-oNL"/>
+                            <constraint firstItem="CGq-p7-PUc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="eZQ-oE-gcH"/>
+                            <constraint firstItem="CGq-p7-PUc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="gBw-D5-UzO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vz5-6B-YEE" secondAttribute="trailing" constant="24" id="hYY-6g-Uvn"/>
+                            <constraint firstItem="Kar-l1-EZ2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="kfM-hH-BQ6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cvh-84-Q6i" secondAttribute="trailing" constant="24" id="mqZ-7L-SxU"/>
+                            <constraint firstItem="7OD-pD-7Gd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="n6v-HW-ToM"/>
+                            <constraint firstItem="sYS-jj-AL8" firstAttribute="top" secondItem="Kar-l1-EZ2" secondAttribute="bottom" constant="10" id="sBA-up-Wk0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sYS-jj-AL8" secondAttribute="trailing" constant="24" id="w01-SP-5WU"/>
+                            <constraint firstItem="ts3-On-lZW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="yjO-9a-IKa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
