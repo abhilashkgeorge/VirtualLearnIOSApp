@@ -24,6 +24,7 @@ class CustomHeaderLabel: UILabel {
         self.textColor = UIColor.black
         self.font = UIFont(name: "Helvetica Neue" , size: 26)
 
+        
     }
 
 }
