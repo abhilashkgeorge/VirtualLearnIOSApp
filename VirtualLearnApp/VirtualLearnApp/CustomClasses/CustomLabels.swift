@@ -7,14 +7,45 @@
 
 import UIKit
 
-class CustomLabels: UILabel {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class CustomHeaderLabel: UILabel {
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setupHeaderLabel()
     }
-    */
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setupHeaderLabel()
+    }
+    
+    func setupHeaderLabel() -> Void {
+        self.textColor = UIColor.black
+        self.font = UIFont(name: "Helvetica Neue" , size: 26)
+
+        
+    }
+
+}
+
+class CustomSubHeaderLabel: UILabel {
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setupSubHeaderLabel()
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setupSubHeaderLabel()
+    }
+    
+    func setupSubHeaderLabel() -> Void {
+        self.textColor = UIColor(red: 122/255, green: 122/255, blue: 122/255, alpha: 122/255)
+        self.font = UIFont(name: "Helvetica Neue" , size: 16)
+
+    }
 
 }
