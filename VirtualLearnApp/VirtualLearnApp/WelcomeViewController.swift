@@ -15,21 +15,15 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationItem.setHidesBackButton(true, animated: true)
-       
-        let virtuallearnLogo = UIImage(named: "img_virtuallearn_lockup")
-        let virtuallearnLogoLogoImageView = UIImageView(image:virtuallearnLogo)
-        self.navigationItem.titleView = virtuallearnLogoLogoImageView
+        
     }
 
     @IBAction func loginTapped(_ sender: Any) {
-
+//        let vc = storyboard!.instantiateViewController(identifier: "WelcomeBackViewController") as? WelcomeBackViewController
+//        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func registerTapped(_ sender: Any) {
-        
+        print("register screen")
     }
 }
