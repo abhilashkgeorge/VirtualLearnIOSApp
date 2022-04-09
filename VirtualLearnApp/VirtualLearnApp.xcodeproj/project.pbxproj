@@ -13,6 +13,8 @@
 		8827389727FEAF4800423E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8827389527FEAF4800423E14 /* Main.storyboard */; };
 		8827389927FEAF4900423E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8827389827FEAF4900423E14 /* Assets.xcassets */; };
 		8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */; };
+		8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842ADB628007EB3009C7F3D /* WelcomeBackViewController.swift */; };
+		8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842ADB928007EC8009C7F3D /* CreateNewPasswordViewController.swift */; };
 		88A17E2627FEEA1800CD1328 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A17E2527FEEA1800CD1328 /* Login.storyboard */; };
 		88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */; };
 		88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E3027FEF91E00CD1328 /* CustomButtons.swift */; };
@@ -37,6 +39,8 @@
 		8827389827FEAF4900423E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8827389B27FEAF4900423E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8827389D27FEAF4900423E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8842ADB628007EB3009C7F3D /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
+		8842ADB928007EC8009C7F3D /* CreateNewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordViewController.swift; sourceTree = "<group>"; };
 		88A17E2527FEEA1800CD1328 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		88A17E3027FEF91E00CD1328 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */,
 				88A17E2527FEEA1800CD1328 /* Login.storyboard */,
 				88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */,
+				8842ADB628007EB3009C7F3D /* WelcomeBackViewController.swift */,
+				8842ADB928007EC8009C7F3D /* CreateNewPasswordViewController.swift */,
 				BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */,
 				8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */,
 				8827389D27FEAF4900423E14 /* Info.plist */,
@@ -199,7 +205,9 @@
 			files = (
 				88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
+				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
+				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,
 				8827389427FEAF4800423E14 /* ViewController.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
