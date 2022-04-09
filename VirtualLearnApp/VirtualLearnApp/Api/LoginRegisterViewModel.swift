@@ -6,3 +6,15 @@
 //
 
 import Foundation
+class LoginRegisterViewModel {
+    
+    func sendOTPForRegistration (mobileNumber: String) {
+        let manager = LoginRegisterNetworkManager()
+        manager.sendOTP(to: mobileNumber, completionHandler:
+                {
+                     (json: Any) -> Void
+                         in
+                    print(json)
+        })
+    }
+}

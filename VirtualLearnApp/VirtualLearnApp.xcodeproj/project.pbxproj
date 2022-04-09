@@ -15,6 +15,7 @@
 		8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */; };
 		8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842ADB628007EB3009C7F3D /* WelcomeBackViewController.swift */; };
 		8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842ADB928007EC8009C7F3D /* CreateNewPasswordViewController.swift */; };
+		88560C1D280190D500094EB1 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88560C1C280190D500094EB1 /* URLRequest+Extension.swift */; };
 		88A17E2627FEEA1800CD1328 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A17E2527FEEA1800CD1328 /* Login.storyboard */; };
 		88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */; };
 		88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E3027FEF91E00CD1328 /* CustomButtons.swift */; };
@@ -45,6 +46,7 @@
 		8827389D27FEAF4900423E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8842ADB628007EB3009C7F3D /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		8842ADB928007EC8009C7F3D /* CreateNewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordViewController.swift; sourceTree = "<group>"; };
+		88560C1C280190D500094EB1 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 		88A17E2527FEEA1800CD1328 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		88A17E3027FEF91E00CD1328 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
@@ -121,9 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				8BEC30B12801869B00F7AD86 /* URL+Extension.swift */,
+				88560C1C280190D500094EB1 /* URLRequest+Extension.swift */,
 				8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */,
-				8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */,
 				8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */,
+				8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
 				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
+				88560C1D280190D500094EB1 /* URLRequest+Extension.swift in Sources */,
 				8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */,
 				8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,

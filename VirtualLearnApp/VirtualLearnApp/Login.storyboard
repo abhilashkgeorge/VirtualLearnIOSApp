@@ -2,8 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,7 +44,7 @@
                                             <color key="titleColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="GRq-N9-yBr" kind="show" id="mbf-4d-W9Y"/>
+                                            <action selector="loginTapped:" destination="oAN-mI-VEe" eventType="touchUpInside" id="bpO-qh-gtQ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id4-Jm-jzR">
@@ -63,6 +62,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerTapped:" destination="oAN-mI-VEe" eventType="touchUpInside" id="cCd-eU-bQd"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By creating new account, you agree to our " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-57-vkN">
                                         <rect key="frame" x="50" y="575.33333333333337" width="276.66666666666669" height="17"/>
@@ -147,13 +149,13 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-V2-L4V">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSF-Hk-eNE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSF-Hk-eNE" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="30" width="266" height="32"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must have at least 6 or more characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-eu-i3J">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must have at least 6 or more characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-eu-i3J" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="72" width="327" height="38.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -173,12 +175,12 @@
                                             <action selector="resetPasswordTapped:" destination="mZW-EU-65p" eventType="touchUpInside" id="Hac-Fd-IAq"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-E7-9Gg">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-E7-9Gg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="227.33333333333334" width="327" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-5A-wB6">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-5A-wB6" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="170.33333333333334" width="327" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -228,20 +230,20 @@
             <objects>
                 <viewController storyboardIdentifier="WelcomeBackViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GRq-N9-yBr" customClass="WelcomeBackViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="czc-h6-Fhc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNx-Rf-OQm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="025-Nb-VQS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="025-Nb-VQS" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="30" width="327" height="31.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy to learn anytime and anywhere. Login to your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwL-yZ-HdG">
-                                        <rect key="frame" x="24" y="71.333333333333329" width="327" height="38.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy to learn anytime and anywhere. Login to your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwL-yZ-HdG" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="71.333333333333329" width="327" height="38.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="7UD-oW-7oh"/>
                                         </constraints>
@@ -249,7 +251,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-6B-WLr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-6B-WLr" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="169.66666666666666" width="157" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="157" id="CmC-vh-feQ"/>
@@ -257,7 +259,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="facebook-1"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-pi-RQJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-pi-RQJ" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="196.66666666666663" y="169.66666666666666" width="157" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="157" id="EeM-Wk-Bic"/>
@@ -265,7 +267,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="google-1"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50T-lf-UQn">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50T-lf-UQn" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="270.66666666666669" width="327" height="18.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="iAe-vu-aCJ"/>
@@ -273,7 +275,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-PT-MSZ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-PT-MSZ" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="329.33333333333331" width="327" height="18.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="SKg-NM-1Qg"/>
@@ -303,7 +305,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-r9-B3Y">
                                         <rect key="frame" x="80.666666666666671" y="517" width="213.66666666666663" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have a account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22l-fa-NM7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have a account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22l-fa-NM7" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="156.66666666666666" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -339,7 +341,7 @@
                                     <constraint firstItem="4gw-Na-zGc" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="pqF-TM-Fph"/>
                                     <constraint firstItem="QFK-6B-WLr" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="qv8-mX-jtV"/>
                                     <constraint firstItem="025-Nb-VQS" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="yJW-18-8DW"/>
-                                    <constraint firstItem="RwL-yZ-HdG" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="zcO-FT-Sj3"/>
+                                    <constraint firstItem="RwL-yZ-HdG" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="28" id="zcO-FT-Sj3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
