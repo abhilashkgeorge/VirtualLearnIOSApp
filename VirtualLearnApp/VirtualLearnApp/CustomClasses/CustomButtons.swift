@@ -37,3 +37,35 @@ class WelcomeScreenButton: UIButton {
     }
 }
 
+//MARK: Button setup for buttons which is used for buttons similar to Forgot password
+class BasicOrangeButton: UIButton{
+    
+    override init(frame: CGRect) {
+         super.init(frame: frame)
+         setup()
+       }
+
+    required init?(coder: NSCoder) {
+         super.init(coder: coder)
+         setup()
+       }
+
+    private func setup() {
+         self.setTitleColor(UIColor(red: 238/255, green: 92/255, blue: 77/255, alpha: 1), for: .normal)
+         self.layer.masksToBounds = true
+       }
+    
+}
+
+//extension UIColor {
+//
+//    func orange() -> UIColor{
+//
+//        let orange = UIColor(red: 238/255, green: 92/255, blue: 77/255, alpha: 1)
+//        return orange
+//
+//    }
+//}
+
+
+
