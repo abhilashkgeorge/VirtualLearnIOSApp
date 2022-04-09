@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rt2-zd-ELa">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rt2-zd-ELa">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,16 +14,95 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91E-Iu-ZWf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXD-Tu-FKA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJn-xR-BXX">
+                                                <rect key="frame" x="0.0" y="165" width="375" height="546"/>
+                                            </scrollView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="F49-xD-p2i">
+                                                <rect key="frame" x="129.5" y="758" width="116" height="4"/>
+                                                <color key="pageIndicatorTintColor" systemColor="systemOrangeColor"/>
+                                                <color key="currentPageIndicatorTintColor" systemColor="systemIndigoColor"/>
+                                                <connections>
+                                                    <action selector="pageControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="0iP-jj-kpP"/>
+                                                </connections>
+                                            </pageControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paq-Tp-HFH">
+                                                <rect key="frame" x="24" y="741" width="55" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
+                                                <connections>
+                                                    <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2Y-h6-wAS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibe-tQ-AIs">
+                                                <rect key="frame" x="306" y="733" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="d77-id-hXn"/>
+                                                    <constraint firstAttribute="height" constant="45" id="vR1-Mm-KPm"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="btn_next" title=" "/>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYH-4W-beC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ibe-tQ-AIs" secondAttribute="bottom" constant="34" id="Cf7-A7-tiD"/>
+                                            <constraint firstItem="EJn-xR-BXX" firstAttribute="top" secondItem="zXD-Tu-FKA" secondAttribute="top" constant="165" id="DTs-BA-qkT"/>
+                                            <constraint firstItem="ibe-tQ-AIs" firstAttribute="top" secondItem="EJn-xR-BXX" secondAttribute="bottom" constant="22" id="HFv-Kv-cc0"/>
+                                            <constraint firstAttribute="height" constant="812" id="JpQ-mB-nDW"/>
+                                            <constraint firstItem="Paq-Tp-HFH" firstAttribute="top" secondItem="EJn-xR-BXX" secondAttribute="bottom" constant="30" id="KYq-x8-XR9"/>
+                                            <constraint firstAttribute="bottom" secondItem="Paq-Tp-HFH" secondAttribute="bottom" constant="37" id="PhM-bR-Fab"/>
+                                            <constraint firstAttribute="bottom" secondItem="F49-xD-p2i" secondAttribute="bottom" constant="50" id="QpB-px-KYq"/>
+                                            <constraint firstAttribute="trailing" secondItem="EJn-xR-BXX" secondAttribute="trailing" id="S3G-sC-VcD"/>
+                                            <constraint firstItem="Paq-Tp-HFH" firstAttribute="leading" secondItem="zXD-Tu-FKA" secondAttribute="leading" constant="24" id="XzV-Fw-UGm"/>
+                                            <constraint firstItem="EJn-xR-BXX" firstAttribute="leading" secondItem="zXD-Tu-FKA" secondAttribute="leading" id="fnu-zF-80C"/>
+                                            <constraint firstItem="F49-xD-p2i" firstAttribute="top" secondItem="EJn-xR-BXX" secondAttribute="bottom" constant="47" id="gbr-bK-Mma"/>
+                                            <constraint firstItem="F49-xD-p2i" firstAttribute="centerX" secondItem="zXD-Tu-FKA" secondAttribute="centerX" id="m7k-a3-bcu"/>
+                                            <constraint firstAttribute="trailing" secondItem="ibe-tQ-AIs" secondAttribute="trailing" constant="24" id="vG4-bI-vdr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zXD-Tu-FKA" firstAttribute="leading" secondItem="91E-Iu-ZWf" secondAttribute="leading" id="2GA-zP-XxI"/>
+                                    <constraint firstItem="zXD-Tu-FKA" firstAttribute="top" secondItem="91E-Iu-ZWf" secondAttribute="top" id="8WG-7f-B8d"/>
+                                    <constraint firstAttribute="bottom" secondItem="zXD-Tu-FKA" secondAttribute="bottom" id="A12-wy-dyw"/>
+                                    <constraint firstItem="zXD-Tu-FKA" firstAttribute="width" secondItem="91E-Iu-ZWf" secondAttribute="width" id="EuT-D4-fpk"/>
+                                    <constraint firstAttribute="trailing" secondItem="zXD-Tu-FKA" secondAttribute="trailing" id="jgI-0P-bcf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="91E-Iu-ZWf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W7l-L6-Oqh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="91E-Iu-ZWf" secondAttribute="trailing" id="gXI-NN-y8M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="91E-Iu-ZWf" secondAttribute="bottom" id="ws8-ck-cOF"/>
+                            <constraint firstItem="91E-Iu-ZWf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ykg-Pm-2Bf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nLA-Dm-4yl"/>
+                    <connections>
+                        <outlet property="nextButton" destination="ibe-tQ-AIs" id="VzJ-yD-LW8"/>
+                        <outlet property="pageControl" destination="F49-xD-p2i" id="w25-0F-rM5"/>
+                        <outlet property="scrollView" destination="EJn-xR-BXX" id="fjd-eq-goW"/>
+                        <outlet property="skipButton" destination="Paq-Tp-HFH" id="bdg-HZ-ss7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="103.79464285714285"/>
+            <point key="canvasLocation" x="1047.2" y="102.99850074962519"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2zC-EK-Obs">
@@ -30,7 +110,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rt2-zd-ELa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Xz-pJ-rVd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -44,8 +124,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_next" width="46" height="46"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
