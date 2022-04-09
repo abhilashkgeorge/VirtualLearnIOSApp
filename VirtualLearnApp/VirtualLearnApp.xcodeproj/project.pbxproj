@@ -18,6 +18,10 @@
 		88A17E2627FEEA1800CD1328 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A17E2527FEEA1800CD1328 /* Login.storyboard */; };
 		88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */; };
 		88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E3027FEF91E00CD1328 /* CustomButtons.swift */; };
+		8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B12801869B00F7AD86 /* URL+Extension.swift */; };
+		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
+		8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */; };
+		8BEC30B8280186E000F7AD86 /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
@@ -44,6 +48,10 @@
 		88A17E2527FEEA1800CD1328 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		88A17E3027FEF91E00CD1328 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		8BEC30B12801869B00F7AD86 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
+		8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterModel.swift; sourceTree = "<group>"; };
+		8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 		8827388E27FEAF4800423E14 /* VirtualLearnApp */ = {
 			isa = PBXGroup;
 			children = (
+				8BEC30B02801867300F7AD86 /* Api */,
 				8827388F27FEAF4800423E14 /* AppDelegate.swift */,
 				8827389127FEAF4800423E14 /* SceneDelegate.swift */,
 				8827389327FEAF4800423E14 /* ViewController.swift */,
@@ -106,6 +115,17 @@
 				BA657B442800483100A334B3 /* NewAccountViewController.swift */,
 			);
 			path = VirtualLearnApp;
+			sourceTree = "<group>";
+		};
+		8BEC30B02801867300F7AD86 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				8BEC30B12801869B00F7AD86 /* URL+Extension.swift */,
+				8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */,
+				8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */,
+				8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		F5C3166B27FF268F00F30001 /* Unfinished */ = {
@@ -205,9 +225,13 @@
 			files = (
 				88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
+				8BEC30B8280186E000F7AD86 /* LoginRegisterViewModel.swift in Sources */,
+				8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */,
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
 				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
+				8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */,
+				8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,
 				8827389427FEAF4800423E14 /* ViewController.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
