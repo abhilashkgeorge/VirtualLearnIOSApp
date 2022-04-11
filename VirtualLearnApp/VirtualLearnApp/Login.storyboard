@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima-Nova-Sbold.otf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+        <array key="biko_bold.otf">
+            <string>Biko-Bold</string>
+        </array>
+        <array key="proxima_nova_bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+        <array key="proxima_nova_regular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Welcome View Controller-->
         <scene sceneID="ScZ-sA-P0A">
@@ -20,26 +35,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_landing_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-Gm-J5W">
-                                        <rect key="frame" x="26" y="30" width="322.33333333333331" height="234"/>
+                                        <rect key="frame" x="26" y="30" width="321" height="234"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgz-Gd-hAn">
-                                        <rect key="frame" x="24" y="314" width="328.33333333333331" height="28.666666666666686"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <rect key="frame" x="24" y="314" width="327" height="26"/>
+                                        <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to study easily in a virtual way?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miJ-C7-SnN">
-                                        <rect key="frame" x="24" y="343.66666666666669" width="328.33333333333331" height="19.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <rect key="frame" x="24" y="341" width="327" height="16"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4r-bs-uVN" customClass="WelcomeScreenButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="418" width="328.33333333333331" height="40"/>
+                                        <rect key="frame" x="24" y="412" width="327" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="teK-bk-Paa"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -48,17 +63,17 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id4-Jm-jzR">
-                                        <rect key="frame" x="180.33333333333334" y="478" width="15.666666666666657" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="181.33333333333334" y="472" width="12.666666666666657" height="14"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                         <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-c7-fyT" customClass="WelcomeScreenButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="518.33333333333337" width="328.33333333333331" height="40"/>
+                                        <rect key="frame" x="24" y="506" width="327" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="fw8-GT-i5D"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -67,30 +82,30 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By creating new account, you agree to our " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-57-vkN">
-                                        <rect key="frame" x="50" y="575.33333333333337" width="276.66666666666669" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="55.666666666666657" y="563" width="263.66666666666674" height="14"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                         <color key="textColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-Ya-CVY">
-                                        <rect key="frame" x="78.333333333333314" y="593.33333333333337" width="220" height="29"/>
+                                        <rect key="frame" x="85" y="578" width="205" height="26"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-cl-pte">
-                                                <rect key="frame" x="0.0" y="0.0" width="116" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="26"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                 <state key="normal" title="Terms of Services">
                                                     <color key="titleColor" red="0.16862745100000001" green="0.70980392160000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itR-yV-b8F">
-                                                <rect key="frame" x="118.00000000000001" y="0.0" width="9.9999999999999858" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="110" y="0.0" width="9" height="26"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                 <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAS-K1-OHT">
-                                                <rect key="frame" x="130" y="0.0" width="90" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="121" y="0.0" width="84" height="26"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                 <state key="normal" title="Privacy Policy">
                                                     <color key="titleColor" red="0.16862745100000001" green="0.70980392160000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -150,24 +165,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSF-Hk-eNE" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="30" width="266" height="32"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <rect key="frame" x="23.999999999999986" y="30" width="249.66666666666663" height="26"/>
+                                        <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must have at least 6 or more characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-eu-i3J" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="72" width="327" height="38.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <rect key="frame" x="24" y="66" width="327" height="32"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-HS-iLJ" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="335.33333333333331" width="327" height="46"/>
+                                        <rect key="frame" x="24" y="333" width="327" height="46"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="8LI-JZ-Jux"/>
                                             <constraint firstAttribute="width" constant="327" id="z4y-y4-1rA"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                         <state key="normal" title="Reset Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -176,13 +192,13 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-E7-9Gg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="227.33333333333334" width="327" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="24" y="220" width="327" height="22"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-5A-wB6" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="170.33333333333334" width="327" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="24" y="158" width="327" height="22"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
@@ -237,22 +253,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="025-Nb-VQS" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="30" width="327" height="31.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <rect key="frame" x="24" y="30" width="327" height="26"/>
+                                        <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy to learn anytime and anywhere. Login to your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwL-yZ-HdG" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="28" y="71.333333333333329" width="327" height="38.333333333333329"/>
+                                        <rect key="frame" x="28" y="66" width="327" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="7UD-oW-7oh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-6B-WLr" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="169.66666666666666" width="157" height="41"/>
+                                        <rect key="frame" x="24" y="158" width="157" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="157" id="CmC-vh-feQ"/>
                                             <constraint firstAttribute="height" constant="41" id="cvM-id-3q5"/>
@@ -260,7 +276,7 @@
                                         <state key="normal" title="Button" image="facebook-1"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-pi-RQJ" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="196.66666666666663" y="169.66666666666666" width="157" height="41"/>
+                                        <rect key="frame" x="196.66666666666663" y="158" width="157" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="157" id="EeM-Wk-Bic"/>
                                             <constraint firstAttribute="height" constant="41" id="k3l-th-NcK"/>
@@ -268,28 +284,29 @@
                                         <state key="normal" title="Button" image="google-1"/>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50T-lf-UQn" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="270.66666666666669" width="327" height="18.666666666666686"/>
+                                        <rect key="frame" x="24" y="259" width="327" height="17.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="iAe-vu-aCJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-PT-MSZ" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="329.33333333333331" width="327" height="18.666666666666686"/>
+                                        <rect key="frame" x="24" y="316.66666666666669" width="327" height="17.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="SKg-NM-1Qg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-Na-zGc" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="447" width="327" height="46"/>
+                                        <rect key="frame" x="24" y="426.33333333333331" width="327" height="46"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="UEJ-jy-88E"/>
                                             <constraint firstAttribute="height" constant="46" id="qbj-1E-qXd"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -298,21 +315,22 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMc-SY-qQF" customClass="OrangeColorButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="372" width="151" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <rect key="frame" x="237" y="358.33333333333331" width="114" height="28"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                         <state key="normal" title="Forgot Password?"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-r9-B3Y">
-                                        <rect key="frame" x="80.666666666666671" y="517" width="213.66666666666663" height="30"/>
+                                        <rect key="frame" x="82.333333333333329" y="496.33333333333331" width="210.33333333333337" height="27.999999999999943"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have a account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22l-fa-NM7" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="156.66666666666666" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152.33333333333334" height="28"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGK-ar-1BG" customClass="OrangeColorButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="156.66666666666669" y="0.0" width="57" height="30"/>
+                                                <rect key="frame" x="152.33333333333331" y="0.0" width="58" height="28"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                 <state key="normal" title="Register"/>
                                             </button>
                                         </subviews>

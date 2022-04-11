@@ -95,13 +95,18 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             txt1.textAlignment = .left
             txt1.lineBreakMode = .byWordWrapping
             txt1.numberOfLines = 2
-            txt1.font = UIFont.boldSystemFont(ofSize: 26.0)
+            txt1.font = UIFont.bikoBold(size: 24)
             txt1.text = titles[index]
+            
             
             let txt2 = UILabel.init(frame: CGRect(x:32,y:txt1.frame.maxY+10,width:scrollWidth-60,height:70))
             txt2.numberOfLines = 4
             txt2.textAlignment = .left
-            txt2.font = UIFont.systemFont(ofSize: 14.0)
+            for family in UIFont.familyNames.sorted() {
+              let names = UIFont.fontNames(forFamilyName: family)
+              print("Family: \(family) Font names: \(names)")
+            }
+            txt2.font = UIFont.proximaNovaRegular(size: 14)
             txt2.textColor = UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 1.00)
             txt2.text = desc[index]
             slide.addSubview(imageView)

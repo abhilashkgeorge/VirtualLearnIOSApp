@@ -27,12 +27,23 @@
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
 		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
+		F57499C72802A6D000695C3B /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = F57499C42802A6D000695C3B /* AvenirLTStd-Roman.otf */; };
+		F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499CA2803111500695C3B /* UIFont+Extention.swift */; };
+		F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499CC2803115600695C3B /* UIColor+Extention.swift */; };
+		F57499CF28033EE200695C3B /* Proxima-Nova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F57499CE28033EE200695C3B /* Proxima-Nova-Sbold.otf */; };
 		F5C3166627FEBCDA00F30001 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */; };
 		F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3166727FEBD4A00F30001 /* SearchViewController.swift */; };
 		F5C3166D27FFEE4400F30001 /* RegisterPart2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3166C27FFEE4400F30001 /* RegisterPart2.storyboard */; };
 		F5C316702800067D00F30001 /* CustomLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3166F2800067D00F30001 /* CustomLabels.swift */; };
 		F5C316722800069C00F30001 /* CustomTextFeilds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C316712800069C00F30001 /* CustomTextFeilds.swift */; };
 		F5C31674280006B100F30001 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C31673280006B100F30001 /* CustomViews.swift */; };
+		F5C7ED2F28029FAE00134409 /* system_san_francisco_display_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2728029FAD00134409 /* system_san_francisco_display_regular.ttf */; };
+		F5C7ED3028029FAE00134409 /* proxima_nova_x_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2828029FAD00134409 /* proxima_nova_x_bold.otf */; };
+		F5C7ED3128029FAE00134409 /* proximanovaextrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2928029FAD00134409 /* proximanovaextrabold.otf */; };
+		F5C7ED3228029FAE00134409 /* proxima_nova_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2A28029FAD00134409 /* proxima_nova_medium.ttf */; };
+		F5C7ED3328029FAE00134409 /* proxima_nova_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2B28029FAD00134409 /* proxima_nova_regular.otf */; };
+		F5C7ED3428029FAE00134409 /* proxima_nova_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2C28029FAE00134409 /* proxima_nova_bold.ttf */; };
+		F5C7ED3528029FAE00134409 /* biko_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2D28029FAE00134409 /* biko_bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,12 +69,23 @@
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
+		F57499C42802A6D000695C3B /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
+		F57499CA2803111500695C3B /* UIFont+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extention.swift"; sourceTree = "<group>"; };
+		F57499CC2803115600695C3B /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
+		F57499CE28033EE200695C3B /* Proxima-Nova-Sbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima-Nova-Sbold.otf"; sourceTree = "<group>"; };
 		F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
 		F5C3166727FEBD4A00F30001 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F5C3166C27FFEE4400F30001 /* RegisterPart2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterPart2.storyboard; sourceTree = "<group>"; };
 		F5C3166F2800067D00F30001 /* CustomLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabels.swift; sourceTree = "<group>"; };
 		F5C316712800069C00F30001 /* CustomTextFeilds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFeilds.swift; sourceTree = "<group>"; };
 		F5C31673280006B100F30001 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		F5C7ED2728029FAD00134409 /* system_san_francisco_display_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = system_san_francisco_display_regular.ttf; sourceTree = "<group>"; };
+		F5C7ED2828029FAD00134409 /* proxima_nova_x_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proxima_nova_x_bold.otf; sourceTree = "<group>"; };
+		F5C7ED2928029FAD00134409 /* proximanovaextrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proximanovaextrabold.otf; sourceTree = "<group>"; };
+		F5C7ED2A28029FAD00134409 /* proxima_nova_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proxima_nova_medium.ttf; sourceTree = "<group>"; };
+		F5C7ED2B28029FAD00134409 /* proxima_nova_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proxima_nova_regular.otf; sourceTree = "<group>"; };
+		F5C7ED2C28029FAE00134409 /* proxima_nova_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proxima_nova_bold.ttf; sourceTree = "<group>"; };
+		F5C7ED2D28029FAE00134409 /* biko_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = biko_bold.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +118,8 @@
 		8827388E27FEAF4800423E14 /* VirtualLearnApp */ = {
 			isa = PBXGroup;
 			children = (
+				F57499C9280310ED00695C3B /* Extentions */,
+				F5C7ED2528029F9100134409 /* Fonts */,
 				8BEC30B02801867300F7AD86 /* Api */,
 				8827388F27FEAF4800423E14 /* AppDelegate.swift */,
 				8827389127FEAF4800423E14 /* SceneDelegate.swift */,
@@ -131,6 +155,15 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		F57499C9280310ED00695C3B /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				F57499CA2803111500695C3B /* UIFont+Extention.swift */,
+				F57499CC2803115600695C3B /* UIColor+Extention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		F5C3166B27FF268F00F30001 /* Unfinished */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +182,22 @@
 				88A17E3027FEF91E00CD1328 /* CustomButtons.swift */,
 			);
 			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		F5C7ED2528029F9100134409 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F5C7ED2D28029FAE00134409 /* biko_bold.otf */,
+				F5C7ED2C28029FAE00134409 /* proxima_nova_bold.ttf */,
+				F5C7ED2A28029FAD00134409 /* proxima_nova_medium.ttf */,
+				F57499CE28033EE200695C3B /* Proxima-Nova-Sbold.otf */,
+				F5C7ED2B28029FAD00134409 /* proxima_nova_regular.otf */,
+				F5C7ED2828029FAD00134409 /* proxima_nova_x_bold.otf */,
+				F5C7ED2928029FAD00134409 /* proximanovaextrabold.otf */,
+				F5C7ED2728029FAD00134409 /* system_san_francisco_display_regular.ttf */,
+				F57499C42802A6D000695C3B /* AvenirLTStd-Roman.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,11 +257,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57499CF28033EE200695C3B /* Proxima-Nova-Sbold.otf in Resources */,
 				8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */,
+				F5C7ED3328029FAE00134409 /* proxima_nova_regular.otf in Resources */,
+				F57499C72802A6D000695C3B /* AvenirLTStd-Roman.otf in Resources */,
+				F5C7ED2F28029FAE00134409 /* system_san_francisco_display_regular.ttf in Resources */,
+				F5C7ED3028029FAE00134409 /* proxima_nova_x_bold.otf in Resources */,
 				BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */,
+				F5C7ED3128029FAE00134409 /* proximanovaextrabold.otf in Resources */,
 				F5C3166627FEBCDA00F30001 /* SearchStoryboard.storyboard in Resources */,
 				88A17E2627FEEA1800CD1328 /* Login.storyboard in Resources */,
+				F5C7ED3528029FAE00134409 /* biko_bold.otf in Resources */,
+				F5C7ED3228029FAE00134409 /* proxima_nova_medium.ttf in Resources */,
 				8827389927FEAF4900423E14 /* Assets.xcassets in Resources */,
+				F5C7ED3428029FAE00134409 /* proxima_nova_bold.ttf in Resources */,
 				F5C3166D27FFEE4400F30001 /* RegisterPart2.storyboard in Resources */,
 				8827389727FEAF4800423E14 /* Main.storyboard in Resources */,
 				BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */,
@@ -232,11 +290,13 @@
 				8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */,
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
+				F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */,
 				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
 				88560C1D280190D500094EB1 /* URLRequest+Extension.swift in Sources */,
 				8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */,
 				8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,
+				F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */,
 				8827389427FEAF4800423E14 /* ViewController.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
 				F5C31674280006B100F30001 /* CustomViews.swift in Sources */,
