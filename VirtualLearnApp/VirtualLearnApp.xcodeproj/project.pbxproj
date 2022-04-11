@@ -26,6 +26,7 @@
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
+		BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */; };
 		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
 		F5C3166627FEBCDA00F30001 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */; };
 		F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3166727FEBD4A00F30001 /* SearchViewController.swift */; };
@@ -57,6 +58,7 @@
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
+		BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyViewController.swift; sourceTree = "<group>"; };
 		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
 		F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
 		F5C3166727FEBD4A00F30001 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				F5C3166E2800064700F30001 /* CustomClasses */,
 				BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */,
 				BA657B442800483100A334B3 /* NewAccountViewController.swift */,
+				BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */,
 			);
 			path = VirtualLearnApp;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */,
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
+				BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */,
 				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
 				88560C1D280190D500094EB1 /* URLRequest+Extension.swift in Sources */,
 				8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */,
