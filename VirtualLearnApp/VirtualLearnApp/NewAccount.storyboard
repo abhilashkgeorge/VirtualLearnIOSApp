@@ -383,6 +383,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="mvX-a5-KDp"/>
                     <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="otpTF1" destination="EOG-lX-DJr" id="gyl-WU-uyB"/>
+                        <outlet property="otpTF2" destination="jHK-y7-9VW" id="xjk-ep-hjk"/>
+                        <outlet property="otpTF3" destination="NXw-u6-C2a" id="rTk-Pt-id5"/>
+                        <outlet property="otpTF4" destination="yHr-bl-PKo" id="OrC-DH-kSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdY-NG-t5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
