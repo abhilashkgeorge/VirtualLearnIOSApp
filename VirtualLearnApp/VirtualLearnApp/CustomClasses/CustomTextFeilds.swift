@@ -32,8 +32,8 @@ class FloatingLabel: UITextField {
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self._placeholder = (self._placeholder != nil) ? self._placeholder : placeholder // Use our custom placeholder if none is set
-        placeholder = self._placeholder // make sure the placeholder is shown
+        self._placeholder = (self._placeholder != nil) ? self._placeholder : placeholder
+        placeholder = self._placeholder
         self.floatingLabel = UILabel(frame: CGRect.zero)
         self.addTarget(self, action: #selector(self.addFloatingLabel), for: .editingDidBegin)
         self.addTarget(self, action: #selector(self.removeFloatingLabel), for: .editingDidEnd)
@@ -52,8 +52,7 @@ class FloatingLabel: UITextField {
             self.addSubview(self.floatingLabel)
           
             self.floatingLabel.bottomAnchor.constraint(equalTo:
-            self.topAnchor, constant: -10).isActive = true // Place our label 10pts above the text field
-            // Remove the placeholder
+            self.topAnchor, constant: -10).isActive = true
             self.placeholder = ""
         }
         self.setNeedsDisplay()

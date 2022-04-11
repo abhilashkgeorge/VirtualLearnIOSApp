@@ -22,7 +22,7 @@ class CustomHeaderLabel: UILabel {
     
     func setupHeaderLabel() -> Void {
         self.textColor = UIColor.black
-        self.font = UIFont(name: "Helvetica Neue" , size: 26)
+        self.font = UIFont.bikoBold(size: 26)
 
         
     }
@@ -44,7 +44,7 @@ class CustomSubHeaderLabel: UILabel {
     
     func setupSubHeaderLabel() -> Void {
         self.textColor = UIColor(red: 122/255, green: 122/255, blue: 122/255, alpha: 122/255)
-        self.font = UIFont(name: "Helvetica Neue" , size: 16)
+        self.font = UIFont.proximaNovaRegular(size: 16)
 
     }
 

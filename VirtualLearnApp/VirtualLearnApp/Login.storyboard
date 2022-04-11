@@ -320,16 +320,16 @@
                                         <state key="normal" title="Forgot Password?"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-r9-B3Y">
-                                        <rect key="frame" x="82.333333333333329" y="496.33333333333331" width="210.33333333333337" height="27.999999999999943"/>
+                                        <rect key="frame" x="80.333333333333329" y="496.33333333333331" width="214.33333333333337" height="27.999999999999943"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have a account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22l-fa-NM7" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="152.33333333333334" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have a account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22l-fa-NM7" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="28"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGK-ar-1BG" customClass="OrangeColorButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="152.33333333333331" y="0.0" width="58" height="28"/>
+                                                <rect key="frame" x="156.33333333333331" y="0.0" width="58" height="28"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                 <state key="normal" title="Register"/>
                                             </button>

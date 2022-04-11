@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var skipButton: UIButton!
@@ -96,19 +96,18 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             txt1.lineBreakMode = .byWordWrapping
             txt1.numberOfLines = 2
             txt1.font = UIFont.bikoBold(size: 24)
-            txt1.text = titles[index]
+            let textString1 = NSAttributedString(string: titles[index]).withLineSpacing(10)
+            txt1.attributedText = textString1
+            
             
             
             let txt2 = UILabel.init(frame: CGRect(x:32,y:txt1.frame.maxY+10,width:scrollWidth-60,height:70))
+            let textString2 = NSAttributedString(string: desc[index]).withLineSpacing(5)
+            txt2.attributedText = textString2
             txt2.numberOfLines = 4
             txt2.textAlignment = .left
-            for family in UIFont.familyNames.sorted() {
-              let names = UIFont.fontNames(forFamilyName: family)
-              print("Family: \(family) Font names: \(names)")
-            }
             txt2.font = UIFont.proximaNovaRegular(size: 14)
             txt2.textColor = UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 1.00)
-            txt2.text = desc[index]
             slide.addSubview(imageView)
             slide.addSubview(txt1)
             slide.addSubview(txt2)
