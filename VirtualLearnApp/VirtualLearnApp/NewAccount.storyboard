@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,7 +37,6 @@
                                         <rect key="frame" x="24" y="305" width="327" height="46"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="327" id="e7d-4g-XQY"/>
                                             <constraint firstAttribute="height" constant="46" id="x5a-gO-n4q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
@@ -47,29 +45,28 @@
                                         </state>
                                         <connections>
                                             <action selector="newAccountContinueTapped:" destination="y6D-iA-TRj" eventType="touchUpInside" id="lAk-mw-mym"/>
-                                            <segue destination="gg0-PR-hV4" kind="show" id="vKE-Id-uxl"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="New Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2g-2M-ZvI" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="64" width="154" height="26"/>
+                                        <rect key="frame" x="24" y="64" width="156.5" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new account to get access to all courses by entering your mobile number." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tud-Qp-2tT" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="100" width="327" height="48"/>
+                                        <rect key="frame" x="24" y="104.5" width="327" height="43.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7K-sw-8ko">
-                                        <rect key="frame" x="24" y="222" width="23" height="16"/>
+                                        <rect key="frame" x="24" y="222" width="27.5" height="19"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your mobile number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gm7-Un-VBX" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="65" y="222" width="199" height="22"/>
+                                        <rect key="frame" x="69.5" y="222" width="199" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="199" id="bX3-9G-CUM"/>
                                             <constraint firstAttribute="height" constant="22" id="oES-ls-qnP"/>
@@ -89,7 +86,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoM-SP-9qg" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="69" y="375" width="181" height="20"/>
+                                        <rect key="frame" x="69" y="375" width="185.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="3or-ae-TZ9"/>
                                         </constraints>
@@ -98,7 +95,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghl-po-Jp4">
-                                        <rect key="frame" x="255" y="375" width="41" height="20"/>
+                                        <rect key="frame" x="259.5" y="375" width="40" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="HVQ-gX-fIj"/>
                                         </constraints>
@@ -184,31 +181,31 @@
             </objects>
             <point key="canvasLocation" x="-722.46376811594212" y="172.09821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Verify View Controller-->
         <scene sceneID="ayJ-0w-xe7">
             <objects>
-                <viewController id="gg0-PR-hV4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OTPVerifyViewController" id="gg0-PR-hV4" customClass="OTPVerifyViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="upa-zg-Djy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="780"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-XQ-Ang">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="780"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-mq-WyZ">
-                                        <rect key="frame" x="24" y="64" width="174.5" height="26"/>
+                                        <rect key="frame" x="24" y="64" width="168" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in the verification code that has been sent to your mobile number." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9E-Si-Tn6" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="100" width="327" height="32"/>
+                                        <rect key="frame" x="24" y="104.5" width="327" height="37.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8H-lj-8bR">
-                                        <rect key="frame" x="87.5" y="191" width="200" height="33"/>
+                                        <rect key="frame" x="87.5" y="201" width="200" height="33"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOG-lX-DJr">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="33"/>
@@ -265,7 +262,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2N6-rl-4rl">
-                                        <rect key="frame" x="87.5" y="224" width="200" height="0.5"/>
+                                        <rect key="frame" x="87.5" y="234" width="200" height="0.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqn-FA-IIe">
                                                 <rect key="frame" x="110" y="0.0" width="35" height="0.5"/>
@@ -317,10 +314,10 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Pq-Xb-teZ">
-                                        <rect key="frame" x="109.5" y="265" width="156" height="48"/>
+                                        <rect key="frame" x="107.5" y="275" width="160.5" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t recieve a code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITv-6t-8Tn" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="156" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="160.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="dTA-U9-Nnz"/>
                                                 </constraints>
@@ -329,7 +326,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8c-3A-kJh">
-                                                <rect key="frame" x="50.5" y="28" width="55" height="20"/>
+                                                <rect key="frame" x="52.5" y="28" width="55" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="VXZ-Ea-8Ip"/>
                                                 </constraints>
@@ -341,7 +338,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnL-zb-UUg" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="393" width="327" height="46"/>
+                                        <rect key="frame" x="24" y="403" width="327" height="46"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="FPw-6D-Ykw"/>
@@ -351,6 +348,9 @@
                                         <state key="normal" title="Verify">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="newAccVerifyTapped:" destination="gg0-PR-hV4" eventType="touchUpInside" id="MY0-U3-4M8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
