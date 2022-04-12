@@ -44,12 +44,21 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func myProfileBtn(_ sender: Any) {
+        let profileStoryboard = UIStoryboard.init(name: "ProfileStoryboard", bundle: Bundle.main)
+        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
+        self.navigationController?.pushViewController(profileVC!, animated: true)
     }
     
     @IBAction func notificationBtn(_ sender: Any) {
+        let notificationsStoryboard = UIStoryboard.init(name: "Notifications", bundle: Bundle.main)
+        let notificationsVC = notificationsStoryboard.instantiateViewController(withIdentifier: "NotificationsViewController") as? NotificationsViewController
+        self.navigationController?.pushViewController(notificationsVC!, animated: true)
     }
     
     @IBAction func settingsBtn(_ sender: Any) {
+        let settingsStoryboard = UIStoryboard.init(name: "Settings", bundle: Bundle.main)
+        let settingsVC = settingsStoryboard.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController
+        self.navigationController?.pushViewController(settingsVC!, animated: true)
     }
     
     @IBAction func logoutBtn(_ sender: Any) {

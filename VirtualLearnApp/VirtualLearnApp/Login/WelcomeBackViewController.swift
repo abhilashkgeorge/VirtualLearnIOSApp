@@ -26,7 +26,11 @@ class WelcomeBackViewController: UIViewController {
                 print("Invalid credential or password")
             }
             else {
-                print("Navigate to home screen")
+                DispatchQueue.main.async {
+                    let homeScreenStoryboard = UIStoryboard.init(name: "HomeScreen", bundle: Bundle.main)
+                    let homeScreenVC = homeScreenStoryboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController
+                    self.navigationController?.pushViewController(homeScreenVC!, animated: true)
+                }
             }
         })
     }
