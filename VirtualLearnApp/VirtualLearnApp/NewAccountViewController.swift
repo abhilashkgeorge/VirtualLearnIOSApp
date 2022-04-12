@@ -20,6 +20,4 @@ class NewAccountViewController: UIViewController {
     @IBAction func newAccountContinueTapped(_ sender: Any) {
         viewModel.sendOTPForRegistration(mobileNumber: newAccountPhoneNumber.text ?? "9945685080")
     }
-    
-
 }
