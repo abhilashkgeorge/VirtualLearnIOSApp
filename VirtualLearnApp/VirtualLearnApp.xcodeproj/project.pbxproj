@@ -43,6 +43,11 @@
 		F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499CC2803115600695C3B /* UIColor+Extention.swift */; };
 		F57499CF28033EE200695C3B /* Proxima-Nova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F57499CE28033EE200695C3B /* Proxima-Nova-Sbold.otf */; };
 		F57499D12803EA5C00695C3B /* NSAttributedString+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499D02803EA5C00695C3B /* NSAttributedString+Extention.swift */; };
+		F57499E2280443FF00695C3B /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57499E1280443FF00695C3B /* HomeScreen.storyboard */; };
+		F57499E82804585600695C3B /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499E72804585600695C3B /* HomeScreenCollectionViewCell.swift */; };
+		F57499EA2804587C00695C3B /* HomeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499E92804587C00695C3B /* HomeScreenTableViewCell.swift */; };
+		F57499EC280560A600695C3B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499EB280560A600695C3B /* HomeScreenViewController.swift */; };
+		F57499EE280564F700695C3B /* UIImage+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499ED280564F700695C3B /* UIImage+Extention.swift */; };
 		F5C3166627FEBCDA00F30001 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */; };
 		F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3166727FEBD4A00F30001 /* SearchViewController.swift */; };
 		F5C3166D27FFEE4400F30001 /* RegisterPart2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3166C27FFEE4400F30001 /* RegisterPart2.storyboard */; };
@@ -97,6 +102,11 @@
 		F57499CC2803115600695C3B /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
 		F57499CE28033EE200695C3B /* Proxima-Nova-Sbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima-Nova-Sbold.otf"; sourceTree = "<group>"; };
 		F57499D02803EA5C00695C3B /* NSAttributedString+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extention.swift"; sourceTree = "<group>"; };
+		F57499E1280443FF00695C3B /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		F57499E72804585600695C3B /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		F57499E92804587C00695C3B /* HomeScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTableViewCell.swift; sourceTree = "<group>"; };
+		F57499EB280560A600695C3B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		F57499ED280564F700695C3B /* UIImage+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extention.swift"; sourceTree = "<group>"; };
 		F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
 		F5C3166727FEBD4A00F30001 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F5C3166C27FFEE4400F30001 /* RegisterPart2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterPart2.storyboard; sourceTree = "<group>"; };
@@ -142,6 +152,7 @@
 		8827388E27FEAF4800423E14 /* VirtualLearnApp */ = {
 			isa = PBXGroup;
 			children = (
+				F57499D62803FFDA00695C3B /* HomeScreen */,
 				F57499C9280310ED00695C3B /* Extentions */,
 				F5C7ED2528029F9100134409 /* Fonts */,
 				8BEC30B02801867300F7AD86 /* Api */,
@@ -195,8 +206,20 @@
 				F57499CA2803111500695C3B /* UIFont+Extention.swift */,
 				F57499CC2803115600695C3B /* UIColor+Extention.swift */,
 				F57499D02803EA5C00695C3B /* NSAttributedString+Extention.swift */,
+				F57499ED280564F700695C3B /* UIImage+Extention.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		F57499D62803FFDA00695C3B /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F57499E1280443FF00695C3B /* HomeScreen.storyboard */,
+				F57499EB280560A600695C3B /* HomeScreenViewController.swift */,
+				F57499E72804585600695C3B /* HomeScreenCollectionViewCell.swift */,
+				F57499E92804587C00695C3B /* HomeScreenTableViewCell.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 		F5C3166B27FF268F00F30001 /* Unfinished */ = {
@@ -310,6 +333,7 @@
 				F5C3166D27FFEE4400F30001 /* RegisterPart2.storyboard in Resources */,
 				8B2531D92803FC3D00256714 /* ProfileStoryboard.storyboard in Resources */,
 				BAB1B679280477D30020F6CE /* Notifications.storyboard in Resources */,
+				F57499E2280443FF00695C3B /* HomeScreen.storyboard in Resources */,
 				8827389727FEAF4800423E14 /* Main.storyboard in Resources */,
 				BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */,
 			);
@@ -333,13 +357,16 @@
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
 				F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */,
+				F57499E82804585600695C3B /* HomeScreenCollectionViewCell.swift in Sources */,
 				BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */,
 				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
 				88560C1D280190D500094EB1 /* URLRequest+Extension.swift in Sources */,
+				F57499EA2804587C00695C3B /* HomeScreenTableViewCell.swift in Sources */,
 				8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */,
 				8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,
 				F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */,
+				F57499EC280560A600695C3B /* HomeScreenViewController.swift in Sources */,
 				8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */,
 				8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
@@ -352,6 +379,7 @@
 				F5C316722800069C00F30001 /* CustomTextFeilds.swift in Sources */,
 				8B67F075280519080056CBD0 /* EditProfileViewController.swift in Sources */,
 				BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */,
+				F57499EE280564F700695C3B /* UIImage+Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
