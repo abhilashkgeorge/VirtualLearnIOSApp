@@ -7,8 +7,11 @@
 
 import UIKit
 
-class OTPVerifyViewController: UIViewController{
+class OTPVerifyViewController: UIViewController,UITextFieldDelegate {
 
+    var viewmodel = RegisterViewModel()
+    var OTP: String = ""
+    
     @IBOutlet weak var otpTF1: UITextField!
     @IBOutlet weak var otpTF2: UITextField!
     @IBOutlet weak var otpTF3: UITextField!
@@ -22,34 +25,56 @@ class OTPVerifyViewController: UIViewController{
         self.otpTF3.delegate = self
         self.otpTF4.delegate = self
         
-        self.otpTF1.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
-        
     }
-    @objc func changeCharacter(textField: UITextField){
-        
-        if textField.text?.utf8.count == 1 {
-        switch textField {
-        case otpTF1:
-            otpTF2.becomeFirstResponder()
-            
-        case otpTF2:
-            otpTF3.becomeFirstResponder()
-            
-        case otpTF3:
-            otpTF4.becomeFirstResponder()
-            
-        case otpTF4:
-            otpTF4.resignFirstResponder()
-//            print("OTP = \(otpTF1.text)\(otpTF2.text)\(otpTF3.text)\(otpTF4.text)")
-            
-        default:
-            break
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text?.count == 1 {
+            if textField == otpTF1 {
+                otpTF2.becomeFirstResponder()
+            }
+            if textField == otpTF2 {
+                otpTF3.becomeFirstResponder()
+            }
+            if textField == otpTF3 {
+                otpTF4.becomeFirstResponder()
+            }
+            if textField == otpTF4 {
+                otpTF4.resignFirstResponder()
+            }
         }
-        }
+       
+        return true
     }
+    
+    @IBAction func newAccVerifyTapped(_ sender: Any) {
+       
+        OTP += otpTF1.text ?? "0"
+        OTP += otpTF2.text ?? "0"
+        OTP += otpTF3.text ?? "0"
+        OTP += otpTF4.text ?? "0"
+        if OTP.count == 3{
+            var intOTP: Int = Int(OTP) ?? 0
+            OTP = String(format: "%02d", intOTP)
+        }
+       print(OTP)
+      
+        viewmodel.verifyOTPForRegistration(otp: Int(OTP) ?? 0000,completion: {
+            (tokenMsg: String) -> Void
+            in
+            if tokenMsg == ""{
+                print("Invalid credential or password")
+            }
+            else {
+                DispatchQueue.main.async {
+                    let storyboard = UIStoryboard.init(name: "RegisterPart2", bundle: Bundle.main)
+                    let personalDetailVc = storyboard.instantiateViewController(withIdentifier: "PersonalDetailsViewController") as? PersonalDetailsViewController
+                    self.navigationController?.pushViewController(personalDetailVc!, animated: true)
+                }
 
-}
-
-extension OTPVerifyViewController: UITextFieldDelegate {
+            }
+        })
+       
+    }
     
 }
+

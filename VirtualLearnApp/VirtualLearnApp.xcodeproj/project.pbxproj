@@ -23,12 +23,13 @@
 		8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2531DA2803FEF100256714 /* ProfileViewController.swift */; };
 		8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2531DC2804102100256714 /* CoursesDetailsCollectionViewCell.swift */; };
 		8B67F075280519080056CBD0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B67F074280519080056CBD0 /* EditProfileViewController.swift */; };
-		8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B12801869B00F7AD86 /* URL+Extension.swift */; };
-		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
-		8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */; };
-		8BEC30B8280186E000F7AD86 /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */; };
 		BA3D7B4128053A4E0092EDE1 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */; };
 		BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */; };
+		88C620BD28042963009DF70C /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C620BC28042963009DF70C /* PersonalDetailsViewController.swift */; };
+		8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B12801869B00F7AD86 /* URL+Extension.swift */; };
+		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
+		8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */; };
+		8BEC30B8280186E000F7AD86 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
@@ -76,12 +77,13 @@
 		8B2531DA2803FEF100256714 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8B2531DC2804102100256714 /* CoursesDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B67F074280519080056CBD0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		8BEC30B12801869B00F7AD86 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
-		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
-		8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterModel.swift; sourceTree = "<group>"; };
-		8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
 		BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		88C620BC28042963009DF70C /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
+		8BEC30B12801869B00F7AD86 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
+		8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				8827389D27FEAF4900423E14 /* Info.plist */,
 				F5C3166B27FF268F00F30001 /* Unfinished */,
 				F5C3166C27FFEE4400F30001 /* RegisterPart2.storyboard */,
+				88C620BC28042963009DF70C /* PersonalDetailsViewController.swift */,
 				F5C3166E2800064700F30001 /* CustomClasses */,
 				BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */,
 				BA657B442800483100A334B3 /* NewAccountViewController.swift */,
@@ -180,8 +183,8 @@
 				8BEC30B12801869B00F7AD86 /* URL+Extension.swift */,
 				88560C1C280190D500094EB1 /* URLRequest+Extension.swift */,
 				8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */,
-				8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */,
-				8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */,
+				8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */,
+				8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -323,10 +326,10 @@
 				BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
 				8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */,
-				8BEC30B8280186E000F7AD86 /* LoginRegisterViewModel.swift in Sources */,
 				BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */,
-				8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */,
 				BA3D7B4128053A4E0092EDE1 /* NotificationsViewController.swift in Sources */,
+				8BEC30B8280186E000F7AD86 /* RegisterViewModel.swift in Sources */,
+				8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */,
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
 				F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */,
@@ -342,6 +345,7 @@
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
 				F5C31674280006B100F30001 /* CustomViews.swift in Sources */,
+				88C620BD28042963009DF70C /* PersonalDetailsViewController.swift in Sources */,
 				8827389027FEAF4800423E14 /* AppDelegate.swift in Sources */,
 				8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */,
 				F57499D12803EA5C00695C3B /* NSAttributedString+Extention.swift in Sources */,
