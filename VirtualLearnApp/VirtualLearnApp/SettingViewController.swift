@@ -8,22 +8,28 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-
+    @IBOutlet weak var privacySettingsView: UIView!
+    @IBOutlet weak var termsOfServiceView: UIView!
+    @IBOutlet weak var extendedSettingsContainerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        extendedSettingsContainerView.isHidden = true
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func openNavigationSettings(_ sender: Any) {
+        privacySettingsView.isHidden = true
+        termsOfServiceView.isHidden = true
+        extendedSettingsContainerView.isHidden = false
+        
     }
-    */
-
+    @IBAction func openNavigationSettingsSymbolClicked(_ sender: Any) {
+        privacySettingsView.isHidden = true
+        termsOfServiceView.isHidden = true
+        extendedSettingsContainerView.isHidden = false
+        
+    }
+    
 }

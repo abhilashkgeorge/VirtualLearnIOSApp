@@ -27,10 +27,15 @@
 		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
 		8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */; };
 		8BEC30B8280186E000F7AD86 /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */; };
+		BA3D7B4128053A4E0092EDE1 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */; };
+		BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
 		BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */; };
+		BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B67328043E270020F6CE /* SettingsContainerView.swift */; };
+		BAB1B679280477D30020F6CE /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB1B678280477D30020F6CE /* Notifications.storyboard */; };
+		BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B685280492D20020F6CE /* CustomImageView.swift */; };
 		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
 		F57499C72802A6D000695C3B /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = F57499C42802A6D000695C3B /* AvenirLTStd-Roman.otf */; };
 		F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499CA2803111500695C3B /* UIFont+Extention.swift */; };
@@ -75,10 +80,15 @@
 		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
 		8BEC30B5280186CF00F7AD86 /* LoginRegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterModel.swift; sourceTree = "<group>"; };
 		8BEC30B7280186E000F7AD86 /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
+		BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyViewController.swift; sourceTree = "<group>"; };
+		BAB1B67328043E270020F6CE /* SettingsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerView.swift; sourceTree = "<group>"; };
+		BAB1B678280477D30020F6CE /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+		BAB1B685280492D20020F6CE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
 		F57499C42802A6D000695C3B /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
 		F57499CA2803111500695C3B /* UIFont+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extention.swift"; sourceTree = "<group>"; };
@@ -138,12 +148,10 @@
 				8827389327FEAF4800423E14 /* OnboardingViewController.swift */,
 				8827389527FEAF4800423E14 /* Main.storyboard */,
 				8827389827FEAF4900423E14 /* Assets.xcassets */,
-				BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */,
 				88A17E2527FEEA1800CD1328 /* Login.storyboard */,
 				88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */,
 				8842ADB628007EB3009C7F3D /* WelcomeBackViewController.swift */,
 				8842ADB928007EC8009C7F3D /* CreateNewPasswordViewController.swift */,
-				BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */,
 				8827389A27FEAF4900423E14 /* LaunchScreen.storyboard */,
 				8827389D27FEAF4900423E14 /* Info.plist */,
 				F5C3166B27FF268F00F30001 /* Unfinished */,
@@ -156,6 +164,12 @@
 				8B2531DA2803FEF100256714 /* ProfileViewController.swift */,
 				8B2531DC2804102100256714 /* CoursesDetailsCollectionViewCell.swift */,
 				8B67F074280519080056CBD0 /* EditProfileViewController.swift */,
+				BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */,
+				BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */,
+				BAB1B67328043E270020F6CE /* SettingsContainerView.swift */,
+				BAB1B678280477D30020F6CE /* Notifications.storyboard */,
+				BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */,
+				BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */,
 			);
 			path = VirtualLearnApp;
 			sourceTree = "<group>";
@@ -198,6 +212,7 @@
 				F5C316712800069C00F30001 /* CustomTextFeilds.swift */,
 				F5C31673280006B100F30001 /* CustomViews.swift */,
 				88A17E3027FEF91E00CD1328 /* CustomButtons.swift */,
+				BAB1B685280492D20020F6CE /* CustomImageView.swift */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -291,6 +306,7 @@
 				F5C7ED3428029FAE00134409 /* proxima_nova_bold.ttf in Resources */,
 				F5C3166D27FFEE4400F30001 /* RegisterPart2.storyboard in Resources */,
 				8B2531D92803FC3D00256714 /* ProfileStoryboard.storyboard in Resources */,
+				BAB1B679280477D30020F6CE /* Notifications.storyboard in Resources */,
 				8827389727FEAF4800423E14 /* Main.storyboard in Resources */,
 				BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */,
 			);
@@ -304,10 +320,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */,
+				BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
 				8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */,
 				8BEC30B8280186E000F7AD86 /* LoginRegisterViewModel.swift in Sources */,
+				BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */,
 				8BEC30B6280186CF00F7AD86 /* LoginRegisterModel.swift in Sources */,
+				BA3D7B4128053A4E0092EDE1 /* NotificationsViewController.swift in Sources */,
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
 				F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */,
@@ -321,6 +340,7 @@
 				8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */,
 				8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
+				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
 				F5C31674280006B100F30001 /* CustomViews.swift in Sources */,
 				8827389027FEAF4800423E14 /* AppDelegate.swift in Sources */,
 				8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */,

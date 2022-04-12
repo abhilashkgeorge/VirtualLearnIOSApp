@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FgP-mN-tYB">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notifications View Controller-->
+        <scene sceneID="Fpy-Bf-Zvt">
+            <objects>
+                <viewController storyboardIdentifier="NotificationsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FgP-mN-tYB" customClass="NotificationsViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jl3-eF-f13">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-CB-V04" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="142" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h2w-Iy-dAE">
+                                <rect key="frame" x="0.0" y="82" width="375" height="585"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationCell" rowHeight="114" id="rlp-p1-5RU" customClass="NotificationCell" customModule="VirtualLearnApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="114"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rlp-p1-5RU" id="nSX-oI-La2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_notify message_dp1" translatesAutoresizingMaskIntoConstraints="NO" id="y56-Pn-5wN" customClass="NotificationImageView" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                    <rect key="frame" x="24" y="22" width="34" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="PSe-yR-3LZ"/>
+                                                        <constraint firstAttribute="width" constant="34" id="wJ1-PD-cfQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You scored 80% in Chapter 3 - Setting up a new project, of Course - Learn Figma - UI/UX Design Essential Training." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N19-zM-v5R" customClass="NotificationMessageLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                    <rect key="frame" x="72" y="20" width="257" height="50.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 min ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfP-Tt-NlG" customClass="NotificationTimeLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                    <rect key="frame" x="72" y="78.5" width="55.5" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHU-bc-oSW" customClass="UnopenedNotificationIndicator" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                    <rect key="frame" x="349" y="54" width="6" height="6"/>
+                                                    <color key="backgroundColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="6" id="Z6w-MV-E1R"/>
+                                                        <constraint firstAttribute="width" constant="6" id="lAW-Ir-Jbk"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="N19-zM-v5R" firstAttribute="top" secondItem="nSX-oI-La2" secondAttribute="top" constant="20" id="3a2-hC-TDx"/>
+                                                <constraint firstItem="NfP-Tt-NlG" firstAttribute="top" secondItem="N19-zM-v5R" secondAttribute="bottom" constant="8" id="91w-HG-M1Z"/>
+                                                <constraint firstItem="y56-Pn-5wN" firstAttribute="leading" secondItem="nSX-oI-La2" secondAttribute="leading" constant="24" id="Gzy-mL-alf"/>
+                                                <constraint firstItem="y56-Pn-5wN" firstAttribute="top" secondItem="nSX-oI-La2" secondAttribute="top" constant="22" id="PIj-4c-vIk"/>
+                                                <constraint firstAttribute="trailing" secondItem="N19-zM-v5R" secondAttribute="trailing" constant="46" id="WyX-7K-Kfy"/>
+                                                <constraint firstItem="zHU-bc-oSW" firstAttribute="centerY" secondItem="nSX-oI-La2" secondAttribute="centerY" id="Yuc-N3-Lgt"/>
+                                                <constraint firstItem="N19-zM-v5R" firstAttribute="leading" secondItem="y56-Pn-5wN" secondAttribute="trailing" constant="14" id="hfw-D0-Am0"/>
+                                                <constraint firstAttribute="trailing" secondItem="zHU-bc-oSW" secondAttribute="trailing" constant="20" id="nvg-P4-Z99"/>
+                                                <constraint firstItem="NfP-Tt-NlG" firstAttribute="leading" secondItem="nSX-oI-La2" secondAttribute="leading" constant="72" id="oHn-8G-ZLp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="notificationTimeLabel" destination="NfP-Tt-NlG" id="qag-XI-j2e"/>
+                                            <outlet property="notifyImageView" destination="y56-Pn-5wN" id="alw-eV-5EL"/>
+                                            <outlet property="notifyMessageLabel" destination="N19-zM-v5R" id="tXL-YA-mYA"/>
+                                            <outlet property="unopenedIndication" destination="zHU-bc-oSW" id="LlW-av-S0i"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ib8-n1-8lY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h2w-Iy-dAE" firstAttribute="trailing" secondItem="Ib8-n1-8lY" secondAttribute="trailing" id="0Ka-dE-sdF"/>
+                            <constraint firstItem="kLf-CB-V04" firstAttribute="top" secondItem="Ib8-n1-8lY" secondAttribute="top" constant="20" id="8qP-9y-EXI"/>
+                            <constraint firstItem="kLf-CB-V04" firstAttribute="leading" secondItem="Ib8-n1-8lY" secondAttribute="leading" constant="20" id="cBH-Fy-bLe"/>
+                            <constraint firstItem="h2w-Iy-dAE" firstAttribute="top" secondItem="kLf-CB-V04" secondAttribute="bottom" constant="30" id="hXr-sH-Fb7"/>
+                            <constraint firstItem="h2w-Iy-dAE" firstAttribute="leading" secondItem="Ib8-n1-8lY" secondAttribute="leading" id="qCI-QN-eHE"/>
+                            <constraint firstItem="h2w-Iy-dAE" firstAttribute="bottom" secondItem="Ib8-n1-8lY" secondAttribute="bottom" id="uoo-Bv-hVJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="h2w-Iy-dAE" id="BBO-tH-hN5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6VN-04-Hfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399.19999999999999" y="164.16791604197903"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_notify message_dp1" width="34" height="34"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
