@@ -29,8 +29,21 @@ class PersonalDetailsViewController: UIViewController {
             showToast()
         }
         else {
-            viewmodel.registerOfUser(fullname: personalDetailFullName.text ?? "AnushaM", username: personalDetailUsername.text ?? "Anusha", email: personalDetailEmail.text ?? "anu@gmail.com", password: personalDetailPassword.text ?? "anusha", confirmpassword: personalDetailConfirmPassword.text ?? "anusha")
-            
+            viewmodel.registerOfUser(fullname: personalDetailFullName.text ?? "AnushaM", username: personalDetailUsername.text ?? "Anusha", email: personalDetailEmail.text ?? "anu@gmail.com", password: personalDetailPassword.text ?? "anusha", confirmpassword: personalDetailConfirmPassword.text ?? "anusha", completion: {
+                (successMsg: String) -> Void
+                    in
+                if successMsg == "Account created" {
+                    DispatchQueue.main.async {
+                        let storyboard = UIStoryboard.init(name: "RegisterPart2", bundle: Bundle.main)
+                        let successVc = storyboard.instantiateViewController(withIdentifier: "RegisterSuccessViewController") as? RegisterSuccessViewController
+                        self.navigationController?.pushViewController(successVc!, animated: true)
+                    }
+                }
+                else {
+                    print("Registration not successful")
+                }
+            })
+
         }
     }
 }
@@ -38,7 +51,7 @@ extension PersonalDetailsViewController {
     
     func showToast() {
         
-        let toastView = UIView(frame: CGRect(x: 20, y: 255, width: 327, height: 5))
+        let toastView = UIView(frame: CGRect(x: 20, y: 630, width: 327, height: 5))
         toastView.backgroundColor = UIColor.green.withAlphaComponent(0)
         
         let toastLabel = UILabel(frame: CGRect(x: 5, y: 1, width: 300, height: 20))

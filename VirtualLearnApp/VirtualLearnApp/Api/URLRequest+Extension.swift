@@ -10,6 +10,7 @@ import Foundation
 extension URLRequest {
     static var token: String = ""
     static var tokenForRegistration: String = ""
+    
     static func postRequestForSendOTPToRegisterAndUserLogin(url: URL,body: [String: String]) -> URLRequest {
         
         var request = URLRequest(url: url)
@@ -25,7 +26,7 @@ extension URLRequest {
         return request
     }
     
-    static func postRequestForVerifyOTPToRegister(url: URL,body: [String: Int]) -> URLRequest {
+    static func postRequestForVerifyOTPToRegister(url: URL,body: [String: String]) -> URLRequest {
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -35,7 +36,7 @@ extension URLRequest {
         } catch let error {
             print(error.localizedDescription)
         }
-        print("viewmodel:\(token)")
+        print("verifyotpToken:\(token)")
         request.setValue("jwt \(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         return request
@@ -51,7 +52,7 @@ extension URLRequest {
         } catch let error {
             print(error.localizedDescription)
         }
-        print("viewmodel:\(tokenForRegistration)")
+        print("verifyotpToken:\(tokenForRegistration)")
         request.setValue("jwt \(tokenForRegistration)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         return request

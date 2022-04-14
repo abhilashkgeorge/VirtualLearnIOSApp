@@ -70,7 +70,7 @@ class LoginRegisterNetworkManager {
             if let jsonResponse = jsonResponse as? [String: Any],
                let meta = jsonResponse["meta"] as? [String: Any],
                let code = meta["code"] as? Int {
-               // print(jsonResponse)
+                print(jsonResponse)
                 if code == 201 {
                     if let token = meta["token"] as? String {
                         print(token)
@@ -87,10 +87,10 @@ class LoginRegisterNetworkManager {
         task.resume()
     }
     
-    func verifyOTP(to otp: Int, completionHandler: @escaping (_ token: String?) -> Void) {
+    func verifyOTP(to otp: String, completionHandler: @escaping (_ token: String?) -> Void) {
        
         let url = URL.fetchURLForVerifyOTPToRegister()
-        let httpBody: [String: Int] = [
+        let httpBody: [String: String] = [
             
                 "otp": otp
         ]
@@ -149,8 +149,8 @@ class LoginRegisterNetworkManager {
                let meta = jsonResponse["meta"] as? [String: Any],
                let code = meta["code"] as? Int {
                 print(jsonResponse)
-                if code == 200 {
-                    if let token = meta["token"] as? String {
+                if code == 201 {
+                    if let token = meta["message"] as? String {
                         print(token)
                         completionHandler(token)
                     }else {

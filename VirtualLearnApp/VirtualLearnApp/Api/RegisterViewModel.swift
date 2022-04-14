@@ -24,8 +24,8 @@ class RegisterViewModel {
         })
     }
     
-    func verifyOTPForRegistration (otp: Int, completion: @escaping (_ tokenMsg: String) -> Void) {
-        
+    func verifyOTPForRegistration (otp: String, completion: @escaping (_ tokenMsg: String) -> Void) {
+        print("otpinvm:\(otp)")
         manager.verifyOTP(to: otp, completionHandler:
                 {
                      (json: String?) -> Void
@@ -37,12 +37,12 @@ class RegisterViewModel {
         })
     }
         
-    func registerOfUser(fullname: String, username: String, email: String, password: String, confirmpassword: String) {
+    func registerOfUser(fullname: String, username: String, email: String, password: String, confirmpassword: String,completion: @escaping (_ tokenMsg: String) -> Void) {
         manager.userRegistration(fullname: fullname, username: username, email: email, password: password, confirmpassword: confirmpassword, completionHandler: {
             (json: String?) -> Void
                 in
-                self.tokenAfterVerifingOtp = json ?? ""
-                print("Token:\(self.tokenAfterVerifingOtp)")
+            print("Message:\(String(describing: json))")
+            completion(json ?? "no message")
           
         })
     }

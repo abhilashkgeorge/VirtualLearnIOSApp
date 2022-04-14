@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -158,10 +157,9 @@
                                                     <constraint firstAttribute="height" constant="46" id="bRZ-2q-8kx"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Register"/>
                                                 <connections>
                                                     <action selector="rgisterButtonTapped:" destination="Ppe-Kj-aIp" eventType="touchUpInside" id="OPr-PR-MvW"/>
-                                                    <segue destination="XaM-V8-rE8" kind="push" id="ZM5-PU-X69"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -244,16 +242,16 @@
             </objects>
             <point key="canvasLocation" x="944.79999999999995" y="108.39580209895054"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Success View Controller-->
         <scene sceneID="9Aq-Tg-6BY">
             <objects>
-                <viewController id="XaM-V8-rE8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterSuccessViewController" id="XaM-V8-rE8" customClass="RegisterSuccessViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QiM-WR-fT4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dB-p6-TfM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-aq-BYC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -274,9 +272,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xg-sg-KDi">
-                                                <rect key="frame" x="164.5" y="693" width="46" height="30"/>
+                                                <rect key="frame" x="131" y="693" width="113" height="30"/>
                                                 <color key="tintColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Lets Get Started"/>
+                                                <connections>
+                                                    <action selector="letsGetStartedTapped:" destination="XaM-V8-rE8" eventType="touchUpInside" id="C2r-d2-aEx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -331,6 +331,9 @@
                                                 <rect key="frame" x="161.66666666666669" y="0.0" width="60" height="31"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                 <state key="normal" title="Register"/>
+                                                <connections>
+                                                    <action selector="loginRegisterTapped:" destination="GRq-N9-yBr" eventType="touchUpInside" id="Jus-oD-eF0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881A9EE92805CAE700384AC1 /* RegisterSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A9EE82805CAE700384AC1 /* RegisterSuccessViewController.swift */; };
 		8827389027FEAF4800423E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827388F27FEAF4800423E14 /* AppDelegate.swift */; };
 		8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827389127FEAF4800423E14 /* SceneDelegate.swift */; };
 		8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827389327FEAF4800423E14 /* OnboardingViewController.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		881A9EE82805CAE700384AC1 /* RegisterSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessViewController.swift; sourceTree = "<group>"; };
 		8827388C27FEAF4800423E14 /* VirtualLearnApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualLearnApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8827388F27FEAF4800423E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8827389127FEAF4800423E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,9 +202,10 @@
 		8B67F0782805911D0056CBD0 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				88C620BC28042963009DF70C /* PersonalDetailsViewController.swift */,
 				BA657B442800483100A334B3 /* NewAccountViewController.swift */,
 				BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */,
+				88C620BC28042963009DF70C /* PersonalDetailsViewController.swift */,
+				881A9EE82805CAE700384AC1 /* RegisterSuccessViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			files = (
 				88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */,
 				BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */,
+				881A9EE92805CAE700384AC1 /* RegisterSuccessViewController.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
 				8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */,
 				BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */,

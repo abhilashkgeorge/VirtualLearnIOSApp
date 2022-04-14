@@ -34,4 +34,10 @@ class WelcomeBackViewController: UIViewController {
             }
         })
     }
+    
+    @IBAction func loginRegisterTapped(_ sender: Any){
+        let NewAccountstoryboard = UIStoryboard.init(name: "NewAccount", bundle: Bundle.main)
+        let registerVC = NewAccountstoryboard.instantiateViewController(identifier: "NewAccountViewController") as? NewAccountViewController
+        self.navigationController?.pushViewController(registerVC!, animated: true)
+    }
 }
