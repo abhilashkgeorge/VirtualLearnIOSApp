@@ -18,6 +18,7 @@ class LoginViewModel {
                          in
                     self.commonTokenAfterLogin = json ?? ""
                     print("Token:\(self.commonTokenAfterLogin)")
+                    URLRequest.commonToken = self.commonTokenAfterLogin
                     completion(self.commonTokenAfterLogin)
         })
     }

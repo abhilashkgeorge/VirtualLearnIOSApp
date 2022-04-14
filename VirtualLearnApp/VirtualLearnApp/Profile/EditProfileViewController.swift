@@ -9,18 +9,28 @@ import UIKit
 
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-
     @IBOutlet weak var genderTableview: UITableView!
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
     
+    @IBOutlet weak var fullName: FloatingLabel!
+    @IBOutlet weak var userName: FloatingLabel!
+    @IBOutlet weak var email: FloatingLabel!
+    @IBOutlet weak var mobileNumber: FloatingLabel!
+    @IBOutlet weak var occupation: FloatingLabel!
+    @IBOutlet weak var dob: FloatingLabel!
+    @IBOutlet weak var twitterLink: FloatingLabel!
+    @IBOutlet weak var facebookLink: FloatingLabel!
+    
     let genderList = ["Male", "Female", "Other"]
+    var profileDetails = ProfileDataModel(fullName: "Anushree", userName: "anu@11", email: "anu@gmail.com", mobileNumber: "9876543211", occupation: "student", gender: "Female", dob: "01-Jan-2000", twitterLink: "", facebookLink: "", courses: 0, chapters: 0, tests: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         genderTableview.delegate = self
         genderTableview.dataSource = self
         genderTableview.isHidden = true
+        setDetails()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +54,6 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             animation(toogle: false)
         }
     }
-    
     
     @IBAction func changeImageTapped(_ sender: Any) {
         let image = UIImagePickerController()
@@ -73,6 +82,19 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             UIView.animate(withDuration: 0.3, animations: {})
             self.genderTableview.isHidden = true
         }
+    }
+    
+    func setDetails() {
+        
+        fullName.text = profileDetails.fullName
+        userName.text = profileDetails.userName
+        email.text = profileDetails.email
+        mobileNumber.text = profileDetails.mobileNumber
+        occupation.text = profileDetails.occupation
+        dob.text = profileDetails.dob
+        gender.text = profileDetails.gender
+        twitterLink.text = profileDetails.twitterLink
+        facebookLink.text = profileDetails.facebookLink
     }
 }
 
