@@ -25,6 +25,9 @@
 		8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2531DA2803FEF100256714 /* ProfileViewController.swift */; };
 		8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2531DC2804102100256714 /* CoursesDetailsCollectionViewCell.swift */; };
 		8B67F075280519080056CBD0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B67F074280519080056CBD0 /* EditProfileViewController.swift */; };
+		8B730B1D28067E4300D17EF2 /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B730B1C28067E4300D17EF2 /* ProfileDataModel.swift */; };
+		8B730B1F28068BBD00D17EF2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B730B1E28068BBD00D17EF2 /* ProfileViewModel.swift */; };
+		8B730B21280691FA00D17EF2 /* ProfileNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B730B20280691FA00D17EF2 /* ProfileNetworkManager.swift */; };
 		8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B12801869B00F7AD86 /* URL+Extension.swift */; };
 		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
 		8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */; };
@@ -85,6 +88,9 @@
 		8B2531DA2803FEF100256714 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8B2531DC2804102100256714 /* CoursesDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B67F074280519080056CBD0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		8B730B1C28067E4300D17EF2 /* ProfileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataModel.swift; sourceTree = "<group>"; };
+		8B730B1E28068BBD00D17EF2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		8B730B20280691FA00D17EF2 /* ProfileNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetworkManager.swift; sourceTree = "<group>"; };
 		8BEC30B12801869B00F7AD86 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
 		8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -247,6 +253,9 @@
 				8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */,
 				8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */,
 				8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */,
+				8B730B1C28067E4300D17EF2 /* ProfileDataModel.swift */,
+				8B730B1E28068BBD00D17EF2 /* ProfileViewModel.swift */,
+				8B730B20280691FA00D17EF2 /* ProfileNetworkManager.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -400,6 +409,7 @@
 				88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */,
 				BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */,
 				881A9EE92805CAE700384AC1 /* RegisterSuccessViewController.swift in Sources */,
+				8B730B21280691FA00D17EF2 /* ProfileNetworkManager.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
 				8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */,
 				BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */,
@@ -422,11 +432,13 @@
 				8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */,
 				8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
+				8B730B1D28067E4300D17EF2 /* ProfileDataModel.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
 				F5C31674280006B100F30001 /* CustomViews.swift in Sources */,
 				88C620BD28042963009DF70C /* PersonalDetailsViewController.swift in Sources */,
 				8827389027FEAF4800423E14 /* AppDelegate.swift in Sources */,
 				8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */,
+				8B730B1F28068BBD00D17EF2 /* ProfileViewModel.swift in Sources */,
 				F57499D12803EA5C00695C3B /* NSAttributedString+Extention.swift in Sources */,
 				F5C316722800069C00F30001 /* CustomTextFeilds.swift in Sources */,
 				8B67F075280519080056CBD0 /* EditProfileViewController.swift in Sources */,
