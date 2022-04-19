@@ -47,4 +47,20 @@ extension URL {
         }
         return url
     }
+    
+    static func fetchURLForEditProfile() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/editProfile") else {
+            fatalError("Error getting URL")
+        }
+        return url
+    }
+    
+    static func fetchURLForMyCourses() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myCourse") else {
+            fatalError("Error getting URL")
+        }
+        return url
+    }
 }

@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var occupation: UILabel!
     @IBOutlet weak var dob: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     
     var numberDetails = ["6", "102", "24"] {
         didSet {
@@ -29,8 +30,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var typeDetails = ["Courses", "Chapters", "Test"]
     var viewModel = ProfileViewModel()
-    var profileModel = ProfileDataModel(fullName: "", userName: "", email: "", mobileNumber: "", occupation: "", gender: "", dob: "", twitterLink: "", facebookLink: "", courses: 0, chapters: 0, tests: 0)
-    
+    var profileModel = ProfileDataModel(fullName: "", userName: "", email: "", mobileNumber: "", occupation: "", gender: "", dob: "", twitterLink: "", facebookLink: "", courses: 0, chapters: 0, tests: 0, profileImage: UIImage())
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         courseDetailsCollectionView.delegate = self
@@ -79,12 +80,14 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.phoneNumber.text = ProfileDataModel.mobileNumber
                 self.occupation.text = ProfileDataModel.occupation
                 self.dob.text = ProfileDataModel.dob
+                self.profileImage.image = ProfileDataModel.profileImage
                 self.numberDetails[0] = "\(ProfileDataModel.courses)"
                 self.numberDetails[1] = "\(ProfileDataModel.chapters)"
                 self.numberDetails[2] = "\(ProfileDataModel.tests)"
                 
                 self.profileModel.fullName = ProfileDataModel.fullName
                 self.profileModel.userName = ProfileDataModel.userName
+                self.profileModel.profileImage = ProfileDataModel.profileImage
                 self.profileModel.email = ProfileDataModel.email
                 self.profileModel.mobileNumber = ProfileDataModel.mobileNumber
                 self.profileModel.occupation = ProfileDataModel.occupation
@@ -103,6 +106,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let editProfileVc = storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as? EditProfileViewController
         editProfileVc?.profileDetails = profileModel
+        editProfileVc?.detailModification = self
         self.navigationController?.pushViewController(editProfileVc!, animated: true)
     }
 }
@@ -122,6 +126,15 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension ProfileViewController: Details {
+    
+    func passDetails(email: String, job: String, dob: String) {
+        self.email.text = email
+        self.occupation.text = job
+        self.dob.text = dob
     }
 }
 

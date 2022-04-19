@@ -46,22 +46,22 @@
                                                     <constraint firstAttribute="height" constant="260" id="CzF-1b-W0Y"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-7V-pEk">
-                                                <rect key="frame" x="24" y="74" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzz-Gq-IrJ">
-                                                <rect key="frame" x="20" y="125" width="74.5" height="26"/>
+                                                <rect key="frame" x="20" y="123" width="74.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="pwl-C9-hIL">
-                                                <rect key="frame" x="26" y="182" width="64" height="64"/>
+                                                <rect key="frame" x="26" y="180" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="EFb-pJ-bPi"/>
+                                                    <constraint firstAttribute="height" constant="64" id="emf-9q-dJb"/>
+                                                </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj3-hh-Vvr">
-                                                <rect key="frame" x="305" y="113" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj3-hh-Vvr">
+                                                <rect key="frame" x="333" y="113" width="18" height="22"/>
+                                                <state key="normal" image="icn_edit profile"/>
                                                 <connections>
                                                     <action selector="editProfileTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Eax-tY-yS4"/>
                                                 </connections>
@@ -276,9 +276,9 @@
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83s-Sr-p1J">
-                                                        <rect key="frame" x="269" y="13" width="46" height="30"/>
-                                                        <state key="normal" title="Button"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83s-Sr-p1J">
+                                                        <rect key="frame" x="307" y="17" width="8" height="22"/>
+                                                        <state key="normal" image="icn_privacy_go"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -305,13 +305,11 @@
                                             <constraint firstItem="RGz-ji-jk4" firstAttribute="top" secondItem="b4q-mG-eum" secondAttribute="bottom" constant="32" id="NV0-GT-SBb"/>
                                             <constraint firstItem="b4q-mG-eum" firstAttribute="leading" secondItem="7uF-Oh-Wzm" secondAttribute="leading" constant="24" id="NzF-BE-DBY"/>
                                             <constraint firstItem="b4q-mG-eum" firstAttribute="top" secondItem="JZJ-Dc-f5o" secondAttribute="bottom" constant="40" id="Pau-Jh-HMY"/>
-                                            <constraint firstItem="Mvh-7V-pEk" firstAttribute="leading" secondItem="7uF-Oh-Wzm" secondAttribute="leading" constant="24" id="Sqv-ZB-lNm"/>
                                             <constraint firstItem="VbE-M5-MPO" firstAttribute="top" secondItem="7uF-Oh-Wzm" secondAttribute="top" constant="193" id="Upy-6x-beU"/>
                                             <constraint firstItem="gj3-hh-Vvr" firstAttribute="top" secondItem="7uF-Oh-Wzm" secondAttribute="top" constant="113" id="W8v-aK-ntD"/>
                                             <constraint firstAttribute="trailing" secondItem="JZJ-Dc-f5o" secondAttribute="trailing" constant="24" id="Y1a-vp-iF1"/>
-                                            <constraint firstItem="pzz-Gq-IrJ" firstAttribute="top" secondItem="Mvh-7V-pEk" secondAttribute="bottom" constant="21" id="YtG-js-BtK"/>
-                                            <constraint firstItem="Mvh-7V-pEk" firstAttribute="top" secondItem="7uF-Oh-Wzm" secondAttribute="top" constant="74" id="Zek-2f-NyI"/>
                                             <constraint firstItem="VJw-iA-r7T" firstAttribute="top" secondItem="VbE-M5-MPO" secondAttribute="bottom" constant="7" id="cZx-bS-Yi5"/>
+                                            <constraint firstItem="pzz-Gq-IrJ" firstAttribute="top" secondItem="7uF-Oh-Wzm" secondAttribute="top" constant="123" id="feU-b1-oe6"/>
                                             <constraint firstItem="JZJ-Dc-f5o" firstAttribute="leading" secondItem="7uF-Oh-Wzm" secondAttribute="leading" constant="24" id="fvX-3O-xoP"/>
                                             <constraint firstItem="pwl-C9-hIL" firstAttribute="top" secondItem="pzz-Gq-IrJ" secondAttribute="bottom" constant="31" id="hq0-CZ-DRb"/>
                                             <constraint firstAttribute="trailing" secondItem="b4q-mG-eum" secondAttribute="trailing" constant="24" id="lkH-NO-U00"/>
@@ -352,6 +350,7 @@
                         <outlet property="occupation" destination="j2h-j7-PYD" id="imJ-cI-WfU"/>
                         <outlet property="phoneNumber" destination="hfA-Y5-fsY" id="CJg-ow-Ndd"/>
                         <outlet property="privacyView" destination="RGz-ji-jk4" id="a1H-Rz-NPw"/>
+                        <outlet property="profileImage" destination="pwl-C9-hIL" id="M9K-sY-nP0"/>
                         <outlet property="userName" destination="bp4-RY-LpM" id="1hP-qa-MF5"/>
                     </connections>
                 </viewController>
@@ -379,18 +378,18 @@
                                                     <constraint firstAttribute="height" constant="323" id="a7k-ly-XtS"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE6-9W-94p">
-                                                <rect key="frame" x="24" y="74" width="22" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE6-9W-94p">
+                                                <rect key="frame" x="24" y="74" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="W6r-ih-8qH"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" image="icn_back_white"/>
                                                 <connections>
                                                     <action selector="backButtonTapped:" destination="Web-Mf-5fc" eventType="touchUpInside" id="7h4-yS-t2O"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaj-5P-tqo">
-                                                <rect key="frame" x="20" y="124" width="129.5" height="26"/>
+                                                <rect key="frame" x="20" y="116" width="129.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -402,9 +401,9 @@
                                                     <constraint firstAttribute="width" constant="118" id="kJS-fj-uQg"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cey-nr-Ue5">
-                                                <rect key="frame" x="221" y="261" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cey-nr-Ue5">
+                                                <rect key="frame" x="221" y="261" width="30" height="30"/>
+                                                <state key="normal" image="icn_change profilepic"/>
                                                 <connections>
                                                     <action selector="changeImageTapped:" destination="Web-Mf-5fc" eventType="touchUpInside" id="vLN-xb-PJm"/>
                                                 </connections>
@@ -580,6 +579,9 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="Web-Mf-5fc" eventType="touchUpInside" id="xEz-v8-RlJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-iM-s08">
                                                 <rect key="frame" x="311" y="724" width="46" height="30"/>
@@ -736,7 +738,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icn_back_white" width="22" height="14"/>
+        <image name="icn_change profilepic" width="30" height="30"/>
+        <image name="icn_edit profile" width="18" height="18"/>
         <image name="icn_privacy" width="40" height="40"/>
+        <image name="icn_privacy_go" width="8" height="14"/>
         <image name="img_profile change" width="118" height="118"/>
         <image name="img_profiledetails_bg" width="375" height="260"/>
         <image name="img_profilepic" width="64" height="64"/>

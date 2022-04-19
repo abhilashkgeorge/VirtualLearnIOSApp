@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol Details {
+    func passDetails(email: String, job: String, dob: String)
+}
+
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var genderTableview: UITableView!
@@ -23,7 +27,9 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var facebookLink: FloatingLabel!
     
     let genderList = ["Male", "Female", "Other"]
-    var profileDetails = ProfileDataModel(fullName: "Anushree", userName: "anu@11", email: "anu@gmail.com", mobileNumber: "9876543211", occupation: "student", gender: "Female", dob: "01-Jan-2000", twitterLink: "", facebookLink: "", courses: 0, chapters: 0, tests: 0)
+    var profileDetails = ProfileDataModel(fullName: "Anushree", userName: "anu@11", email: "anu@gmail.com", mobileNumber: "9876543211", occupation: "student", gender: "Female", dob: "01-Jan-2000", twitterLink: "", facebookLink: "", courses: 0, chapters: 0, tests: 0, profileImage: UIImage())
+    var detailModification: Details?
+    var viewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +50,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
+        detailModification?.passDetails(email: email.text ?? "Email modification failed", job: occupation.text ?? "Occupation change failed", dob: dob.text ?? "DOB change failed")
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -88,6 +95,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         
         fullName.text = profileDetails.fullName
         userName.text = profileDetails.userName
+        profileImage.image = profileDetails.profileImage
         email.text = profileDetails.email
         mobileNumber.text = profileDetails.mobileNumber
         occupation.text = profileDetails.occupation
@@ -95,6 +103,21 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         gender.text = profileDetails.gender
         twitterLink.text = profileDetails.twitterLink
         facebookLink.text = profileDetails.facebookLink
+
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        
+        viewModel.editUserProfile(email: email.text ?? "", occupation: occupation.text ?? "", gender: gender.text ?? "", dob: dob.text ?? "", twitterLink: twitterLink.text ?? "", facebookLink: facebookLink.text ?? "", completionHandler: {
+            (successMessage: String) -> Void
+            in
+            
+            if successMessage == "Profile updated successfully" {
+                print("Profile updated")
+            } else {
+                print("Profile updation failed")
+            }
+        })
     }
 }
 
