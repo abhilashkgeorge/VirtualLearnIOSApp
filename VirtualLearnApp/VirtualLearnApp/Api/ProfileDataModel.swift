@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ProfileDataModel {
     
@@ -21,8 +22,9 @@ class ProfileDataModel {
     var courses: Int
     var chapters: Int
     var tests: Int
+    var profileImage: UIImage
     
-    init(fullName: String, userName: String, email: String, mobileNumber: String, occupation: String, gender: String, dob: String, twitterLink: String, facebookLink: String, courses: Int, chapters: Int, tests: Int) {
+    init(fullName: String, userName: String, email: String, mobileNumber: String, occupation: String, gender: String, dob: String, twitterLink: String, facebookLink: String, courses: Int, chapters: Int, tests: Int, profileImage: UIImage) {
         
         self.fullName = fullName
         self.userName = userName
@@ -36,5 +38,6 @@ class ProfileDataModel {
         self.courses = courses
         self.chapters = chapters
         self.tests = tests
+        self.profileImage = profileImage
     }
 }

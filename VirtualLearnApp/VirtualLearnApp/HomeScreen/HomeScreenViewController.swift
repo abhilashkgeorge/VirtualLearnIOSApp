@@ -12,7 +12,10 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
     @IBOutlet weak var sideMenuView: UIView!
     
+    var viewModel = MyCoursesViewModel()
+    
     @IBOutlet weak var hamburgerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
@@ -41,10 +44,13 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func myCourseBtn(_ sender: Any) {
+        let myCoursesStoryboard = UIStoryboard.init(name: "MyCourses", bundle: Bundle.main)
+        let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "OngoingAndCompletedViewController") as? OngoingAndCompletedViewController
+        self.navigationController?.pushViewController(myCoursesVC!, animated: true)
     }
     
     @IBAction func myProfileBtn(_ sender: Any) {
-        let profileStoryboard = UIStoryboard.init(name: "ProfileStoryboard", bundle: Bundle.main)
+        let profileStoryboard = UIStoryboard.init(name: "Profile", bundle: Bundle.main)
         let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
         self.navigationController?.pushViewController(profileVC!, animated: true)
     }

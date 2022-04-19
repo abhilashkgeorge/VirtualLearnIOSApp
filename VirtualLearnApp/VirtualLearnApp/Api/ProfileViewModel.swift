@@ -6,12 +6,16 @@
 //
 
 import Foundation
+import UIKit
 
 class ProfileViewModel {
     
     let manager = ProfileNetworkManager()
+    let imageApi = ApiImage()
     
     func profileSerialization(json: Any) -> ProfileDataModel {
+        
+        var picture = UIImage()
         
         let newJson = json as? [String: AnyObject]
         let name = newJson!["fullName"] as? String ?? "no name"
@@ -26,8 +30,13 @@ class ProfileViewModel {
         let coursesCompleted = newJson!["course"] as? Int ?? 0
         let chaptersCompleted = newJson!["chapters"] as? Int ?? 0
         let testsCompleted = newJson!["testCompleted"] as? Int ?? 0
+        let profilePic = newJson!["profilePicture"] as? String ?? "no image"
         
-        let profile = ProfileDataModel(fullName: name, userName: username, email: emailID, mobileNumber: mobilenumber, occupation: occupation, gender: gender, dob: dob, twitterLink: twitterlink, facebookLink: facebooklink, courses: coursesCompleted, chapters: chaptersCompleted, tests: testsCompleted)
+        imageApi.getImgFromApi(url: profilePic) { (image) in
+            picture = image
+        }
+        
+        let profile = ProfileDataModel(fullName: name, userName: username, email: emailID, mobileNumber: mobilenumber, occupation: occupation, gender: gender, dob: dob, twitterLink: twitterlink, facebookLink: facebooklink, courses: coursesCompleted, chapters: chaptersCompleted, tests: testsCompleted, profileImage: picture)
         
         return profile
     }
@@ -41,5 +50,17 @@ class ProfileViewModel {
                                     completionHandler(details)
                                 }
         )
+    }
+    
+    func editUserProfile(email: String, occupation: String, gender: String, dob: String, twitterLink: String, facebookLink: String, completionHandler: @escaping (_ successMessage: String) -> Void) {
+        
+        manager.editProfile(email: email, occupation: occupation, gender: gender, dob: dob, twitterLink: twitterLink, facebookLink: facebookLink, completionHandler: {
+            
+            (json: String?) -> Void
+                in
+            print("Message:\(String(describing: json))")
+            completionHandler(json ?? "no message")
+          
+        })
     }
 }
