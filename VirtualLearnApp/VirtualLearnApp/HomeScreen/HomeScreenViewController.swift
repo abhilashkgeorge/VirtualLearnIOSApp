@@ -92,8 +92,10 @@ class HomeScreenViewController: UIViewController {
 extension HomeScreenViewController: UISearchBarDelegate {
     
     @objc func searchItemTapped() {
-      
-        }
+        let searchStoryboard = UIStoryboard.init(name: "SearchStoryboard", bundle: Bundle.main)
+        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        self.navigationController?.pushViewController(searchVC!, animated: true)
+    }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         hideSearch()

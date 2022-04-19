@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880823F1280A828700152B3A /* SearchCourseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880823F0280A828700152B3A /* SearchCourseDataModel.swift */; };
+		880823F4280A82A200152B3A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880823F3280A82A200152B3A /* SearchViewModel.swift */; };
+		880823F7280A82B800152B3A /* SearchNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880823F6280A82B800152B3A /* SearchNetworkManager.swift */; };
 		881A9EE92805CAE700384AC1 /* RegisterSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A9EE82805CAE700384AC1 /* RegisterSuccessViewController.swift */; };
 		8827389027FEAF4800423E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827388F27FEAF4800423E14 /* AppDelegate.swift */; };
 		8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827389127FEAF4800423E14 /* SceneDelegate.swift */; };
@@ -21,6 +24,7 @@
 		88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */; };
 		88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E3027FEF91E00CD1328 /* CustomButtons.swift */; };
 		88C620BD28042963009DF70C /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C620BC28042963009DF70C /* PersonalDetailsViewController.swift */; };
+		88F9F141280B1558003A7FF9 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F9F140280B1558003A7FF9 /* SearchResultTableViewCell.swift */; };
 		8B2531D92803FC3D00256714 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2531D82803FC3D00256714 /* ProfileStoryboard.storyboard */; };
 		8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2531DA2803FEF100256714 /* ProfileViewController.swift */; };
 		8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2531DC2804102100256714 /* CoursesDetailsCollectionViewCell.swift */; };
@@ -68,6 +72,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880823F0280A828700152B3A /* SearchCourseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCourseDataModel.swift; sourceTree = "<group>"; };
+		880823F3280A82A200152B3A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		880823F6280A82B800152B3A /* SearchNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkManager.swift; sourceTree = "<group>"; };
 		881A9EE82805CAE700384AC1 /* RegisterSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessViewController.swift; sourceTree = "<group>"; };
 		8827388C27FEAF4800423E14 /* VirtualLearnApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualLearnApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8827388F27FEAF4800423E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 		88A17E2C27FEEC1200CD1328 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		88A17E3027FEF91E00CD1328 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		88C620BC28042963009DF70C /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
+		88F9F140280B1558003A7FF9 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		8B2531D82803FC3D00256714 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		8B2531DA2803FEF100256714 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8B2531DC2804102100256714 /* CoursesDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -287,6 +295,10 @@
 			children = (
 				F5C3166727FEBD4A00F30001 /* SearchViewController.swift */,
 				F5C3166527FEBCDA00F30001 /* SearchStoryboard.storyboard */,
+				880823F3280A82A200152B3A /* SearchViewModel.swift */,
+				880823F6280A82B800152B3A /* SearchNetworkManager.swift */,
+				88F9F140280B1558003A7FF9 /* SearchResultTableViewCell.swift */,
+				880823F0280A828700152B3A /* SearchCourseDataModel.swift */,
 			);
 			path = Unfinished;
 			sourceTree = "<group>";
@@ -419,18 +431,22 @@
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
 				F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */,
+				880823F1280A828700152B3A /* SearchCourseDataModel.swift in Sources */,
 				F57499E82804585600695C3B /* HomeScreenCollectionViewCell.swift in Sources */,
 				BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */,
 				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
 				88560C1D280190D500094EB1 /* URLRequest+Extension.swift in Sources */,
+				880823F7280A82B800152B3A /* SearchNetworkManager.swift in Sources */,
 				F57499EA2804587C00695C3B /* HomeScreenTableViewCell.swift in Sources */,
 				8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */,
+				88F9F141280B1558003A7FF9 /* SearchResultTableViewCell.swift in Sources */,
 				8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,
 				F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */,
 				F57499EC280560A600695C3B /* HomeScreenViewController.swift in Sources */,
 				8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */,
 				8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */,
+				880823F4280A82A200152B3A /* SearchViewModel.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
 				8B730B1D28067E4300D17EF2 /* ProfileDataModel.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,

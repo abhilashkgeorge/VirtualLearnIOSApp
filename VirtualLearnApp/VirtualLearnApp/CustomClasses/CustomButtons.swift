@@ -142,3 +142,76 @@ class OrangeColorButton: UIButton {
     
     }
 }
+
+class YellowButton: UIButton {
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setupYellowButton()
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setupYellowButton()
+    }
+    
+    func setupYellowButton() -> Void {
+        
+   //     self.titleLabel?.font = UIFont(name: "proxima_nova_medium", size: 12.8)
+        self.setTitleColor(UIColor(red:0.22, green:0.22, blue:0.22, alpha:1), for: .normal)
+        self.backgroundColor = UIColor(red:0.99, green:0.75, blue:0.29, alpha:1)
+        self.layer.cornerRadius = 4
+    }
+}
+
+class SearchCategoryButton: UIButton {
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setupSearchCategoryButton()
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setupSearchCategoryButton()
+    }
+
+    func setupSearchCategoryButton() -> Void {
+        
+    //    self.titleLabel?.font = UIFont(name: "proxima_nova_medium", size: 8)
+        self.setTitleColor(UIColor(red:0.17, green:0.17, blue:0.17, alpha:1), for: .normal)
+        self.layer.cornerRadius = 6
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.gray.cgColor
+        self.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+    }
+}
+
+class ClearAllButton: UIButton {
+    
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setup()
+
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setup()
+    }
+    
+    
+    func setup() -> Void {
+
+        self.layer.cornerRadius = 6
+        self.layer.borderWidth = 1.5
+        self.layer.borderColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1).cgColor
+        self.titleLabel?.font = UIFont(name: "ProximaNova-Semibold", size: 16)
+
+    }
+}

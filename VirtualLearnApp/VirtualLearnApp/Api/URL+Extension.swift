@@ -47,4 +47,12 @@ extension URL {
         }
         return url
     }
+    
+    static func fetchURLForSearch() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/search") else {
+            fatalError("Error getting URL")
+        }
+        return url
+    }
 }

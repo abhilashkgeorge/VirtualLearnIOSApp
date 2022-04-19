@@ -92,3 +92,43 @@ class NotificationTimeLabel: UILabel {
     }
 
 }
+
+class SearchScreenLabel: UILabel {
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setupSearchScreenLabel()
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setupSearchScreenLabel()
+    }
+    
+    func setupSearchScreenLabel() -> Void {
+        self.textColor = UIColor(red:0.17, green:0.17, blue:0.17, alpha:1)
+        self.font = UIFont(name: "Proxima-Nova-Sbold", size: 18)
+
+    }
+}
+
+class SearchScreenDurationLabel: UILabel {
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        setupSearchScreenDurationLabel()
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        super.init(coder: coder)
+        setupSearchScreenDurationLabel()
+    }
+    
+    func setupSearchScreenDurationLabel() {
+        self.textColor = UIColor(red:0.17, green:0.17, blue:0.17, alpha:1)
+        self.font = UIFont(name: "proxima_nova_bold", size: 18)
+
+    }
+}
