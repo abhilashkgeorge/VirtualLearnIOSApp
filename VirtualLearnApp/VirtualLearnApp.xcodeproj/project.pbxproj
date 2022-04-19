@@ -56,6 +56,11 @@
 		BAB1B679280477D30020F6CE /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB1B678280477D30020F6CE /* Notifications.storyboard */; };
 		BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B685280492D20020F6CE /* CustomImageView.swift */; };
 		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
+		F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5315C50280E9D4800C81290 /* OverviewScreenController.swift */; };
+		F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836A28081F0000A32D52 /* HomeNetworkManager.swift */; };
+		F553836D28082E0100A32D52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836C28082E0100A32D52 /* HomeViewModel.swift */; };
+		F553836F280837B800A32D52 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836E280837B800A32D52 /* HomeModel.swift */; };
+		F55383722808907F00A32D52 /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55383712808907F00A32D52 /* Overview.storyboard */; };
 		F57499C72802A6D000695C3B /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = F57499C42802A6D000695C3B /* AvenirLTStd-Roman.otf */; };
 		F57499CB2803111500695C3B /* UIFont+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499CA2803111500695C3B /* UIFont+Extention.swift */; };
 		F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57499CC2803115600695C3B /* UIColor+Extention.swift */; };
@@ -133,6 +138,11 @@
 		BAB1B678280477D30020F6CE /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		BAB1B685280492D20020F6CE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
+		F5315C50280E9D4800C81290 /* OverviewScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreenController.swift; sourceTree = "<group>"; };
+		F553836A28081F0000A32D52 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
+		F553836C28082E0100A32D52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F553836E280837B800A32D52 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		F55383712808907F00A32D52 /* Overview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overview.storyboard; sourceTree = "<group>"; };
 		F57499C42802A6D000695C3B /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
 		F57499CA2803111500695C3B /* UIFont+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extention.swift"; sourceTree = "<group>"; };
 		F57499CC2803115600695C3B /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
@@ -195,6 +205,7 @@
 				8B67F0782805911D0056CBD0 /* Register */,
 				8B67F077280590FB0056CBD0 /* Login */,
 				8B67F076280590630056CBD0 /* Storyboards */,
+				F55383702808904E00A32D52 /* OverviewScreen */,
 				F57499D62803FFDA00695C3B /* HomeScreen */,
 				F57499C9280310ED00695C3B /* Extentions */,
 				F5C7ED2528029F9100134409 /* Fonts */,
@@ -306,6 +317,15 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		F55383702808904E00A32D52 /* OverviewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F55383712808907F00A32D52 /* Overview.storyboard */,
+				F5315C50280E9D4800C81290 /* OverviewScreenController.swift */,
+			);
+			path = OverviewScreen;
+			sourceTree = "<group>";
+		};
 		F57499C9280310ED00695C3B /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +344,9 @@
 				F57499EB280560A600695C3B /* HomeScreenViewController.swift */,
 				F57499E72804585600695C3B /* HomeScreenCollectionViewCell.swift */,
 				F57499E92804587C00695C3B /* HomeScreenTableViewCell.swift */,
+				F553836A28081F0000A32D52 /* HomeNetworkManager.swift */,
+				F553836C28082E0100A32D52 /* HomeViewModel.swift */,
+				F553836E280837B800A32D52 /* HomeModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -426,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55383722808907F00A32D52 /* Overview.storyboard in Resources */,
 				F57499CF28033EE200695C3B /* Proxima-Nova-Sbold.otf in Resources */,
 				8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */,
 				F5C7ED3328029FAE00134409 /* proxima_nova_regular.otf in Resources */,
@@ -485,12 +509,15 @@
 				8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */,
 				88F9F141280B1558003A7FF9 /* SearchResultTableViewCell.swift in Sources */,
 				8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */,
+				F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,
+				F553836D28082E0100A32D52 /* HomeViewModel.swift in Sources */,
 				F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */,
 				F57499EC280560A600695C3B /* HomeScreenViewController.swift in Sources */,
 				8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */,
 				8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */,
 				880823F4280A82A200152B3A /* SearchViewModel.swift in Sources */,
+				F553836F280837B800A32D52 /* HomeModel.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
 				8B730B1D28067E4300D17EF2 /* ProfileDataModel.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
@@ -508,6 +535,7 @@
 				8B6DBFBE280976F20064677C /* MyCoursesNetworkManager.swift in Sources */,
 				BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */,
 				F57499EE280564F700695C3B /* UIImage+Extention.swift in Sources */,
+				F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

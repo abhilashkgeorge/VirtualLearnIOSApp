@@ -5,12 +5,13 @@
 //  Created by Abhilash k George on 12/04/22.
 //
 
+
 import UIKit
-
 class HomeScreenViewController: UIViewController {
-
+    
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
     @IBOutlet weak var sideMenuView: UIView!
+    @IBOutlet weak var homeScreenTableview: UITableView!
     
     var viewModel = MyCoursesViewModel()
     
@@ -18,10 +19,12 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.homeScreenTableview.separatorStyle = .none
         configureNavigationBar()
-
-        // Do any additional setup after loading the view.
+        homeScreenTableview.delegate = self
+        homeScreenTableview.dataSource = self
     }
+    
     
     func configureNavigationBar() {
         navigationController?.navigationBar.tintColor = .white
@@ -33,8 +36,6 @@ class HomeScreenViewController: UIViewController {
             UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.HamburgerMenu.rawValue), style: .done, target: self, action: #selector(hamburgerButtonPressed))
         ]
     }
-    
-    
     //MARK: OUTLETS
     
     @IBAction func homeBtnTapped(_ sender: Any) {
@@ -81,9 +82,9 @@ class HomeScreenViewController: UIViewController {
     func animateView() {
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded() })
-        
         navigationItem.leftBarButtonItems = []
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch? = touches.first
         if touch?.view != sideMenuView {
@@ -92,6 +93,58 @@ class HomeScreenViewController: UIViewController {
                 self.view.layoutIfNeeded()
             })
         }
+    }
+}
+
+extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "firstTableCell") as! HomeScreenTableViewCell
+            cell.configureCells(indexPath: indexPath.row)
+            return cell
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "secondTableCell") as! HomeScreenTableViewCell
+            cell.contentView.backgroundColor = .white
+            cell.configureCells(indexPath: indexPath.row)
+            return cell
+        }
+        else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "thirdTableCell") as! HomeScreenTableViewCell
+            cell.configureCells(indexPath: indexPath.row)
+            return cell
+        } else if indexPath.row >= 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "fourthTableCell") as! HomeScreenTableViewCell
+            cell.contentView.backgroundColor = .white
+            cell.configureCells(indexPath: indexPath.row)
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 0 {
+            return 260
+        } else if indexPath.row == 1 {
+            return 104
+        }
+        
+        else if indexPath.row == 2 {
+            return 220
+        } else {
+            return 230
+        }
+        
     }
 }
 

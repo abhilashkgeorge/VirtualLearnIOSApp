@@ -70,5 +70,13 @@ extension URL {
             fatalError("Error getting URL")
         }
         return url
-    }
+    } 
+    static func fetchURLForHomePage() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/home/user") else {
+            fatalError("Error getting Home URL")
+        }
+    return url
 }
+}
+

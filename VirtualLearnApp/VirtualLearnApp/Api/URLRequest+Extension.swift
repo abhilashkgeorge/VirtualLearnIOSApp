@@ -103,12 +103,22 @@ extension URLRequest {
         return request
     }
     
+   
     static func getRequestForMyCourses(url: URL) -> URLRequest {
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            
+            print("Token for my courses \(commonToken)")
+            request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
+            return request
+        }
+        
+    static func getRequestForHome(url: URL) -> URLRequest {
         
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        print("Token for my courses \(commonToken)")
+        request.httpMethod = "GET"   
+            
         request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
         return request
     }

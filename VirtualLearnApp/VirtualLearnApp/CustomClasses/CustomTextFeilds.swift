@@ -14,7 +14,7 @@ class FloatingLabel: UITextField {
     @IBInspectable
     var _placeholder: String?
     @IBInspectable
-    var floatingLabelColor: UIColor = UIColor.black {
+    var floatingLabelColor: UIColor = UIColor.gray {
         didSet {
             self.floatingLabel.textColor = floatingLabelColor
             self.setNeedsDisplay()
