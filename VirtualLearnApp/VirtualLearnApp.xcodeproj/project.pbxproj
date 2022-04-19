@@ -46,6 +46,7 @@
 		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
 		8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */; };
 		8BEC30B8280186E000F7AD86 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */; };
+		BA19006F280D27A300ED8624 /* TestModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA19006E280D27A300ED8624 /* TestModule.storyboard */; };
 		BA3D7B4128053A4E0092EDE1 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */; };
 		BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
@@ -55,6 +56,8 @@
 		BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B67328043E270020F6CE /* SettingsContainerView.swift */; };
 		BAB1B679280477D30020F6CE /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB1B678280477D30020F6CE /* Notifications.storyboard */; };
 		BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B685280492D20020F6CE /* CustomImageView.swift */; };
+		BAB80CBD280ED89800EADB24 /* TestModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB80CBC280ED89800EADB24 /* TestModuleViewController.swift */; };
+		BAB80CC0280ED8B500EADB24 /* TestModuleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB80CBF280ED8B500EADB24 /* TestModuleContainerView.swift */; };
 		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
 		F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5315C50280E9D4800C81290 /* OverviewScreenController.swift */; };
 		F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836A28081F0000A32D52 /* HomeNetworkManager.swift */; };
@@ -128,6 +131,7 @@
 		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
 		8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		BA19006E280D27A300ED8624 /* TestModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestModule.storyboard; sourceTree = "<group>"; };
 		BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 		BAB1B67328043E270020F6CE /* SettingsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerView.swift; sourceTree = "<group>"; };
 		BAB1B678280477D30020F6CE /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		BAB1B685280492D20020F6CE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		BAB80CBC280ED89800EADB24 /* TestModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModuleViewController.swift; sourceTree = "<group>"; };
+		BAB80CBF280ED8B500EADB24 /* TestModuleContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModuleContainerView.swift; sourceTree = "<group>"; };
 		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
 		F5315C50280E9D4800C81290 /* OverviewScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreenController.swift; sourceTree = "<group>"; };
 		F553836A28081F0000A32D52 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8B46939C2809326200B0CFB8 /* OngoingAndCompleted */,
+				BA19006D280D268100ED8624 /* TestModule */,
 				8B67F07B280591A40056CBD0 /* Notifications */,
 				8B67F07A280591750056CBD0 /* Settings */,
 				8B67F079280591580056CBD0 /* Profile */,
@@ -326,6 +333,16 @@
 			path = OverviewScreen;
 			sourceTree = "<group>";
 		};
+		BA19006D280D268100ED8624 /* TestModule */ = {
+			isa = PBXGroup;
+			children = (
+				BA19006E280D27A300ED8624 /* TestModule.storyboard */,
+				BAB80CBC280ED89800EADB24 /* TestModuleViewController.swift */,
+				BAB80CBF280ED8B500EADB24 /* TestModuleContainerView.swift */,
+			);
+			path = TestModule;
+			sourceTree = "<group>";
+		};
 		F57499C9280310ED00695C3B /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55383722808907F00A32D52 /* Overview.storyboard in Resources */,
+				BA19006F280D27A300ED8624 /* TestModule.storyboard in Resources */,
 				F57499CF28033EE200695C3B /* Proxima-Nova-Sbold.otf in Resources */,
 				8827389C27FEAF4900423E14 /* LaunchScreen.storyboard in Resources */,
 				F5C7ED3328029FAE00134409 /* proxima_nova_regular.otf in Resources */,
@@ -510,6 +528,8 @@
 				88F9F141280B1558003A7FF9 /* SearchResultTableViewCell.swift in Sources */,
 				8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */,
 				F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */,
+				BAB80CC0280ED8B500EADB24 /* TestModuleContainerView.swift in Sources */,
+				BAB80CBD280ED89800EADB24 /* TestModuleViewController.swift in Sources */,
 				F5C316702800067D00F30001 /* CustomLabels.swift in Sources */,
 				F553836D28082E0100A32D52 /* HomeViewModel.swift in Sources */,
 				F57499CD2803115600695C3B /* UIColor+Extention.swift in Sources */,
