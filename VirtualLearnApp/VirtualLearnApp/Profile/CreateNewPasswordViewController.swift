@@ -11,10 +11,10 @@ class CreateNewPasswordViewController: UIViewController {
 
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmNewPasswordTextField: UITextField!
-    
+    let viewmodel = RegisterViewModel()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 
@@ -23,8 +23,27 @@ class CreateNewPasswordViewController: UIViewController {
         let newPassword = newPasswordTextField.text ?? ""
         
         if newPassword.count < 6 {
-            
             showToast()
+        }
+        else {
+            viewmodel.resetPassword(password: newPasswordTextField.text ?? "Anusha18", confirmPassword: confirmNewPasswordTextField.text ?? "Anusha18",completion: {
+                (tokenMsg: String) -> Void
+                in
+                if tokenMsg == "Password changed successfully" {
+                    DispatchQueue.main.async {
+                        let NewAccountstoryboard = UIStoryboard.init(name: "RegisterPart2", bundle: Bundle.main)
+                        let successVC = NewAccountstoryboard.instantiateViewController(identifier: "RegisterSuccessViewController") as? RegisterSuccessViewController
+                        successVC?.displayScreen = 1
+                        self.navigationController?.pushViewController(successVC!, animated: true)
+                    }
+                }
+                else if tokenMsg == "password should be atleast  6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'" {
+                    self.showToast()
+                }
+                else {
+                    print("Invalid credential or password")
+                }
+            })
         }
     }
 }

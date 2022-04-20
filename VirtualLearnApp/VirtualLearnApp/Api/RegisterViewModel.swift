@@ -12,7 +12,7 @@ class RegisterViewModel {
     var tokenAfterVerifingOtp: String = ""
     let manager = LoginRegisterNetworkManager()
    
-    func sendOTPForRegistration (mobileNumber: String) {
+    func sendOTPForRegistration (mobileNumber: String, completion: @escaping (_ tokenMsg: String) -> Void) {
        
         manager.sendOTP(to: mobileNumber, completionHandler:
                 {
@@ -21,6 +21,7 @@ class RegisterViewModel {
                     self.tokenAfterSendingOtp = json ?? ""
                     URLRequest.token = self.tokenAfterSendingOtp
                     print("TokenSent:\(self.tokenAfterSendingOtp)")
+                    completion(self.tokenAfterSendingOtp)
         })
     }
     
@@ -46,4 +47,44 @@ class RegisterViewModel {
           
         })
     }
+    
+    let forgotPassManager = ForgotPasswordNetworkManager()
+    var resetPassMsg = ""
+    var msgVerifyOTPForgotPass = ""
+    
+    func sendOTPForForgotPassword (mobileNumber: String, completion: @escaping (_ tokenMsg: String) -> Void) {
+        forgotPassManager.sendOTPForgotPassword(to: mobileNumber, completionHandler:
+                {
+                     (json: String?) -> Void
+                         in
+                    self.tokenAfterSendingOtp = json ?? ""
+                    URLRequest.token = self.tokenAfterSendingOtp
+                    print("TokenSent:\(self.tokenAfterSendingOtp)")
+                    completion(self.tokenAfterSendingOtp)
+        })
+    }
+
+    func verifyOTPForForgotPassword (otp: String, completion: @escaping (_ tokenMsg: String) -> Void) {
+        print("otpinvm:\(otp)")
+        forgotPassManager.verifyOTPForgotPassword(to: otp, completionHandler:
+                {
+                     (json: String?) -> Void
+                         in
+                    self.msgVerifyOTPForgotPass = json ?? ""
+                    print("messageverifyOTPForForgotPassword:\(self.msgVerifyOTPForgotPass)")
+                    completion(self.msgVerifyOTPForgotPass)
+        })
+    }
+
+    func resetPassword(password: String, confirmPassword: String, completion: @escaping (_ tokenMsg: String) -> Void) {
+        forgotPassManager.resetForgotPassword(password: password, confirmPassword: confirmPassword, completionHandler:
+                {
+                     (json: String?) -> Void
+                         in
+                    self.resetPassMsg = json ?? ""
+                    print("messageResetPassword:\(self.resetPassMsg)")
+                    completion(self.resetPassMsg)
+                })
+    }
+    
 }

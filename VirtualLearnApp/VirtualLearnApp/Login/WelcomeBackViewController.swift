@@ -40,4 +40,12 @@ class WelcomeBackViewController: UIViewController {
         let registerVC = NewAccountstoryboard.instantiateViewController(identifier: "NewAccountViewController") as? NewAccountViewController
         self.navigationController?.pushViewController(registerVC!, animated: true)
     }
+    
+    @IBAction func forgotPasswordTapped(_ sender: Any) {
+        let NewAccountstoryboard = UIStoryboard.init(name: "NewAccount", bundle: Bundle.main)
+        let registerVC = NewAccountstoryboard.instantiateViewController(identifier: "NewAccountViewController") as? NewAccountViewController
+        registerVC?.displayScreen = 1
+        self.navigationController?.pushViewController(registerVC!, animated: true)
+    }
+    
 }

@@ -236,6 +236,7 @@
                         <outlet property="personalDetailFullName" destination="jSe-8N-9RN" id="KND-7t-5pq"/>
                         <outlet property="personalDetailPassword" destination="x6a-aC-g0Q" id="b3z-b8-jO1"/>
                         <outlet property="personalDetailUsername" destination="MEd-bg-eGE" id="Ucz-KU-JFe"/>
+                        <outlet property="phoneNumberRegistration" destination="i1c-ym-0gA" id="v1o-jO-xsk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5c-bF-tlB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -260,7 +261,7 @@
                                                 <rect key="frame" x="69" y="168" width="238" height="269"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlD-Gx-u9n">
-                                                <rect key="frame" x="126" y="491" width="130.5" height="37.5"/>
+                                                <rect key="frame" x="122.5" y="491" width="130.5" height="37.5"/>
                                                 <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="32"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -271,7 +272,7 @@
                                                 <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xg-sg-KDi">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xg-sg-KDi" customClass="OrangeColorButton" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="131" y="693" width="113" height="30"/>
                                                 <color key="tintColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Lets Get Started"/>
@@ -283,12 +284,13 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="2ee-Z0-914" firstAttribute="leading" secondItem="IwF-aq-BYC" secondAttribute="leading" constant="69" id="2nj-uh-kXR"/>
-                                            <constraint firstItem="pof-kX-Ptb" firstAttribute="leading" secondItem="IwF-aq-BYC" secondAttribute="leading" constant="24" id="6Ai-mB-hpn"/>
+                                            <constraint firstItem="MlD-Gx-u9n" firstAttribute="centerX" secondItem="IwF-aq-BYC" secondAttribute="centerX" id="3ON-QR-QNV"/>
+                                            <constraint firstAttribute="trailing" secondItem="pof-kX-Ptb" secondAttribute="trailing" constant="24" id="DTC-lt-xzI"/>
                                             <constraint firstItem="pof-kX-Ptb" firstAttribute="top" secondItem="MlD-Gx-u9n" secondAttribute="bottom" constant="8" id="OIa-7R-l2X"/>
+                                            <constraint firstItem="pof-kX-Ptb" firstAttribute="leading" secondItem="IwF-aq-BYC" secondAttribute="leading" constant="24" id="Rik-XD-Dkh"/>
                                             <constraint firstAttribute="height" constant="812" id="Si8-fA-Dc4"/>
-                                            <constraint firstItem="MlD-Gx-u9n" firstAttribute="leading" secondItem="IwF-aq-BYC" secondAttribute="leading" constant="126" id="TXn-Dj-XgD"/>
+                                            <constraint firstItem="pof-kX-Ptb" firstAttribute="centerX" secondItem="MlD-Gx-u9n" secondAttribute="centerX" id="eGo-Xm-8pb"/>
                                             <constraint firstItem="3Xg-sg-KDi" firstAttribute="centerX" secondItem="IwF-aq-BYC" secondAttribute="centerX" id="h6w-EM-aB6"/>
-                                            <constraint firstAttribute="trailing" secondItem="pof-kX-Ptb" secondAttribute="trailing" constant="24" id="t4c-Jf-FxY"/>
                                             <constraint firstItem="MlD-Gx-u9n" firstAttribute="top" secondItem="2ee-Z0-914" secondAttribute="bottom" constant="54" id="wdq-2e-d1M"/>
                                             <constraint firstItem="2ee-Z0-914" firstAttribute="top" secondItem="IwF-aq-BYC" secondAttribute="top" constant="168" id="wsO-00-sSJ"/>
                                             <constraint firstItem="3Xg-sg-KDi" firstAttribute="top" secondItem="pof-kX-Ptb" secondAttribute="bottom" constant="119" id="y0Q-TC-dYq"/>
@@ -314,6 +316,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KY7-Pa-9Z5"/>
+                    <connections>
+                        <outlet property="letsGetStartedButton" destination="3Xg-sg-KDi" id="FbE-AT-tFg"/>
+                        <outlet property="mainHeader" destination="MlD-Gx-u9n" id="mTQ-dQ-fe2"/>
+                        <outlet property="subHeader" destination="pof-kX-Ptb" id="CcA-2N-gV5"/>
+                        <outlet property="successImage" destination="2ee-Z0-914" id="p8e-rv-g0c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHf-P3-qCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

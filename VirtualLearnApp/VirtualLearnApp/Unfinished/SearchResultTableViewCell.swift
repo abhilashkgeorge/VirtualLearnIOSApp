@@ -14,4 +14,12 @@ class SearchResultTableViewCell: UITableViewCell {
     @IBOutlet weak var courseNoChapters: UILabel!
     @IBOutlet weak var courseCategory: UILabel!
     
+    func setStyling() {
+        
+        self.courseImage.layer.masksToBounds = true
+        self.courseImage.layer.cornerRadius = self.courseImage.frame.width/5.0
+        courseCategory.layer.masksToBounds = true
+        courseCategory.layer.cornerRadius = 3
+    
+    }
 }

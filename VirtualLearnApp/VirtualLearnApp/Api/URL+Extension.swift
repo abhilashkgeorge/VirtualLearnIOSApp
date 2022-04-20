@@ -70,13 +70,37 @@ extension URL {
             fatalError("Error getting URL")
         }
         return url
-    } 
+    }
     static func fetchURLForHomePage() -> URL {
         
         guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/home/user") else {
             fatalError("Error getting Home URL")
         }
-    return url
-}
+        return url
+    }
+    
+    static func fetchURLForForgotPasswordSndOTP() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/forgot_password/sendOtp") else {
+            fatalError("Error getting Home URL")
+        }
+        return url
+    }
+    
+    static func fetchURLForForgotPasswordVerifyOTP() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/forgot_password/verifyOtp") else {
+            fatalError("Error getting Home URL")
+        }
+        return url
+    }
+    
+    static func fetchURLForForgotPasswordReset() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/forgot_password/resetPassword") else {
+            fatalError("Error getting Home URL")
+        }
+        return url
+    }
 }
 

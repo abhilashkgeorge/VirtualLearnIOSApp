@@ -1,58 +1,17 @@
 //
-//  LoginRegisterNetworkManager.swift
+//  ForgotPasswordNetworkManager.swift
 //  VirtualLearnApp
 //
-//  Created by Anushree on 09/04/22.
+//  Created by Anusha on 20/04/22.
 //
 
 import Foundation
 
-class LoginRegisterNetworkManager {
+class ForgotPasswordNetworkManager {
     
-    func userLogin(username: String, password: String, completionHandler: @escaping (_ token: String?) -> Void) {
+    func sendOTPForgotPassword(to mobileNumber: String, completionHandler: @escaping (_ token: String?) -> Void) {
         
-        let url = URL.fetchURLForuserLogin()
-        let httpBody: [String: String] = [
-            
-                "userName": username,
-                "password": password
-        ]
-        let request = URLRequest.postRequestForSendOTPToRegisterAndUserLogin(url: url, body: httpBody)
-        let task =  URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let data = data, error == nil else {
-                print(error?.localizedDescription ?? "No Data")
-                completionHandler(nil)
-                return
-            }
-
-            let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
-
-            if let jsonResponse = jsonResponse as? [String: Any],
-               let meta = jsonResponse["meta"] as? [String: Any],
-               let code = meta["code"] as? Int {
-                print(jsonResponse)
-                if code == 200 {
-                    if let token = meta["token"] as? String {
-                        print(token)
-                        completionHandler(token)
-                    }else {
-                        completionHandler(nil)
-                    }
-                }
-                else if code == 404 {
-                    completionHandler("Invalid credential or password")
-                }
-                else {
-                    completionHandler(nil)
-                }
-            }
-        }
-        task.resume()
-    }
-    
-    func sendOTP(to mobileNumber: String, completionHandler: @escaping (_ token: String?) -> Void) {
-        
-        let url = URL.fetchURLForSendOTPToRegister()
+        let url = URL.fetchURLForForgotPasswordSndOTP()
         let httpBody: [String:String] = [
             
                 "phoneNumber": mobileNumber
@@ -79,20 +38,18 @@ class LoginRegisterNetworkManager {
                         completionHandler(nil)
                     }
                 }
-                else if code == 400 {
-                    completionHandler(nil)
-                }
                 else {
                     completionHandler(nil)
+                    print("Error")
                 }
             }
         }
         task.resume()
     }
     
-    func verifyOTP(to otp: String, completionHandler: @escaping (_ token: String?) -> Void) {
+    func verifyOTPForgotPassword(to otp: String, completionHandler: @escaping (_ tokenMsg: String?) -> Void) {
        
-        let url = URL.fetchURLForVerifyOTPToRegister()
+        let url = URL.fetchURLForForgotPasswordVerifyOTP()
         let httpBody: [String: String] = [
             
                 "otp": otp
@@ -112,14 +69,15 @@ class LoginRegisterNetworkManager {
                let code = meta["code"] as? Int {
                 print(jsonResponse)
                 if code == 200 {
-                    if let token = meta["token"] as? String {
-                        print(token)
-                        completionHandler(token)
+                    if let tokenMsg = meta["message"] as? String {
+                        print(tokenMsg)
+                        completionHandler(tokenMsg)
                     }else {
                         completionHandler(nil)
                     }
                 }
                 else {
+                    print("error")
                     completionHandler(nil)
                 }
             }
@@ -127,18 +85,15 @@ class LoginRegisterNetworkManager {
         task.resume()
     }
     
-    func userRegistration(fullname: String, username: String, email: String, password: String, confirmpassword: String, completionHandler: @escaping (_ token: String?) -> Void) {
-        
-        let url = URL.fetchURLForRegistration()
+    func resetForgotPassword(password: String, confirmPassword: String, completionHandler: @escaping (_ message: String?) -> Void) {
+       
+        let url = URL.fetchURLForForgotPasswordReset()
         let httpBody: [String: String] = [
-            
-            "fullName": fullname,
-            "userName": username,
-            "email": email,
             "password": password,
-            "confirmPassword": confirmpassword
+            "confirmPassword": confirmPassword
         ]
-        let request = URLRequest.postRequestForUserRegistration(url: url, body: httpBody)
+        let request = URLRequest.postRequestForSendOTPToRegisterAndUserLogin(url: url, body: httpBody)
+        
         let task =  URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No Data")
@@ -152,19 +107,16 @@ class LoginRegisterNetworkManager {
                let meta = jsonResponse["meta"] as? [String: Any],
                let code = meta["code"] as? Int {
                 print(jsonResponse)
-                if code == 201 {
-                    if let token = meta["message"] as? String {
-                        print(token)
-                        completionHandler(token)
+                if code == 200 {
+                    if let message = meta["message"] as? String {
+                        print(message)
+                        completionHandler(message)
                     }else {
                         completionHandler(nil)
                     }
                 }
-                else if code == 404 {
-                    completionHandler("Invalid credential or password")
-                }
                 else {
-                    completionHandler(nil)
+                    completionHandler("password should be atleast 6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'")
                 }
             }
         }

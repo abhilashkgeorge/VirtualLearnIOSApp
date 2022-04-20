@@ -177,7 +177,12 @@
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="alreadyHaveAccLabel" destination="eoM-SP-9qg" id="h8x-4H-lMP"/>
+                        <outlet property="continueButton" destination="8ds-AI-0kK" id="Rwe-cj-MYG"/>
+                        <outlet property="headerLabel" destination="a2g-2M-ZvI" id="AtV-2y-qd4"/>
+                        <outlet property="loginButton" destination="ghl-po-Jp4" id="qyo-st-7rP"/>
                         <outlet property="newAccountPhoneNumber" destination="Gm7-Un-VBX" id="deu-ps-aAu"/>
+                        <outlet property="subLabel" destination="tud-Qp-2tT" id="bxf-Pg-hSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6q-A4-5RX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -390,10 +395,12 @@
                     <navigationItem key="navigationItem" id="mvX-a5-KDp"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="headerLabel" destination="GTZ-mq-WyZ" id="3rW-QU-6Xt"/>
                         <outlet property="otpTF1" destination="EOG-lX-DJr" id="gyl-WU-uyB"/>
                         <outlet property="otpTF2" destination="jHK-y7-9VW" id="xjk-ep-hjk"/>
                         <outlet property="otpTF3" destination="NXw-u6-C2a" id="rTk-Pt-id5"/>
                         <outlet property="otpTF4" destination="yHr-bl-PKo" id="OrC-DH-kSM"/>
+                        <outlet property="verifyButton" destination="WnL-zb-UUg" id="joO-ud-60r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdY-NG-t5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

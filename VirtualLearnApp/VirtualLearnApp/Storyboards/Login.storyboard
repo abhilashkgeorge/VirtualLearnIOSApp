@@ -272,7 +272,7 @@
                                             <constraint firstAttribute="width" constant="157" id="CmC-vh-feQ"/>
                                             <constraint firstAttribute="height" constant="41" id="cvM-id-3q5"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="facebook-1"/>
+                                        <state key="normal" image="facebook-1"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-pi-RQJ" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="196.66666666666663" y="167.66666666666666" width="157" height="41"/>
@@ -280,7 +280,7 @@
                                             <constraint firstAttribute="width" constant="157" id="EeM-Wk-Bic"/>
                                             <constraint firstAttribute="height" constant="41" id="k3l-th-NcK"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="google-1"/>
+                                        <state key="normal" image="google-1"/>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50T-lf-UQn" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="268.66666666666669" width="327" height="20.333333333333314"/>
@@ -317,6 +317,9 @@
                                         <rect key="frame" x="236" y="373.33333333333331" width="115" height="29"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                         <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="forgotPasswordTapped:" destination="GRq-N9-yBr" eventType="touchUpInside" id="FIv-nd-Vrg"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-r9-B3Y">
                                         <rect key="frame" x="76.666666666666671" y="512.33333333333337" width="221.66666666666663" height="31"/>

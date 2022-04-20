@@ -10,6 +10,7 @@ import UIKit
 class PersonalDetailsViewController: UIViewController {
 
     var viewmodel = RegisterViewModel()
+    var phone = ""
     @IBOutlet weak var mobileNumberDisplay: UILabel!
     
     @IBOutlet weak var personalDetailFullName: FloatingLabel!
@@ -17,10 +18,11 @@ class PersonalDetailsViewController: UIViewController {
     @IBOutlet weak var personalDetailEmail: FloatingLabel!
     @IBOutlet weak var personalDetailPassword: FloatingLabel!
     @IBOutlet weak var personalDetailConfirmPassword: FloatingLabel!
+    @IBOutlet weak var phoneNumberRegistration: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        phoneNumberRegistration.text = phone
     }
     
     @IBAction func rgisterButtonTapped(_ sender: Any) {

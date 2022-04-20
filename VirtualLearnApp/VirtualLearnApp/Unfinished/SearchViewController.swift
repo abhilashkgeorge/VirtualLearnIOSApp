@@ -76,9 +76,12 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultTableViewCell", for: indexPath) as! SearchResultTableViewCell
+        cell.setStyling()
         cell.courseName.text = searchedArray[indexPath.row].name
         cell.courseCategory.text = searchedArray[indexPath.row].category
         cell.courseNoChapters.text = String(searchedArray[indexPath.row].totalChapters) + " Chapters"
+        cell.courseImage.image = searchedArray[indexPath.row].courseImage
+        
         return cell
     }
     
