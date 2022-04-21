@@ -109,6 +109,12 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         editProfileVc?.detailModification = self
         self.navigationController?.pushViewController(editProfileVc!, animated: true)
     }
+    
+    @IBAction func changePasswordButtonTapped(_ sender: Any) {
+        
+        let changePasswordVc = storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as? ChangePasswordViewController
+        self.navigationController?.pushViewController(changePasswordVc!, animated: true)
+    }
 }
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout {

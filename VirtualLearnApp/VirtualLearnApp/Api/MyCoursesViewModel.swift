@@ -64,9 +64,9 @@ class MyCoursesViewModel {
         let completed = jsonData!["completedCourse"] as? [[String: String]] ?? [["ongoing": "error"]]
         
         for item in completed {
-            name = item["courseName"] ?? "No ongoing course name"
-            id = item["courseId"] ?? "No ongoing course id"
-            img = item["courseImg"] ?? "No ongoing course image"
+            name = item["courseName"] ?? "No completed course name"
+            id = item["courseId"] ?? "No completed course id"
+            img = item["courseImg"] ?? "No completed course image"
             
             imageApi.getImgFromApi(url: img) { (image) in
                 picture = image

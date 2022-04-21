@@ -7,33 +7,20 @@
 
 
 import Foundation
+import  UIKit
 
-// MARK: - Welcome
-struct HomeModel {
-    let data: DataClass
-    let allCourses: [AllCourse]
+class HomeModel {
+    
+    var courseTitle: String
+    var courseCategory: String
+    var noOfChapters: Int
+    var courseImage: UIImage
+    
+    init(courseTitle: String, courseCategory: String, noOfChapters: Int, courseImage: UIImage) {
+        
+        self.courseTitle = courseTitle
+        self.courseCategory = courseCategory
+        self.noOfChapters = noOfChapters
+        self.courseImage = courseImage
+    }
 }
-
-// MARK: - DataClass
-struct DataClass {
-    let allCourses: [AllCourse]
-    let profileStatus: ProfileStatus
-    let categories: [String]
-    let popular: [String]
-}
-
-// MARK: - AllCourse
-struct AllCourse {
-    let id, courseName: String
-    let totalChapters: Int
-    let category: String
-    let courseImg: String
-    let date: String
-}
-
-// MARK: - ProfileStatus
-struct ProfileStatus {
-    let message: String
-    let status: Bool
-}
-

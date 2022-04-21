@@ -89,6 +89,7 @@
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-wc-2Wv">
                                                         <rect key="frame" x="0.0" y="36" width="327" height="85"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="85" id="oi4-7i-LUO"/>
                                                         </constraints>
@@ -119,6 +120,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="oJU-Mz-1k9" firstAttribute="top" secondItem="8X5-eg-9IX" secondAttribute="bottom" constant="6" id="01G-m4-KoP"/>
                                                                         <constraint firstItem="8X5-eg-9IX" firstAttribute="top" secondItem="OeQ-i2-tdP" secondAttribute="top" constant="16" id="6iy-Fw-aWs"/>
@@ -279,6 +281,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83s-Sr-p1J">
                                                         <rect key="frame" x="307" y="17" width="8" height="22"/>
                                                         <state key="normal" image="icn_privacy_go"/>
+                                                        <connections>
+                                                            <action selector="changePasswordButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sTe-Hh-jDC"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -573,19 +578,19 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-e3-smM" customClass="WelcomeScreenButton" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="1020" width="327" height="46"/>
-                                                <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="6O8-uf-lDS"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Save"/>
                                                 <connections>
                                                     <action selector="saveButtonTapped:" destination="Web-Mf-5fc" eventType="touchUpInside" id="xEz-v8-RlJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-iM-s08">
-                                                <rect key="frame" x="311" y="724" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-iM-s08">
+                                                <rect key="frame" x="331" y="732" width="14" height="22"/>
+                                                <state key="normal" image="icn_dropdown"/>
                                                 <connections>
                                                     <action selector="dropDownButtonTapped:" destination="Web-Mf-5fc" eventType="touchUpInside" id="wLk-4b-FpP"/>
                                                 </connections>
@@ -681,7 +686,7 @@
                                             <constraint firstItem="cde-pA-yaL" firstAttribute="leading" secondItem="EdH-1J-Bne" secondAttribute="leading" constant="24" id="jAG-4h-Qo6"/>
                                             <constraint firstItem="pgc-5Y-5eL" firstAttribute="top" secondItem="VVJ-Bc-9LL" secondAttribute="bottom" constant="10" id="kuc-BU-uBO"/>
                                             <constraint firstAttribute="trailing" secondItem="EOw-9i-qzD" secondAttribute="trailing" constant="24" id="lIL-vG-0yA"/>
-                                            <constraint firstAttribute="trailing" secondItem="W5y-iM-s08" secondAttribute="trailing" constant="18" id="mvN-9S-WoA"/>
+                                            <constraint firstAttribute="trailing" secondItem="W5y-iM-s08" secondAttribute="trailing" constant="30" id="mvN-9S-WoA"/>
                                             <constraint firstItem="Uaj-5P-tqo" firstAttribute="leading" secondItem="EdH-1J-Bne" secondAttribute="leading" constant="20" id="nq7-2v-1eb"/>
                                             <constraint firstItem="cey-nr-Ue5" firstAttribute="top" secondItem="EdH-1J-Bne" secondAttribute="top" constant="261" id="rLE-fB-kZ4"/>
                                             <constraint firstItem="wu6-ZA-keI" firstAttribute="leading" secondItem="EdH-1J-Bne" secondAttribute="leading" constant="24" id="rgF-W8-6xv"/>
@@ -736,10 +741,167 @@
             </objects>
             <point key="canvasLocation" x="192.80000000000001" y="120.98950524737631"/>
         </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="t72-PU-EHP">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KRD-aj-ZJs" customClass="ChangePasswordViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Na-1s-HxA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-sN-7qw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tw6-av-eRd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kt5-HS-hEN" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="341" width="327" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                                        <color key="value" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEc-mx-dR7">
+                                                <rect key="frame" x="24" y="225.5" width="327" height="1"/>
+                                                <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="sdu-BX-cXV"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHo-6M-9zg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="266.5" width="327" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Username"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                                        <color key="value" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6c-6b-ank">
+                                                <rect key="frame" x="24" y="300" width="327" height="1"/>
+                                                <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="gda-gS-dPl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6js-D0-XeB">
+                                                <rect key="frame" x="24" y="374.5" width="327" height="1"/>
+                                                <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="szQ-Rn-1Dc"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-7S-CAg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="192" width="327" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Full name"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                                        <color key="value" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vth-fB-fub" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="455.5" width="327" height="46"/>
+                                                <color key="backgroundColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="AO3-NP-hxK"/>
+                                                    <constraint firstAttribute="width" constant="327" id="PV2-s0-7fm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                <state key="normal" title="Reset Password">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetPasswordButtonTapped:" destination="KRD-aj-ZJs" eventType="touchUpInside" id="4yN-YZ-70G"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6js-D0-XeB" firstAttribute="top" secondItem="Kt5-HS-hEN" secondAttribute="bottom" constant="10" id="09o-GO-thZ"/>
+                                            <constraint firstItem="Kt5-HS-hEN" firstAttribute="top" secondItem="y6c-6b-ank" secondAttribute="bottom" constant="40" id="0SG-HM-hDB"/>
+                                            <constraint firstItem="QHo-6M-9zg" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="0lN-Mt-Lrz"/>
+                                            <constraint firstAttribute="trailing" secondItem="y6c-6b-ank" secondAttribute="trailing" constant="24" id="6XA-32-hq4"/>
+                                            <constraint firstItem="vth-fB-fub" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="7gw-QK-pMU"/>
+                                            <constraint firstAttribute="trailing" secondItem="IEc-mx-dR7" secondAttribute="trailing" constant="24" id="9Ar-TW-MU7"/>
+                                            <constraint firstAttribute="trailing" secondItem="6js-D0-XeB" secondAttribute="trailing" constant="24" id="BrG-Gi-cVr"/>
+                                            <constraint firstAttribute="height" constant="812" id="Jkt-vj-QT6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kt5-HS-hEN" secondAttribute="trailing" constant="24" id="QhS-gZ-ZZ0"/>
+                                            <constraint firstItem="Bgj-7S-CAg" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="Rpj-Vc-Xdg"/>
+                                            <constraint firstItem="QHo-6M-9zg" firstAttribute="top" secondItem="IEc-mx-dR7" secondAttribute="bottom" constant="40" id="Uz7-KJ-X5z"/>
+                                            <constraint firstItem="y6c-6b-ank" firstAttribute="top" secondItem="QHo-6M-9zg" secondAttribute="bottom" constant="10" id="VG3-xg-LEp"/>
+                                            <constraint firstItem="y6c-6b-ank" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="VN5-ml-ggD"/>
+                                            <constraint firstAttribute="trailing" secondItem="QHo-6M-9zg" secondAttribute="trailing" constant="24" id="ae7-7c-xr7"/>
+                                            <constraint firstItem="vth-fB-fub" firstAttribute="top" secondItem="6js-D0-XeB" secondAttribute="bottom" constant="80" id="cyL-9b-ngu"/>
+                                            <constraint firstItem="IEc-mx-dR7" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="eE0-BH-NdI"/>
+                                            <constraint firstItem="6js-D0-XeB" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="gDG-er-3RX"/>
+                                            <constraint firstItem="IEc-mx-dR7" firstAttribute="top" secondItem="Bgj-7S-CAg" secondAttribute="bottom" constant="10" id="qTw-Mb-DfN"/>
+                                            <constraint firstItem="Kt5-HS-hEN" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="tTi-G6-nMx"/>
+                                            <constraint firstAttribute="trailing" secondItem="vth-fB-fub" secondAttribute="trailing" constant="24" id="uTk-DF-10P"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bgj-7S-CAg" secondAttribute="trailing" constant="24" id="ugT-g8-hTx"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change your Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVW-tP-d0z" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="64" width="261" height="26"/>
+                                        <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must have at least 6 or more characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vot-Yi-oNe" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="100" width="327" height="32"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vot-Yi-oNe" firstAttribute="top" secondItem="VVW-tP-d0z" secondAttribute="bottom" constant="10" id="BnO-EB-Efm"/>
+                                    <constraint firstItem="VVW-tP-d0z" firstAttribute="leading" secondItem="RQe-sN-7qw" secondAttribute="leading" constant="20" id="EPd-qQ-rl9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tw6-av-eRd" secondAttribute="trailing" id="ILy-5z-H7b"/>
+                                    <constraint firstItem="Tw6-av-eRd" firstAttribute="top" secondItem="RQe-sN-7qw" secondAttribute="top" id="L6T-TB-4Te"/>
+                                    <constraint firstItem="Tw6-av-eRd" firstAttribute="width" secondItem="RQe-sN-7qw" secondAttribute="width" id="Mgj-B4-e5S"/>
+                                    <constraint firstItem="Bgj-7S-CAg" firstAttribute="top" secondItem="Vot-Yi-oNe" secondAttribute="bottom" constant="60" id="Mjs-5z-bIi"/>
+                                    <constraint firstItem="Vot-Yi-oNe" firstAttribute="leading" secondItem="RQe-sN-7qw" secondAttribute="leading" constant="24" id="Mqc-iN-8vT"/>
+                                    <constraint firstItem="VVW-tP-d0z" firstAttribute="top" secondItem="RQe-sN-7qw" secondAttribute="top" constant="64" id="SjP-Zz-iXn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tw6-av-eRd" secondAttribute="bottom" id="ZjQ-hB-kX1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vot-Yi-oNe" secondAttribute="trailing" constant="24" id="eGs-3U-4Qf"/>
+                                    <constraint firstItem="Tw6-av-eRd" firstAttribute="leading" secondItem="RQe-sN-7qw" secondAttribute="leading" id="z9g-Sr-v1g"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eMX-nt-hrn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eMX-nt-hrn" firstAttribute="bottom" secondItem="RQe-sN-7qw" secondAttribute="bottom" id="Kh5-HJ-vH9"/>
+                            <constraint firstItem="eMX-nt-hrn" firstAttribute="trailing" secondItem="RQe-sN-7qw" secondAttribute="trailing" id="LzU-EI-8Vn"/>
+                            <constraint firstItem="RQe-sN-7qw" firstAttribute="leading" secondItem="eMX-nt-hrn" secondAttribute="leading" id="ctk-vg-dwE"/>
+                            <constraint firstItem="RQe-sN-7qw" firstAttribute="top" secondItem="eMX-nt-hrn" secondAttribute="top" id="yMg-e2-Klt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmNewPassword" destination="Kt5-HS-hEN" id="CgW-hw-OxO"/>
+                        <outlet property="currentPassword" destination="Bgj-7S-CAg" id="R9w-cO-wvo"/>
+                        <outlet property="newPassword" destination="QHo-6M-9zg" id="xIr-xV-SqX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWQ-gp-KxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.60000000000002" y="120.98950524737631"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icn_back_white" width="22" height="14"/>
         <image name="icn_change profilepic" width="30" height="30"/>
+        <image name="icn_dropdown" width="14" height="8"/>
         <image name="icn_edit profile" width="18" height="18"/>
         <image name="icn_privacy" width="40" height="40"/>
         <image name="icn_privacy_go" width="8" height="14"/>

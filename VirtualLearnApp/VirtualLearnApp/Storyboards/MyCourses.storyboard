@@ -37,13 +37,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Course" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4k-x9-p8s">
-                                                <rect key="frame" x="24" y="108" width="123.5" height="26"/>
+                                                <rect key="frame" x="24" y="64" width="123.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                                 <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tW4-BO-I1Z">
-                                                <rect key="frame" x="24" y="164" width="75" height="26"/>
+                                                <rect key="frame" x="24" y="120" width="75" height="26"/>
                                                 <color key="backgroundColor" red="0.035294117649999998" green="0.16078431369999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="a76-aL-VpF"/>
@@ -58,7 +58,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pui-UQ-dW0">
-                                                <rect key="frame" x="99" y="164" width="75" height="26"/>
+                                                <rect key="frame" x="99" y="120" width="75" height="26"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="CqS-mi-Xoq"/>
@@ -73,13 +73,13 @@
                                                 </connections>
                                             </button>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEm-tZ-JoD">
-                                                <rect key="frame" x="24" y="220" width="327" height="592"/>
+                                                <rect key="frame" x="24" y="176" width="327" height="636"/>
                                                 <connections>
                                                     <segue destination="a7r-Gj-Je9" kind="embed" id="Hc4-cN-nJv"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHS-OB-T1x">
-                                                <rect key="frame" x="24" y="220" width="327" height="592"/>
+                                                <rect key="frame" x="24" y="176" width="327" height="636"/>
                                                 <connections>
                                                     <segue destination="bQL-lk-YNf" kind="embed" id="DAr-BI-WwN"/>
                                                 </connections>
@@ -101,7 +101,7 @@
                                             <constraint firstAttribute="bottom" secondItem="lEm-tZ-JoD" secondAttribute="bottom" id="vE5-ga-Ewk"/>
                                             <constraint firstItem="Pui-UQ-dW0" firstAttribute="leading" secondItem="tW4-BO-I1Z" secondAttribute="trailing" id="vUg-Lu-yeb"/>
                                             <constraint firstItem="GHS-OB-T1x" firstAttribute="top" secondItem="tW4-BO-I1Z" secondAttribute="bottom" constant="30" id="xYH-kp-ZeP"/>
-                                            <constraint firstItem="h4k-x9-p8s" firstAttribute="top" secondItem="UoR-mL-pRG" secondAttribute="top" constant="108" id="zvB-Ji-Vxk"/>
+                                            <constraint firstItem="h4k-x9-p8s" firstAttribute="top" secondItem="UoR-mL-pRG" secondAttribute="top" constant="64" id="zvB-Ji-Vxk"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -132,18 +132,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3QZ-ON-xBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2476" y="-90"/>
+            <point key="canvasLocation" x="-2850.4000000000001" y="-95.802098950524751"/>
         </scene>
         <!--Ongoing View Controller-->
         <scene sceneID="Axg-lI-Q6Y">
             <objects>
                 <viewController storyboardIdentifier="OngoingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a7r-Gj-Je9" customClass="OngoingViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9np-it-yiB">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="592"/>
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="636"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Njr-CB-BIt">
-                                <rect key="frame" x="0.0" y="0.0" width="327" height="592"/>
+                                <rect key="frame" x="0.0" y="0.0" width="327" height="636"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ongoingCourseCell" rowHeight="139" id="63p-0k-EYc" customClass="OngoingTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
@@ -232,18 +232,253 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rs5-s9-zwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1716" y="-392"/>
+            <point key="canvasLocation" x="-2105" y="175"/>
+        </scene>
+        <!--Empty Course View Controller-->
+        <scene sceneID="IAN-hn-dgq">
+            <objects>
+                <viewController storyboardIdentifier="EmptyCourseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KqY-LA-UR9" customClass="EmptyCourseViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZi-b1-23X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqG-dH-1eS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-p6-hrt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emw-Pi-gjE">
+                                                <rect key="frame" x="0.0" y="159" width="375" height="653"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_my course_empty" translatesAutoresizingMaskIntoConstraints="NO" id="VJI-0y-ss5">
+                                                        <rect key="frame" x="56" y="30" width="265" height="237"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="237" id="cOi-Zf-o7r"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What will you learn first?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOH-S3-vBD">
+                                                        <rect key="frame" x="89.5" y="291" width="196" height="18"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your courses will go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXW-Kh-pa0">
+                                                        <rect key="frame" x="109" y="317" width="157" height="14"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                                        <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5f-Dk-8kO">
+                                                        <rect key="frame" x="24" y="371" width="321" height="180"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Fzm-Sm-Orn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="159.5"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3D1-Ad-wY4">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvi-Rv-V1W" customClass="SearchScreenLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-Zl-HLY">
+                                                                        <rect key="frame" x="0.0" y="32.5" width="286" height="30"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSy-fR-LB2" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="83" id="MSe-PQ-oGc"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="WFh-QN-zoA"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Design" image="icn_categories suggestion_design">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-R1-igA" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="91" y="0.0" width="94" height="30"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Development" image="icn_categories suggestion_code">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQc-gn-Lv7" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="193" y="0.0" width="93" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="93" id="osn-iR-ihP"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Business" image="icn_categories suggestion_business">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Oxd-hj-X23">
+                                                                        <rect key="frame" x="0.0" y="74.5" width="296" height="20"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysg-ff-cZe" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="20"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="87" id="o6D-D7-dGF"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Finance" image="icn_categories suggestion_finance">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJK-6z-kmK" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="96" y="0.0" width="112" height="20"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Health &amp; Fitness" image="icn_categories suggestion_fitness">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt2-V2-o4M" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="217" y="0.0" width="79" height="20"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="79" id="Rnd-oZ-fYr"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Music" image="icn_categories suggestion_music">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-W4-iIV">
+                                                                        <rect key="frame" x="0.0" y="106.5" width="300" height="20"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZS-3s-9Zb" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="IT &amp; Software" image="icn_categories suggestion_IT">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrZ-GV-qx9" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="104" y="0.0" width="99" height="20"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="99" id="mtC-UI-HRb"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Marketing" image="icn_categories suggestion_marketing">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZh-mt-SF8" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="211" y="0.0" width="89" height="20"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="89" id="gLp-hm-6kP"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Lifestyle" image="icn_categories suggestion_lifestyle">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vf0-PS-EDB">
+                                                                        <rect key="frame" x="0.0" y="138.5" width="195" height="21"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-Po-8dd" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="21"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Photography" image="icn_categories suggestion_photography">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yif-D2-EkF" customClass="SearchCategoryButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="100" y="0.0" width="95" height="21"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="95" id="4ko-w8-oTr"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <state key="normal" title="Teaching" image="icn_categories suggestion_teaching">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="GxX-ne-BNV"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="VJI-0y-ss5" secondAttribute="trailing" constant="54" id="2pf-hf-JOr"/>
+                                                    <constraint firstItem="mOH-S3-vBD" firstAttribute="centerX" secondItem="Emw-Pi-gjE" secondAttribute="centerX" id="9zG-1a-ZRd"/>
+                                                    <constraint firstItem="mOH-S3-vBD" firstAttribute="top" secondItem="VJI-0y-ss5" secondAttribute="bottom" constant="24" id="AgP-GS-b7D"/>
+                                                    <constraint firstItem="c5f-Dk-8kO" firstAttribute="leading" secondItem="Emw-Pi-gjE" secondAttribute="leading" constant="24" id="Lli-0o-6nP"/>
+                                                    <constraint firstItem="nXW-Kh-pa0" firstAttribute="top" secondItem="mOH-S3-vBD" secondAttribute="bottom" constant="8" id="Sr7-JQ-UHf"/>
+                                                    <constraint firstItem="nXW-Kh-pa0" firstAttribute="centerX" secondItem="Emw-Pi-gjE" secondAttribute="centerX" id="Twu-aT-z92"/>
+                                                    <constraint firstItem="VJI-0y-ss5" firstAttribute="top" secondItem="Emw-Pi-gjE" secondAttribute="top" constant="30" id="jzQ-OO-ryW"/>
+                                                    <constraint firstItem="c5f-Dk-8kO" firstAttribute="top" secondItem="nXW-Kh-pa0" secondAttribute="bottom" constant="40" id="nYJ-4a-Gme"/>
+                                                    <constraint firstItem="VJI-0y-ss5" firstAttribute="leading" secondItem="Emw-Pi-gjE" secondAttribute="leading" constant="56" id="pcA-yw-M0T"/>
+                                                    <constraint firstAttribute="trailing" secondItem="c5f-Dk-8kO" secondAttribute="trailing" constant="30" id="qMy-2L-fC2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="812" id="PAj-yD-WXK"/>
+                                            <constraint firstItem="Emw-Pi-gjE" firstAttribute="top" secondItem="cfw-p6-hrt" secondAttribute="top" constant="159" id="QNm-Qx-CaR"/>
+                                            <constraint firstItem="Emw-Pi-gjE" firstAttribute="leading" secondItem="cfw-p6-hrt" secondAttribute="leading" id="STI-Gi-gNF"/>
+                                            <constraint firstAttribute="bottom" secondItem="Emw-Pi-gjE" secondAttribute="bottom" id="u0u-fb-8SO"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Course" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CS-Ny-DXc">
+                                        <rect key="frame" x="24" y="64" width="123.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
+                                        <color key="textColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cfw-p6-hrt" secondAttribute="bottom" id="amS-gH-qNs"/>
+                                    <constraint firstItem="2CS-Ny-DXc" firstAttribute="leading" secondItem="wqG-dH-1eS" secondAttribute="leading" constant="24" id="cQa-Ya-CXN"/>
+                                    <constraint firstItem="cfw-p6-hrt" firstAttribute="width" secondItem="wqG-dH-1eS" secondAttribute="width" id="eXN-fy-XUo"/>
+                                    <constraint firstItem="cfw-p6-hrt" firstAttribute="top" secondItem="wqG-dH-1eS" secondAttribute="top" id="he9-aF-RC5"/>
+                                    <constraint firstItem="2CS-Ny-DXc" firstAttribute="top" secondItem="wqG-dH-1eS" secondAttribute="top" constant="64" id="liB-JW-Z6e"/>
+                                    <constraint firstItem="cfw-p6-hrt" firstAttribute="leading" secondItem="wqG-dH-1eS" secondAttribute="leading" id="vQE-jW-c4F"/>
+                                    <constraint firstAttribute="trailing" secondItem="cfw-p6-hrt" secondAttribute="trailing" id="zxB-wy-na1"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PuK-k4-kwj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wqG-dH-1eS" firstAttribute="top" secondItem="PuK-k4-kwj" secondAttribute="top" id="GTc-cr-5NW"/>
+                            <constraint firstItem="PuK-k4-kwj" firstAttribute="trailing" secondItem="wqG-dH-1eS" secondAttribute="trailing" id="Mx1-W1-lpi"/>
+                            <constraint firstItem="PuK-k4-kwj" firstAttribute="bottom" secondItem="wqG-dH-1eS" secondAttribute="bottom" id="Uty-U8-i7F"/>
+                            <constraint firstItem="wqG-dH-1eS" firstAttribute="leading" secondItem="PuK-k4-kwj" secondAttribute="leading" id="wXY-fA-2c9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nK-kH-gTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1396" y="-96"/>
         </scene>
         <!--Completed View Controller-->
         <scene sceneID="esk-qr-g1N">
             <objects>
                 <viewController storyboardIdentifier="CompletedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bQL-lk-YNf" customClass="CompletedViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kpE-Sy-7jh">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="592"/>
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="636"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gC0-xu-81e">
-                                <rect key="frame" x="0.0" y="0.0" width="327" height="592"/>
+                                <rect key="frame" x="0.0" y="0.0" width="327" height="636"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="completedCourseCell" rowHeight="139" id="ixB-Qz-k8Z" customClass="CompletedTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
@@ -331,10 +566,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdF-BS-ILC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1716" y="524"/>
+            <point key="canvasLocation" x="-3121" y="666"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icn_categories suggestion_IT" width="19" height="20"/>
+        <image name="icn_categories suggestion_business" width="19" height="20"/>
+        <image name="icn_categories suggestion_code" width="19" height="20"/>
+        <image name="icn_categories suggestion_design" width="19" height="20"/>
+        <image name="icn_categories suggestion_finance" width="19" height="20"/>
+        <image name="icn_categories suggestion_fitness" width="19" height="20"/>
+        <image name="icn_categories suggestion_lifestyle" width="19" height="20"/>
+        <image name="icn_categories suggestion_marketing" width="19" height="20"/>
+        <image name="icn_categories suggestion_music" width="20" height="20"/>
+        <image name="icn_categories suggestion_photography" width="19" height="21"/>
+        <image name="icn_categories suggestion_teaching" width="19" height="20"/>
+        <image name="img_my course_empty" width="265" height="237"/>
         <image name="img_profiledetails_bg" width="375" height="260"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

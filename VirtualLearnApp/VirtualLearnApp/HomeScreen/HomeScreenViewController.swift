@@ -13,7 +13,8 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var homeScreenTableview: UITableView!
     
-    var viewModel = MyCoursesViewModel()
+    var viewModel = HomeViewModel()
+    var ongoingCount = 0
     
     @IBOutlet weak var hamburgerView: UIView!
     
@@ -21,6 +22,7 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         self.homeScreenTableview.separatorStyle = .none
         configureNavigationBar()
+        getOngoingCourseCount()
         homeScreenTableview.delegate = self
         homeScreenTableview.dataSource = self
     }
@@ -36,6 +38,13 @@ class HomeScreenViewController: UIViewController {
             UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.HamburgerMenu.rawValue), style: .done, target: self, action: #selector(hamburgerButtonPressed))
         ]
     }
+    
+    func getOngoingCourseCount() {
+        
+        viewModel.ongoingCourseCount { (courseCount) in
+            self.ongoingCount = courseCount
+        }
+    }
     //MARK: OUTLETS
     
     @IBAction func homeBtnTapped(_ sender: Any) {
@@ -46,8 +55,15 @@ class HomeScreenViewController: UIViewController {
     
     @IBAction func myCourseBtn(_ sender: Any) {
         let myCoursesStoryboard = UIStoryboard.init(name: "MyCourses", bundle: Bundle.main)
-        let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "OngoingAndCompletedViewController") as? OngoingAndCompletedViewController
-        self.navigationController?.pushViewController(myCoursesVC!, animated: true)
+        if ongoingCount == 0 {
+        
+            let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "EmptyCourseViewController") as? EmptyCourseViewController
+            self.navigationController?.pushViewController(myCoursesVC!, animated: true)
+        } else {
+        
+            let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "OngoingAndCompletedViewController") as? OngoingAndCompletedViewController
+            self.navigationController?.pushViewController(myCoursesVC!, animated: true)
+        }
     }
     
     @IBAction func myProfileBtn(_ sender: Any) {
@@ -81,7 +97,7 @@ class HomeScreenViewController: UIViewController {
     
     func animateView() {
         UIView.animate(withDuration: 0.3, animations: {
-            self.view.layoutIfNeeded() })
+                        self.view.layoutIfNeeded() })
         navigationItem.leftBarButtonItems = []
     }
     
@@ -106,7 +122,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         return 10
     }
     
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "firstTableCell") as! HomeScreenTableViewCell
@@ -155,7 +171,7 @@ extension HomeScreenViewController: UISearchBarDelegate {
         let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
         self.navigationController?.pushViewController(searchVC!, animated: true)
     }
-
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         hideSearch()
         
@@ -163,7 +179,7 @@ extension HomeScreenViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-    
+        
     }
     
     func hideSearch() {
