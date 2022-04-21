@@ -56,6 +56,10 @@
 		BAB1B679280477D30020F6CE /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB1B678280477D30020F6CE /* Notifications.storyboard */; };
 		BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B685280492D20020F6CE /* CustomImageView.swift */; };
 		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
+		F5048C5D280FEB6400DBCFC9 /* Biko_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5048C5C280FEB6400DBCFC9 /* Biko_Regular.otf */; };
+		F5048C6528101C6900DBCFC9 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5048C6428101C6900DBCFC9 /* ChaptersViewController.swift */; };
+		F5048C6828101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5048C6728101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift */; };
+		F5273863281122F7004D25CF /* ChapterCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5273862281122F7004D25CF /* ChapterCourseTableViewCell.swift */; };
 		F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5315C50280E9D4800C81290 /* OverviewScreenController.swift */; };
 		F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836A28081F0000A32D52 /* HomeNetworkManager.swift */; };
 		F553836D28082E0100A32D52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836C28082E0100A32D52 /* HomeViewModel.swift */; };
@@ -138,6 +142,10 @@
 		BAB1B678280477D30020F6CE /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		BAB1B685280492D20020F6CE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
+		F5048C5C280FEB6400DBCFC9 /* Biko_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Biko_Regular.otf; sourceTree = "<group>"; };
+		F5048C6428101C6900DBCFC9 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		F5048C6728101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterOverviewChapterViewController.swift; sourceTree = "<group>"; };
+		F5273862281122F7004D25CF /* ChapterCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCourseTableViewCell.swift; sourceTree = "<group>"; };
 		F5315C50280E9D4800C81290 /* OverviewScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreenController.swift; sourceTree = "<group>"; };
 		F553836A28081F0000A32D52 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
 		F553836C28082E0100A32D52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -322,6 +330,9 @@
 			children = (
 				F55383712808907F00A32D52 /* Overview.storyboard */,
 				F5315C50280E9D4800C81290 /* OverviewScreenController.swift */,
+				F5048C6428101C6900DBCFC9 /* ChaptersViewController.swift */,
+				F5048C6728101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift */,
+				F5273862281122F7004D25CF /* ChapterCourseTableViewCell.swift */,
 			);
 			path = OverviewScreen;
 			sourceTree = "<group>";
@@ -381,6 +392,7 @@
 			children = (
 				F5C7ED2D28029FAE00134409 /* biko_bold.otf */,
 				F5C7ED2C28029FAE00134409 /* proxima_nova_bold.ttf */,
+				F5048C5C280FEB6400DBCFC9 /* Biko_Regular.otf */,
 				F5C7ED2A28029FAD00134409 /* proxima_nova_medium.ttf */,
 				F57499CE28033EE200695C3B /* Proxima-Nova-Sbold.otf */,
 				F5C7ED2B28029FAD00134409 /* proxima_nova_regular.otf */,
@@ -455,6 +467,7 @@
 				F5C7ED3328029FAE00134409 /* proxima_nova_regular.otf in Resources */,
 				F57499C72802A6D000695C3B /* AvenirLTStd-Roman.otf in Resources */,
 				F5C7ED2F28029FAE00134409 /* system_san_francisco_display_regular.ttf in Resources */,
+				F5048C5D280FEB6400DBCFC9 /* Biko_Regular.otf in Resources */,
 				F5C7ED3028029FAE00134409 /* proxima_nova_x_bold.otf in Resources */,
 				BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */,
 				F5C7ED3128029FAE00134409 /* proximanovaextrabold.otf in Resources */,
@@ -481,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5048C6528101C6900DBCFC9 /* ChaptersViewController.swift in Sources */,
 				88A17E2D27FEEC1200CD1328 /* WelcomeViewController.swift in Sources */,
 				8B6DD710280DA7F600175F2A /* OngoingTableViewCell.swift in Sources */,
 				BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */,
@@ -520,6 +534,7 @@
 				F553836F280837B800A32D52 /* HomeModel.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
 				8B730B1D28067E4300D17EF2 /* ProfileDataModel.swift in Sources */,
+				F5273863281122F7004D25CF /* ChapterCourseTableViewCell.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
 				F5C31674280006B100F30001 /* CustomViews.swift in Sources */,
 				8B1377AC280DACCA007C72DB /* CompletedViewController.swift in Sources */,
@@ -528,6 +543,7 @@
 				8B4693A328094FD900B0CFB8 /* MyCoursesDataModel.swift in Sources */,
 				8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */,
 				8B730B1F28068BBD00D17EF2 /* ProfileViewModel.swift in Sources */,
+				F5048C6828101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift in Sources */,
 				F57499D12803EA5C00695C3B /* NSAttributedString+Extention.swift in Sources */,
 				F5C316722800069C00F30001 /* CustomTextFeilds.swift in Sources */,
 				8B7963B0280E7FE100B9BA5A /* ApiImage.swift in Sources */,

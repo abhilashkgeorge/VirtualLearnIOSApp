@@ -2,18 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>biko_bold.otf</string>
-		<string>proxima_nova_bold.ttf</string>
-		<string>proxima_nova_medium.ttf</string>
-		<string>proxima_nova_regular.otf</string>
-		<string>Proxima-Nova-Sbold.otf</string>
-		<string>proxima_nova_x_bold.otf</string>
-		<string>proximanovaextrabold.otf</string>
-		<string>system_san_francisco_display_regular.ttf</string>
-		<string>AvenirLTStd-Roman.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -32,6 +20,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>biko_bold.otf</string>
+		<string>proxima_nova_bold.ttf</string>
+		<string>proxima_nova_medium.ttf</string>
+		<string>proxima_nova_regular.otf</string>
+		<string>Proxima-Nova-Sbold.otf</string>
+		<string>proxima_nova_x_bold.otf</string>
+		<string>proximanovaextrabold.otf</string>
+		<string>system_san_francisco_display_regular.ttf</string>
+		<string>AvenirLTStd-Roman.otf</string>
+		<string>Biko_Regular.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
