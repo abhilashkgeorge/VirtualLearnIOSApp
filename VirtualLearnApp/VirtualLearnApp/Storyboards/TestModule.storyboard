@@ -11,7 +11,7 @@
         <!--Test Module View Controller-->
         <scene sceneID="vkK-Ww-Znr">
             <objects>
-                <viewController id="N5u-VV-aaE" customClass="TestModuleViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestModuleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N5u-VV-aaE" customClass="TestModuleViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PFg-gB-LcI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,6 +268,12 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="option1" destination="BIL-ez-Gf3" id="INy-gA-u8S"/>
+                        <outlet property="option2" destination="rG2-V3-7ib" id="nWz-Yj-757"/>
+                        <outlet property="option3" destination="jd9-9e-D8k" id="sNS-yB-gJE"/>
+                        <outlet property="option4" destination="3m8-f1-mtg" id="l8F-5n-QlT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVU-hc-fb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

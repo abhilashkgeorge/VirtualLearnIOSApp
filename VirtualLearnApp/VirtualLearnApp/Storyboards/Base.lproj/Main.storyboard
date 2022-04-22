@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rt2-zd-ELa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rt2-zd-ELa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +26,7 @@
                                                 <rect key="frame" x="0.0" y="165" width="414" height="546"/>
                                             </scrollView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="F49-xD-p2i">
-                                                <rect key="frame" x="149.5" y="758" width="115.5" height="4"/>
+                                                <rect key="frame" x="146" y="758" width="122.5" height="4"/>
                                                 <color key="pageIndicatorTintColor" systemColor="systemOrangeColor"/>
                                                 <color key="currentPageIndicatorTintColor" systemColor="systemIndigoColor"/>
                                                 <connections>
@@ -52,6 +51,14 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYH-4W-beC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAC-rH-fE9">
+                                                <rect key="frame" x="120" y="745" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Go"/>
+                                                <connections>
+                                                    <segue destination="h78-YN-7V4" kind="show" id="CXy-81-MLc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -102,6 +109,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.2" y="102.99850074962519"/>
+        </scene>
+        <!--TestModuleViewController-->
+        <scene sceneID="6PV-je-Q8A">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TestModule" referencedIdentifier="TestModuleViewController" id="h78-YN-7V4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5Jm-Zt-9hr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8F-wR-ZYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478" y="225"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2zC-EK-Obs">
