@@ -83,6 +83,11 @@
 		F5048C6528101C6900DBCFC9 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5048C6428101C6900DBCFC9 /* ChaptersViewController.swift */; };
 		F5048C6828101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5048C6728101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift */; };
 		F5273863281122F7004D25CF /* ChapterCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5273862281122F7004D25CF /* ChapterCourseTableViewCell.swift */; };
+		F52738742812FF74004D25CF /* OverviewCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738732812FF74004D25CF /* OverviewCourseTableViewCell.swift */; };
+		F52738772812FF96004D25CF /* OverviewLearnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738762812FF96004D25CF /* OverviewLearnTableViewCell.swift */; };
+		F527387A2812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738792812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift */; };
+		F52738832813C3AD004D25CF /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738822813C3AD004D25CF /* UIButton+Extention.swift */; };
+		F527388828140D11004D25CF /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527388728140D11004D25CF /* UIViewController+Extention.swift */; };
 		F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5315C50280E9D4800C81290 /* OverviewScreenController.swift */; };
 		F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836A28081F0000A32D52 /* HomeNetworkManager.swift */; };
 		F553836D28082E0100A32D52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836C28082E0100A32D52 /* HomeViewModel.swift */; };
@@ -192,6 +197,11 @@
 		F5048C6428101C6900DBCFC9 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		F5048C6728101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterOverviewChapterViewController.swift; sourceTree = "<group>"; };
 		F5273862281122F7004D25CF /* ChapterCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCourseTableViewCell.swift; sourceTree = "<group>"; };
+		F52738732812FF74004D25CF /* OverviewCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCourseTableViewCell.swift; sourceTree = "<group>"; };
+		F52738762812FF96004D25CF /* OverviewLearnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewLearnTableViewCell.swift; sourceTree = "<group>"; };
+		F52738792812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewRequirementsTableViewCell.swift; sourceTree = "<group>"; };
+		F52738822813C3AD004D25CF /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
+		F527388728140D11004D25CF /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		F5315C50280E9D4800C81290 /* OverviewScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreenController.swift; sourceTree = "<group>"; };
 		F553836A28081F0000A32D52 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
 		F553836C28082E0100A32D52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -418,6 +428,9 @@
 				8B08596E2815128B007BEF53 /* ChapterDataModel.swift */,
 				8B08597128151348007BEF53 /* SubChaptersDataModel.swift */,
 				8B0859742815146A007BEF53 /* ChaptersViewModel.swift */,
+				F52738732812FF74004D25CF /* OverviewCourseTableViewCell.swift */,
+				F52738762812FF96004D25CF /* OverviewLearnTableViewCell.swift */,
+				F52738792812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift */,
 			);
 			path = OverviewScreen;
 			sourceTree = "<group>";
@@ -429,6 +442,8 @@
 				F57499CC2803115600695C3B /* UIColor+Extention.swift */,
 				F57499D02803EA5C00695C3B /* NSAttributedString+Extention.swift */,
 				F57499ED280564F700695C3B /* UIImage+Extention.swift */,
+				F52738822813C3AD004D25CF /* UIButton+Extention.swift */,
+				F527388728140D11004D25CF /* UIViewController+Extention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -592,8 +607,10 @@
 				8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */,
 				BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */,
 				BA3D7B4128053A4E0092EDE1 /* NotificationsViewController.swift in Sources */,
+				F52738832813C3AD004D25CF /* UIButton+Extention.swift in Sources */,
 				8BEC30B8280186E000F7AD86 /* RegisterViewModel.swift in Sources */,
 				8B4DFF2D2813CE8E0034C34C /* OverviewDataModel.swift in Sources */,
+				F52738742812FF74004D25CF /* OverviewCourseTableViewCell.swift in Sources */,
 				8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */,
 				8B46939E2809329100B0CFB8 /* OngoingAndCompletedViewController.swift in Sources */,
 				8B6D529C2813D3DD00DAA870 /* OverviewViewModel.swift in Sources */,
@@ -605,9 +622,11 @@
 				F57499E82804585600695C3B /* HomeScreenCollectionViewCell.swift in Sources */,
 				8B08597228151348007BEF53 /* SubChaptersDataModel.swift in Sources */,
 				BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */,
+				F52738772812FF96004D25CF /* OverviewLearnTableViewCell.swift in Sources */,
 				8BA75C48280FDE66003CF45F /* ChangePasswordViewModel.swift in Sources */,
 				8842ADBA28007EC8009C7F3D /* CreateNewPasswordViewController.swift in Sources */,
 				882939142811754600B54A60 /* SubCategoryCollectionViewCell.swift in Sources */,
+				F527387A2812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift in Sources */,
 				8B6DD70D280DA7DF00175F2A /* OngoingViewController.swift in Sources */,
 				8B4693A7280952DD00B0CFB8 /* MyCoursesViewModel.swift in Sources */,
 				88560C1D280190D500094EB1 /* URLRequest+Extension.swift in Sources */,
@@ -647,6 +666,7 @@
 				8B4DFF302813D1640034C34C /* OverviewNetworkManager.swift in Sources */,
 				8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */,
 				8B730B1F28068BBD00D17EF2 /* ProfileViewModel.swift in Sources */,
+				F527388828140D11004D25CF /* UIViewController+Extention.swift in Sources */,
 				F5048C6828101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift in Sources */,
 				F57499D12803EA5C00695C3B /* NSAttributedString+Extention.swift in Sources */,
 				8857BB36280FC20A00757726 /* ForgotPasswordNetworkManager.swift in Sources */,

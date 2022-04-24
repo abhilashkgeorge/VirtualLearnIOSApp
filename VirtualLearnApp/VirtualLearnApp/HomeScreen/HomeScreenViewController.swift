@@ -13,12 +13,25 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var homeScreenTableview: UITableView!
     
+    //MARK: Hamburger Buttons
+    
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var myCourse: UIButton!
+    @IBOutlet weak var myProfile: UIButton!
+    @IBOutlet weak var notification: UIButton!
+    @IBOutlet weak var setting: UIButton!
+    @IBOutlet weak var logout: UIButton!
+    
+    
     var viewModel = HomeViewModel()
     var overviewModel = OverviewViewModel()
     var chapterViewModel = ChaptersViewModel()
     var ongoingCount = 0
     var selectedCourseName = "angular"
     var selectedCourseID = "62273a3e4603abcaf3ffee8c"
+    
+    var allCourses = [HomeModel]()
+    var popularCourses = [HomeModel]()
     
     @IBOutlet weak var hamburgerView: UIView!
     
@@ -29,7 +42,38 @@ class HomeScreenViewController: UIViewController {
         getOngoingCourseCount()
         homeScreenTableview.delegate = self
         homeScreenTableview.dataSource = self
+        getAllCourses()
+        getPopularCourses()
+        homeButton.imageWith(color: .hamburgerGrey, for: .normal)
     }
+    
+    func getAllCourses() {
+
+        viewModel.homeScreenAllCourses(completionHandler: {
+
+            (_ courses: [HomeModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.allCourses = courses
+                self.homeScreenTableview.reloadData()
+            }
+        })
+
+        }
+    func getPopularCourses() {
+
+        viewModel.homeScreenPopularCourses(completionHandler: {
+
+            (_ courses: [HomeModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.popularCourses = courses
+                
+                self.homeScreenTableview.reloadData()
+            }
+        })
+
+        }
     
     
     func configureNavigationBar() {
@@ -49,9 +93,12 @@ class HomeScreenViewController: UIViewController {
             self.ongoingCount = courseCount
         }
     }
-    //MARK: OUTLETS
+    
+    //MARK: Hamburger Button Tapped
     
     @IBAction func homeBtnTapped(_ sender: Any) {
+        
+        homeButton.tintColor = UIColor.white
         sideMenuConstraint.constant = 0
         animateView()
         configureNavigationBar()
@@ -72,13 +119,16 @@ class HomeScreenViewController: UIViewController {
         
     }
     
+    
     @IBAction func myCourseBtn(_ sender: Any) {
+        myCourse.imageWith(color: .red, for: .normal)
         let myCoursesStoryboard = UIStoryboard.init(name: "MyCourses", bundle: Bundle.main)
         if ongoingCount == 0 {
         
             let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "EmptyCourseViewController") as? EmptyCourseViewController
             self.navigationController?.pushViewController(myCoursesVC!, animated: true)
         } else {
+            
         
             let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "OngoingAndCompletedViewController") as? OngoingAndCompletedViewController
             self.navigationController?.pushViewController(myCoursesVC!, animated: true)
@@ -104,11 +154,26 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func logoutBtn(_ sender: Any) {
+        sideMenuConstraint.constant = 0
+        animateView()
+        configureNavigationBar()
+        let alert = UIAlertController(title: "Are you sure want to logout?", message: "" , preferredStyle: .alert)
+        let optionNo = UIAlertAction(title: "Cancel", style: .cancel) { (selection) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        let optionYes = UIAlertAction(title: "Logout", style: .default) { (selection) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        present(alert, animated: true, completion: nil)
+        alert.addAction(optionNo)
+        alert.addAction(optionYes)
+        
     }
+
     
     
     @objc func hamburgerButtonPressed(_ sender: Any) {
-        print("tapped")
+        navigationItem.hidesBackButton = true
         hamburgerView.translatesAutoresizingMaskIntoConstraints = false
         sideMenuConstraint.constant = -350
         animateView()
@@ -124,6 +189,7 @@ class HomeScreenViewController: UIViewController {
         let touch: UITouch? = touches.first
         if touch?.view != sideMenuView {
             configureNavigationBar()
+            sideMenuConstraint.constant = -350
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
@@ -138,28 +204,41 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 13
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "firstTableCell") as! HomeScreenTableViewCell
+            cell.allCourses = self.allCourses
             cell.configureCells(indexPath: indexPath.row)
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "secondTableCell") as! HomeScreenTableViewCell
+            cell.allCourses = self.allCourses
             cell.contentView.backgroundColor = .white
             cell.configureCells(indexPath: indexPath.row)
             return cell
         }
         else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "thirdTableCell") as! HomeScreenTableViewCell
-            cell.configureCells(indexPath: indexPath.row)
-            return cell
-        } else if indexPath.row >= 2{
+            if cell.allButtonStatus == true {
+                cell.homeScreenTV = self.homeScreenTableview
+                cell.allCourses = self.popularCourses
+                cell.configureCells(indexPath: indexPath.row)
+                return cell
+            } else {
+                cell.allCourses = self.allCourses
+                cell.configureCells(indexPath: indexPath.row)
+                return cell
+            }
+           
+        } else if indexPath.row > 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "fourthTableCell") as! HomeScreenTableViewCell
+            cell.allCourses = self.allCourses
             cell.contentView.backgroundColor = .white
+            cell.fourthCellHeaderLbl.text = "Top courses in \(cell.categoryTitles[indexPath.row - 2])"
             cell.configureCells(indexPath: indexPath.row)
             return cell
         }
@@ -171,7 +250,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return 260
         } else if indexPath.row == 1 {
-            return 104
+            return 120
         }
         
         else if indexPath.row == 2 {
@@ -190,18 +269,4 @@ extension HomeScreenViewController: UISearchBarDelegate {
         let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
         self.navigationController?.pushViewController(searchVC!, animated: true)
     }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        hideSearch()
-        
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        
-    }
-    
-    func hideSearch() {
-    }
-    
 }
