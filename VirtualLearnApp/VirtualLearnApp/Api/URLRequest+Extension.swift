@@ -139,5 +139,14 @@ extension URLRequest {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         return request
     }
-
+    
+    static func getRequestForOverView(url: URL) -> URLRequest {
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+         
+        print("Token for overview \(commonToken)")
+        request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
+        return request
+    }
 }

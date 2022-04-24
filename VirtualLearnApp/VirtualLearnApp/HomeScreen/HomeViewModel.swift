@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewModel {
     
+    var id = ""
     var title = ""
     var category = ""
     var chapters = 0
@@ -41,6 +42,7 @@ class HomeViewModel {
         
         for course in allCourses {
             
+            id = course["_id"] as? String ?? "No all course ID"
             title = course["courseName"] as? String ?? "No all course name"
             category = course["category"] as? String ?? "No all course category"
             chapters = course["totalChapters"] as? Int ?? 0
@@ -50,7 +52,7 @@ class HomeViewModel {
                 self.courseImage = image
             }
             
-            let eachAllCourse = HomeModel(courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
+            let eachAllCourse = HomeModel(id: id, courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
             allUserCourses.append(eachAllCourse)
         }
         print(allUserCourses[0].courseTitle)
@@ -76,6 +78,7 @@ class HomeViewModel {
         
         for course in popularCourses {
             
+            id = course["_id"] as? String ?? "No all course ID"
             title = course["courseName"] as? String ?? "No popular course name"
             category = course["category"] as? String ?? "No popular course category"
             chapters = course["totalChapters"] as? Int ?? 0
@@ -85,7 +88,7 @@ class HomeViewModel {
                 self.courseImage = image
             }
             
-            let eachPopularCourse = HomeModel(courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
+            let eachPopularCourse = HomeModel(id: id, courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
             userPopularCourses.append(eachPopularCourse)
         }
         print(userPopularCourses[0].courseTitle)
