@@ -119,5 +119,13 @@ extension URL {
         }
         return url
     }
+    
+    static func fetchURLForLogout() -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/logout")else {
+            fatalError("Error getting Home URL")
+        }
+        return url
+    }
 }
 

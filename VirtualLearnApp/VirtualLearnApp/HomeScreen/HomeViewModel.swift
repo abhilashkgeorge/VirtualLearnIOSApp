@@ -89,6 +89,7 @@ class HomeViewModel {
             userPopularCourses.append(eachPopularCourse)
         }
         print(userPopularCourses[0].courseTitle)
+        print("\(userPopularCourses.count)0000000..0..00.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.")
         return userPopularCourses
     }
     

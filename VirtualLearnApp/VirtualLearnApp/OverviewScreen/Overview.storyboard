@@ -50,7 +50,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="180" id="gpN-Wu-1xr"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Overview"/>
                                                 <connections>
                                                     <action selector="chaptersButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jcl-vg-Aqi"/>
@@ -61,26 +61,24 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="180" id="rz9-8J-B8Y"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Chapters"/>
                                                 <connections>
                                                     <action selector="overviewButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zq3-Nz-Uro"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBz-em-SRF">
-                                                <rect key="frame" x="24" y="280.5" width="164" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <rect key="frame" x="24" y="280.5" width="163" height="1"/>
+                                                <color key="backgroundColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="YSz-uo-dT7"/>
-                                                    <constraint firstAttribute="width" constant="164" id="fAx-ND-SOG"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcZ-sx-QDF">
-                                                <rect key="frame" x="186" y="280.5" width="164" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <rect key="frame" x="187" y="280.5" width="163" height="1"/>
+                                                <color key="backgroundColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="EVT-be-ucr"/>
-                                                    <constraint firstAttribute="width" constant="164" id="uOf-2i-gXC"/>
                                                 </constraints>
                                             </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUI-mv-vem">
@@ -98,13 +96,30 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-Z1-cm6">
+                                                <rect key="frame" x="24" y="164" width="31" height="11.5"/>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.74509803919999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Chapters | 46 Lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24r-xk-hIU">
+                                                <rect key="frame" x="67" y="164" width="149" height="14"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="UBz-em-SRF" firstAttribute="width" secondItem="QcZ-sx-QDF" secondAttribute="width" id="5gb-cB-67y"/>
+                                            <constraint firstItem="QcZ-sx-QDF" firstAttribute="leading" secondItem="UBz-em-SRF" secondAttribute="trailing" id="5oM-bB-Wnr"/>
                                             <constraint firstItem="4EA-xj-ZHH" firstAttribute="leading" secondItem="BtF-Rh-orY" secondAttribute="leading" constant="24" id="7oB-5m-RbZ"/>
+                                            <constraint firstItem="24r-xk-hIU" firstAttribute="leading" secondItem="Yd6-Z1-cm6" secondAttribute="trailing" constant="12" id="8bx-cZ-nuE"/>
                                             <constraint firstItem="WUI-mv-vem" firstAttribute="leading" secondItem="BtF-Rh-orY" secondAttribute="leading" id="AbW-WE-zSa"/>
                                             <constraint firstAttribute="trailing" secondItem="QcZ-sx-QDF" secondAttribute="trailing" constant="24" id="PPE-44-Wd7"/>
                                             <constraint firstAttribute="trailing" secondItem="gby-eo-mUF" secondAttribute="trailing" constant="16" id="RRK-Id-4xK"/>
+                                            <constraint firstItem="Yd6-Z1-cm6" firstAttribute="top" secondItem="gby-eo-mUF" secondAttribute="bottom" constant="4" id="Rgf-pb-OdN"/>
                                             <constraint firstItem="UBz-em-SRF" firstAttribute="leading" secondItem="BtF-Rh-orY" secondAttribute="leading" constant="24" id="SEx-WH-AZU"/>
                                             <constraint firstAttribute="bottom" secondItem="WUI-mv-vem" secondAttribute="bottom" id="Saa-w4-aqw"/>
                                             <constraint firstItem="gby-eo-mUF" firstAttribute="top" secondItem="BtF-Rh-orY" secondAttribute="top" constant="108" id="XXV-hx-ggW"/>
@@ -112,6 +127,8 @@
                                             <constraint firstAttribute="trailing" secondItem="Y6I-kI-kJu" secondAttribute="trailing" constant="24" id="cYN-3l-24n"/>
                                             <constraint firstItem="UBz-em-SRF" firstAttribute="top" secondItem="4EA-xj-ZHH" secondAttribute="bottom" constant="8.5" id="dv4-xh-gi3"/>
                                             <constraint firstAttribute="trailing" secondItem="WUI-mv-vem" secondAttribute="trailing" id="eiN-jz-xiv"/>
+                                            <constraint firstItem="Yd6-Z1-cm6" firstAttribute="leading" secondItem="BtF-Rh-orY" secondAttribute="leading" constant="24" id="gOw-Vb-5z2"/>
+                                            <constraint firstItem="24r-xk-hIU" firstAttribute="top" secondItem="gby-eo-mUF" secondAttribute="bottom" constant="4" id="n3N-XI-DRl"/>
                                             <constraint firstItem="QcZ-sx-QDF" firstAttribute="top" secondItem="Y6I-kI-kJu" secondAttribute="bottom" constant="8.5" id="ngo-WH-hOt"/>
                                             <constraint firstItem="4EA-xj-ZHH" firstAttribute="top" secondItem="kA0-Lv-xQQ" secondAttribute="bottom" constant="30" id="oyW-Ro-Hk0"/>
                                             <constraint firstItem="WUI-mv-vem" firstAttribute="top" secondItem="UBz-em-SRF" secondAttribute="bottom" constant="20" id="rEU-8k-58R"/>
@@ -143,7 +160,10 @@
                     <connections>
                         <outlet property="chaptersButton" destination="4EA-xj-ZHH" id="QUf-nr-MKw"/>
                         <outlet property="chaptersUIView" destination="UBz-em-SRF" id="Lxs-sD-Xfn"/>
+                        <outlet property="courseCatergoryLbl" destination="Yd6-Z1-cm6" id="Nh1-ej-UW9"/>
                         <outlet property="courseImg" destination="kA0-Lv-xQQ" id="sG0-vp-sFS"/>
+                        <outlet property="courseSizeLbl" destination="24r-xk-hIU" id="e3y-0o-VtV"/>
+                        <outlet property="courseTitle" destination="gby-eo-mUF" id="9RE-Be-Onc"/>
                         <outlet property="mainContainerView" destination="WUI-mv-vem" id="buR-Gp-BfK"/>
                         <outlet property="overviewButton" destination="Y6I-kI-kJu" id="5Z2-5v-yLk"/>
                         <outlet property="overviewUIView" destination="QcZ-sx-QDF" id="NzE-A5-5h4"/>
@@ -162,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn how to design a beautiful and engaging mobile app with Figma. Learn-by-doing approach." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duW-z8-eqd">
-                                <rect key="frame" x="24" y="0.0" width="366" height="32"/>
+                                <rect key="frame" x="24" y="0.0" width="366" height="33"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
                                 <color key="textColor" red="0.16862745098039217" green="0.70980392156862748" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -193,45 +213,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U06-7A-lcc">
-                                <rect key="frame" x="98" y="149" width="26" height="12"/>
+                                <rect key="frame" x="98" y="149" width="26" height="14"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qd-3f-1Ks">
-                                <rect key="frame" x="24" y="217" width="366" height="95"/>
+                                <rect key="frame" x="24" y="217" width="366" height="114.5"/>
                                 <string key="text">Figma is a very powerful application that runs online. There are virtually no platform boundaries when it comes to using figma because you can design within a web browser or using their desktop application made for windows and macs. Figma is similar to Sketch and Adobe XD but is the more powerful of the three when it comes to te…</string>
                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
                                 <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Includes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfr-R2-mCU">
-                                <rect key="frame" x="24" y="342" width="116.5" height="20"/>
+                                <rect key="frame" x="24" y="361.5" width="116.5" height="20"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="SFNS Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What you'll learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-L1-PIx">
-                                <rect key="frame" x="24" y="576" width="124.5" height="20"/>
+                                <rect key="frame" x="24" y="595.5" width="124.5" height="20"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="SFNS Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What you'll learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5i-TK-vDJ">
-                                <rect key="frame" x="24" y="811" width="124.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requirments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5i-TK-vDJ">
+                                <rect key="frame" x="24" y="830.5" width="92" height="20"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="SFNS Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Lu-w8-1xW">
-                                <rect key="frame" x="24" y="376" width="237" height="170"/>
+                                <rect key="frame" x="24" y="395.5" width="237" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="1Gk-xN-IXX"/>
                                     <constraint firstAttribute="width" constant="237" id="WGe-D9-xVm"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="18" id="R6l-Rz-Tzn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="course" rowHeight="18" id="R6l-Rz-Tzn" customClass="OverviewCourseTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="237" height="18"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6l-Rz-Tzn" id="yFM-a0-FaC">
@@ -246,7 +266,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.5 total hours video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBQ-mj-bCu">
-                                                    <rect key="frame" x="28" y="0.0" width="127" height="16"/>
+                                                    <rect key="frame" x="28" y="0.0" width="128" height="16"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -263,53 +283,115 @@
                                 </prototypes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WP6-ua-slY">
-                                <rect key="frame" x="24" y="611" width="364" height="170"/>
+                                <rect key="frame" x="24" y="630.5" width="364" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="ES9-mk-RMQ"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="learn" id="wEc-cX-nxO" customClass="OverviewLearnTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="364" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wEc-cX-nxO" id="Bs3-Ra-MOB">
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle" translatesAutoresizingMaskIntoConstraints="NO" id="t72-0g-JDk">
+                                                    <rect key="frame" x="0.0" y="14" width="18" height="18"/>
+                                                    <color key="tintColor" red="0.98823529409999999" green="0.74509803919999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="LLn-j2-mhn"/>
+                                                        <constraint firstAttribute="width" constant="18" id="me7-n9-soy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmF-sg-l0I">
+                                                    <rect key="frame" x="28" y="12.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lmF-sg-l0I" firstAttribute="centerY" secondItem="t72-0g-JDk" secondAttribute="centerY" id="FVQ-Oh-mbL"/>
+                                                <constraint firstItem="t72-0g-JDk" firstAttribute="top" secondItem="Bs3-Ra-MOB" secondAttribute="top" constant="14" id="exp-nf-qqy"/>
+                                                <constraint firstItem="t72-0g-JDk" firstAttribute="leading" secondItem="Bs3-Ra-MOB" secondAttribute="leading" id="fZF-Zr-rkm"/>
+                                                <constraint firstItem="lmF-sg-l0I" firstAttribute="leading" secondItem="t72-0g-JDk" secondAttribute="trailing" constant="10" id="rtE-hh-pPL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2GZ-ED-PWH">
-                                <rect key="frame" x="24" y="840" width="368" height="170"/>
+                                <rect key="frame" x="24" y="859.5" width="368" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="lxQ-gF-gXE"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requirements" id="VEP-9O-w1i" customClass="OverViewRequirementsTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="368" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VEP-9O-w1i" id="z2r-b4-BxB">
+                                            <rect key="frame" x="0.0" y="0.0" width="368" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASN-PR-vQ6">
+                                                    <rect key="frame" x="0.0" y="4" width="12.5" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpP-mk-p2h">
+                                                    <rect key="frame" x="22.5" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dpP-mk-p2h" firstAttribute="leading" secondItem="ASN-PR-vQ6" secondAttribute="trailing" constant="10" id="14V-ad-EmM"/>
+                                                <constraint firstItem="dpP-mk-p2h" firstAttribute="centerY" secondItem="ASN-PR-vQ6" secondAttribute="centerY" id="AR2-PQ-WlJ"/>
+                                                <constraint firstItem="ASN-PR-vQ6" firstAttribute="centerY" secondItem="z2r-b4-BxB" secondAttribute="centerY" id="R6Y-qj-WcY"/>
+                                                <constraint firstItem="ASN-PR-vQ6" firstAttribute="leading" secondItem="z2r-b4-BxB" secondAttribute="leading" id="hyP-Fv-B8r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgo-pk-T3e">
-                                <rect key="frame" x="24" y="1040" width="70" height="20"/>
+                                <rect key="frame" x="24" y="1059.5" width="70" height="20"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="SFNS Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_instructor1" translatesAutoresizingMaskIntoConstraints="NO" id="GIP-g2-0RD">
-                                <rect key="frame" x="24" y="1074" width="60" height="60"/>
+                                <rect key="frame" x="24" y="1093.5" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="OUf-Zp-EHN"/>
                                     <constraint firstAttribute="width" constant="60" id="UIq-9H-fgf"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dean Mathew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlv-6v-Zze">
-                                <rect key="frame" x="94" y="1082" width="77.5" height="14.5"/>
+                                <rect key="frame" x="94" y="1101.5" width="77.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Interface teacher www.appledesigntips.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-MH-pxa">
-                                <rect key="frame" x="94" y="1098.5" width="237.5" height="12"/>
+                                <rect key="frame" x="94" y="1118" width="237.5" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfI-iq-OsQ">
-                                <rect key="frame" x="24" y="1143" width="369" height="47.5"/>
+                                <rect key="frame" x="24" y="1162.5" width="369" height="49"/>
                                 <string key="text">Back in 2020, I started brainspin with a desire to design compelling and engaging apps. For over 7 years, I have designed many high…</string>
                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaS-cd-D1l">
-                                <rect key="frame" x="0.0" y="1206.5" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="1227.5" width="414" height="56"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="NVA-ia-TY6"/>
@@ -371,10 +453,21 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1280"/>
+                    <connections>
+                        <outlet property="courseTableView" destination="4Lu-w8-1xW" id="zsH-rN-mPr"/>
+                        <outlet property="instructorDescription" destination="BfI-iq-OsQ" id="y4L-It-LXP"/>
+                        <outlet property="instructorName" destination="Tlv-6v-Zze" id="IrM-zu-fJe"/>
+                        <outlet property="instructorOccupation" destination="IiF-MH-pxa" id="piT-H8-fhp"/>
+                        <outlet property="joinCourseButton" destination="UaS-cd-D1l" id="mwR-v0-ehz"/>
+                        <outlet property="learnTableView" destination="WP6-ua-slY" id="xPT-xA-f59"/>
+                        <outlet property="overViewDescription" destination="8qd-3f-1Ks" id="VDN-zB-Ke9"/>
+                        <outlet property="overViewTitle" destination="duW-z8-eqd" id="wdw-Sb-m2L"/>
+                        <outlet property="requirementsTableView" destination="2GZ-ED-PWH" id="ewb-7J-h6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QR-By-mXG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="792"/>
+            <point key="canvasLocation" x="1945.5999999999999" y="-300.44977511244377"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="Prt-MF-1Lq">
@@ -396,19 +489,19 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od1-D4-iBS">
-                                <rect key="frame" x="24" y="76" width="127" height="18"/>
+                                <rect key="frame" x="24" y="76" width="127" height="21"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Chapter | 46 lessons | 6 Assignment Test | 3.5h total length" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvO-DL-joN">
-                                <rect key="frame" x="24" y="96" width="326" height="14"/>
+                                <rect key="frame" x="24" y="99" width="326" height="14"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-vd-qlP">
-                                <rect key="frame" x="24" y="130" width="326" height="400"/>
+                                <rect key="frame" x="24" y="133" width="326" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="omm-II-qyG"/>
@@ -428,19 +521,19 @@
                                                     <rect key="frame" x="33" y="0.0" width="293" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="47" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-74-vhD">
-                                                            <rect key="frame" x="16" y="20" width="35" height="32"/>
+                                                            <rect key="frame" x="16" y="17.5" width="36" height="37.5"/>
                                                             <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="32"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYL-yO-eUG">
-                                                            <rect key="frame" x="64" y="15" width="78" height="16"/>
+                                                            <rect key="frame" x="65" y="15" width="79.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0.34 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkj-nR-jd0">
-                                                            <rect key="frame" x="64" y="39" width="54" height="12"/>
+                                                            <rect key="frame" x="65" y="42" width="56" height="14"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -487,19 +580,19 @@
                                                     <rect key="frame" x="33" y="0.0" width="293" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTK-gz-CJC">
-                                                            <rect key="frame" x="64" y="15" width="68" height="16"/>
+                                                            <rect key="frame" x="64" y="15" width="68" height="19"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 mins | 25 Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHi-uo-iyv">
-                                                            <rect key="frame" x="64" y="37" width="119" height="12"/>
+                                                            <rect key="frame" x="64" y="40" width="123" height="14"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbd-m6-iJz">
-                                                            <rect key="frame" x="279" y="19" width="6" height="8"/>
+                                                            <rect key="frame" x="279" y="19" width="8" height="9.5"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="8"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -509,14 +602,14 @@
                                                             <state key="normal" image="icn_moduletest"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="47" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTQ-l8-PL1">
-                                                            <rect key="frame" x="236" y="17" width="41" height="38"/>
+                                                            <rect key="frame" x="234.5" y="14" width="42.5" height="44.5"/>
                                                             <color key="tintColor" red="0.11764705882352941" green="0.6705882352941176" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="38"/>
                                                             <color key="textColor" red="0.11764705882352941" green="0.6705882352941176" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approval Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQT-hV-dq2">
-                                                            <rect key="frame" x="231.5" y="47" width="50" height="8"/>
+                                                            <rect key="frame" x="230.5" y="47" width="51" height="9.5"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="8"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -552,32 +645,32 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6i-bm-APF">
-                                <rect key="frame" x="0.0" y="570" width="374" height="883"/>
+                                <rect key="frame" x="0.0" y="573" width="374" height="880"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJn-Ca-car">
-                                        <rect key="frame" x="24" y="58" width="130.5" height="90"/>
+                                        <rect key="frame" x="24" y="61" width="156.5" height="100"/>
                                         <color key="tintColor" red="0.1176470588" green="0.6705882353" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="8Ys-xX-ws3"/>
+                                            <constraint firstAttribute="height" constant="100" id="8Ys-xX-ws3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Biko" family="Biko" pointSize="74"/>
                                         <color key="textColor" red="0.1176470588" green="0.6705882353" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8H-fX-d0f">
-                                        <rect key="frame" x="24" y="30" width="112" height="18"/>
+                                        <rect key="frame" x="24" y="30" width="114" height="21"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="approval rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-Ou-nxY">
-                                        <rect key="frame" x="24" y="139" width="92.5" height="16"/>
+                                        <rect key="frame" x="24" y="152" width="94" height="19"/>
                                         <fontDescription key="fontDescription" name="Biko" family="Biko" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vH7-Jd-gTO">
-                                        <rect key="frame" x="24" y="175" width="326" height="80"/>
+                                        <rect key="frame" x="24" y="191" width="326" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjj-Y4-6h9">
                                                 <rect key="frame" x="36" y="16" width="37" height="14"/>
@@ -586,13 +679,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/04/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-1f-O7d">
-                                                <rect key="frame" x="14.5" y="38" width="80" height="18.5"/>
+                                                <rect key="frame" x="13.5" y="38" width="82" height="19"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                                 <color key="textColor" red="0.16862745098039217" green="0.70980392156862748" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oo-nU-gqf">
-                                                <rect key="frame" x="106.5" y="23" width="1" height="34"/>
+                                                <rect key="frame" x="107.5" y="23" width="1" height="34"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="31V-WR-HrW"/>
@@ -600,19 +693,19 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8M-7H-eQg">
-                                                <rect key="frame" x="132.5" y="16" width="59" height="14"/>
+                                                <rect key="frame" x="133.5" y="16" width="59" height="14"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/04/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-xb-mRI">
-                                                <rect key="frame" x="122" y="38" width="80" height="18.5"/>
+                                                <rect key="frame" x="122" y="38" width="82" height="19"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                                 <color key="textColor" red="0.16862745100000001" green="0.70980392160000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mx-8V-ttf">
-                                                <rect key="frame" x="215" y="23" width="1" height="34"/>
+                                                <rect key="frame" x="217" y="23" width="1" height="34"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="A25-Jx-oC8"/>
@@ -620,13 +713,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r4-ql-TLR">
-                                                <rect key="frame" x="246" y="16" width="46" height="14"/>
+                                                <rect key="frame" x="248" y="16" width="46" height="14"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4h 30m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc3-9H-y9a">
-                                                <rect key="frame" x="242" y="38" width="54.5" height="18.5"/>
+                                                <rect key="frame" x="244" y="38" width="54" height="19"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                                 <color key="textColor" red="0.16862745100000001" green="0.70980392160000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -654,21 +747,24 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Certificate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-cY-Jjv">
-                                        <rect key="frame" x="24" y="295" width="145.5" height="18"/>
+                                        <rect key="frame" x="24" y="311" width="145.5" height="21"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBK-LL-Q9v">
-                                        <rect key="frame" x="328" y="292" width="22" height="24"/>
+                                        <rect key="frame" x="328" y="309.5" width="22" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Msh-sK-Ymg"/>
                                             <constraint firstAttribute="width" constant="22" id="Zz0-tV-cwO"/>
                                         </constraints>
                                         <state key="normal" image="Download"/>
+                                        <connections>
+                                            <action selector="certificateDownloadButtonTapped:" destination="wi0-Wg-h9F" eventType="touchUpInside" id="lpy-Ut-zXJ"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_course1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="sVX-v5-7J2">
-                                        <rect key="frame" x="24" y="329" width="326" height="184"/>
+                                        <rect key="frame" x="24" y="348" width="326" height="184"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="184" id="txy-v3-092"/>
                                         </constraints>
@@ -715,13 +811,18 @@
                             <constraint firstItem="od1-D4-iBS" firstAttribute="top" secondItem="dCU-3X-3qk" secondAttribute="bottom" constant="30" id="xFT-MU-UIg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chapterTableView" destination="UWd-vd-qlP" id="0CD-zd-1EK"/>
+                        <outlet property="continueChapterButton" destination="dCU-3X-3qk" id="z7e-OE-eds"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cj-bW-7cv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="-725"/>
+            <point key="canvasLocation" x="886" y="-223"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Circle" width="28" height="28"/>
         <image name="Download" width="30" height="30"/>
         <image name="icn_lessonplay_active" width="24" height="24"/>
         <image name="icn_moduletest" width="24" height="34"/>
@@ -733,9 +834,6 @@
         <image name="img_preview1_bg" width="327" height="80"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

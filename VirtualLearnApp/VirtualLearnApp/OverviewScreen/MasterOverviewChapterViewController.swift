@@ -12,51 +12,52 @@ class MasterOverviewChapterViewController: UIViewController {
     let  overviewIdentifier = "OverviewScreenController"
     let  chaptersIdentifier = "ChaptersViewController"
     
-
+//MARK: Header
     @IBOutlet weak var courseImg: UIImageView!
+    @IBOutlet weak var courseTitle: UILabel!
+    @IBOutlet weak var courseCatergoryLbl: UILabel!
+    @IBOutlet weak var courseSizeLbl: UILabel!
+    
+    
+    //MARK: Buttons and UIVIew
     @IBOutlet weak var chaptersButton: UIButton!
     @IBOutlet weak var overviewButton: UIButton!
     @IBOutlet weak var chaptersUIView: UIView!
     @IBOutlet weak var overviewUIView: UIView!
+    
     @IBOutlet weak var mainContainerView: UIView!
     
         
-        var chaptersVC = UIViewController()
-        var overviewVC = UIViewController()
+
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            showSignIn()
-            setBackgroundGradientColour()
-        }
-        
-        func setBackgroundGradientColour(){
-//            let gradient = CAGradientLayer()
-//            gradient.frame = self.view.bounds
-//            //gradient.colors = [UIColor(named: "#20BBFF")!.cgColor, UIColor(named: "#0E85FF")!.cgColor]
-//            self.view.layer.insertSublayer(gradient, at: 0)
+            showChapters()
         }
         
         @IBAction func chaptersButtonTapped(_ sender: Any) {
-            showSignIn()
+            showChapters()
         }
         @IBAction func overviewButtonTapped(_ sender: Any) {
-            showSignUp()
+            showOverView()
         }
         
-        var status = false
+    var status = false
+    var chaptersVC = UIViewController()
+    var overviewVC = UIViewController()
     
     
-        func showSignIn() {
-//            reactGoldView.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([reactGoldView.centerXAnchor.constraint(equalTo: headerSignInBtn.centerXAnchor)
-//            ])
-
+        func showChapters() {
             if status == false {
                chaptersVC = storyboard?.instantiateViewController(withIdentifier: chaptersIdentifier) as! ChaptersViewController
                 overviewVC = storyboard?.instantiateViewController(withIdentifier: overviewIdentifier) as! OverviewScreenController
                 status = true
             }
+            
+            chaptersButton.tintColor = .customOrange
+            chaptersUIView.backgroundColor = .customOrange
+            overviewButton.tintColor = .customGrey
+            overviewUIView.backgroundColor = .customGrey
             
             remove(asChildViewController: overviewVC)
             add(asChildViewController: chaptersVC)
@@ -64,12 +65,13 @@ class MasterOverviewChapterViewController: UIViewController {
         }
         
         
-        func showSignUp() {
-    //        reactGoldView.translatesAutoresizingMaskIntoConstraints = false
-    //        NSLayoutConstraint.activate([reactGoldView.centerXAnchor.constraint(equalTo: headerSignInBtn.centerXAnchor)        ])
+        func showOverView() {
             remove(asChildViewController: chaptersVC)
             add(asChildViewController: overviewVC)
-            print("hello")
+            chaptersButton.tintColor = .customGrey
+            chaptersUIView.backgroundColor = .customGrey
+            overviewButton.tintColor = .customOrange
+            overviewUIView.backgroundColor = .customOrange
        
         }
         

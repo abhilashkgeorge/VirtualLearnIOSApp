@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -38,7 +37,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstTableCell" rowHeight="289" id="KLO-Gg-fmP" customClass="HomeScreenTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="289"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="289"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KLO-Gg-fmP" id="reL-Ib-1Wq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="289"/>
@@ -59,7 +58,7 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OiX-aH-dvl">
                                                     <rect key="frame" x="0.0" y="77" width="414" height="201"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vsy-St-nTP">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vsy-St-nTP">
                                                         <size key="itemSize" width="224" height="188"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -112,7 +111,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondTableCell" rowHeight="138" id="GBd-g6-d5c" customClass="HomeScreenTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="333.5" width="414" height="138"/>
+                                        <rect key="frame" x="0.0" y="317" width="414" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GBd-g6-d5c" id="OIa-h9-Us9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
@@ -124,10 +123,19 @@
                                                     <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRK-eR-rFk">
+                                                    <rect key="frame" x="353" y="0.0" width="37" height="24"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                                                    <color key="tintColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="See All"/>
+                                                    <connections>
+                                                        <action selector="categoriesSeeAllButtonTapped:" destination="GBd-g6-d5c" eventType="touchUpInside" id="yJQ-CU-LWK"/>
+                                                    </connections>
+                                                </button>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-Ju-Dka">
                                                     <rect key="frame" x="0.0" y="43" width="414" height="84"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GkG-bC-htd">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GkG-bC-htd">
                                                         <size key="itemSize" width="96" height="37"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -145,15 +153,6 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="37"/>
                                                                         <color key="tintColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" image="icn_categories suggestion_business" imagePadding="6">
-                                                                            <attributedString key="attributedTitle">
-                                                                                <fragment content="Python">
-                                                                                    <attributes>
-                                                                                        <font key="NSFont" size="12" name="ArialMT"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                            </attributedString>
-                                                                        </buttonConfiguration>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
@@ -170,20 +169,6 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRK-eR-rFk">
-                                                    <rect key="frame" x="328.5" y="0.0" width="61.5" height="27.5"/>
-                                                    <color key="tintColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="See All">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="12" name="ArialMT"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </buttonConfiguration>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ya8-y8-xiI" firstAttribute="leading" secondItem="OIa-h9-Us9" secondAttribute="leading" constant="24" id="LeC-fB-R2X"/>
@@ -201,7 +186,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thirdTableCell" rowHeight="229" id="oeT-Ed-SRa" customClass="HomeScreenTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="471.5" width="414" height="229"/>
+                                        <rect key="frame" x="0.0" y="455" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oeT-Ed-SRa" id="prO-JX-pit">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
@@ -219,7 +204,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="136" id="g9f-XB-dX5"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gvy-Xx-LqO">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gvy-Xx-LqO">
                                                         <size key="itemSize" width="142" height="138"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -255,9 +240,18 @@
                                                                                 <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGu-d2-y9g">
+                                                                                <rect key="frame" x="105.5" y="64" width="21.5" height="10"/>
+                                                                                <color key="backgroundColor" red="0.98823529409999999" green="0.74509803919999995" blue="0.29411764709999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="ZGu-d2-y9g" secondAttribute="trailing" constant="15" id="9fH-6m-sRo"/>
+                                                                            <constraint firstItem="ZGu-d2-y9g" firstAttribute="top" secondItem="DuS-pJ-4GA" secondAttribute="top" constant="64" id="OFO-ax-HQv"/>
                                                                             <constraint firstItem="g98-dh-6o7" firstAttribute="leading" secondItem="DuS-pJ-4GA" secondAttribute="leading" constant="10" id="OpG-Vl-4zO"/>
                                                                             <constraint firstItem="8Oz-tq-dPB" firstAttribute="top" secondItem="g98-dh-6o7" secondAttribute="bottom" constant="4" id="eYB-Lv-LMY"/>
                                                                             <constraint firstItem="HjX-Bc-3CU" firstAttribute="leading" secondItem="DuS-pJ-4GA" secondAttribute="leading" id="ejL-42-IAv"/>
@@ -286,6 +280,7 @@
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="142" height="138"/>
                                                             <connections>
+                                                                <outlet property="tagLbl" destination="ZGu-d2-y9g" id="3b2-qY-0DT"/>
                                                                 <outlet property="thirdCVImg" destination="HjX-Bc-3CU" id="vkb-GE-fIR"/>
                                                                 <outlet property="thirdCVLbl2" destination="8Oz-tq-dPB" id="Leq-30-JQS"/>
                                                                 <outlet property="thirdCVlbl" destination="g98-dh-6o7" id="dho-pR-y7V"/>
@@ -294,60 +289,44 @@
                                                     </cells>
                                                 </collectionView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKC-Sc-8sr">
-                                                    <rect key="frame" x="328.5" y="4" width="61.5" height="27.5"/>
+                                                    <rect key="frame" x="353" y="4" width="37" height="24"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="See All">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="12" name="ArialMT"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </buttonConfiguration>
+                                                    <state key="normal" title="See All"/>
+                                                    <connections>
+                                                        <action selector="courseSeeAllButtonTapped:" destination="oeT-Ed-SRa" eventType="touchUpInside" id="Rhv-RZ-QMx"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNI-Zc-Hhq">
-                                                    <rect key="frame" x="81.5" y="49" width="67" height="28"/>
+                                                    <rect key="frame" x="94" y="49" width="41" height="26"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="tinted">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="popular">
-                                                                <attributes>
-                                                                    <font key="NSFont" metaFont="cellTitle"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </buttonConfiguration>
+                                                    <state key="normal" title="Popular"/>
+                                                    <connections>
+                                                        <action selector="thirdTBCellPopularBtnTapped:" destination="oeT-Ed-SRa" eventType="touchUpInside" id="fQl-Hk-B5p"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNw-16-Hqw">
-                                                    <rect key="frame" x="24" y="49" width="37.5" height="27.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNw-16-Hqw">
+                                                    <rect key="frame" x="24" y="49" width="50" height="26"/>
+                                                    <color key="backgroundColor" red="0.87450980392156863" green="0.90588235294117647" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="lkZ-O9-fq8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="tinted">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="All">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="12" name="ArialMT"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </buttonConfiguration>
+                                                    <state key="normal" title="All"/>
+                                                    <connections>
+                                                        <action selector="thirdTBCellAllBtnTapped:" destination="oeT-Ed-SRa" eventType="touchUpInside" id="FIW-Xe-HDp"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-Fx-iAg">
-                                                    <rect key="frame" x="168.5" y="49" width="66.5" height="28"/>
+                                                    <rect key="frame" x="155" y="49" width="41" height="26"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="tinted">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="Newest">
-                                                                <attributes>
-                                                                    <font key="NSFont" metaFont="cellTitle"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </buttonConfiguration>
+                                                    <state key="normal" title="Newest"/>
+                                                    <connections>
+                                                        <action selector="thirdTBCellNewestBtnTapped:" destination="oeT-Ed-SRa" eventType="touchUpInside" id="ujM-NS-k13"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -367,11 +346,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="thirdCollectionView" destination="daX-jQ-RgV" id="ttp-P5-jsH"/>
+                                            <outlet property="thirdCollectionView" destination="daX-jQ-RgV" id="2NS-pH-Pfd"/>
+                                            <outlet property="thirdTBCellAllBtn" destination="zNw-16-Hqw" id="F0t-LH-bCK"/>
+                                            <outlet property="thirdTBCellNewestBtn" destination="Y88-Fx-iAg" id="eaT-4Z-gib"/>
+                                            <outlet property="thirdTBCellPopularBtn" destination="sNI-Zc-Hhq" id="gpI-Vc-mLI"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fourthTableCell" rowHeight="240" id="f0u-5n-ZJu" customClass="HomeScreenTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="700.5" width="414" height="240"/>
+                                        <rect key="frame" x="0.0" y="684" width="414" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f0u-5n-ZJu" id="xgr-4I-mjd">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
@@ -389,7 +371,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="190" id="2tW-KF-GRf"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="acY-NN-flw">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="acY-NN-flw">
                                                         <size key="itemSize" width="326" height="183"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -452,24 +434,22 @@
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="326" height="183"/>
                                                             <connections>
+                                                                <outlet property="fourthCVChapterNumber" destination="tqp-1i-lh7" id="83w-cb-2Xz"/>
                                                                 <outlet property="fourthCVImg" destination="e9p-GH-C4f" id="fQJ-d7-GFs"/>
+                                                                <outlet property="fourthCVTime" destination="fSD-ua-7V6" id="B45-XR-9CF"/>
+                                                                <outlet property="fourthCVTitle" destination="vH3-Bm-ZZw" id="Li0-zv-UXK"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="ggy-AP-6Dp" id="vnR-FW-7pm"/>
+                                                    </connections>
                                                 </collectionView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysx-vn-BKn">
-                                                    <rect key="frame" x="328.5" y="0.0" width="61.5" height="28"/>
+                                                    <rect key="frame" x="353" y="0.0" width="37" height="24"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="See All">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="12" name="ArialMT"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </buttonConfiguration>
+                                                    <state key="normal" title="See All"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -483,6 +463,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="fourthCellHeaderLbl" destination="F8o-yu-tLU" id="Avi-pn-vIh"/>
                                             <outlet property="fourthCollectionView" destination="cex-xc-H8X" id="UHP-I7-cXa"/>
                                         </connections>
                                     </tableViewCell>
@@ -516,66 +497,68 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4A-Qc-xp7">
-                                        <rect key="frame" x="24" y="218" width="99" height="32.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4A-Qc-xp7">
+                                        <rect key="frame" x="24" y="218" width="72" height="19"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                         <color key="tintColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icn_home_menu-Home" title="Home" imagePadding="16">
-                                            <fontDescription key="titleFontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
-                                        </buttonConfiguration>
+                                        <state key="normal" title="   Home" image="icn_home_menu-Home">
+                                            <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="homeBtnTapped:" destination="ggy-AP-6Dp" eventType="touchUpInside" id="XIW-x9-kmV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeV-uW-iFY">
-                                        <rect key="frame" x="24" y="284.5" width="132.5" height="32.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeV-uW-iFY">
+                                        <rect key="frame" x="24" y="271" width="105" height="19"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                         <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icn_course_menu-Briefcase" title="My Course" imagePadding="16">
-                                            <fontDescription key="titleFontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
-                                        </buttonConfiguration>
+                                        <state key="normal" title="   My Course" image="icn_course_menu-Briefcase">
+                                            <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="myCourseBtn:" destination="ggy-AP-6Dp" eventType="touchUpInside" id="ADv-Be-U73"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3W-nR-Y13">
-                                        <rect key="frame" x="24" y="351" width="129" height="33"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3W-nR-Y13">
+                                        <rect key="frame" x="24" y="324" width="102" height="19"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                         <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icn_profile_menu" title="My Profile" imagePadding="16">
-                                            <fontDescription key="titleFontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
-                                        </buttonConfiguration>
+                                        <state key="normal" title="   My Profile" image="icn_profile_menu">
+                                            <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="myProfileBtn:" destination="ggy-AP-6Dp" eventType="touchUpInside" id="sKX-2o-S7e"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsA-zk-aUj">
-                                        <rect key="frame" x="24" y="418" width="140" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsA-zk-aUj">
+                                        <rect key="frame" x="24" y="377" width="119" height="19"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                         <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icn_notification_menu" title="Notifications" imagePadding="16"/>
+                                        <state key="normal" title="   Notifications" image="icn_notification_menu">
+                                            <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="notificationBtn:" destination="ggy-AP-6Dp" eventType="touchUpInside" id="jYn-kQ-aJ7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmM-nU-Tlb">
-                                        <rect key="frame" x="24" y="484" width="115" height="32.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmM-nU-Tlb">
+                                        <rect key="frame" x="24" y="430" width="88" height="19"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                         <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icn_settings_menu-Settings" title="Settings" imagePadding="16">
-                                            <fontDescription key="titleFontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
-                                        </buttonConfiguration>
+                                        <state key="normal" title="   Settings" image="icn_notification settings-Settings">
+                                            <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="settingsBtn:" destination="ggy-AP-6Dp" eventType="touchUpInside" id="4WF-wJ-26s"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcD-Ri-XTJ">
-                                        <rect key="frame" x="24" y="550.5" width="106.5" height="32.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcD-Ri-XTJ">
+                                        <rect key="frame" x="24" y="483" width="79" height="19"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
                                         <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icn_logout_menu-Power buttom" title="Logout" imagePadding="16">
-                                            <fontDescription key="titleFontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
-                                        </buttonConfiguration>
+                                        <state key="normal" title="   Logout" image="icn_logout_menu-Power buttom">
+                                            <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="logoutBtn:" destination="ggy-AP-6Dp" eventType="touchUpInside" id="QOj-lj-na8"/>
                                         </connections>
@@ -618,7 +601,13 @@
                     </view>
                     <connections>
                         <outlet property="hamburgerView" destination="cns-5g-YfK" id="gac-4E-wIu"/>
+                        <outlet property="homeButton" destination="G4A-Qc-xp7" id="hdA-cV-kmH"/>
                         <outlet property="homeScreenTableview" destination="fn6-rB-s1F" id="vsf-bs-CkZ"/>
+                        <outlet property="logout" destination="JcD-Ri-XTJ" id="toY-nH-jLu"/>
+                        <outlet property="myCourse" destination="eeV-uW-iFY" id="TD1-xZ-uYD"/>
+                        <outlet property="myProfile" destination="O3W-nR-Y13" id="5Rg-ON-ki0"/>
+                        <outlet property="notification" destination="vsA-zk-aUj" id="8jJ-RC-Smi"/>
+                        <outlet property="setting" destination="NmM-nU-Tlb" id="p1v-qh-LMx"/>
                         <outlet property="sideMenuConstraint" destination="p9W-qy-get" id="G9I-PT-D2q"/>
                         <outlet property="sideMenuView" destination="cns-5g-YfK" id="kwH-Pf-qh2"/>
                     </connections>
@@ -629,13 +618,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icn_categories suggestion_business" width="19" height="20"/>
         <image name="icn_course_menu-Briefcase" width="16" height="16"/>
         <image name="icn_home_menu-Home" width="16" height="16"/>
         <image name="icn_logout_menu-Power buttom" width="16" height="18"/>
+        <image name="icn_notification settings-Settings" width="16" height="16"/>
         <image name="icn_notification_menu" width="18" height="18"/>
         <image name="icn_profile_menu" width="18" height="19"/>
-        <image name="icn_settings_menu-Settings" width="16" height="16"/>
         <image name="icn_test duration" width="16" height="17"/>
         <image name="img_banner1_home" width="300" height="180"/>
         <image name="img_course1_bg" width="160" height="100"/>
