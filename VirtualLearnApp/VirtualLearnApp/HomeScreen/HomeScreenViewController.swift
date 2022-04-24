@@ -14,7 +14,11 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var homeScreenTableview: UITableView!
     
     var viewModel = HomeViewModel()
+    var overviewModel = OverviewViewModel()
+    var chapterViewModel = ChaptersViewModel()
     var ongoingCount = 0
+    var selectedCourseName = "angular"
+    var selectedCourseID = "62273a3e4603abcaf3ffee8c"
     
     @IBOutlet weak var hamburgerView: UIView!
     
@@ -51,6 +55,21 @@ class HomeScreenViewController: UIViewController {
         sideMenuConstraint.constant = 0
         animateView()
         configureNavigationBar()
+        
+        //MARK: Checked overview api details , chapter details and sub chapter details
+        overviewModel.userCourseOverview(name: selectedCourseName, id: selectedCourseID) { (OverviewDataModel) in
+            print(OverviewDataModel.instructorName)
+        }
+        
+        chapterViewModel.chapterDetail(name: selectedCourseName, id: selectedCourseID) { ([ChapterDataModel]) in
+            print("getting chapter details")
+        }
+        
+        chapterViewModel.subChapterDetail(name: selectedCourseName, id: selectedCourseID) { ([SubChaptersDataModel]) in
+            print("sub chapters details")
+        }
+        //MARK: end of checking
+        
     }
     
     @IBAction func myCourseBtn(_ sender: Any) {
