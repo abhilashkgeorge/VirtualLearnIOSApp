@@ -13,6 +13,7 @@ extension URLRequest {
     static var tokenForRegistration: String = ""
     static var commonToken: String = ""
     
+    
     static func postRequestForSendOTPToRegisterAndUserLogin(url: URL,body: [String: String]) -> URLRequest {
         
         var request = URLRequest(url: url)
@@ -121,5 +122,14 @@ extension URLRequest {
             
         request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
         return request
+    }
+    static func getRequestForNotifications(url: URL) -> URLRequest {
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            
+            print("viewModel:\(commonToken)")
+            request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
+            return request
     }
 }
