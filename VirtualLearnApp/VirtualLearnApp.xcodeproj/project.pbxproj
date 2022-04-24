@@ -51,6 +51,7 @@
 		BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
+		BA5971B528152DA200079CCC /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5971B428152DA200079CCC /* NotificationViewModel.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
 		BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */; };
 		BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B67328043E270020F6CE /* SettingsContainerView.swift */; };
@@ -138,6 +139,7 @@
 		BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BA5971B428152DA200079CCC /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyViewController.swift; sourceTree = "<group>"; };
 		BAB1B67328043E270020F6CE /* SettingsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerView.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */,
 				BAF9630E28127A4000969251 /* NotificationManager.swift */,
 				BAF9631128127A7A00969251 /* NotificationModel.swift */,
+				BA5971B428152DA200079CCC /* NotificationViewModel.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				880823F4280A82A200152B3A /* SearchViewModel.swift in Sources */,
 				F553836F280837B800A32D52 /* HomeModel.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
+				BA5971B528152DA200079CCC /* NotificationViewModel.swift in Sources */,
 				8B730B1D28067E4300D17EF2 /* ProfileDataModel.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
 				F5C31674280006B100F30001 /* CustomViews.swift in Sources */,
