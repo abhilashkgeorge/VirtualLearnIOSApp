@@ -104,14 +104,29 @@ class OTPVerifyViewController: UIViewController,UITextFieldDelegate {
                 (tokenMsg: String) -> Void
                 in
                 if tokenMsg == ""{
+                    DispatchQueue.main.async {
+                        self.setUpBottomColourOTP(textField: self.otpTF1, color: UIColor.red.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF2, color: UIColor.red.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF3, color: UIColor.red.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF4, color: UIColor.red.cgColor)
+                        
+                        self.showToast(message: "Invalid verification code, please try again")
+                        self.OTP = ""
+                    }
                     print("Invalid credential or password")
                 }
                 else {
                     DispatchQueue.main.async {
+                        self.setUpBottomColourOTP(textField: self.otpTF1, color: UIColor.green.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF2, color: UIColor.green.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF3, color: UIColor.green.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF4, color: UIColor.green.cgColor)
+                        
                         let storyboard = UIStoryboard.init(name: "RegisterPart2", bundle: Bundle.main)
                         let personalDetailVc = storyboard.instantiateViewController(withIdentifier: "PersonalDetailsViewController") as? PersonalDetailsViewController
                         personalDetailVc?.phone = self.phoneString
                         self.navigationController?.pushViewController(personalDetailVc!, animated: true)
+                        self.OTP = ""
                     }
                 }
             })
@@ -122,12 +137,26 @@ class OTPVerifyViewController: UIViewController,UITextFieldDelegate {
                 in
                 if tokenMsg == "OTP verified"{
                     DispatchQueue.main.async {
+                        self.setUpBottomColourOTP(textField: self.otpTF1, color: UIColor.green.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF2, color: UIColor.green.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF3, color: UIColor.green.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF4, color: UIColor.green.cgColor)
+                        
                         let storyboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)
                         let personalDetailVc = storyboard.instantiateViewController(withIdentifier: "CreateNewPasswordViewController") as? CreateNewPasswordViewController
                         self.navigationController?.pushViewController(personalDetailVc!, animated: true)
+                        self.OTP = ""
                     }
                 }
                 else {
+                    DispatchQueue.main.async {
+                        self.setUpBottomColourOTP(textField: self.otpTF1, color: UIColor.red.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF2, color: UIColor.red.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF3, color: UIColor.red.cgColor)
+                        self.setUpBottomColourOTP(textField: self.otpTF4, color: UIColor.red.cgColor)
+                        self.showToast(message: "Invalid verification code, please try again")
+                        self.OTP = ""
+                    }
                     print("Invalid credential or password")
                 }
             })

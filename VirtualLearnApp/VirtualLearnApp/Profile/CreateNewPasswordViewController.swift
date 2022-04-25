@@ -37,10 +37,15 @@ class CreateNewPasswordViewController: UIViewController {
                         self.navigationController?.pushViewController(successVC!, animated: true)
                     }
                 }
-                else if tokenMsg == "password should be atleast  6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'" {
-                    self.showToast()
+                else if tokenMsg == "password should be atleast 6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'" {
+                    DispatchQueue.main.async {
+                        self.showToast()
+                    }
                 }
                 else {
+                    DispatchQueue.main.async {
+                        self.showToast(message: "Invalid credential or password")
+                    }
                     print("Invalid credential or password")
                 }
             })

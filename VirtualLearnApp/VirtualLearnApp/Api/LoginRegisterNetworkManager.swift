@@ -167,6 +167,9 @@ class LoginRegisterNetworkManager {
                     completionHandler(nil)
                 }
             }
+            else {
+                completionHandler("password should be atleast 6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'")
+            }
         }
         task.resume()
     }

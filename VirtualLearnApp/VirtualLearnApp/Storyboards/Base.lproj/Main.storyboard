@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rt2-zd-ELa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rt2-zd-ELa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJn-xR-BXX">
-                                                <rect key="frame" x="0.0" y="165" width="414" height="546"/>
+                                                <rect key="frame" x="0.0" y="10" width="414" height="701"/>
                                             </scrollView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="F49-xD-p2i">
                                                 <rect key="frame" x="146" y="758" width="122.5" height="4"/>
@@ -34,21 +34,24 @@
                                                 </connections>
                                             </pageControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paq-Tp-HFH">
-                                                <rect key="frame" x="24" y="741" width="46" height="34"/>
+                                                <rect key="frame" x="24" y="741" width="31" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="SKIP">
+                                                    <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2Y-h6-wAS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibe-tQ-AIs">
-                                                <rect key="frame" x="345" y="733" width="45" height="45"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibe-tQ-AIs">
+                                                <rect key="frame" x="345" y="736" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="d77-id-hXn"/>
                                                     <constraint firstAttribute="height" constant="45" id="vR1-Mm-KPm"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" image="btn_next"/>
                                                 <connections>
                                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYH-4W-beC"/>
                                                 </connections>
@@ -57,7 +60,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="ibe-tQ-AIs" secondAttribute="bottom" constant="34" id="Cf7-A7-tiD"/>
-                                            <constraint firstItem="EJn-xR-BXX" firstAttribute="top" secondItem="zXD-Tu-FKA" secondAttribute="top" constant="165" id="DTs-BA-qkT"/>
+                                            <constraint firstItem="EJn-xR-BXX" firstAttribute="top" secondItem="zXD-Tu-FKA" secondAttribute="top" constant="10" id="DTs-BA-qkT"/>
                                             <constraint firstItem="ibe-tQ-AIs" firstAttribute="top" secondItem="EJn-xR-BXX" secondAttribute="bottom" constant="22" id="HFv-Kv-cc0"/>
                                             <constraint firstAttribute="height" constant="812" id="JpQ-mB-nDW"/>
                                             <constraint firstItem="Paq-Tp-HFH" firstAttribute="top" secondItem="EJn-xR-BXX" secondAttribute="bottom" constant="30" id="KYq-x8-XR9"/>
@@ -122,6 +125,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_next" width="46" height="46"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

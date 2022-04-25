@@ -63,7 +63,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSe-8N-9RN" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="282.5" width="327" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Full name"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
@@ -81,7 +81,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MEd-bg-eGE" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="357" width="327" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Username"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
@@ -99,7 +99,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-Vz-lpu" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="431.5" width="327" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Email"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
@@ -117,7 +117,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x6a-aC-g0Q" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="506" width="327" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Password"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
@@ -135,7 +135,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mYf-me-j8M" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="580.5" width="327" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Confirm password"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">

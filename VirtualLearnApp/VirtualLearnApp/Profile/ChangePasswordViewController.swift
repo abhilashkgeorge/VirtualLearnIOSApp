@@ -38,8 +38,15 @@ class ChangePasswordViewController: UIViewController {
                 in
                 
                 if successMessage == "Password changed successfully" {
+                    DispatchQueue.main.async {
+                        self.setUpBottomColour(textField: self.currentPassword, color: UIColor.green.cgColor,image:   UIImage(named: "icn_textfield_right") ?? #imageLiteral(resourceName: "icn_textfield_right"))
+                    }
                     print("Change password is successfull")
                 } else {
+                    DispatchQueue.main.async {
+                        self.setUpBottomColour(textField: self.currentPassword, color: UIColor.red.cgColor,image:   UIImage(named: "icn_textfield_wrong") ?? #imageLiteral(resourceName: "icn_textfield_wrong"))
+                        self.showToast(message: "Invalid password, please try again")
+                    }
                     print("Change password attempt failed!!!")
                 }
             })

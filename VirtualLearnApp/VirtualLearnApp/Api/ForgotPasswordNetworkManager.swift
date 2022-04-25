@@ -119,6 +119,9 @@ class ForgotPasswordNetworkManager {
                     completionHandler("password should be atleast 6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'")
                 }
             }
+            else {
+                completionHandler("password should be atleast 6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'")
+            }
         }
         task.resume()
     }

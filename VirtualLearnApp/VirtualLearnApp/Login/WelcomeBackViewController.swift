@@ -23,10 +23,15 @@ class WelcomeBackViewController: UIViewController {
             (tokenMsg: String) -> Void
             in
             if tokenMsg == "Invalid credential or password" || tokenMsg == ""{
+                DispatchQueue.main.async {
+                    self.setUpBottomColour(textField: self.loginUsername, color:  UIColor.red.cgColor,image:   UIImage(named: "icn_textfield_wrong") ?? #imageLiteral(resourceName: "icn_textfield_wrong"))
+                    self.showToast(message: "Invalid username, please try again")
+                }
                 print("Invalid credential or password")
             }
             else {
                 DispatchQueue.main.async {
+                    self.setUpBottomColour(textField: self.loginUsername, color:  UIColor.green.cgColor,image:   UIImage(named: "icn_textfield_right") ?? #imageLiteral(resourceName: "icn_textfield_right"))
                     let homeScreenStoryboard = UIStoryboard.init(name: "HomeScreen", bundle: Bundle.main)
                     let homeScreenVC = homeScreenStoryboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController
                     self.navigationController?.pushViewController(homeScreenVC!, animated: true)
