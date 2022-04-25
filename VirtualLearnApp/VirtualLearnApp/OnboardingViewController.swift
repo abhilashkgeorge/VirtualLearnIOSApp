@@ -101,7 +101,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
             
             
             
-            let txt2 = UILabel.init(frame: CGRect(x:32,y:txt1.frame.maxY+10,width:scrollWidth-60,height:70))
+            let txt2 = UILabel.init(frame: CGRect(x:32,y:txt1.frame.maxY+10,width:scrollWidth-60,height:85))
             let textString2 = NSAttributedString(string: desc[index]).withLineSpacing(5)
             txt2.attributedText = textString2
             txt2.numberOfLines = 4

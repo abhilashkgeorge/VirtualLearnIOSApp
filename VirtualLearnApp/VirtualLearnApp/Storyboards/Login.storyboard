@@ -193,12 +193,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-E7-9Gg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="229.66666666666666" width="327" height="22"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-5A-wB6" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                         <rect key="frame" x="24" y="167.66666666666666" width="327" height="22"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -288,18 +288,18 @@
                                             <constraint firstAttribute="width" constant="327" id="iAe-vu-aCJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-PT-MSZ" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="329" width="327" height="20.333333333333314"/>
+                                        <rect key="frame" x="24" y="329" width="327" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="SKg-NM-1Qg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-Na-zGc" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="442.33333333333331" width="327" height="46"/>
+                                        <rect key="frame" x="24" y="441" width="327" height="46"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="UEJ-jy-88E"/>
@@ -314,7 +314,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMc-SY-qQF" customClass="OrangeColorButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="236" y="373.33333333333331" width="115" height="29"/>
+                                        <rect key="frame" x="236" y="372" width="115" height="29"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
@@ -322,7 +322,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-r9-B3Y">
-                                        <rect key="frame" x="76.666666666666671" y="512.33333333333337" width="221.66666666666663" height="31"/>
+                                        <rect key="frame" x="76.666666666666671" y="511" width="221.66666666666663" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have a account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22l-fa-NM7" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="31"/>

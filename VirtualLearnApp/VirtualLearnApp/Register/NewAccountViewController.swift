@@ -45,16 +45,22 @@ class NewAccountViewController: UIViewController {
         if displayScreen == 0 {
             if newAccountPhoneNumber.text?.count ?? 10 != 10 {
                 print("Enter 10 digit phone number")
+                showToast(message: "Enter 10 digit phone number")
             }
             else {
                 viewModel.sendOTPForRegistration(mobileNumber: newAccountPhoneNumber.text ?? "9743119850",completion: {
                     (token: String) -> Void
                     in
                     if token == ""{
+                        DispatchQueue.main.async {
+                            self.setUpBottomColour(textField: self.newAccountPhoneNumber, color: UIColor.red.cgColor, image: UIImage(named: "icn_textfield_wrong") ?? #imageLiteral(resourceName: "icn_textfield_wrong"))
+                            self.showToast(message: "Phone number is registered.Please login")
+                        }
                         print("Phone number is registered.Please login")
                     }
                     else {
                         DispatchQueue.main.async {
+                            self.setUpBottomColour(textField: self.newAccountPhoneNumber, color: UIColor.green.cgColor,image: UIImage(named: "icn_textfield_right") ?? #imageLiteral(resourceName: "icn_textfield_right"))
                             if let verifyAccVC = self.storyboard?.instantiateViewController(identifier: "OTPVerifyViewController") as? OTPVerifyViewController {
                                     verifyAccVC.displayScreen = 0
                                     verifyAccVC.phoneString = self.phone
@@ -68,6 +74,7 @@ class NewAccountViewController: UIViewController {
         
         else {
             if newAccountPhoneNumber.text?.count ?? 10 != 10 {
+                showToast(message: "Enter 10 digit phone number")
                 print("Enter 10 digit phone number")
             }
             else {
@@ -75,11 +82,16 @@ class NewAccountViewController: UIViewController {
                     (token: String) -> Void
                     in
                     if token == ""{
+                        DispatchQueue.main.async {
+                            self.setUpBottomColour(textField: self.newAccountPhoneNumber, color: UIColor.red.cgColor,image:   UIImage(named: "icn_textfield_wrong") ?? #imageLiteral(resourceName: "icn_textfield_wrong"))
+                            self.showToast(message: "Invalid mobile number, please try again")
+                        }
                         print("Phone is not registered.Please register")
                         
                     }
                     else {
                         DispatchQueue.main.async {
+                            self.setUpBottomColour(textField: self.newAccountPhoneNumber, color: UIColor.green.cgColor,image: UIImage(named: "icn_textfield_right") ?? #imageLiteral(resourceName: "icn_textfield_right"))
                             if let verifyAccVC = self.storyboard?.instantiateViewController(identifier: "OTPVerifyViewController") as? OTPVerifyViewController {
                                     verifyAccVC.displayScreen = 1
                                     verifyAccVC.phoneString = self.phone

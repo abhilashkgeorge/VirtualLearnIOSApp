@@ -41,7 +41,15 @@ class PersonalDetailsViewController: UIViewController {
                         self.navigationController?.pushViewController(successVc!, animated: true)
                     }
                 }
+                else if successMsg == "password should be atleast 6 characters long with 'one number','one uppercase letter' and 'one lowercase letter'" {
+                    DispatchQueue.main.async {
+                        self.showToast()
+                    }
+                }
                 else {
+                    DispatchQueue.main.async {
+                        self.showToast(message: "Registration not successful")
+                    }
                     print("Registration not successful")
                 }
             })
