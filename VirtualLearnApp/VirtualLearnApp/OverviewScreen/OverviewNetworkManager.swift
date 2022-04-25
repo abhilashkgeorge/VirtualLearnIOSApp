@@ -11,7 +11,7 @@ class OverviewNetworkManager {
     
     func courseOverview(url: URL, completionHandler: @escaping (_ json: Any) -> Void) {
         
-        let request = URLRequest.getRequestForMyCourses(url: url)
+        let request = URLRequest.getRequestForOverView(url: url)
         
         let task =  URLSession.shared.dataTask(with: request) { (data, response, error) in
             

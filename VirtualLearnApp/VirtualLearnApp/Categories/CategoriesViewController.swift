@@ -13,6 +13,10 @@ class CategoriesViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let imageArray = [UIImage(named: "icn_categories_design"),UIImage(named: "icn_categories_developer"),UIImage(named: "icn_categories_business"),UIImage(named: "icn_categories_marketing"),UIImage(named: "icn_categories_photography"),UIImage(named: "icn_categories_finance"),UIImage(named: "icn_categories_IT"),UIImage(named: "icn_categories_lifestyle"),UIImage(named: "icn_categories_music"),UIImage(named: "icn_categories_teaching"),UIImage(named: "icn_categories_fitness")]
     
+    var categoryAllCourses = [HomeModel]()
+    
+    var categoryPopularCourses = [HomeModel]()
+    
     let labelArray = [
         "Design",
         "Development",
@@ -45,5 +49,17 @@ class CategoriesViewController: UIViewController, UICollectionViewDelegate, UICo
         cell.categoryImage.image = imageArray[indexPath.row]
         cell.categoryLabel.text = labelArray[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Tapped")
+        let title = labelArray[indexPath.row]
+        print(title)
+        
+        let eachCourseVc = storyboard?.instantiateViewController(withIdentifier: "EachCourseViewController") as? EachCourseViewController
+        eachCourseVc?.selectedCategory = title
+        eachCourseVc?.allCourses = categoryAllCourses
+        eachCourseVc?.filteredArray = categoryPopularCourses.filter({$0.courseCategory == title})
+        self.navigationController?.pushViewController(eachCourseVc!, animated: true)
     }
 }

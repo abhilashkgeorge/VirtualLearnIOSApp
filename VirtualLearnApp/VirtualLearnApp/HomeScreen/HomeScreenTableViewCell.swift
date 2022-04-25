@@ -7,6 +7,13 @@
 
 import UIKit
 import Foundation
+
+protocol HomeScreenNavigationDelegate: AnyObject {
+    
+    func didSelectCategorySeeAllButton()
+    func didSelectCoursesSeeAllButton()
+}
+
 class HomeScreenTableViewCell: UITableViewCell {
     
     @IBOutlet weak var firstCollectionView: UICollectionView!
@@ -20,7 +27,7 @@ class HomeScreenTableViewCell: UITableViewCell {
     
     
     
-    
+    weak var delegate: HomeScreenNavigationDelegate?
     
     var homeScreenTV: UITableView?
     
@@ -57,8 +64,11 @@ class HomeScreenTableViewCell: UITableViewCell {
     }
     
     @IBAction func categoriesSeeAllButtonTapped(_ sender: Any) {
+        delegate?.didSelectCategorySeeAllButton()
     }
+    
     @IBAction func courseSeeAllButtonTapped(_ sender: Any) {
+        delegate?.didSelectCoursesSeeAllButton()
     }
     @IBAction func thirdTBCellAllBtnTapped(_ sender: Any) {
         

@@ -12,6 +12,8 @@ class ChoiceYourCourseViewController: UIViewController,UITableViewDelegate,UITab
     @IBOutlet weak var choiceCourseCategoryCollectionView: UICollectionView!
     @IBOutlet weak var choiceCourseAllCourseTableView: UITableView!
     
+    var userAllCourses = [HomeModel]()
+
     let imageArray = [UIImage(named: "icn_categories_design"),UIImage(named: "icn_categories_developer"),UIImage(named: "icn_categories_business"),UIImage(named: "icn_categories_marketing"),UIImage(named: "icn_categories_photography"),UIImage(named: "icn_categories_finance"),UIImage(named: "icn_categories_IT"),UIImage(named: "icn_categories_lifestyle"),UIImage(named: "icn_categories_music"),UIImage(named: "icn_categories_teaching"),UIImage(named: "icn_categories_fitness")]
     
     let labelArray = [
@@ -37,17 +39,22 @@ class ChoiceYourCourseViewController: UIViewController,UITableViewDelegate,UITab
         self.choiceCourseAllCourseTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return userAllCourses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChoiceCourseAllCourseTableViewCell", for: indexPath) as! ChoiceCourseAllCourseTableViewCell
         cell.setStyling()
-        cell.tableCourseName.text = "User Interface Design Essentials - UI/UX Design"
-        cell.tableCategory.text = "Development"
-        cell.tableChapters.text = "2" + " Chapters"
-        cell.tableImage.image = #imageLiteral(resourceName: "img_serach result1")
+        cell.tableCourseName.text = userAllCourses[indexPath.row].courseTitle
+        cell.tableCategory.text = userAllCourses[indexPath.row].courseCategory
+        cell.tableChapters.text = "\(userAllCourses[indexPath.row].noOfChapters)" + " Chapters"
+        cell.tableImage.image = userAllCourses[indexPath.row].courseImage
         
         return cell
     }

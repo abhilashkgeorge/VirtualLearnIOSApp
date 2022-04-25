@@ -26,12 +26,16 @@ class HomeScreenViewController: UIViewController {
     var viewModel = HomeViewModel()
     var overviewModel = OverviewViewModel()
     var chapterViewModel = ChaptersViewModel()
+    var newCouseViewModel = JoinCourseViewModel()
     var ongoingCount = 0
     var selectedCourseName = "angular"
     var selectedCourseID = "62273a3e4603abcaf3ffee8c"
+    var newCourse = "Arts"
+    var newCourseID = "62272a53b615cf685469dd27"
     
     var allCourses = [HomeModel]()
     var popularCourses = [HomeModel]()
+    var userLogout = Logout()
     
     @IBOutlet weak var hamburgerView: UIView!
     
@@ -48,9 +52,9 @@ class HomeScreenViewController: UIViewController {
     }
     
     func getAllCourses() {
-
+        
         viewModel.homeScreenAllCourses(completionHandler: {
-
+            
             (_ courses: [HomeModel]) -> Void
             in
             DispatchQueue.main.async {
@@ -58,12 +62,12 @@ class HomeScreenViewController: UIViewController {
                 self.homeScreenTableview.reloadData()
             }
         })
-
-        }
+        
+    }
     func getPopularCourses() {
-
+        
         viewModel.homeScreenPopularCourses(completionHandler: {
-
+            
             (_ courses: [HomeModel]) -> Void
             in
             DispatchQueue.main.async {
@@ -72,8 +76,8 @@ class HomeScreenViewController: UIViewController {
                 self.homeScreenTableview.reloadData()
             }
         })
-
-        }
+        
+    }
     
     
     func configureNavigationBar() {
@@ -94,6 +98,33 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
+    func getCategoryAllCourse() {
+        
+        viewModel.homeScreenAllCourses(completionHandler: {
+            
+            (_ courses: [HomeModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.allCourses = courses
+            }
+        })
+        
+    }
+    
+    func getCategoryPopularCourses() {
+        
+        viewModel.homeScreenPopularCourses(completionHandler: {
+            
+            (_ courses: [HomeModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.popularCourses = courses
+            }
+        })
+        
+    }
+    
+    
     //MARK: Hamburger Button Tapped
     
     @IBAction func homeBtnTapped(_ sender: Any) {
@@ -103,33 +134,25 @@ class HomeScreenViewController: UIViewController {
         animateView()
         configureNavigationBar()
         
-        //MARK: Checked overview api details , chapter details and sub chapter details
-        overviewModel.userCourseOverview(name: selectedCourseName, id: selectedCourseID) { (OverviewDataModel) in
-            print(OverviewDataModel.instructorName)
-        }
+        //MARK: Checked join new course api details
         
-        chapterViewModel.chapterDetail(name: selectedCourseName, id: selectedCourseID) { ([ChapterDataModel]) in
-            print("getting chapter details")
-        }
-        
-        chapterViewModel.subChapterDetail(name: selectedCourseName, id: selectedCourseID) { ([SubChaptersDataModel]) in
-            print("sub chapters details")
+        newCouseViewModel.joiningNewCourse(name: newCourse, id: newCourseID) { (_: String?) in
+            print("Join course successfully working!!!")
         }
         //MARK: end of checking
-        
     }
     
     
     @IBAction func myCourseBtn(_ sender: Any) {
+        
         myCourse.imageWith(color: .red, for: .normal)
         let myCoursesStoryboard = UIStoryboard.init(name: "MyCourses", bundle: Bundle.main)
         if ongoingCount == 0 {
-        
+            
             let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "EmptyCourseViewController") as? EmptyCourseViewController
             self.navigationController?.pushViewController(myCoursesVC!, animated: true)
         } else {
             
-        
             let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "OngoingAndCompletedViewController") as? OngoingAndCompletedViewController
             self.navigationController?.pushViewController(myCoursesVC!, animated: true)
         }
@@ -163,6 +186,13 @@ class HomeScreenViewController: UIViewController {
         }
         let optionYes = UIAlertAction(title: "Logout", style: .default) { (selection) in
             alert.dismiss(animated: true, completion: nil)
+            self.userLogout.logout(url: URL.fetchURLForLogout()) { (Any) in
+                DispatchQueue.main.async {
+                    let loginStoryboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)
+                    let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController
+                    self.navigationController?.pushViewController(loginVC!, animated: true)
+                }
+            }
         }
         present(alert, animated: true, completion: nil)
         alert.addAction(optionNo)
@@ -218,6 +248,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "secondTableCell") as! HomeScreenTableViewCell
             cell.allCourses = self.allCourses
             cell.contentView.backgroundColor = .white
+            cell.delegate = self
             cell.configureCells(indexPath: indexPath.row)
             return cell
         }
@@ -226,6 +257,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             if cell.allButtonStatus == true {
                 cell.homeScreenTV = self.homeScreenTableview
                 cell.allCourses = self.popularCourses
+                cell.delegate = self
                 cell.configureCells(indexPath: indexPath.row)
                 return cell
             } else {
@@ -233,7 +265,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.configureCells(indexPath: indexPath.row)
                 return cell
             }
-           
+            
         } else if indexPath.row > 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "fourthTableCell") as! HomeScreenTableViewCell
             cell.allCourses = self.allCourses
@@ -259,6 +291,29 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             return 230
         }
         
+    }
+}
+
+extension HomeScreenViewController: HomeScreenNavigationDelegate {
+    
+    func didSelectCategorySeeAllButton() {
+        
+        let categoryStoryboard = UIStoryboard.init(name: "Categories", bundle: Bundle.main)
+        let categoryVC = categoryStoryboard.instantiateViewController(withIdentifier: "CategoriesViewController") as? CategoriesViewController
+        getCategoryAllCourse()
+        categoryVC?.categoryAllCourses = allCourses
+        getCategoryPopularCourses()
+        categoryVC?.categoryPopularCourses = popularCourses
+        self.navigationController?.pushViewController(categoryVC!, animated: true)
+    }
+    
+    func didSelectCoursesSeeAllButton() {
+        
+        let courseStoryboard = UIStoryboard.init(name: "Categories", bundle: Bundle.main)
+        let courseVC = courseStoryboard.instantiateViewController(withIdentifier: "ChoiceYourCourseViewController") as? ChoiceYourCourseViewController
+        getCategoryAllCourse()
+        courseVC?.userAllCourses = allCourses
+        self.navigationController?.pushViewController(courseVC!, animated: true)
     }
 }
 

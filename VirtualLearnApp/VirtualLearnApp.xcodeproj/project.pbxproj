@@ -49,6 +49,7 @@
 		8B4693A7280952DD00B0CFB8 /* MyCoursesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4693A6280952DD00B0CFB8 /* MyCoursesViewModel.swift */; };
 		8B4DFF2D2813CE8E0034C34C /* OverviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DFF2C2813CE8E0034C34C /* OverviewDataModel.swift */; };
 		8B4DFF302813D1640034C34C /* OverviewNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DFF2F2813D1640034C34C /* OverviewNetworkManager.swift */; };
+		8B629AE328163DBB00873A36 /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629AE228163DBB00873A36 /* Logout.swift */; };
 		8B67F075280519080056CBD0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B67F074280519080056CBD0 /* EditProfileViewController.swift */; };
 		8B6D529C2813D3DD00DAA870 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6D529B2813D3DD00DAA870 /* OverviewViewModel.swift */; };
 		8B6DBFBE280976F20064677C /* MyCoursesNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DBFBD280976F20064677C /* MyCoursesNetworkManager.swift */; };
@@ -62,6 +63,8 @@
 		8BA75C43280FDAE8003CF45F /* ChangePasswordNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA75C42280FDAE8003CF45F /* ChangePasswordNetworkManager.swift */; };
 		8BA75C48280FDE66003CF45F /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA75C47280FDE66003CF45F /* ChangePasswordViewModel.swift */; };
 		8BA75C4B280FDF69003CF45F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA75C4A280FDF69003CF45F /* ChangePasswordViewController.swift */; };
+		8BBF3CFF281591E900B5546B /* JoinCourseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF3CFE281591E900B5546B /* JoinCourseNetworkManager.swift */; };
+		8BBF3D022815993D00B5546B /* JoinCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF3D012815993D00B5546B /* JoinCourseViewModel.swift */; };
 		8BEC30B22801869B00F7AD86 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B12801869B00F7AD86 /* URL+Extension.swift */; };
 		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
 		8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */; };
@@ -163,6 +166,7 @@
 		8B4693A6280952DD00B0CFB8 /* MyCoursesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewModel.swift; sourceTree = "<group>"; };
 		8B4DFF2C2813CE8E0034C34C /* OverviewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewDataModel.swift; sourceTree = "<group>"; };
 		8B4DFF2F2813D1640034C34C /* OverviewNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNetworkManager.swift; sourceTree = "<group>"; };
+		8B629AE228163DBB00873A36 /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		8B67F074280519080056CBD0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		8B6D529B2813D3DD00DAA870 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		8B6DBFBD280976F20064677C /* MyCoursesNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesNetworkManager.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 		8BA75C42280FDAE8003CF45F /* ChangePasswordNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordNetworkManager.swift; sourceTree = "<group>"; };
 		8BA75C47280FDE66003CF45F /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		8BA75C4A280FDF69003CF45F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		8BBF3CFE281591E900B5546B /* JoinCourseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCourseNetworkManager.swift; sourceTree = "<group>"; };
+		8BBF3D012815993D00B5546B /* JoinCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCourseViewModel.swift; sourceTree = "<group>"; };
 		8BEC30B12801869B00F7AD86 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
 		8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -262,6 +268,8 @@
 		8827388E27FEAF4800423E14 /* VirtualLearnApp */ = {
 			isa = PBXGroup;
 			children = (
+				8B629AE52816411300873A36 /* Logout */,
+				8BBF3CF92815919400B5546B /* JoinCourse */,
 				8870D4B8281053D100367A83 /* Categories */,
 				8B46939C2809326200B0CFB8 /* OngoingAndCompleted */,
 				BA19006D280D268100ED8624 /* TestModule */,
@@ -314,6 +322,14 @@
 				8B77F264281118F700DF8EC3 /* EmptyCourseViewController.swift */,
 			);
 			path = OngoingAndCompleted;
+			sourceTree = "<group>";
+		};
+		8B629AE52816411300873A36 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				8B629AE228163DBB00873A36 /* Logout.swift */,
+			);
+			path = Logout;
 			sourceTree = "<group>";
 		};
 		8B67F076280590630056CBD0 /* Storyboards */ = {
@@ -380,6 +396,15 @@
 				BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		8BBF3CF92815919400B5546B /* JoinCourse */ = {
+			isa = PBXGroup;
+			children = (
+				8BBF3CFE281591E900B5546B /* JoinCourseNetworkManager.swift */,
+				8BBF3D012815993D00B5546B /* JoinCourseViewModel.swift */,
+			);
+			path = JoinCourse;
 			sourceTree = "<group>";
 		};
 		8BEC30B02801867300F7AD86 /* Api */ = {
@@ -603,6 +628,7 @@
 				BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */,
 				881A9EE92805CAE700384AC1 /* RegisterSuccessViewController.swift in Sources */,
 				8B730B21280691FA00D17EF2 /* ProfileNetworkManager.swift in Sources */,
+				8B629AE328163DBB00873A36 /* Logout.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
 				8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */,
 				BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */,
@@ -659,11 +685,13 @@
 				F5273863281122F7004D25CF /* ChapterCourseTableViewCell.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
 				F5C31674280006B100F30001 /* CustomViews.swift in Sources */,
+				8BBF3CFF281591E900B5546B /* JoinCourseNetworkManager.swift in Sources */,
 				8B1377AC280DACCA007C72DB /* CompletedViewController.swift in Sources */,
 				88C620BD28042963009DF70C /* PersonalDetailsViewController.swift in Sources */,
 				8827389027FEAF4800423E14 /* AppDelegate.swift in Sources */,
 				8B4693A328094FD900B0CFB8 /* MyCoursesDataModel.swift in Sources */,
 				8B4DFF302813D1640034C34C /* OverviewNetworkManager.swift in Sources */,
+				8BBF3D022815993D00B5546B /* JoinCourseViewModel.swift in Sources */,
 				8827389227FEAF4800423E14 /* SceneDelegate.swift in Sources */,
 				8B730B1F28068BBD00D17EF2 /* ProfileViewModel.swift in Sources */,
 				F527388828140D11004D25CF /* UIViewController+Extention.swift in Sources */,

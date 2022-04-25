@@ -149,4 +149,14 @@ extension URLRequest {
         request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
         return request
     }
+    
+    static func getRequestForJoinCourse(url: URL) -> URLRequest {
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+         
+        print("Token for joining course \(commonToken)")
+        request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
+        return request
+    }
 }

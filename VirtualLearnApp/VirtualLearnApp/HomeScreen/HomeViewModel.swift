@@ -17,8 +17,6 @@ class HomeViewModel {
     var imageString = ""
     var courseImage = UIImage()
     
-    var allUserCourses = [HomeModel]()
-    var userPopularCourses = [HomeModel]()
     let manager = HomeNetworkManager()
     let imageApi = ApiImage()
     
@@ -36,6 +34,8 @@ class HomeViewModel {
     }
     
     func serializeAllCourses(json: Any)-> [HomeModel] {
+        
+        var allUserCourses = [HomeModel]()
         
         let jsonData = json as? [String: Any]
         let allCourses = jsonData!["allCourses"] as? [[String: Any]] ?? [["All Courses": "error"]]
@@ -72,6 +72,8 @@ class HomeViewModel {
     }
     
     func serializePopularCourses(json: Any)-> [HomeModel] {
+        
+        var userPopularCourses = [HomeModel]()
         
         let jsonData = json as? [String: Any]
         let popularCourses = jsonData!["popular"] as? [String: Any] ?? ["Popular Courses": "error"]

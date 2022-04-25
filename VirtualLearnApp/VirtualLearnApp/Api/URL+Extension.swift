@@ -135,5 +135,14 @@ extension URL {
         }
         return url
     }
+    
+    static func fetchURLForJoinCourse(courseID: String, courseTitle: String) -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/user/joinCourse?courseName=\(courseTitle)&courseId=\(courseID)") else {
+            fatalError("Error getting join course URL")
+        }
+        return url
+    }
+    
 }
 
