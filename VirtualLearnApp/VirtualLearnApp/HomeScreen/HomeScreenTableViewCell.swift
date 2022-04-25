@@ -17,7 +17,7 @@ protocol NavigationDelegate: AnyObject {
 }
 
 class HomeScreenTableViewCell: UITableViewCell {
-    weak var delegate: NavigationDelegate?
+
     @IBOutlet weak var firstCollectionView: UICollectionView!
     @IBOutlet weak var secondCollectionView: UICollectionView!
     @IBOutlet weak var thirdCollectionView: UICollectionView!
@@ -28,7 +28,7 @@ class HomeScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var fourthCellHeaderLbl: UILabel!
     
     
-    
+    weak var  navigationDelegate: NavigationDelegate?
     weak var delegate: HomeScreenNavigationDelegate?
     
     var homeScreenTV: UITableView?
@@ -251,7 +251,7 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             for item in 0...allCourses.count {
                 
                 if item == indexPath.item {
-                    delegate?.didSelectItem(courseName: allCourses[item].courseTitle, courseId: allCourses[item].id)
+                    navigationDelegate?.didSelectItem(courseName: allCourses[item].courseTitle, courseId: allCourses[item].id)
                     print("------------------------------------------------------------")
                     print(allCourses[item].courseTitle)
                 } 

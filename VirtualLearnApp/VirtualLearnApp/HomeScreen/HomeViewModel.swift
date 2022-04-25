@@ -16,12 +16,8 @@ class HomeViewModel {
     var chapters = 0
     var imageString = ""
     var courseImage = UIImage()
-<<<<<<< HEAD
-    
-=======
     var allUserCourses = [HomeModel]()
     var userPopularCourses = [HomeModel]()
->>>>>>> features/overview
     let manager = HomeNetworkManager()
     let imageApi = ApiImage()
     

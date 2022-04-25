@@ -259,7 +259,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         }
         else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "thirdTableCell") as! HomeScreenTableViewCell
-            cell.delegate = self
+            cell.navigationDelegate = self
             if cell.allButtonStatus == true {
                 cell.homeScreenTV = self.homeScreenTableview
                 cell.allCourses = self.popularCourses
