@@ -33,6 +33,8 @@ class HomeScreenViewController: UIViewController {
     var allCourses = [HomeModel]()
     var popularCourses = [HomeModel]()
     
+    var categoryTopCourses : Set<String> = []
+    var sortedCategory: [String] = ["Design", "Development", "Photography", "Lifestyle"]
     @IBOutlet weak var hamburgerView: UIView!
     
     override func viewDidLoad() {
@@ -68,7 +70,10 @@ class HomeScreenViewController: UIViewController {
             in
             DispatchQueue.main.async {
                 self.popularCourses = courses
-                
+                for item in 0...courses.count - 1 {
+                    self.categoryTopCourses.insert(courses[item].courseCategory)
+                    self.sortedCategory = self.categoryTopCourses.sorted(by: <)
+                }
                 self.homeScreenTableview.reloadData()
             }
         })
@@ -204,7 +209,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        return 7
     }
     
     
@@ -223,6 +228,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         }
         else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "thirdTableCell") as! HomeScreenTableViewCell
+            cell.delegate = self
             if cell.allButtonStatus == true {
                 cell.homeScreenTV = self.homeScreenTableview
                 cell.allCourses = self.popularCourses
@@ -235,10 +241,13 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             }
            
         } else if indexPath.row > 2{
+            
+            let categoriesArray = [viewModel.design, viewModel.development, viewModel.photography, viewModel.lifestyle]
             let cell = tableView.dequeueReusableCell(withIdentifier: "fourthTableCell") as! HomeScreenTableViewCell
-            cell.allCourses = self.allCourses
+            cell.categoryTopCourses = sortedCategory
+            cell.allCourses = categoriesArray[indexPath.row - 3]
             cell.contentView.backgroundColor = .white
-            cell.fourthCellHeaderLbl.text = "Top courses in \(cell.categoryTitles[indexPath.row - 2])"
+            cell.fourthCellHeaderLbl.text = "Top courses in \(sortedCategory[indexPath.row - 3])"
             cell.configureCells(indexPath: indexPath.row)
             return cell
         }
@@ -269,4 +278,14 @@ extension HomeScreenViewController: UISearchBarDelegate {
         let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
         self.navigationController?.pushViewController(searchVC!, animated: true)
     }
+}
+
+
+extension HomeScreenViewController: NavigationDelegate {
+    func didSelectItem(courseName: String, courseId: String) {
+        let overviewStoryBoard = UIStoryboard.init(name: "Overview", bundle: Bundle.main)
+        let overviewVC = overviewStoryBoard.instantiateViewController(withIdentifier: "MasterOverviewChapterViewController") as? MasterOverviewChapterViewController
+        self.navigationController!.pushViewController(overviewVC!, animated: true)
+    }
+    
 }

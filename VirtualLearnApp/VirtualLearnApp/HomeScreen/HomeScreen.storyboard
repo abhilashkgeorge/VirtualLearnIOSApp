@@ -385,27 +385,27 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="326" height="183"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_course1_design" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-GH-C4f">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="134"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_course1_design" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-GH-C4f">
+                                                                        <rect key="frame" x="0.0" y="10" width="288" height="134"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="288" id="2gE-xU-yCL"/>
                                                                             <constraint firstAttribute="height" constant="134" id="MMu-OV-1cV"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Complete Communication Skill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH3-Bm-ZZw">
-                                                                        <rect key="frame" x="10" y="144" width="237" height="15.5"/>
+                                                                        <rect key="frame" x="10" y="154" width="237" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15.399999618530273"/>
                                                                         <color key="textColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqp-1i-lh7">
-                                                                        <rect key="frame" x="10" y="163.5" width="59" height="13.5"/>
+                                                                        <rect key="frame" x="10" y="173.5" width="59" height="13.5"/>
                                                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13.5"/>
                                                                         <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_test duration" translatesAutoresizingMaskIntoConstraints="NO" id="nq1-HJ-jO9">
-                                                                        <rect key="frame" x="76" y="163.5" width="10" height="10"/>
+                                                                        <rect key="frame" x="76" y="173.5" width="10" height="10"/>
                                                                         <color key="tintColor" systemColor="labelColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="10" id="br6-s4-FAZ"/>
@@ -413,14 +413,14 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:30:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSD-ua-7V6">
-                                                                        <rect key="frame" x="92" y="164.5" width="36.5" height="11.5"/>
+                                                                        <rect key="frame" x="92" y="174.5" width="36.5" height="11.5"/>
                                                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11.5"/>
                                                                         <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="e9p-GH-C4f" firstAttribute="top" secondItem="FLJ-7a-huN" secondAttribute="top" id="82M-Ar-C82"/>
+                                                                    <constraint firstItem="e9p-GH-C4f" firstAttribute="top" secondItem="FLJ-7a-huN" secondAttribute="top" constant="10" id="82M-Ar-C82"/>
                                                                     <constraint firstItem="vH3-Bm-ZZw" firstAttribute="top" secondItem="e9p-GH-C4f" secondAttribute="bottom" constant="10" id="Dqr-P3-BVt"/>
                                                                     <constraint firstItem="tqp-1i-lh7" firstAttribute="leading" secondItem="FLJ-7a-huN" secondAttribute="leading" constant="10" id="E5E-Fq-Bx6"/>
                                                                     <constraint firstItem="nq1-HJ-jO9" firstAttribute="leading" secondItem="tqp-1i-lh7" secondAttribute="trailing" constant="7" id="EHq-OS-dPy"/>

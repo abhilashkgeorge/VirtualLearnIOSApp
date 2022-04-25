@@ -9,6 +9,10 @@ import UIKit
 
 class ChaptersViewController: UIViewController {
     
+
+    var chaptersViewModel = ChaptersViewModel()
+    var chapterData = [ChapterDataModel]()
+    
     //MARK: TableView Outlets
     @IBOutlet weak var chapterTableView: UITableView!
     
@@ -18,11 +22,25 @@ class ChaptersViewController: UIViewController {
 
     
     override func viewDidLoad() {
+        print("============++++++My Boi++++++++++=================")
+        print(chapterData.count)
         super.viewDidLoad()
         chapterTableView.delegate = self
         chapterTableView.dataSource = self
     }
     
+    func getChapterDetails(name: String, id: String) {
+
+        chaptersViewModel.chapterDetail(name: name, id: id, completionHandler: {
+
+            (_ details: [ChapterDataModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.chapterData = details
+            }
+        })
+
+        }
     @IBAction func certificateDownloadButtonTapped(_ sender: Any) {
     }
 }

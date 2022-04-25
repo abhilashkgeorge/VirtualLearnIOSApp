@@ -14,6 +14,8 @@ class OverviewScreenController: UIViewController {
     let LearnIdentifier = "learn"
     let requirementsIdentifier = "requirements"
     
+    var overviewViewModel = OverviewViewModel()
+    var overviewData = [OverviewDataModel]()
     
     //MARK: Table View Outlets
     @IBOutlet weak var courseTableView: UITableView!
@@ -49,6 +51,19 @@ class OverviewScreenController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func getOverviewDetails(name: String, id: String) {
+
+        overviewViewModel.userCourseOverview(name: name, id: id, completionHandler: {
+
+            (_ details: OverviewDataModel) -> Void
+            in
+            DispatchQueue.main.async {
+                self.overviewData = [details]
+            }
+        })
+
+        }
 }
 
 extension OverviewScreenController: UITableViewDelegate, UITableViewDataSource {

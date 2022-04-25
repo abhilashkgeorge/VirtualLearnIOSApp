@@ -16,11 +16,17 @@ class HomeViewModel {
     var chapters = 0
     var imageString = ""
     var courseImage = UIImage()
-    
     var allUserCourses = [HomeModel]()
     var userPopularCourses = [HomeModel]()
     let manager = HomeNetworkManager()
     let imageApi = ApiImage()
+    
+    
+   var popular = [HomeModel]()
+   var design = [HomeModel]()
+   var development = [HomeModel]()
+   var photography = [HomeModel]()
+   var lifestyle = [HomeModel]()
     
     func ongoingCourseCount (completionHandler: @escaping (_ coursesCount: Int) -> Void) {
         
@@ -92,7 +98,10 @@ class HomeViewModel {
             
             let eachPopularCourse = HomeModel(id: id, courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
             print(eachPopularCourse.courseTitle)
+            design.append(eachPopularCourse)
+            popular.append(eachPopularCourse)
             userPopularCourses.append(eachPopularCourse)
+            
         }
         
         let developmentCourses = popularCourses["Development"] as? [[String: Any]] ?? [["Development courses": "error"]]
@@ -112,6 +121,7 @@ class HomeViewModel {
             let eachPopularCourse = HomeModel(id: id, courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
             print(eachPopularCourse.courseTitle)
             userPopularCourses.append(eachPopularCourse)
+            development.append(eachPopularCourse)
         }
         
         let photographyCourses = popularCourses["Photography"] as? [[String: Any]] ?? [["Photography courses": "error"]]
@@ -131,6 +141,7 @@ class HomeViewModel {
             let eachPopularCourse = HomeModel(id: id, courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
             print(eachPopularCourse.courseTitle)
             userPopularCourses.append(eachPopularCourse)
+            photography.append(eachPopularCourse)
         }
         
         let lifeStyleCourses = popularCourses["Lifestyle"] as? [[String: Any]] ?? [["LifeStyle courses": "error"]]
@@ -150,6 +161,7 @@ class HomeViewModel {
             let eachPopularCourse = HomeModel(id: id, courseTitle: title, courseCategory: category, noOfChapters: chapters, courseImage: courseImage)
             print(eachPopularCourse.courseTitle)
             userPopularCourses.append(eachPopularCourse)
+            lifestyle.append(eachPopularCourse)
         }
         
         return userPopularCourses
