@@ -9,13 +9,15 @@ import UIKit
 import Foundation
 
 protocol HomeScreenNavigationDelegate: AnyObject {
-    
     func didSelectCategorySeeAllButton()
     func didSelectCoursesSeeAllButton()
 }
+protocol NavigationDelegate: AnyObject {
+    func didSelectItem(courseName: String, courseId: String)
+}
 
 class HomeScreenTableViewCell: UITableViewCell {
-    
+    weak var delegate: NavigationDelegate?
     @IBOutlet weak var firstCollectionView: UICollectionView!
     @IBOutlet weak var secondCollectionView: UICollectionView!
     @IBOutlet weak var thirdCollectionView: UICollectionView!
@@ -57,6 +59,9 @@ class HomeScreenTableViewCell: UITableViewCell {
                           "Music",
                           "Teaching",
                           "Health & Fitness"]
+    
+    
+    var categoryTopCourses = [String]()
     
     
     override func awakeFromNib() {
@@ -211,10 +216,12 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdCV", for: indexPath) as! HomeScreenCollectionViewCell
             cell.thirdCVImg.image = allCourses[indexPath.item].courseImage
             cell.thirdCVlbl.text = allCourses[indexPath.item].courseTitle
+            cell.tagLbl.text  = allCourses[indexPath.item].courseCategory
             cell.thirdCVLbl2.text = "\(allCourses[indexPath.item].noOfChapters) Chapter"
             return cell
                    
         } else {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fourthCV", for: indexPath) as! HomeScreenCollectionViewCell
             cell.fourthCVImg.image = allCourses[indexPath.item].courseImage
             cell.fourthCVTime.text = allCourses[indexPath.item].courseCategory
@@ -237,6 +244,19 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
          
         }
         else if collectionView == thirdCollectionView {
+            guard let allCourses = allCourses else {
+                print("The course count in all courses is Zero")
+                return
+            }
+            for item in 0...allCourses.count {
+                
+                if item == indexPath.item {
+                    delegate?.didSelectItem(courseName: allCourses[item].courseTitle, courseId: allCourses[item].id)
+                    print("------------------------------------------------------------")
+                    print(allCourses[item].courseTitle)
+                } 
+                
+            }
             
            
                    
