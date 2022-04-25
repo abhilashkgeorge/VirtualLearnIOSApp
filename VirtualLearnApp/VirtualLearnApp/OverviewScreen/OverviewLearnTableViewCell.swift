@@ -9,6 +9,8 @@ import UIKit
 
 class OverviewLearnTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var secondTBLbl: UILabel!
+    @IBOutlet weak var secondTBImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

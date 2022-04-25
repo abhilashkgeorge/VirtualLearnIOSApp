@@ -13,9 +13,14 @@ class OverviewScreenController: UIViewController {
     let courseIdentifier = "course"
     let LearnIdentifier = "learn"
     let requirementsIdentifier = "requirements"
+    var imageArray = [
+        UIImage(named:"icn_includes_certificate"),
+        UIImage(named:"icn_includes_duration"),
+        UIImage(named:"icn_includes_lifetime"),
+        UIImage(named:"icn_includes_supportfiles"),
+        UIImage(named:"icn_includes_test")]
     
-    var overviewViewModel = OverviewViewModel()
-    var overviewData = [OverviewDataModel]()
+
     
     //MARK: Table View Outlets
     @IBOutlet weak var courseTableView: UITableView!
@@ -36,9 +41,18 @@ class OverviewScreenController: UIViewController {
     //MARK: Button
     @IBOutlet weak var joinCourseButton: UIButton!
     
+    var overviewViewModel = OverviewViewModel()
+    
+    var overviewData = [OverviewDataModel]() {
+        didSet {
+            self.courseTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
+        getOverviewDetails(name: "Angular", id: "621712f90ddbaf905504874b")
         super.viewDidLoad()
+        
         courseTableView.delegate = self
         courseTableView.dataSource = self
         
@@ -47,9 +61,7 @@ class OverviewScreenController: UIViewController {
 
         requirementsTableView.delegate = self
         requirementsTableView.dataSource = self
-        
-
-        // Do any additional setup after loading the view.
+   // Do any additional setup after loading the view.
     }
     
     func getOverviewDetails(name: String, id: String) {
@@ -60,16 +72,30 @@ class OverviewScreenController: UIViewController {
             in
             DispatchQueue.main.async {
                 self.overviewData = [details]
+                print("989389898989898")
+                print(self.overviewData[0].description)
+                self.configureView()
+                self.courseTableView.reloadData()
             }
+
         })
 
         }
+    
+    func configureView() {
+
+        overViewTitle.text = overviewData[0].overViewTitle
+        overViewDescription.text = overviewData[0].description
+        instructorName.text = overviewData[0].instructorName
+        instructorOccupation.text = overviewData[0].occupation
+        instructorDescription.text = overviewData[0].instructorDetails
+    }
 }
 
 extension OverviewScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == courseTableView {
-            return 2
+            return overviewData.count
         } else if tableView == learnTableView {
             return 5
         } else  {
@@ -80,6 +106,8 @@ extension OverviewScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == courseTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: courseIdentifier) as! OverviewCourseTableViewCell
+            cell.firstTBLbl.text = overviewData[indexPath.row].courseIncludes[indexPath.row]
+            cell.firstTBImage.image = imageArray[indexPath.row]
             return cell
         } else if tableView == learnTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: LearnIdentifier) as! OverviewLearnTableViewCell

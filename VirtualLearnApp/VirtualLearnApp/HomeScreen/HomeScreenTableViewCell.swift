@@ -13,7 +13,7 @@ protocol HomeScreenNavigationDelegate: AnyObject {
     func didSelectCoursesSeeAllButton()
 }
 protocol NavigationDelegate: AnyObject {
-    func didSelectItem(courseName: String, courseId: String)
+    func didSelectItem(courseName: String, courseId: String, courseCategory: String, courseImage: UIImage, numberOfChapters: Int)
 }
 
 class HomeScreenTableViewCell: UITableViewCell {
@@ -251,8 +251,7 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             for item in 0...allCourses.count {
                 
                 if item == indexPath.item {
-                    navigationDelegate?.didSelectItem(courseName: allCourses[item].courseTitle, courseId: allCourses[item].id)
-                    print("------------------------------------------------------------")
+                    navigationDelegate?.didSelectItem(courseName: allCourses[item].courseTitle, courseId: allCourses[item].id, courseCategory: allCourses[item].courseCategory, courseImage: allCourses[item].courseImage, numberOfChapters: allCourses[item].noOfChapters)
                     print(allCourses[item].courseTitle)
                 } 
                 

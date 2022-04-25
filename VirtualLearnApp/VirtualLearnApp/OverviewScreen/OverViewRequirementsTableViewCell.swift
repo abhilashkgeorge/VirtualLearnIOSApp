@@ -9,6 +9,8 @@ import UIKit
 
 class OverViewRequirementsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var thirdTBBulletLbl: UILabel!
+    @IBOutlet weak var thirdTBLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
