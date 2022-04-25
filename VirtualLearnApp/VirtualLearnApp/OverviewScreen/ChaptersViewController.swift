@@ -22,8 +22,6 @@ class ChaptersViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        print("============++++++My Boi++++++++++=================")
-        print(chapterData.count)
         super.viewDidLoad()
         chapterTableView.delegate = self
         chapterTableView.dataSource = self

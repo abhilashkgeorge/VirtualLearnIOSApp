@@ -337,10 +337,16 @@ extension HomeScreenViewController: UISearchBarDelegate {
 
 
 extension HomeScreenViewController: NavigationDelegate {
-    func didSelectItem(courseName: String, courseId: String) {
+    func didSelectItem(courseName: String, courseId: String, courseCategory: String, courseImage: UIImage, numberOfChapters: Int) {
         let overviewStoryBoard = UIStoryboard.init(name: "Overview", bundle: Bundle.main)
-        let overviewVC = overviewStoryBoard.instantiateViewController(withIdentifier: "MasterOverviewChapterViewController") as? MasterOverviewChapterViewController
-        self.navigationController!.pushViewController(overviewVC!, animated: true)
+        let masterVC = overviewStoryBoard.instantiateViewController(withIdentifier: "MasterOverviewChapterViewController") as? MasterOverviewChapterViewController
+        masterVC?.courseName = courseName
+        masterVC?.courseId = courseId
+        masterVC?.courseNameReference = courseName
+        masterVC?.courseCategoryReference = courseCategory
+        masterVC?.numberOfChapterReference = numberOfChapters
+        masterVC?.courseImageReference = courseImage
+        self.navigationController!.pushViewController(masterVC!, animated: true)
     }
-    
-}
+    }
+
