@@ -119,6 +119,7 @@
 		F5C7ED3328029FAE00134409 /* proxima_nova_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2B28029FAD00134409 /* proxima_nova_regular.otf */; };
 		F5C7ED3428029FAE00134409 /* proxima_nova_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2C28029FAE00134409 /* proxima_nova_bold.ttf */; };
 		F5C7ED3528029FAE00134409 /* biko_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5C7ED2D28029FAE00134409 /* biko_bold.otf */; };
+		F5ECFC4528171AA400B5F45A /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECFC4428171AA400B5F45A /* UITableView+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +237,7 @@
 		F5C7ED2B28029FAD00134409 /* proxima_nova_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proxima_nova_regular.otf; sourceTree = "<group>"; };
 		F5C7ED2C28029FAE00134409 /* proxima_nova_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proxima_nova_bold.ttf; sourceTree = "<group>"; };
 		F5C7ED2D28029FAE00134409 /* biko_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = biko_bold.otf; sourceTree = "<group>"; };
+		F5ECFC4428171AA400B5F45A /* UITableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +471,7 @@
 				F57499ED280564F700695C3B /* UIImage+Extention.swift */,
 				F52738822813C3AD004D25CF /* UIButton+Extention.swift */,
 				F527388728140D11004D25CF /* UIViewController+Extention.swift */,
+				F5ECFC4428171AA400B5F45A /* UITableView+Extention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				881A9EE92805CAE700384AC1 /* RegisterSuccessViewController.swift in Sources */,
 				8B730B21280691FA00D17EF2 /* ProfileNetworkManager.swift in Sources */,
 				8B629AE328163DBB00873A36 /* Logout.swift in Sources */,
+				F5ECFC4528171AA400B5F45A /* UITableView+Extention.swift in Sources */,
 				F5C3166827FEBD4A00F30001 /* SearchViewController.swift in Sources */,
 				8B2531DD2804102100256714 /* CoursesDetailsCollectionViewCell.swift in Sources */,
 				BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */,

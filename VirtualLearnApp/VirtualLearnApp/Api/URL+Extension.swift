@@ -123,7 +123,7 @@ extension URL {
     static func fetchURLForOverview(courseID: String, courseTitle: String) -> URL {
         
         guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/viewCourse?courseName=\(courseTitle)&courseId=\(courseID)") else {
-            fatalError("Error getting Home URL")
+            fatalError("Error getting OverView URL : https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/viewCourse?courseName=\(courseTitle)&courseId=\(courseID) ")
         }
         return url
     }
