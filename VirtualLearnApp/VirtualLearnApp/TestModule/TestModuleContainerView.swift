@@ -24,6 +24,8 @@ class TestModuleContainerView: UIViewController {
         let ok = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
             
+            let testSuccessVc = self.storyboard?.instantiateViewController(withIdentifier: "TestSuccessViewController") as? TestSuccessViewController
+            self.navigationController?.pushViewController(testSuccessVc!, animated: true)
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in

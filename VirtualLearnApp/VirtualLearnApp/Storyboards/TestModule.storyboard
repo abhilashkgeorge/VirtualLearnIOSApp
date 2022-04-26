@@ -379,7 +379,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have completed Chapter 7 - Conclusion, Final Test from Course: Learn Figma - UI/UX Design Essential Training" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nY-3K-cJk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have completed Chapter 7 - Conclusion, Final Test from Course: Learn Figma - UI/UX Design Essential Training" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nY-3K-cJk">
                                         <rect key="frame" x="24" y="459" width="327" height="48"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
@@ -400,6 +400,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="2YY-4Z-x54" secondAttribute="trailing" constant="30" id="1Gp-n4-3sW"/>
                                     <constraint firstItem="9nY-3K-cJk" firstAttribute="top" secondItem="hBz-Rs-Nfp" secondAttribute="bottom" constant="11" id="JgA-1G-be2"/>
+                                    <constraint firstItem="5e7-Nf-Ff2" firstAttribute="leading" secondItem="SFG-s1-9cE" secondAttribute="leading" constant="163.5" id="Lar-Bq-2Eq"/>
                                     <constraint firstItem="9nY-3K-cJk" firstAttribute="centerX" secondItem="SFG-s1-9cE" secondAttribute="centerX" id="P8l-R6-KLa"/>
                                     <constraint firstItem="hBz-Rs-Nfp" firstAttribute="centerX" secondItem="SFG-s1-9cE" secondAttribute="centerX" id="PFz-ca-TCL"/>
                                     <constraint firstItem="5e7-Nf-Ff2" firstAttribute="top" secondItem="9nY-3K-cJk" secondAttribute="bottom" constant="126" id="Vrs-wr-GnB"/>
