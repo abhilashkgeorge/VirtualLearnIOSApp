@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 class NotificationsNetworkManager {
     
     func userNotifications(completionHandler: @escaping (_ json: Any) -> Void) {

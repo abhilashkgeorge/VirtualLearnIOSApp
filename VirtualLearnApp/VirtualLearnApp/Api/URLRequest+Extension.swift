@@ -132,4 +132,21 @@ extension URLRequest {
             request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
             return request
     }
+    
+    static func postRequestForTests(url: URL,body: [String: String]) -> URLRequest {
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        print("verifyotpToken:\(commonToken)")
+        request.setValue("jwt \(commonToken)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        return request
+    }
+    
 }
