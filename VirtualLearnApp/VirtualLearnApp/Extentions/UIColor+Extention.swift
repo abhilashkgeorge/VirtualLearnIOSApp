@@ -30,4 +30,14 @@ extension UIColor {
     public class var hamburgerOrange: UIColor {
         return UIColor(red: 234/255, green: 38/255, blue: 38/255, alpha: 1.0)
     }
+    
+    //    //rgb(4,44,92)
+    public class var textBlue: UIColor {
+        return UIColor(red: 4/255, green: 44/255, blue: 92/255, alpha: 1.0)
+    }
+    
+    //rgb(223,231,245)
+    public class var buttonGreyBackground: UIColor {
+        return UIColor(red: 223/255, green: 231/255, blue: 245/255, alpha: 1.0)
+    }
 }

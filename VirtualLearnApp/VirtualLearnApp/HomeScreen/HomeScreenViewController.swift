@@ -138,13 +138,6 @@ class HomeScreenViewController: UIViewController {
         sideMenuConstraint.constant = 0
         animateView()
         configureNavigationBar()
-        
-        //MARK: Checked join new course api details
-        
-        newCouseViewModel.joiningNewCourse(name: newCourse, id: newCourseID) { (_: String?) in
-            print("Join course successfully working!!!")
-        }
-        //MARK: end of checking
     }
     
     
