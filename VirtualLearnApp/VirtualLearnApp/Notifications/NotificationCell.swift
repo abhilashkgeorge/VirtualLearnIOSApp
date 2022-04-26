@@ -31,10 +31,10 @@ class NotificationCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setNotifications(notification: Notifications) {
-        notifyImageView.image = notification.image
+    func setNotifications(notification: NotificationModel) {
+        notifyImageView.image = notification.notificationImageIcon
         notifyMessageLabel.text = notification.message
-        notificationTimeLabel.text = notification.time
+        notificationTimeLabel.text = notification.notifyTime
     }
 
 
