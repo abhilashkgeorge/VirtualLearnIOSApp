@@ -14,7 +14,7 @@ class MasterOverviewChapterViewController: UIViewController {
     
     var courseName: String = ""
     var courseId: String = ""
-    
+
     
 //MARK: Header
     @IBOutlet weak var courseImg: UIImageView!
@@ -37,14 +37,17 @@ class MasterOverviewChapterViewController: UIViewController {
     @IBOutlet weak var chapterContainerView: UIView!
     
         override func viewDidLoad() {
+            configureView()
             showOverView()
             super.viewDidLoad()
 
-            configureView()
+            
         }
     
 
     func configureView() {
+        overviewContainerView.isHidden = false
+        chapterContainerView.isHidden = false
         courseTitle.text = courseName
         courseTitle.text =  courseNameReference
         courseCatergoryLbl.text =  courseCategoryReference
@@ -52,75 +55,56 @@ class MasterOverviewChapterViewController: UIViewController {
         courseImg.image =  courseImageReference
     }
         @IBAction func chaptersButtonTapped(_ sender: Any) {
+            configureView()
             showChapters()
+            
         }
         @IBAction func overviewButtonTapped(_ sender: Any) {
+            configureView()
             showOverView()
+            
         }
-        
-    var status = false
-    
-//    var chaptersVC = UIViewController()
-//
-//    var overviewVC = UIViewController()
-    
     
         func showChapters() {
-            chapterContainerView.isHidden = false
             overviewContainerView.isHidden = true
+            let chapterVC = self.storyboard!.instantiateViewController(withIdentifier: chaptersIdentifier) as! ChaptersViewController
+            chapterVC.courseID = self.courseId
+            chapterVC.courseName = self.courseName
+           addChild(chapterVC)
+            chapterVC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            chapterVC.view.frame = overviewContainerView.bounds
+            overviewContainerView.addSubview(chapterVC.view)
+            chapterVC.didMove(toParent: self)
+            chaptersButton.tintColor = .customGrey
+            chaptersUIView.backgroundColor = .customGrey
+            overviewButton.tintColor = .customOrange
+            overviewUIView.backgroundColor = .customOrange
+            chapterContainerView.isHidden = false
             chaptersButton.tintColor = .customOrange
             chaptersUIView.backgroundColor = .customOrange
             overviewButton.tintColor = .customGrey
             overviewUIView.backgroundColor = .customGrey
-            
-//            remove(asChildViewController: overviewVC)
-//            add(asChildViewController: chaptersVC)
-
         }
         
         
         func showOverView() {
             chapterContainerView.isHidden = true
-            overviewContainerView.isHidden = false
-            //            if status == false {
-//                chaptersVC = storyboard?.instantiateViewController(withIdentifier: chaptersIdentifier) as! ChaptersViewController
-//
-//
-//             overviewVC = storyboard?.instantiateViewController(withIdentifier: overviewIdentifier) as! OverviewScreenController
-//
-//               let over = overviewVC as! OverviewScreenController
-//                DispatchQueue.main.async {
-//                    over.getOverviewDetails(name: self.courseName, id: self.courseId)
-//
-//                }
-//
-//                status = true
-//            }
-
-//            remove(asChildViewController: chaptersVC)
-//            add(asChildViewController: overviewVC)
+            let overviewVC = self.storyboard!.instantiateViewController(withIdentifier: overviewIdentifier) as! OverviewScreenController
+            overviewVC.courseID = self.courseId
+            overviewVC.courseName = self.courseName
+           addChild(overviewVC)
+            overviewVC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            overviewVC.view.frame = overviewContainerView.bounds
+            overviewContainerView.addSubview(overviewVC.view)
+            overviewVC.didMove(toParent: self)
             chaptersButton.tintColor = .customGrey
             chaptersUIView.backgroundColor = .customGrey
             overviewButton.tintColor = .customOrange
             overviewUIView.backgroundColor = .customOrange
+
        
         }
         
-
-//        public func add(asChildViewController viewController: UIViewController) {
-//
-//            addChild(viewController)
-//            mainContainerView.addSubview(viewController.view)
-//            viewController.view.frame = mainContainerView.bounds
-//            viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//            viewController.didMove(toParent: self)
-//        }
-//
-//        public func remove(asChildViewController viewController: UIViewController) {
-//            viewController.willMove(toParent: nil)
-//            viewController.view.removeFromSuperview()
-//            viewController.removeFromParent()
-//        }
     }
 
 
