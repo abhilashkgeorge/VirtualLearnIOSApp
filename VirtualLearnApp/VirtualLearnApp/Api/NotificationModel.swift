@@ -14,6 +14,7 @@ class NotificationModel {
     var message : String
     var notifyTime: String
     var notificationImageIcon: UIImage
+    var isRead: Bool = false
     
     init(message :String, notifyTime: String, notificationImageIcon: UIImage) {
         

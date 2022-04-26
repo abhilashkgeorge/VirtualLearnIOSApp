@@ -11,41 +11,54 @@ class NotificationsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var notifications: [Notifications] = []
+    var viewModel = NotificationsViewModel()
+    
+    var notificationList = [NotificationModel]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        notifications = createArray()
+       
+        loadNotification()
     }
     
-    func createArray() -> [Notifications]{
-        
-        let notify1 = Notifications(image: #imageLiteral(resourceName: "img_notify message_dp1"), message: "You scored 80% in Chapter 3 - Setting up a new project, of Course - Learn Figma - UI/UX Design Essential Training.", time: "2 min ago")
-        let notify2 = Notifications(image: #imageLiteral(resourceName: "img_notify message_dp1"), message: "Completed Chapter 3 - Setting up a new project, of Course - Learn Figma - UI/UX Design Essential Training.", time: "5 min ago")
-        let notify3 = Notifications(image: #imageLiteral(resourceName: "Circle"), message: "Successfully changed your Password", time: "1 hour ago")
-        let notify4 = Notifications(image: #imageLiteral(resourceName: "img_notify message_dp2"), message: "Joined a New Course - Art & Illustration ", time: "yesterday")
-        let notify5 = Notifications(image: #imageLiteral(resourceName: "icn_notification_notify-Megaphone"), message: "Hay Msdian, There is a new course about Art & Illustration added to the topic Design", time: "yesterday")
-
-        return [notify1,notify2,notify3,notify4,notify5]
+    func loadNotification() {
+        viewModel.ongoingUserCourses(completionHandler: {
+            
+            (_ profile: [NotificationModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.notificationList = profile
+            }
+        })
     }
-    
     
 
 }
 
 extension NotificationsViewController: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notifications.count
+        return notificationList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let notification = notifications[indexPath.row]
+        
+        let notification = notificationList[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell") as! NotificationCell
-        
+        if notification.isRead == false {
+            cell.unopenedIndication.backgroundColor = .orange
+            cell.backgroundColor = UIColor(red:0.94, green:0.96, blue:0.98, alpha:1)
+        }
+        else {
+            cell.unopenedIndication.backgroundColor = .white
+        }
         cell.setNotifications(notification: notification)
         
         return cell
@@ -55,18 +68,12 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
          return 114
     }
     
-}
-
-class Notifications {
-    
-    var image: UIImage
-    var message: String
-    var time: String
-    
-    init(image: UIImage,message: String, time: String) {
-        self.image = image
-        self.message = message
-        self.time = time
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let currentCell = tableView.cellForRow(at: indexPath)! as! NotificationCell
+        currentCell.unopenedIndication.backgroundColor = .white
+        currentCell.backgroundColor = .white
+        viewModel.changingIsRead(index: indexPath.row)
     }
-
 }
+

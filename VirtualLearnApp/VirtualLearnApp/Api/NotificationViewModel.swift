@@ -14,21 +14,20 @@ class NotificationsViewModel {
     let imageApi = ApiImage()
     var notifications = [NotificationModel]()
     
-    func notificationsSerialize(json: Any)-> [NotificationModel] {
+    func notificationsSerialize(json: [[String: Any]])-> [NotificationModel] {
         
         var message: String = ""
         var notifyTime: String = ""
         var notifyImg: String = ""
         var notificationIcon = UIImage()
         
-        let jsonData = json as? [String: Any]
-        let ongoing = jsonData!["notifications"] as? [[String: String]] ?? [["ongoing": "error"]]
-        
-        for item in ongoing {
-            message = item["message"] ?? "No message"
-            notifyTime = item["notifyTime"] ?? "Time not known"
-            notifyImg = item["notificationImageIcon"] ?? "No notification icon"
-        
+        let jsonData = json as? [[String: String]] ?? [["ongoing": "error"]]
+
+        for item in jsonData {
+            message = item["notificationMsg"] ?? "No message"
+            notifyTime = item["createdAt"] ?? "Time not known"
+            notifyImg = item["notificationicon"] ?? "No notification icon"
+            
             imageApi.getImgFromApi(url: notifyImg) { (image) in
                 notificationIcon = image
             }
@@ -36,7 +35,7 @@ class NotificationsViewModel {
             let notification = NotificationModel(message: message, notifyTime: notifyTime, notificationImageIcon: notificationIcon)
             notifications.append(notification)
             
-        }
+       }
         return notifications
     }
     
@@ -44,7 +43,7 @@ class NotificationsViewModel {
         
         manager.userNotifications(completionHandler:
                                 {
-                                    (json: Any) -> Void
+                                    (json: [[String: Any]]) -> Void
                                     in
                                     let course = self.notificationsSerialize(json: json)
                                     completionHandler(course)
@@ -52,5 +51,7 @@ class NotificationsViewModel {
         )
     }
     
-    
+    func changingIsRead(index: Int) {
+        notifications[index].isRead = true
+    }
 }
