@@ -51,7 +51,7 @@ class MasterOverviewChapterViewController: UIViewController {
         courseTitle.text = courseName
         courseTitle.text =  courseNameReference
         courseCatergoryLbl.text =  courseCategoryReference
-        courseSizeLbl.text =  "\(String(describing: numberOfChapterReference)) Chapters"
+        courseSizeLbl.text =  "\(numberOfChapterReference)" + " Chapters"
         courseImg.image =  courseImageReference
     }
         @IBAction func chaptersButtonTapped(_ sender: Any) {

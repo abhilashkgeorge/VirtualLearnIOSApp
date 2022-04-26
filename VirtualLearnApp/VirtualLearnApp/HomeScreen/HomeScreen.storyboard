@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fn6-rB-s1F">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fn6-rB-s1F">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -298,7 +298,10 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNI-Zc-Hhq">
-                                                    <rect key="frame" x="94" y="49" width="41" height="26"/>
+                                                    <rect key="frame" x="94" y="49" width="60" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="HhD-lD-4hY"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Popular"/>
@@ -314,13 +317,15 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="All"/>
+                                                    <state key="normal" title="All">
+                                                        <color key="titleColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="thirdTBCellAllBtnTapped:" destination="oeT-Ed-SRa" eventType="touchUpInside" id="FIW-Xe-HDp"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-Fx-iAg">
-                                                    <rect key="frame" x="155" y="49" width="41" height="26"/>
+                                                    <rect key="frame" x="174" y="49" width="41" height="26"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
                                                     <color key="tintColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Newest"/>

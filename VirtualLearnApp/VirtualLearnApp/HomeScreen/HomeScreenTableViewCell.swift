@@ -83,6 +83,10 @@ class HomeScreenTableViewCell: UITableViewCell {
         allButtonStatus = true
         popularButtonStatus = false
         newestButtonStatus = false
+        thirdTBCellAllBtn.setTitleColor(.textBlue, for: .normal)
+        thirdTBCellAllBtn.backgroundColor = .buttonGreyBackground
+        thirdTBCellPopularBtn.backgroundColor = .clear
+        thirdTBCellPopularBtn.setTitleColor(.customGrey, for: .normal)
         homeScreenTV.reloadData()
     }
     
@@ -93,6 +97,11 @@ class HomeScreenTableViewCell: UITableViewCell {
         allButtonStatus = false
         popularButtonStatus = true
         newestButtonStatus = false
+        
+        thirdTBCellPopularBtn.setTitleColor(.textBlue, for: .normal)
+        thirdTBCellPopularBtn.backgroundColor = .buttonGreyBackground
+        thirdTBCellAllBtn.backgroundColor = .clear
+        thirdTBCellAllBtn.setTitleColor(.customGrey, for: .normal)
         homeScreenTV.reloadData()
     }
     @IBAction func thirdTBCellNewestBtnTapped(_ sender: Any) {
