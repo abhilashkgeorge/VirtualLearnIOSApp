@@ -22,14 +22,14 @@ class TestModuleContainerView: UIViewController {
         let dialogMessage = UIAlertController(title: "Do you want to end the test?", message: "\nYou still have 50 second remaining \n\n If you want to check your answer again, press cancel button. If you want to end the test and submit your answers you can press submit button.", preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
-            print("Ok button tapped")
+
             
             let testSuccessVc = self.storyboard?.instantiateViewController(withIdentifier: "TestSuccessViewController") as? TestSuccessViewController
             self.navigationController?.pushViewController(testSuccessVc!, animated: true)
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-            print("Cancel button tapped")
+ 
         }
         
         dialogMessage.addAction(ok)

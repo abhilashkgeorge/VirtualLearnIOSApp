@@ -13,6 +13,8 @@ class ChaptersViewController: UIViewController {
     var courseID = ""
     var hiddenSections = Set<Int>()
     
+    
+    static let tesrVcIdentifier = "TestModuleViewController"
     var chaptersViewModel = ChaptersViewModel()
     var chapterData = [ChapterDataModel]() {
         didSet {
@@ -180,6 +182,14 @@ extension ChaptersViewController: UITableViewDelegate, UITableViewDataSource {
             self.chapterTableView.deleteRows(at: indexPathsForSection(),
                                       with: .fade)
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == indexPath.last {
+            let testStoryboard = UIStoryboard.init(name: "TestModule", bundle: Bundle.main)
+            let testVC = testStoryboard.instantiateViewController(withIdentifier: ChaptersViewController.tesrVcIdentifier) as? TestModuleViewController
+            self.navigationController?.pushViewController(testVC!, animated: true)
+        }
+
     }
     
 }

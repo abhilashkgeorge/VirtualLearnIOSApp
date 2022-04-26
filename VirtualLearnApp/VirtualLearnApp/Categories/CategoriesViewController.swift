@@ -52,9 +52,9 @@ class CategoriesViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Tapped")
+
         let title = labelArray[indexPath.row]
-        print(title)
+ 
         
         let eachCourseVc = storyboard?.instantiateViewController(withIdentifier: "EachCourseViewController") as? EachCourseViewController
         eachCourseVc?.selectedCategory = title

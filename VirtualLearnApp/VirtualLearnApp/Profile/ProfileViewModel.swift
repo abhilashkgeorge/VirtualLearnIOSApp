@@ -58,7 +58,6 @@ class ProfileViewModel {
             
             (json: String?) -> Void
                 in
-            print("Message:\(String(describing: json))")
             completionHandler(json ?? "no message")
           
         })

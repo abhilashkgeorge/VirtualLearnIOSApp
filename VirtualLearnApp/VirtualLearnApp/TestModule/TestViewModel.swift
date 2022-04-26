@@ -17,7 +17,6 @@ class TestViewModel {
                      (json: String?) -> Void
                          in
                     self.commonTokenForTest = json ?? ""
-                    print("Token:\(self.commonTokenForTest)")
                     URLRequest.commonToken = self.commonTokenForTest
                     completion(self.commonTokenForTest)
         })

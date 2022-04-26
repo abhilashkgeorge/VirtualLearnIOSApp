@@ -20,6 +20,28 @@ class OngoingAndCompletedViewController: UIViewController {
         completedView.isHidden = true
         ongoing.layer.cornerRadius = 6
         completed.layer.cornerRadius = 6
+        configureNavigationBar()
+    }
+    
+    func configureNavigationBar() {
+        navigationController?.navigationBar.tintColor = .white
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.SearchIcon.rawValue), style: .done, target: self, action: #selector(searchItemTapped))
+        ]
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.HamburgerMenu.rawValue), style: .done, target: self, action: #selector(hamburgerButtonPressed))
+        ]
+    }
+    
+    @objc func searchItemTapped() {
+        let searchStoryboard = UIStoryboard.init(name: "SearchStoryboard", bundle: Bundle.main)
+        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        self.navigationController?.pushViewController(searchVC!, animated: true)
+    }
+    
+    @objc func hamburgerButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func ongoingButtonTapped(_ sender: Any) {

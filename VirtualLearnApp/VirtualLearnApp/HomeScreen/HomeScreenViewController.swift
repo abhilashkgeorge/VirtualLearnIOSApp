@@ -12,7 +12,11 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
     @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var homeScreenTableview: UITableView!
+    @IBOutlet weak var coverImg: UIImageView!
     
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var occupationhamburgerLbl: UILabel!
+    @IBOutlet weak var hamburgerNameLbl: UILabel!
     //MARK: Hamburger Buttons
     
     @IBOutlet weak var homeButton: UIButton!
@@ -27,15 +31,14 @@ class HomeScreenViewController: UIViewController {
     var overviewModel = OverviewViewModel()
     var chapterViewModel = ChaptersViewModel()
     var newCouseViewModel = JoinCourseViewModel()
+    var profileViewModel = ProfileViewModel()
     var ongoingCount = 0
-    var selectedCourseName = "angular"
-    var selectedCourseID = "62273a3e4603abcaf3ffee8c"
-    var newCourse = "Arts"
-    var newCourseID = "62272a53b615cf685469dd27"
+    var profileData = [ProfileDataModel]()
     
     var allCourses = [HomeModel]()
     var popularCourses = [HomeModel]()
     var userLogout = Logout()
+    var hamburgerStatus = false
     
     var categoryTopCourses : Set<String> = []
     var sortedCategory: [String] = ["Design", "Development", "Photography", "Lifestyle"]
@@ -51,6 +54,17 @@ class HomeScreenViewController: UIViewController {
         getAllCourses()
         getPopularCourses()
         homeButton.imageWith(color: .hamburgerGrey, for: .normal)
+        profileViewModel.myProfile { (ProfileDataModel) in
+            DispatchQueue.main.async {
+                
+                self.profileData = [ProfileDataModel]
+                self.hamburgerNameLbl.text = ProfileDataModel.fullName
+                self.occupationhamburgerLbl.text = ProfileDataModel.occupation
+                self.profileImage.image = ProfileDataModel.profileImage
+                
+            }
+
+        }
     }
     
     func getAllCourses() {
@@ -94,6 +108,11 @@ class HomeScreenViewController: UIViewController {
         navigationItem.leftBarButtonItems = [
             UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.HamburgerMenu.rawValue), style: .done, target: self, action: #selector(hamburgerButtonPressed))
         ]
+        
+        if hamburgerStatus == true {
+            sideMenuConstraint.constant = -350
+            animateView()
+        }
     }
     
     func getOngoingCourseCount() {
@@ -159,16 +178,23 @@ class HomeScreenViewController: UIViewController {
     @IBAction func myProfileBtn(_ sender: Any) {
         let profileStoryboard = UIStoryboard.init(name: "Profile", bundle: Bundle.main)
         let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
+        profileVC?.profileModel = profileData[0]
         self.navigationController?.pushViewController(profileVC!, animated: true)
     }
     
     @IBAction func notificationBtn(_ sender: Any) {
+        sideMenuConstraint.constant = 0
+        animateView()
+        configureNavigationBar()
         let notificationsStoryboard = UIStoryboard.init(name: "Notifications", bundle: Bundle.main)
         let notificationsVC = notificationsStoryboard.instantiateViewController(withIdentifier: "NotificationsViewController") as? NotificationsViewController
         self.navigationController?.pushViewController(notificationsVC!, animated: true)
     }
     
     @IBAction func settingsBtn(_ sender: Any) {
+        sideMenuConstraint.constant = 0
+        animateView()
+        configureNavigationBar()
         let settingsStoryboard = UIStoryboard.init(name: "Settings", bundle: Bundle.main)
         let settingsVC = settingsStoryboard.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController
         self.navigationController?.pushViewController(settingsVC!, animated: true)
@@ -213,9 +239,11 @@ class HomeScreenViewController: UIViewController {
         navigationItem.leftBarButtonItems = []
     }
     
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch? = touches.first
-        if touch?.view != sideMenuView {
+        if touch?.view != hamburgerView {
             configureNavigationBar()
             sideMenuConstraint.constant = -350
             UIView.animate(withDuration: 0.3, animations: {

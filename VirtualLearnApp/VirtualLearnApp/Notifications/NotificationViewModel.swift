@@ -33,7 +33,7 @@ class NotificationsViewModel {
             }
             
             let notification = NotificationModel(message: message, notifyTime: notifyTime, notificationImageIcon: notificationIcon)
-            notifications.append(notification)
+            notifications.insert(notification, at: 0)
             
        }
         return notifications

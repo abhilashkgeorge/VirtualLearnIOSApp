@@ -25,7 +25,6 @@ class NotificationsNetworkManager {
             
             if let jsonResponse = jsonResponse as? [String: Any],
                 let info = jsonResponse["data"] as? [[String: Any]] {
-                    print("network\(info)")
                     completionHandler(info)
                 }
             

@@ -24,7 +24,6 @@ class Logout {
             let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
             
             if let jsonResponse = jsonResponse as? [String: Any]{
-                print(jsonResponse)
                 completionHandler(jsonResponse)
                 
             }

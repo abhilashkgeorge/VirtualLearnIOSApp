@@ -32,10 +32,8 @@ class ChangePasswordNetworkManager {
             if let jsonResponse = jsonResponse as? [String: Any],
                let meta = jsonResponse["meta"] as? [String: Any],
                let code = meta["code"] as? Int {
-                print(jsonResponse)
                 if code == 200 {
                     if let token = meta["message"] as? String {
-                        print(token)
                         completionHandler(token)
                     }else {
                         completionHandler(nil)

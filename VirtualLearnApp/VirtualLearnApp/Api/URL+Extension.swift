@@ -87,7 +87,7 @@ extension URL {
         }
         return url
     }
-
+    
     static func fetchURLForChangePassword() -> URL {
         
         guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myProfile/changePassword") else {
@@ -123,11 +123,11 @@ extension URL {
     static func fetchURLForOverview(courseID: String, courseTitle: String) -> URL {
         let originalString = "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/viewCourse?courseName=\(courseTitle)&courseId=\(courseID)"
         guard let urlString = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-             fatalError("original failed")
+            fatalError("original failed")
             
         }
         guard let url = URL(string: urlString) else {
-             fatalError("main url failed")
+            fatalError("main url failed")
         }
         return url
     }
@@ -141,31 +141,35 @@ extension URL {
     }
     
     static func fetchURLForJoinCourse(courseID: String, courseTitle: String) -> URL {
+        let originalString = "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/user/joinCourse?courseName=\(courseTitle)&courseId=\(courseID)"
         
-        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/user/joinCourse?courseName=\(courseTitle)&courseId=\(courseID)") else {
-            fatalError("Error getting join course URL")
+        guard let urlString = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            fatalError("original failed")
+        }
+        guard let url = URL(string: urlString) else {
+            fatalError("main url failed")
         }
         return url
     }
     
     
     static func fetchURLForNotifications() -> URL {
-            
-            guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/notification") else {
-                fatalError("Error getting URL")
-            }
-            return url
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/notification") else {
+            fatalError("Error getting URL")
+        }
+        return url
         
     }
     
     static func fetchURLForTest() -> URL {
-            
-            guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/notification") else {
-                fatalError("Error getting URL")
-            }
-            return url
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/notification") else {
+            fatalError("Error getting URL")
+        }
+        return url
         
     }
 }
-    
+
 

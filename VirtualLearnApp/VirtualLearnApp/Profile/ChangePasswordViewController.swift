@@ -40,14 +40,17 @@ class ChangePasswordViewController: UIViewController {
                 if successMessage == "Password changed successfully" {
                     DispatchQueue.main.async {
                         self.setUpBottomColour(textField: self.currentPassword, color: UIColor.green.cgColor,image:   UIImage(named: "icn_textfield_right") ?? #imageLiteral(resourceName: "icn_textfield_right"))
+                            let NewAccountstoryboard = UIStoryboard.init(name: "RegisterPart2", bundle: Bundle.main)
+                            let successVC = NewAccountstoryboard.instantiateViewController(identifier: "RegisterSuccessViewController") as? RegisterSuccessViewController
+                            successVC?.displayScreen = 1
+                            self.navigationController?.pushViewController(successVC!, animated: true)
                     }
-                    print("Change password is successfull")
                 } else {
                     DispatchQueue.main.async {
                         self.setUpBottomColour(textField: self.currentPassword, color: UIColor.red.cgColor,image:   UIImage(named: "icn_textfield_wrong") ?? #imageLiteral(resourceName: "icn_textfield_wrong"))
                         self.showToast(message: "Invalid password, please try again")
                     }
-                    print("Change password attempt failed!!!")
+
                 }
             })
         }

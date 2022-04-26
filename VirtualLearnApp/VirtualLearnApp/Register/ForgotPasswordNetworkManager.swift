@@ -32,7 +32,7 @@ class ForgotPasswordNetworkManager {
                 print(jsonResponse)
                 if code == 201 {
                     if let token = meta["token"] as? String {
-                        print(token)
+    
                         completionHandler(token)
                     }else {
                         completionHandler(nil)
@@ -67,7 +67,7 @@ class ForgotPasswordNetworkManager {
             if let jsonResponse = jsonResponse as? [String: Any],
                let meta = jsonResponse["meta"] as? [String: Any],
                let code = meta["code"] as? Int {
-                print(jsonResponse)
+
                 if code == 200 {
                     if let tokenMsg = meta["message"] as? String {
                         print(tokenMsg)
@@ -106,10 +106,8 @@ class ForgotPasswordNetworkManager {
             if let jsonResponse = jsonResponse as? [String: Any],
                let meta = jsonResponse["meta"] as? [String: Any],
                let code = meta["code"] as? Int {
-                print(jsonResponse)
                 if code == 200 {
                     if let message = meta["message"] as? String {
-                        print(message)
                         completionHandler(message)
                     }else {
                         completionHandler(nil)

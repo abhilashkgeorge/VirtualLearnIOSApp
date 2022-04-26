@@ -108,6 +108,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="firstCollectionView" destination="OiX-aH-dvl" id="xnr-AZ-lFh"/>
+                                            <outlet property="nameViewLabel" destination="Got-vm-bHZ" id="vFN-8h-if1"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondTableCell" rowHeight="138" id="GBd-g6-d5c" customClass="HomeScreenTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
@@ -474,7 +475,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cns-5g-YfK" userLabel="Hamburger">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cns-5g-YfK" userLabel="Hamburger" customClass="HamburgerUIView" customModule="VirtualLearnApp" customModuleProvider="target">
                                 <rect key="frame" x="-352" y="0.0" width="352" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_menubg" translatesAutoresizingMaskIntoConstraints="NO" id="jrN-Xm-5rN">
@@ -570,6 +571,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="HamburgerUIView"/>
                                 <constraints>
                                     <constraint firstItem="eeV-uW-iFY" firstAttribute="top" secondItem="G4A-Qc-xp7" secondAttribute="bottom" constant="34" id="04L-Rw-OZ5"/>
                                     <constraint firstAttribute="trailing" secondItem="jrN-Xm-5rN" secondAttribute="trailing" id="0XK-X6-012"/>
@@ -605,6 +607,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coverImg" destination="jrN-Xm-5rN" id="UZZ-0n-2lY"/>
+                        <outlet property="hamburgerNameLbl" destination="drH-gW-sGq" id="QIr-Om-xTR"/>
                         <outlet property="hamburgerView" destination="cns-5g-YfK" id="gac-4E-wIu"/>
                         <outlet property="homeButton" destination="G4A-Qc-xp7" id="hdA-cV-kmH"/>
                         <outlet property="homeScreenTableview" destination="fn6-rB-s1F" id="vsf-bs-CkZ"/>
@@ -612,6 +616,8 @@
                         <outlet property="myCourse" destination="eeV-uW-iFY" id="TD1-xZ-uYD"/>
                         <outlet property="myProfile" destination="O3W-nR-Y13" id="5Rg-ON-ki0"/>
                         <outlet property="notification" destination="vsA-zk-aUj" id="8jJ-RC-Smi"/>
+                        <outlet property="occupationhamburgerLbl" destination="2Gr-yH-2jF" id="tcO-dr-dq9"/>
+                        <outlet property="profileImage" destination="mDE-wt-u4f" id="FuN-hB-fWG"/>
                         <outlet property="setting" destination="NmM-nU-Tlb" id="p1v-qh-LMx"/>
                         <outlet property="sideMenuConstraint" destination="p9W-qy-get" id="G9I-PT-D2q"/>
                         <outlet property="sideMenuView" destination="cns-5g-YfK" id="kwH-Pf-qh2"/>

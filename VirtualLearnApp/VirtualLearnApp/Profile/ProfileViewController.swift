@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var typeDetails = ["Courses", "Chapters", "Test"]
     var viewModel = ProfileViewModel()
-    var profileModel = ProfileDataModel(fullName: "", userName: "", email: "", mobileNumber: "", occupation: "", gender: "", dob: "", twitterLink: "", facebookLink: "", courses: 0, chapters: 0, tests: 0, profileImage: UIImage())
+    var profileModel: ProfileDataModel?
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +48,32 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        configureNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        configureNavigationBar()
+    }
+    func configureNavigationBar() {
+        navigationController?.navigationBar.tintColor = .white
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.SearchIcon.rawValue), style: .done, target: self, action: #selector(searchItemTapped))
+        ]
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.HamburgerMenu.rawValue), style: .done, target: self, action: #selector(hamburgerButtonPressed))
+        ]
+    }
+    
+    @objc func searchItemTapped() {
+        let searchStoryboard = UIStoryboard.init(name: "SearchStoryboard", bundle: Bundle.main)
+        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        self.navigationController?.pushViewController(searchVC!, animated: true)
+    }
+    
+    @objc func hamburgerButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -70,40 +90,41 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func getDetails() {
         
-        viewModel.myProfile { (ProfileDataModel) in
-            DispatchQueue.main.async {
-                self.name.text = ProfileDataModel.fullName
-                self.job.text = ProfileDataModel.occupation
-                self.fullName.text = ProfileDataModel.fullName
-                self.userName.text = ProfileDataModel.userName
-                self.email.text = ProfileDataModel.email
-                self.phoneNumber.text = ProfileDataModel.mobileNumber
-                self.occupation.text = ProfileDataModel.occupation
-                self.dob.text = ProfileDataModel.dob
-                self.profileImage.image = ProfileDataModel.profileImage
-                self.numberDetails[0] = "\(ProfileDataModel.courses)"
-                self.numberDetails[1] = "\(ProfileDataModel.chapters)"
-                self.numberDetails[2] = "\(ProfileDataModel.tests)"
+        
+            
+            guard let profileModel = self.profileModel else { return }
+        
+                self.name.text = profileModel.fullName
+                self.job.text = profileModel.occupation
+                self.fullName.text = profileModel.fullName
+                self.userName.text = profileModel.userName
+                self.email.text = profileModel.email
+                self.phoneNumber.text = profileModel.mobileNumber
+                self.occupation.text = profileModel.occupation
+                self.dob.text = profileModel.dob
+                self.profileImage.image = profileModel.profileImage
+                self.numberDetails[0] = "\(profileModel.courses)"
+                self.numberDetails[1] = "\(profileModel.chapters)"
+                self.numberDetails[2] = "\(profileModel.tests)"
                 
-                self.profileModel.fullName = ProfileDataModel.fullName
-                self.profileModel.userName = ProfileDataModel.userName
-                self.profileModel.profileImage = ProfileDataModel.profileImage
-                self.profileModel.email = ProfileDataModel.email
-                self.profileModel.mobileNumber = ProfileDataModel.mobileNumber
-                self.profileModel.occupation = ProfileDataModel.occupation
-                self.profileModel.dob = ProfileDataModel.dob
-                self.profileModel.gender = ProfileDataModel.gender
-                self.profileModel.twitterLink = ProfileDataModel.twitterLink
-                self.profileModel.facebookLink = ProfileDataModel.facebookLink
-                self.profileModel.courses = ProfileDataModel.courses
-                self.profileModel.chapters = ProfileDataModel.chapters
-                self.profileModel.tests = ProfileDataModel.tests
+//                self.profileModel.fullName = profileModel.fullName
+//                self.profileModel.userName = profileModel.userName
+//                self.profileModel.profileImage = profileModel.profileImage
+//                self.profileModel.email = profileModel.email
+//                self.profileModel.mobileNumber = profileModel.mobileNumber
+//                self.profileModel.occupation = profileModel.occupation
+//                self.profileModel.dob = profileModel.dob
+//                self.profileModel.gender = profileModel.gender
+//                self.profileModel.twitterLink = profileModel.twitterLink
+//                self.profileModel.facebookLink = profileModel.facebookLink
+//                self.profileModel.courses = profileModel.courses
+//                self.profileModel.chapters = profileModel.chapters
+//                self.profileModel.tests = profileModel.tests
             }
-        }
-    }
+    
     
     @IBAction func editProfileTapped(_ sender: Any) {
-        
+        guard let profileModel = self.profileModel else { return }
         let editProfileVc = storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as? EditProfileViewController
         editProfileVc?.profileDetails = profileModel
         editProfileVc?.detailModification = self
