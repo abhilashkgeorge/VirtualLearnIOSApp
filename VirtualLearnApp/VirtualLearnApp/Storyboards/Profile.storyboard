@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -31,23 +31,23 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-3D-W3i">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uF-Oh-Wzm">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_profiledetails_bg" translatesAutoresizingMaskIntoConstraints="NO" id="iM3-0r-1w3">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="260" id="CzF-1b-W0Y"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzz-Gq-IrJ">
-                                                <rect key="frame" x="20" y="123" width="74.5" height="26"/>
+                                                <rect key="frame" x="20" y="123" width="74.666666666666671" height="26"/>
                                                 <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj3-hh-Vvr">
-                                                <rect key="frame" x="333" y="113" width="18" height="22"/>
+                                                <rect key="frame" x="372" y="113" width="18" height="22"/>
                                                 <state key="normal" image="icn_edit profile"/>
                                                 <connections>
                                                     <action selector="editProfileTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Eax-tY-yS4"/>
@@ -73,22 +73,22 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI/UX Designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJw-iA-r7T">
-                                                <rect key="frame" x="112" y="220" width="96.5" height="16"/>
+                                                <rect key="frame" x="112" y="220" width="96.666666666666686" height="16"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZJ-Dc-f5o">
-                                                <rect key="frame" x="24" y="284" width="327" height="122"/>
+                                                <rect key="frame" x="24" y="284" width="366" height="122"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has Completed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcP-2F-oCT">
-                                                        <rect key="frame" x="115.5" y="0.0" width="96.5" height="16"/>
+                                                        <rect key="frame" x="135" y="0.0" width="96.333333333333314" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
                                                         <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-wc-2Wv">
-                                                        <rect key="frame" x="0.0" y="36" width="327" height="85"/>
+                                                        <rect key="frame" x="0.0" y="36" width="366" height="85"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="85" id="oi4-7i-LUO"/>
@@ -108,7 +108,7 @@
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-eg-9IX">
-                                                                            <rect key="frame" x="29.5" y="16" width="36.5" height="32"/>
+                                                                            <rect key="frame" x="29.666666666666671" y="16" width="36" height="32"/>
                                                                             <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="32"/>
                                                                             <color key="textColor" red="0.16862745098039217" green="0.70980392156862748" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -148,10 +148,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4q-mG-eum">
-                                                <rect key="frame" x="24" y="446" width="327" height="249"/>
+                                                <rect key="frame" x="24" y="446" width="366" height="249"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K71-2O-jQk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="130.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="18"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                                         <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdO-5e-nZ3">
-                                                        <rect key="frame" x="0.0" y="186" width="72" height="16"/>
+                                                        <rect key="frame" x="0.0" y="186" width="71.666666666666671" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
                                                         <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -193,37 +193,37 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mahendra Singh Dhoni" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OZ-KK-3qs">
-                                                        <rect key="frame" x="162.5" y="45" width="164.5" height="16"/>
+                                                        <rect key="frame" x="202" y="45" width="164" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                         <color key="textColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Msdian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp4-RY-LpM">
-                                                        <rect key="frame" x="275" y="79" width="52" height="16"/>
+                                                        <rect key="frame" x="314" y="79" width="52" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                         <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="msd07@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5op-Uu-g6S">
-                                                        <rect key="frame" x="192" y="113" width="135" height="16"/>
+                                                        <rect key="frame" x="231.33333333333337" y="113" width="134.66666666666663" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                         <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91987654321" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfA-Y5-fsY">
-                                                        <rect key="frame" x="222" y="149" width="105" height="16"/>
+                                                        <rect key="frame" x="261" y="149" width="105" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                         <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI/UX Designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2h-j7-PYD">
-                                                        <rect key="frame" x="215" y="183" width="112" height="16"/>
+                                                        <rect key="frame" x="254.66666666666671" y="183" width="111.33333333333334" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                         <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/04/1989" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdC-Jy-gTN">
-                                                        <rect key="frame" x="246" y="217" width="81" height="16"/>
+                                                        <rect key="frame" x="285.66666666666669" y="217" width="80.333333333333314" height="16"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                         <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -260,7 +260,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGz-ji-jk4">
-                                                <rect key="frame" x="24" y="727" width="327" height="56"/>
+                                                <rect key="frame" x="24" y="727" width="366" height="56"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_privacy" translatesAutoresizingMaskIntoConstraints="NO" id="G0j-7p-GnI">
                                                         <rect key="frame" x="8" y="8" width="40" height="40"/>
@@ -279,7 +279,7 @@
                                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83s-Sr-p1J">
-                                                        <rect key="frame" x="307" y="17" width="8" height="22"/>
+                                                        <rect key="frame" x="345.66666666666669" y="17" width="8" height="22"/>
                                                         <state key="normal" image="icn_privacy_go"/>
                                                         <connections>
                                                             <action selector="changePasswordButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sTe-Hh-jDC"/>
@@ -328,21 +328,21 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="7uF-Oh-Wzm" firstAttribute="width" secondItem="x5f-3D-W3i" secondAttribute="width" id="5LH-rE-lXE"/>
-                                    <constraint firstItem="7uF-Oh-Wzm" firstAttribute="top" secondItem="x5f-3D-W3i" secondAttribute="top" id="NAG-RO-Ghc"/>
-                                    <constraint firstAttribute="trailing" secondItem="7uF-Oh-Wzm" secondAttribute="trailing" id="obx-X3-jdG"/>
-                                    <constraint firstItem="7uF-Oh-Wzm" firstAttribute="leading" secondItem="x5f-3D-W3i" secondAttribute="leading" id="v8U-XF-syB"/>
-                                    <constraint firstAttribute="bottom" secondItem="7uF-Oh-Wzm" secondAttribute="bottom" id="x8F-SI-9mG"/>
+                                    <constraint firstAttribute="trailing" secondItem="7uF-Oh-Wzm" secondAttribute="trailing" id="55Z-lb-iuN"/>
+                                    <constraint firstItem="7uF-Oh-Wzm" firstAttribute="centerX" secondItem="x5f-3D-W3i" secondAttribute="centerX" id="JzV-OL-Sxb"/>
+                                    <constraint firstItem="7uF-Oh-Wzm" firstAttribute="leading" secondItem="x5f-3D-W3i" secondAttribute="leading" id="PbK-1O-FzU"/>
+                                    <constraint firstAttribute="bottom" secondItem="7uF-Oh-Wzm" secondAttribute="bottom" constant="84" id="PgX-lH-5Nn"/>
+                                    <constraint firstItem="7uF-Oh-Wzm" firstAttribute="top" secondItem="x5f-3D-W3i" secondAttribute="top" id="cyJ-bN-r6E"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="x5f-3D-W3i" secondAttribute="bottom" id="OXH-s7-OM7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="x5f-3D-W3i" secondAttribute="trailing" id="i8t-Na-EO8"/>
-                            <constraint firstItem="x5f-3D-W3i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jq8-Oo-fcd"/>
-                            <constraint firstItem="x5f-3D-W3i" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rKO-GG-uqX"/>
+                            <constraint firstItem="x5f-3D-W3i" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WIq-NH-lgz"/>
+                            <constraint firstItem="x5f-3D-W3i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XHn-Q7-L3O"/>
+                            <constraint firstItem="x5f-3D-W3i" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="YZJ-sL-o5e"/>
+                            <constraint firstItem="x5f-3D-W3i" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="-44" id="dtF-y2-A4I"/>
                         </constraints>
                     </view>
                     <connections>
@@ -361,24 +361,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="121"/>
+            <point key="canvasLocation" x="-533.33333333333337" y="120.53571428571428"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="n0E-Kq-4d5">
             <objects>
                 <viewController storyboardIdentifier="EditProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Web-Mf-5fc" customClass="EditProfileViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RAy-81-7Kl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qae-LC-Hra">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdH-1J-Bne">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1106"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1106"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_profiledetails_bg" translatesAutoresizingMaskIntoConstraints="NO" id="5cg-Gu-5hp">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="323"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="323" id="a7k-ly-XtS"/>
                                                 </constraints>
@@ -394,7 +394,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaj-5P-tqo">
-                                                <rect key="frame" x="20" y="116" width="129.5" height="26"/>
+                                                <rect key="frame" x="20" y="116" width="129.33333333333334" height="26"/>
                                                 <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -414,21 +414,22 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-Gb-xhB">
-                                                <rect key="frame" x="267" y="294" width="92" height="16"/>
+                                                <rect key="frame" x="306" y="294" width="92" height="16"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                 <color key="textColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2F-ls-KsK">
-                                                <rect key="frame" x="24" y="610" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="592.66666666666663" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="zAq-cW-js6"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Occupation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cde-pA-yaL" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="651" width="327" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <rect key="frame" x="24" y="633.66666666666663" width="366" height="17.666666666666629"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Occupation"/>
@@ -438,15 +439,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lL-01-q09">
-                                                <rect key="frame" x="24" y="684.5" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="661.33333333333337" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="w4l-dh-aj6"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Facebook Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLz-Pl-jvc" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="949" width="327" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <rect key="frame" x="24" y="908.33333333333337" width="366" height="17.666666666666629"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Facebook Link"/>
@@ -456,22 +458,23 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHy-vE-5k7">
-                                                <rect key="frame" x="24" y="908" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="867.33333333333337" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="a24-Pi-tva"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rC-kI-oOa">
-                                                <rect key="frame" x="24" y="982.5" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="936" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="fMi-16-TWK"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitter Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-4Z-3Yw" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="874.5" width="327" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <rect key="frame" x="24" y="839.66666666666663" width="366" height="17.666666666666629"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Twitter Link"/>
@@ -481,28 +484,29 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wu6-ZA-keI">
-                                                <rect key="frame" x="24" y="759" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="730" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="qkj-Jd-IfV"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOw-9i-qzD">
-                                                <rect key="frame" x="24" y="725.5" width="327" height="23.5"/>
-                                                <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <rect key="frame" x="24" y="702.33333333333337" width="366" height="17.666666666666629"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QY4-dD-IZB">
-                                                <rect key="frame" x="24" y="833.5" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="798.66666666666663" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="mcx-6R-68d"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S69-wG-uPR" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="800" width="327" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <rect key="frame" x="24" y="771" width="366" height="17.666666666666629"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Username"/>
@@ -512,21 +516,22 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlr-yQ-dYQ">
-                                                <rect key="frame" x="24" y="461" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="449.33333333333331" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ICq-A2-UWY"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-5Y-5eL">
-                                                <rect key="frame" x="24" y="386.5" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="380.66666666666669" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="prw-b6-uJo"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3j-tr-1Kd" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="576.5" width="327" height="23.5"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3j-tr-1Kd" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="559" width="366" height="23.666666666666629"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -537,8 +542,9 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNa-U6-T8S" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="502" width="327" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                                <rect key="frame" x="24" y="490.33333333333331" width="366" height="17.666666666666686"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Email"/>
@@ -548,15 +554,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xY4-s6-xpg">
-                                                <rect key="frame" x="24" y="535.5" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="518" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="hwg-ed-eRm"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqV-id-ylI" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="427.5" width="327" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqV-id-ylI" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="421.66666666666669" width="366" height="17.666666666666686"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Username"/>
@@ -565,19 +572,20 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVJ-Bc-9LL" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="353" width="327" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVJ-Bc-9LL" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="353" width="366" height="17.666666666666686"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Full name"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
-                                                        <color key="value" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-e3-smM" customClass="WelcomeScreenButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="1020" width="327" height="46"/>
+                                                <rect key="frame" x="24" y="973.66666666666663" width="366" height="46"/>
                                                 <color key="backgroundColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="6O8-uf-lDS"/>
@@ -589,32 +597,32 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-iM-s08">
-                                                <rect key="frame" x="331" y="732" width="14" height="22"/>
+                                                <rect key="frame" x="370" y="703" width="14" height="22"/>
                                                 <state key="normal" image="icn_dropdown"/>
                                                 <connections>
                                                     <action selector="dropDownButtonTapped:" destination="Web-Mf-5fc" eventType="touchUpInside" id="wLk-4b-FpP"/>
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-0H-UvY">
-                                                <rect key="frame" x="24" y="760" width="327" height="128"/>
+                                                <rect key="frame" x="24" y="731" width="366" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="nlG-UU-Ro7"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Z6M-j2-E34" style="IBUITableViewCellStyleDefault" id="iKg-Le-PRg">
-                                                        <rect key="frame" x="0.0" y="28" width="327" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="28" width="366" height="43.666667938232422"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iKg-Le-PRg" id="QIp-j4-Fld">
-                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="43.666667938232422"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z6M-j2-E34">
-                                                                    <rect key="frame" x="16" y="0.0" width="295" height="43.5"/>
+                                                                    <rect key="frame" x="20" y="0.0" width="326" height="43.666667938232422"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                                     <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="highlightedColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </label>
                                                             </subviews>
                                                         </tableViewCellContentView>
@@ -705,21 +713,21 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="EdH-1J-Bne" secondAttribute="bottom" id="9ze-fF-Xvp"/>
-                                    <constraint firstItem="EdH-1J-Bne" firstAttribute="leading" secondItem="qae-LC-Hra" secondAttribute="leading" id="EJy-B8-4D6"/>
-                                    <constraint firstItem="EdH-1J-Bne" firstAttribute="top" secondItem="qae-LC-Hra" secondAttribute="top" id="GtI-nw-eKa"/>
-                                    <constraint firstAttribute="trailing" secondItem="EdH-1J-Bne" secondAttribute="trailing" id="L0S-F1-vYu"/>
-                                    <constraint firstItem="EdH-1J-Bne" firstAttribute="width" secondItem="qae-LC-Hra" secondAttribute="width" id="p4g-Zg-7ix"/>
+                                    <constraint firstAttribute="trailing" secondItem="EdH-1J-Bne" secondAttribute="trailing" id="3Ai-aX-I2o"/>
+                                    <constraint firstItem="EdH-1J-Bne" firstAttribute="centerX" secondItem="qae-LC-Hra" secondAttribute="centerX" id="T4m-Ut-qSs"/>
+                                    <constraint firstItem="EdH-1J-Bne" firstAttribute="top" secondItem="qae-LC-Hra" secondAttribute="top" id="cXs-oe-sgD"/>
+                                    <constraint firstAttribute="bottom" secondItem="EdH-1J-Bne" secondAttribute="bottom" constant="-210" id="e8X-zu-efR"/>
+                                    <constraint firstItem="EdH-1J-Bne" firstAttribute="leading" secondItem="qae-LC-Hra" secondAttribute="leading" id="rtP-u6-UOm"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ssx-FQ-6ab"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ssx-FQ-6ab" firstAttribute="trailing" secondItem="qae-LC-Hra" secondAttribute="trailing" id="8Um-4B-Jaw"/>
-                            <constraint firstItem="ssx-FQ-6ab" firstAttribute="bottom" secondItem="qae-LC-Hra" secondAttribute="bottom" id="G63-4K-Tce"/>
-                            <constraint firstItem="qae-LC-Hra" firstAttribute="leading" secondItem="ssx-FQ-6ab" secondAttribute="leading" id="N1T-M4-mxb"/>
-                            <constraint firstItem="qae-LC-Hra" firstAttribute="top" secondItem="ssx-FQ-6ab" secondAttribute="top" id="adb-Qq-NdH"/>
+                            <constraint firstItem="qae-LC-Hra" firstAttribute="top" secondItem="RAy-81-7Kl" secondAttribute="topMargin" constant="-44" id="0z8-jG-04d"/>
+                            <constraint firstItem="qae-LC-Hra" firstAttribute="centerY" secondItem="RAy-81-7Kl" secondAttribute="centerY" id="B3s-ZR-oCJ"/>
+                            <constraint firstItem="qae-LC-Hra" firstAttribute="centerX" secondItem="RAy-81-7Kl" secondAttribute="centerX" id="LBZ-nx-bUa"/>
+                            <constraint firstItem="qae-LC-Hra" firstAttribute="leading" secondItem="ssx-FQ-6ab" secondAttribute="leading" id="gGC-Uw-h6k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k52-5I-6Hd"/>
@@ -739,78 +747,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioB-JM-Fsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.80000000000001" y="120.98950524737631"/>
+            <point key="canvasLocation" x="192.75362318840581" y="120.53571428571428"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="t72-PU-EHP">
             <objects>
                 <viewController storyboardIdentifier="ChangePasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KRD-aj-ZJs" customClass="ChangePasswordViewController" customModule="VirtualLearnApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Na-1s-HxA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-sN-7qw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tw6-av-eRd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kt5-HS-hEN" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="341" width="327" height="23.5"/>
+                                                <rect key="frame" x="24" y="341" width="366" height="23.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Confirm New Password"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
                                                         <color key="value" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEc-mx-dR7">
-                                                <rect key="frame" x="24" y="225.5" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="225.66666666666669" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="sdu-BX-cXV"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHo-6M-9zg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="266.5" width="327" height="23.5"/>
+                                                <rect key="frame" x="24" y="266.66666666666669" width="366" height="23.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Username"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="New Password"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
                                                         <color key="value" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6c-6b-ank">
-                                                <rect key="frame" x="24" y="300" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="300" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="gda-gS-dPl"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6js-D0-XeB">
-                                                <rect key="frame" x="24" y="374.5" width="327" height="1"/>
+                                                <rect key="frame" x="24" y="374.66666666666669" width="366" height="1"/>
                                                 <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="szQ-Rn-1Dc"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-7S-CAg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="192" width="327" height="23.5"/>
+                                                <rect key="frame" x="24" y="192" width="366" height="23.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Full name"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Current Password"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
                                                         <color key="value" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vth-fB-fub" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="455.5" width="327" height="46"/>
+                                                <rect key="frame" x="43.666666666666657" y="455.66666666666669" width="327" height="46"/>
                                                 <color key="backgroundColor" red="0.93333333333333335" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="AO3-NP-hxK"/>
@@ -831,7 +839,7 @@
                                             <constraint firstItem="Kt5-HS-hEN" firstAttribute="top" secondItem="y6c-6b-ank" secondAttribute="bottom" constant="40" id="0SG-HM-hDB"/>
                                             <constraint firstItem="QHo-6M-9zg" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="0lN-Mt-Lrz"/>
                                             <constraint firstAttribute="trailing" secondItem="y6c-6b-ank" secondAttribute="trailing" constant="24" id="6XA-32-hq4"/>
-                                            <constraint firstItem="vth-fB-fub" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="7gw-QK-pMU"/>
+                                            <constraint firstItem="vth-fB-fub" firstAttribute="centerX" secondItem="Tw6-av-eRd" secondAttribute="centerX" id="6nq-bE-2Ou"/>
                                             <constraint firstAttribute="trailing" secondItem="IEc-mx-dR7" secondAttribute="trailing" constant="24" id="9Ar-TW-MU7"/>
                                             <constraint firstAttribute="trailing" secondItem="6js-D0-XeB" secondAttribute="trailing" constant="24" id="BrG-Gi-cVr"/>
                                             <constraint firstAttribute="height" constant="812" id="Jkt-vj-QT6"/>
@@ -846,7 +854,6 @@
                                             <constraint firstItem="6js-D0-XeB" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="gDG-er-3RX"/>
                                             <constraint firstItem="IEc-mx-dR7" firstAttribute="top" secondItem="Bgj-7S-CAg" secondAttribute="bottom" constant="10" id="qTw-Mb-DfN"/>
                                             <constraint firstItem="Kt5-HS-hEN" firstAttribute="leading" secondItem="Tw6-av-eRd" secondAttribute="leading" constant="24" id="tTi-G6-nMx"/>
-                                            <constraint firstAttribute="trailing" secondItem="vth-fB-fub" secondAttribute="trailing" constant="24" id="uTk-DF-10P"/>
                                             <constraint firstAttribute="trailing" secondItem="Bgj-7S-CAg" secondAttribute="trailing" constant="24" id="ugT-g8-hTx"/>
                                         </constraints>
                                     </view>
@@ -857,7 +864,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must have at least 6 or more characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vot-Yi-oNe" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="100" width="327" height="32"/>
+                                        <rect key="frame" x="24" y="100" width="366" height="32"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
