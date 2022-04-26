@@ -56,14 +56,6 @@
                                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYH-4W-beC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xB5-AM-hBi">
-                                                <rect key="frame" x="112" y="745" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Go"/>
-                                                <connections>
-                                                    <segue destination="UhJ-vI-oWq" kind="show" id="iVa-Fp-tWe"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -112,16 +104,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.2" y="102.99850074962519"/>
-        </scene>
-        <!--TestModuleViewController-->
-        <scene sceneID="ipg-68-SaS">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TestModule" referencedIdentifier="TestModuleViewController" id="UhJ-vI-oWq" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="OMg-Vz-Thv"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TPI-CV-68X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1569" y="195"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2zC-EK-Obs">

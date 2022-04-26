@@ -258,19 +258,19 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What will you learn first?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOH-S3-vBD">
-                                                        <rect key="frame" x="89.5" y="291" width="196" height="18"/>
+                                                        <rect key="frame" x="89" y="291" width="197" height="21"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your courses will go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXW-Kh-pa0">
-                                                        <rect key="frame" x="109" y="317" width="157" height="14"/>
+                                                        <rect key="frame" x="109.5" y="320" width="156.5" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                                         <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5f-Dk-8kO">
-                                                        <rect key="frame" x="24" y="371" width="321" height="180"/>
+                                                        <rect key="frame" x="24" y="376.5" width="321" height="180"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Fzm-Sm-Orn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="159.5"/>
@@ -438,7 +438,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Course" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CS-Ny-DXc">
-                                        <rect key="frame" x="24" y="64" width="123.5" height="26"/>
+                                        <rect key="frame" x="24" y="64" width="127" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <color key="textColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
