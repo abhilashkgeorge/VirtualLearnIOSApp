@@ -85,7 +85,10 @@
 		BAB1B686280492D20020F6CE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B685280492D20020F6CE /* CustomImageView.swift */; };
 		BAB80CBD280ED89800EADB24 /* TestModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB80CBC280ED89800EADB24 /* TestModuleViewController.swift */; };
 		BAB80CC0280ED8B500EADB24 /* TestModuleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB80CBF280ED8B500EADB24 /* TestModuleContainerView.swift */; };
+		BADAD9E62817CAED00DC705E /* TestSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAD9E52817CAED00DC705E /* TestSuccessViewController.swift */; };
 		BADB09C327FF49BA00FD5CD6 /* NewAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */; };
+		BAF9630F28127A4000969251 /* NotificationsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9630E28127A4000969251 /* NotificationsNetworkManager.swift */; };
+		BAF9631228127A7A00969251 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9631128127A7A00969251 /* NotificationModel.swift */; };
 		F5048C5D280FEB6400DBCFC9 /* Biko_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5048C5C280FEB6400DBCFC9 /* Biko_Regular.otf */; };
 		F5048C6528101C6900DBCFC9 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5048C6428101C6900DBCFC9 /* ChaptersViewController.swift */; };
 		F5048C6828101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5048C6728101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift */; };
@@ -95,8 +98,6 @@
 		F527387A2812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738792812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift */; };
 		F52738832813C3AD004D25CF /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738822813C3AD004D25CF /* UIButton+Extention.swift */; };
 		F527388828140D11004D25CF /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527388728140D11004D25CF /* UIViewController+Extention.swift */; };
-		BAF9630F28127A4000969251 /* NotificationsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9630E28127A4000969251 /* NotificationsNetworkManager.swift */; };
-		BAF9631228127A7A00969251 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9631128127A7A00969251 /* NotificationModel.swift */; };
 		F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5315C50280E9D4800C81290 /* OverviewScreenController.swift */; };
 		F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836A28081F0000A32D52 /* HomeNetworkManager.swift */; };
 		F553836D28082E0100A32D52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836C28082E0100A32D52 /* HomeViewModel.swift */; };
@@ -208,7 +209,10 @@
 		BAB1B685280492D20020F6CE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BAB80CBC280ED89800EADB24 /* TestModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModuleViewController.swift; sourceTree = "<group>"; };
 		BAB80CBF280ED8B500EADB24 /* TestModuleContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModuleContainerView.swift; sourceTree = "<group>"; };
+		BADAD9E52817CAED00DC705E /* TestSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSuccessViewController.swift; sourceTree = "<group>"; };
 		BADB09C227FF49BA00FD5CD6 /* NewAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAccount.storyboard; sourceTree = "<group>"; };
+		BAF9630E28127A4000969251 /* NotificationsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsNetworkManager.swift; sourceTree = "<group>"; };
+		BAF9631128127A7A00969251 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		F5048C5C280FEB6400DBCFC9 /* Biko_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Biko_Regular.otf; sourceTree = "<group>"; };
 		F5048C6428101C6900DBCFC9 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		F5048C6728101C9A00DBCFC9 /* MasterOverviewChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterOverviewChapterViewController.swift; sourceTree = "<group>"; };
@@ -218,8 +222,6 @@
 		F52738792812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewRequirementsTableViewCell.swift; sourceTree = "<group>"; };
 		F52738822813C3AD004D25CF /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		F527388728140D11004D25CF /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
-		BAF9630E28127A4000969251 /* NotificationsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsNetworkManager.swift; sourceTree = "<group>"; };
-		BAF9631128127A7A00969251 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		F5315C50280E9D4800C81290 /* OverviewScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreenController.swift; sourceTree = "<group>"; };
 		F553836A28081F0000A32D52 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
 		F553836C28082E0100A32D52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -453,17 +455,9 @@
 			children = (
 				BAB80CBC280ED89800EADB24 /* TestModuleViewController.swift */,
 				BAB80CBF280ED8B500EADB24 /* TestModuleContainerView.swift */,
+				BADAD9E52817CAED00DC705E /* TestSuccessViewController.swift */,
 			);
 			path = TestModule;
-			sourceTree = "<group>";
-		};
-		F55383702808904E00A32D52 /* OverviewScreen */ = {
-			isa = PBXGroup;
-			children = (
-				F55383712808907F00A32D52 /* Overview.storyboard */,
-				F5315C50280E9D4800C81290 /* OverviewScreenController.swift */,
-			);
-			path = OverviewScreen;
 			sourceTree = "<group>";
 		};
 		F55383702808904E00A32D52 /* OverviewScreen */ = {
@@ -736,6 +730,7 @@
 				889F971D281113D100645B71 /* CategoriesCollectionViewCell.swift in Sources */,
 				8B67F075280519080056CBD0 /* EditProfileViewController.swift in Sources */,
 				8B6DBFBE280976F20064677C /* MyCoursesNetworkManager.swift in Sources */,
+				BADAD9E62817CAED00DC705E /* TestSuccessViewController.swift in Sources */,
 				BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */,
 				F57499EE280564F700695C3B /* UIImage+Extention.swift in Sources */,
 				BAF9630F28127A4000969251 /* NotificationsNetworkManager.swift in Sources */,

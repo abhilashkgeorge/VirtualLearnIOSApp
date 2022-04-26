@@ -25,6 +25,9 @@ class TestModuleViewController: UIViewController {
     @IBOutlet weak var option4Check: UIImageView!
     
     
+    @IBOutlet weak var testBottom: UIView!
+    
+    @IBOutlet weak var testCV: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,10 @@ class TestModuleViewController: UIViewController {
     }
     
     func optionsUI() {
+        
+        testCV.isHidden = true
+        testBottom.isHidden = false
+        
         option1.layer.borderWidth = 0.5
         option2.layer.borderWidth = 0.5
         option3.layer.borderWidth = 0.5
@@ -78,7 +85,8 @@ class TestModuleViewController: UIViewController {
     }
     
     @IBAction func onClickNext(_ sender: Any) {
-        
+        testCV.isHidden = false
+        testBottom.isHidden = true
     }
     
     @IBAction func onClickPrevious(_ sender: Any) {
@@ -86,7 +94,7 @@ class TestModuleViewController: UIViewController {
     }
    
     @IBAction func onClickOption1(_ sender: Any) {
-        option1.backgroundColor = .orange
+        option1.backgroundColor = UIColor.customOrange
         option2.backgroundColor = .white
         option3.backgroundColor = .white
         option4.backgroundColor = .white
@@ -104,7 +112,7 @@ class TestModuleViewController: UIViewController {
     
     @IBAction func onClickOption2(_ sender: Any) {
         option1.backgroundColor = .white
-        option2.backgroundColor = .orange
+        option2.backgroundColor = UIColor.customOrange
         option3.backgroundColor = .white
         option4.backgroundColor = .white
         
@@ -122,7 +130,7 @@ class TestModuleViewController: UIViewController {
     @IBAction func onClickOption3(_ sender: Any) {
         option1.backgroundColor = .white
         option2.backgroundColor = .white
-        option3.backgroundColor = .orange
+        option3.backgroundColor = UIColor.customOrange
         option4.backgroundColor = .white
         
         option1Check.isHidden = true
@@ -140,7 +148,7 @@ class TestModuleViewController: UIViewController {
         option1.backgroundColor = .white
         option2.backgroundColor = .white
         option3.backgroundColor = .white
-        option4.backgroundColor = .orange
+        option4.backgroundColor = UIColor.customOrange
         
         option1Check.isHidden = true
         option2Check.isHidden = true
