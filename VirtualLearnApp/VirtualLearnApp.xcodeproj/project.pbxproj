@@ -69,11 +69,15 @@
 		8BEC30B4280186BB00F7AD86 /* LoginRegisterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */; };
 		8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */; };
 		8BEC30B8280186E000F7AD86 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */; };
+		BA08B4592817920F00C3460D /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA08B4582817920F00C3460D /* TestModel.swift */; };
+		BA08B45C281794E200C3460D /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA08B45B281794E200C3460D /* TestViewModel.swift */; };
 		BA19006F280D27A300ED8624 /* TestModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA19006E280D27A300ED8624 /* TestModule.storyboard */; };
+		BA283CED2816662800539407 /* TestNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA283CEC2816662800539407 /* TestNetworkManager.swift */; };
 		BA3D7B4128053A4E0092EDE1 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */; };
 		BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
+		BA5971B528152DA200079CCC /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5971B428152DA200079CCC /* NotificationViewModel.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
 		BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */; };
 		BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B67328043E270020F6CE /* SettingsContainerView.swift */; };
@@ -91,6 +95,8 @@
 		F527387A2812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738792812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift */; };
 		F52738832813C3AD004D25CF /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52738822813C3AD004D25CF /* UIButton+Extention.swift */; };
 		F527388828140D11004D25CF /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527388728140D11004D25CF /* UIViewController+Extention.swift */; };
+		BAF9630F28127A4000969251 /* NotificationsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9630E28127A4000969251 /* NotificationsNetworkManager.swift */; };
+		BAF9631228127A7A00969251 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9631128127A7A00969251 /* NotificationModel.swift */; };
 		F5315C51280E9D4800C81290 /* OverviewScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5315C50280E9D4800C81290 /* OverviewScreenController.swift */; };
 		F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836A28081F0000A32D52 /* HomeNetworkManager.swift */; };
 		F553836D28082E0100A32D52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553836C28082E0100A32D52 /* HomeViewModel.swift */; };
@@ -186,11 +192,15 @@
 		8BEC30B3280186BB00F7AD86 /* LoginRegisterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterNetworkManager.swift; sourceTree = "<group>"; };
 		8BEC30B5280186CF00F7AD86 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8BEC30B7280186E000F7AD86 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		BA08B4582817920F00C3460D /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		BA08B45B281794E200C3460D /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		BA19006E280D27A300ED8624 /* TestModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestModule.storyboard; sourceTree = "<group>"; };
+		BA283CEC2816662800539407 /* TestNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkManager.swift; sourceTree = "<group>"; };
 		BA3D7B4028053A4E0092EDE1 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BA5971B428152DA200079CCC /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyViewController.swift; sourceTree = "<group>"; };
 		BAB1B67328043E270020F6CE /* SettingsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerView.swift; sourceTree = "<group>"; };
@@ -208,6 +218,8 @@
 		F52738792812FFAD004D25CF /* OverViewRequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewRequirementsTableViewCell.swift; sourceTree = "<group>"; };
 		F52738822813C3AD004D25CF /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		F527388728140D11004D25CF /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		BAF9630E28127A4000969251 /* NotificationsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsNetworkManager.swift; sourceTree = "<group>"; };
+		BAF9631128127A7A00969251 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		F5315C50280E9D4800C81290 /* OverviewScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreenController.swift; sourceTree = "<group>"; };
 		F553836A28081F0000A32D52 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
 		F553836C28082E0100A32D52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -344,6 +356,7 @@
 				BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */,
 				BAB1B678280477D30020F6CE /* Notifications.storyboard */,
 				8B4693982809322F00B0CFB8 /* MyCourses.storyboard */,
+				BA19006E280D27A300ED8624 /* TestModule.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -425,6 +438,12 @@
 				8B6DBFBD280976F20064677C /* MyCoursesNetworkManager.swift */,
 				8BA75C42280FDAE8003CF45F /* ChangePasswordNetworkManager.swift */,
 				8BA75C47280FDE66003CF45F /* ChangePasswordViewModel.swift */,
+				BA5971B428152DA200079CCC /* NotificationViewModel.swift */,
+				BAF9631128127A7A00969251 /* NotificationModel.swift */,
+				BAF9630E28127A4000969251 /* NotificationsNetworkManager.swift */,
+				BA08B4582817920F00C3460D /* TestModel.swift */,
+				BA283CEC2816662800539407 /* TestNetworkManager.swift */,
+				BA08B45B281794E200C3460D /* TestViewModel.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -432,11 +451,19 @@
 		BA19006D280D268100ED8624 /* TestModule */ = {
 			isa = PBXGroup;
 			children = (
-				BA19006E280D27A300ED8624 /* TestModule.storyboard */,
 				BAB80CBC280ED89800EADB24 /* TestModuleViewController.swift */,
 				BAB80CBF280ED8B500EADB24 /* TestModuleContainerView.swift */,
 			);
 			path = TestModule;
+			sourceTree = "<group>";
+		};
+		F55383702808904E00A32D52 /* OverviewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F55383712808907F00A32D52 /* Overview.storyboard */,
+				F5315C50280E9D4800C81290 /* OverviewScreenController.swift */,
+			);
+			path = OverviewScreen;
 			sourceTree = "<group>";
 		};
 		F55383702808904E00A32D52 /* OverviewScreen */ = {
@@ -640,6 +667,7 @@
 				8BEC30B6280186CF00F7AD86 /* LoginViewModel.swift in Sources */,
 				8B46939E2809329100B0CFB8 /* OngoingAndCompletedViewController.swift in Sources */,
 				8B6D529C2813D3DD00DAA870 /* OverviewViewModel.swift in Sources */,
+				BA08B45C281794E200C3460D /* TestViewModel.swift in Sources */,
 				8842ADB728007EB3009C7F3D /* WelcomeBackViewController.swift in Sources */,
 				8B1377AF280DACE5007C72DB /* CompletedTableViewCell.swift in Sources */,
 				88A17E3127FEF91E00CD1328 /* CustomButtons.swift in Sources */,
@@ -675,12 +703,15 @@
 				F57499EC280560A600695C3B /* HomeScreenViewController.swift in Sources */,
 				8BA75C43280FDAE8003CF45F /* ChangePasswordNetworkManager.swift in Sources */,
 				8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */,
+				BAF9631228127A7A00969251 /* NotificationModel.swift in Sources */,
 				8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */,
 				880823F4280A82A200152B3A /* SearchViewModel.swift in Sources */,
 				88A257CB281131A400CBFF40 /* ChoiceCourseCategoryCollectionViewCell.swift in Sources */,
+				BA08B4592817920F00C3460D /* TestModel.swift in Sources */,
 				F553836F280837B800A32D52 /* HomeModel.swift in Sources */,
 				88302357281124B9009C3F8A /* ChoiceYourCourseViewController.swift in Sources */,
 				BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */,
+				BA5971B528152DA200079CCC /* NotificationViewModel.swift in Sources */,
 				8B730B1D28067E4300D17EF2 /* ProfileDataModel.swift in Sources */,
 				F5273863281122F7004D25CF /* ChapterCourseTableViewCell.swift in Sources */,
 				BAB1B67428043E270020F6CE /* SettingsContainerView.swift in Sources */,
@@ -707,6 +738,8 @@
 				8B6DBFBE280976F20064677C /* MyCoursesNetworkManager.swift in Sources */,
 				BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */,
 				F57499EE280564F700695C3B /* UIImage+Extention.swift in Sources */,
+				BAF9630F28127A4000969251 /* NotificationsNetworkManager.swift in Sources */,
+				BA283CED2816662800539407 /* TestNetworkManager.swift in Sources */,
 				F553836B28081F0000A32D52 /* HomeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

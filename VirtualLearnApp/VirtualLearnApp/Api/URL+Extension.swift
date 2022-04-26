@@ -144,5 +144,24 @@ extension URL {
         return url
     }
     
+    
+    static func fetchURLForNotifications() -> URL {
+            
+            guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/notification") else {
+                fatalError("Error getting URL")
+            }
+            return url
+        
+    }
+    
+    static func fetchURLForTest() -> URL {
+            
+            guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/notification") else {
+                fatalError("Error getting URL")
+            }
+            return url
+        
+    }
 }
+    
 

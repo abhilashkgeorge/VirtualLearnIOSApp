@@ -9,6 +9,8 @@ import UIKit
 
 class NotificationCell: UITableViewCell {
     
+    static let identifier = "notificationCell"
+    
     @IBOutlet weak var notifyImageView: NotificationImageView!
     @IBOutlet weak var notifyMessageLabel: NotificationMessageLabel!
     @IBOutlet weak var notificationTimeLabel: NotificationTimeLabel!
