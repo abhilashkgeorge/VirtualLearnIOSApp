@@ -86,9 +86,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1453" id="oaC-fV-b00"/>
                                                 </constraints>
-                                                <connections>
-                                                    <segue destination="Rky-Nd-BbU" kind="embed" identifier="FirstChildVC" id="b7E-aZ-lmA"/>
-                                                </connections>
                                             </containerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Figma - UI/UX Design Essential Training" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gby-eo-mUF">
                                                 <rect key="frame" x="24" y="108" width="334" height="52"/>
@@ -114,9 +111,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1453" id="6tO-BY-4Nx"/>
                                                 </constraints>
-                                                <connections>
-                                                    <segue destination="wi0-Wg-h9F" kind="embed" identifier="SecondChildVC" id="ciS-dF-fRg"/>
-                                                </connections>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -207,7 +201,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_preview1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="3T4-h1-jdG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_preview1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="3T4-h1-jdG">
                                 <rect key="frame" x="24" y="108" width="366" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="k5Y-sy-RIx"/>
@@ -238,21 +232,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="What you'll learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-L1-PIx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What you'll learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-L1-PIx">
                                 <rect key="frame" x="24" y="576" width="124.5" height="20"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="SFNS Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Requirments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5i-TK-vDJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requirments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5i-TK-vDJ">
                                 <rect key="frame" x="24" y="811" width="92" height="20"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="SFNS Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Lu-w8-1xW" customClass="SelfSizedTableView" customModule="VirtualLearnApp" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="237" placeholderIntrinsicHeight="170" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Lu-w8-1xW" customClass="ContentSizedTableView" customModule="VirtualLearnApp" customModuleProvider="target">
                                 <rect key="frame" x="24" y="376" width="237" height="170"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="237" id="WGe-D9-xVm"/>
                                 </constraints>
@@ -274,7 +267,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.5 total hours video" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBQ-mj-bCu">
                                                     <rect key="frame" x="28" y="0.0" width="209" height="16"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -293,7 +286,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WP6-ua-slY" customClass="SelfSizedTableView" customModule="VirtualLearnApp" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="364" placeholderIntrinsicHeight="170" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WP6-ua-slY" customClass="ContentSizedTableView" customModule="VirtualLearnApp" customModuleProvider="target">
                                 <rect key="frame" x="24" y="611" width="364" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -334,8 +327,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2GZ-ED-PWH" customClass="SelfSizedTableView" customModule="VirtualLearnApp" customModuleProvider="target">
-                                <rect key="frame" x="24" y="840" width="368" height="170"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="368" placeholderIntrinsicHeight="187.5" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2GZ-ED-PWH" customClass="ContentSizedTableView" customModule="VirtualLearnApp" customModuleProvider="target">
+                                <rect key="frame" x="24" y="840" width="368" height="187.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requirements" id="VEP-9O-w1i" customClass="OverViewRequirementsTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
@@ -431,6 +424,14 @@
                                     <action selector="playButtonTapped:" destination="Rky-Nd-BbU" eventType="touchUpInside" id="E4u-fi-MuQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s2-jg-E1r">
+                                <rect key="frame" x="361" y="141.5" width="7" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="7" id="0qg-24-pjP"/>
+                                    <constraint firstAttribute="height" constant="13" id="rek-PN-GID"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icn_previewgo"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kFc-A8-Pnh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -454,6 +455,7 @@
                             <constraint firstItem="Pfr-R2-mCU" firstAttribute="leading" secondItem="kFc-A8-Pnh" secondAttribute="leading" constant="24" id="JRf-Kp-EYB"/>
                             <constraint firstItem="Tlv-6v-Zze" firstAttribute="leading" secondItem="GIP-g2-0RD" secondAttribute="trailing" constant="10" id="JrM-AK-ucY"/>
                             <constraint firstItem="BfI-iq-OsQ" firstAttribute="leading" secondItem="kFc-A8-Pnh" secondAttribute="leading" constant="24" id="Qk2-GM-YEg"/>
+                            <constraint firstItem="5s2-jg-E1r" firstAttribute="centerY" secondItem="X7y-zg-9Ko" secondAttribute="centerY" id="Qmz-oK-t0J"/>
                             <constraint firstItem="3T4-h1-jdG" firstAttribute="leading" secondItem="kFc-A8-Pnh" secondAttribute="leading" constant="24" id="RU4-Kz-v1r"/>
                             <constraint firstItem="kFc-A8-Pnh" firstAttribute="trailing" secondItem="2GZ-ED-PWH" secondAttribute="trailing" constant="22" id="SpC-si-eje"/>
                             <constraint firstItem="Y73-JQ-O5e" firstAttribute="leading" secondItem="kFc-A8-Pnh" secondAttribute="leading" constant="24" id="TJw-30-pdb"/>
@@ -463,6 +465,7 @@
                             <constraint firstItem="sgo-pk-T3e" firstAttribute="top" secondItem="2GZ-ED-PWH" secondAttribute="bottom" constant="30" id="WOT-n1-Ope"/>
                             <constraint firstItem="dbP-L1-PIx" firstAttribute="leading" secondItem="kFc-A8-Pnh" secondAttribute="leading" constant="24" id="ZhT-h5-tNk"/>
                             <constraint firstItem="kFc-A8-Pnh" firstAttribute="trailing" secondItem="duW-z8-eqd" secondAttribute="trailing" constant="24" id="anG-yx-mOy"/>
+                            <constraint firstItem="kFc-A8-Pnh" firstAttribute="trailing" secondItem="5s2-jg-E1r" secondAttribute="trailing" constant="46" id="b0m-1y-a2X"/>
                             <constraint firstItem="WP6-ua-slY" firstAttribute="top" secondItem="dbP-L1-PIx" secondAttribute="bottom" constant="15" id="bM8-B7-LdW"/>
                             <constraint firstItem="WP6-ua-slY" firstAttribute="leading" secondItem="kFc-A8-Pnh" secondAttribute="leading" constant="24" id="bpH-L2-Pn7"/>
                             <constraint firstItem="dbP-L1-PIx" firstAttribute="top" secondItem="4Lu-w8-1xW" secondAttribute="bottom" constant="30" id="dH4-mP-TrU"/>
@@ -532,7 +535,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-vd-qlP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="366" placeholderIntrinsicHeight="297" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-vd-qlP" customClass="ContentSizedTableView" customModule="VirtualLearnApp" customModuleProvider="target">
                                 <rect key="frame" x="24" y="130" width="366" height="297"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -872,6 +875,7 @@
         <image name="icn_lessonplay_active" width="24" height="24"/>
         <image name="icn_moduletest" width="24" height="34"/>
         <image name="icn_play_orange" width="48" height="48"/>
+        <image name="icn_previewgo" width="8" height="14"/>
         <image name="icn_timeline_completed" width="20" height="20"/>
         <image name="img_course1_bg" width="160" height="100"/>
         <image name="img_instructor1" width="60" height="60"/>

@@ -13,6 +13,8 @@ class ChaptersViewController: UIViewController {
     var courseID = ""
     var hiddenSections = Set<Int>()
     
+    var count = 0
+    
     
     static let tesrVcIdentifier = "TestModuleViewController"
     var chaptersViewModel = ChaptersViewModel()
@@ -37,17 +39,13 @@ class ChaptersViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        print("********************************00")
-        print(courseName)
-        let courseName  = "HTMl"
-        let courseID = "621714a60ddbaf9055048787"
-        getChapterDetails(name: courseName, id: courseID)
         getSubChapterDetails(name: courseName, id: courseID)
+        getChapterDetails(name: courseName, id: courseID)
+
         super.viewDidLoad()
         chapterTableView.delegate = self
         chapterTableView.dataSource = self
         chapterTableView.alwaysBounceVertical = false
-        //chapterTableView.estimatedRowHeight = 
         chapterTableView.rowHeight = UITableView.automaticDimension
     }
     
@@ -59,8 +57,6 @@ class ChaptersViewController: UIViewController {
             in
             DispatchQueue.main.async {
                 self.chapterData = details
-                print("********************************80")
-                print(self.chapterData.count)
                self.chapterTableView.reloadData()
             }
         })
@@ -104,7 +100,8 @@ extension ChaptersViewController: UITableViewDelegate, UITableViewDataSource {
             return 0
         }
         
-        return self.subChapterData.count
+        return chapterData[section].subChapterCount
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -116,8 +113,8 @@ extension ChaptersViewController: UITableViewDelegate, UITableViewDataSource {
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
-                    cell.firstCellChapterNumber.text = "\(chapterData[indexPath.row].chapterNo)"
-                    cell.firstCellTitle.text = chapterData[indexPath.row].chapterName
+                    cell.firstCellChapterNumber.text = "\(subChapterData[indexPath.row].chapterNo)"
+                    cell.firstCellTitle.text = subChapterData[indexPath.row].videoName
                     return cell
                 }
         

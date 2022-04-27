@@ -66,7 +66,6 @@ class MasterOverviewChapterViewController: UIViewController {
         }
     
         func showChapters() {
-            overviewContainerView.isHidden = true
             let chapterVC = self.storyboard!.instantiateViewController(withIdentifier: chaptersIdentifier) as! ChaptersViewController
             chapterVC.courseID = self.courseId
             chapterVC.courseName = self.courseName
@@ -79,7 +78,6 @@ class MasterOverviewChapterViewController: UIViewController {
             chaptersUIView.backgroundColor = .customGrey
             overviewButton.tintColor = .customOrange
             overviewUIView.backgroundColor = .customOrange
-            chapterContainerView.isHidden = false
             chaptersButton.tintColor = .customOrange
             chaptersUIView.backgroundColor = .customOrange
             overviewButton.tintColor = .customGrey
@@ -88,7 +86,6 @@ class MasterOverviewChapterViewController: UIViewController {
         
         
         func showOverView() {
-            chapterContainerView.isHidden = true
             let overviewVC = self.storyboard!.instantiateViewController(withIdentifier: overviewIdentifier) as! OverviewScreenController
             overviewVC.courseID = self.courseId
             overviewVC.courseName = self.courseName

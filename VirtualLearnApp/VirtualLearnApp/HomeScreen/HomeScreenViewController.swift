@@ -237,6 +237,7 @@ class HomeScreenViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
                         self.view.layoutIfNeeded() })
         navigationItem.leftBarButtonItems = []
+        self.view.backgroundColor = .black
     }
     
     

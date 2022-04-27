@@ -21,13 +21,12 @@ class ChaptersViewModel {
         let chapters = jsonData!["chapters"] as? [[String: Any]] ?? [["chapters": "error"]]
         
         for chapter in chapters {
-            
+            let subChapters = chapter["serialNumber"] as? [[String: Any]] ?? [["Sub chapters": "error"]]
             let number = chapter["chapterNo"] as? Int ?? 0
             let name = chapter["chapterName"]  as? String ?? "No chapter name"
             let id = chapter["_id"] as? String ?? "No chapter id"
-            let testID = chapter["testId"] as? String ?? "No test ID"
-            
-            let course = ChapterDataModel(chapterNo: number, chapterName: name, chapterID: id, testID: testID)
+            let testID = chapter["testId"] as? String ?? "No test ID"        
+            let course = ChapterDataModel(chapterNo: number, chapterName: name, chapterID: id, testID: testID, subChapterCount: subChapters.count)
             allChapters.append(course)
         }
         print("All chapters from api")
@@ -73,7 +72,6 @@ class ChaptersViewModel {
             }
         }
         print("All sub chapters from api: \(allSubChapters.count)")
-        print(allSubChapters[0].videoPausedTime)
         return allSubChapters
     }
     
