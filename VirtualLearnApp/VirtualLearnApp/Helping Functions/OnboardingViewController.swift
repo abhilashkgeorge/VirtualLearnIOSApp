@@ -20,7 +20,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     
     var images = ["img_onboarding_illustration1", "img_onboarding_illustration2", "img_onboarding_illustration3"]
     var titles = ["Learner Engagement", "Accountable Tracking", "Seamless Workflow"]
-    var desc = ["Interactive features mirror the traditional classroom experience and learners receive feedback to increase long-term retention, tripling learning efficiency over standard video.","Receive immediate, accesible data (both performance and behaviour-based) to effectively remediate concepts, automatically assign grades, and address deficiences","Sync rosters, create and assign impactful video experiences, enrich your flipped classroom, and streamline tedious grading."]
+    var desc = ["Interactive features mirror the traditional classroom experience and learners receive feedback to increase long-term retention, tripling learning efficiency over standard video.","Receive immediate, accesible data (both performance and behaviour-based) to effectively remediate concepts, automatically assign grades, and address deficiences.","Sync rosters, create and assign impactful video experiences, enrich your flipped classroom, and streamline tedious grading."]
 
     override func viewDidLayoutSubviews() {
         scrollWidth = scrollView.frame.size.width
@@ -91,7 +91,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
             imageView.center = CGPoint(x:scrollWidth/2,y: scrollHeight/2 - 100)
             
     
-            let txt1 = UILabel.init(frame: CGRect(x:32,y:imageView.frame.maxY+10,width:scrollWidth-200,height:100))
+            let txt1 = UILabel.init(frame: CGRect(x:32,y:imageView.frame.maxY+30,width:scrollWidth-200,height:100))
             txt1.textAlignment = .left
             txt1.lineBreakMode = .byWordWrapping
             txt1.numberOfLines = 2
@@ -101,7 +101,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
             
             
             
-            let txt2 = UILabel.init(frame: CGRect(x:32,y:txt1.frame.maxY+10,width:scrollWidth-60,height:85))
+            let txt2 = UILabel.init(frame: CGRect(x:32,y:txt1.frame.maxY+10,width:scrollWidth-80,height:90))
             let textString2 = NSAttributedString(string: desc[index]).withLineSpacing(5)
             txt2.attributedText = textString2
             txt2.numberOfLines = 4

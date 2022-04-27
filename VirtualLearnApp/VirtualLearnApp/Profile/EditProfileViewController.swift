@@ -38,21 +38,6 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         genderTableview.isHidden = true
         setDetails()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
-        detailModification?.passDetails(email: email.text ?? "Email modification failed", job: occupation.text ?? "Occupation change failed", dob: dob.text ?? "DOB change failed")
-        self.navigationController?.popViewController(animated: true)
-    }
 
     @IBAction func dropDownButtonTapped(_ sender: Any) {
         if genderTableview.isHidden {
