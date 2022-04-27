@@ -28,19 +28,6 @@ class HomeViewModel {
    var photography = [HomeModel]()
    var lifestyle = [HomeModel]()
     
-    func ongoingCourseCount (completionHandler: @escaping (_ coursesCount: Int) -> Void) {
-        
-        manager.userHomeScreen(completionHandler:
-                                {
-                                    (json: Any) -> Void
-                                    in
-                                    let jsonData = json as? [String: Any]
-                                    let ongoingCourses = jsonData!["ongoingCourses"] as? [[String: String]] ?? [["ongoing": "error"]]
-                                    completionHandler(ongoingCourses.count)
-                                    
-                                })
-    }
-    
     func serializeAllCourses(json: Any)-> [HomeModel] {
         
         var allUserCourses = [HomeModel]()

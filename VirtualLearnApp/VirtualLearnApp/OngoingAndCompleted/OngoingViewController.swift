@@ -11,33 +11,16 @@ class OngoingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var ongoingTable: UITableView!
     
-    var viewModel = MyCoursesViewModel()
-    
-    var courseList = [MyCoursesDataModel]() {
-        didSet {
-            ongoingTable.reloadData()
-        }
-    }
+    var courseList = [MyCoursesDataModel]()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        getCoursesList()
         ongoingTable.delegate = self
         ongoingTable.dataSource = self
+        ongoingTable.alwaysBounceHorizontal = false
     }
-    
-    func getCoursesList() {
-        
-        viewModel.ongoingUserCourses(completionHandler: {
-            
-            (_ profile: [MyCoursesDataModel]) -> Void
-            in
-            DispatchQueue.main.async {
-                self.courseList = profile
-            }
-        })
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

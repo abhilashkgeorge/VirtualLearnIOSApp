@@ -28,32 +28,39 @@ class HomeScreenViewController: UIViewController {
     
     
     var viewModel = HomeViewModel()
-    var overviewModel = OverviewViewModel()
-    var chapterViewModel = ChaptersViewModel()
-    var newCouseViewModel = JoinCourseViewModel()
     var profileViewModel = ProfileViewModel()
-    var ongoingCount = 0
-    var profileData = [ProfileDataModel]()
+    var myCoursesViewModel = MyCoursesViewModel()
     
+    var profileData = [ProfileDataModel]()
     var allCourses = [HomeModel]()
     var popularCourses = [HomeModel]()
+    var ongoingCourses = [MyCoursesDataModel]()
+    var completedCourses = [MyCoursesDataModel]()
     var userLogout = Logout()
     var hamburgerStatus = false
+    var ongoingCount = 0
     
     var categoryTopCourses : Set<String> = []
     var sortedCategory: [String] = ["Design", "Development", "Photography", "Lifestyle"]
     @IBOutlet weak var hamburgerView: UIView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.homeScreenTableview.separatorStyle = .none
         configureNavigationBar()
-        getOngoingCourseCount()
         homeScreenTableview.delegate = self
         homeScreenTableview.dataSource = self
         getAllCourses()
         getPopularCourses()
+        getProfileDetails()
+        getOngoingCourses()
+        getCompletedCourses()
         homeButton.imageWith(color: .hamburgerGrey, for: .normal)
+    }
+    
+    func getProfileDetails() {
+        
         profileViewModel.myProfile { (ProfileDataModel) in
             DispatchQueue.main.async {
                 
@@ -98,6 +105,31 @@ class HomeScreenViewController: UIViewController {
         
     }
     
+    func getOngoingCourses() {
+        
+        myCoursesViewModel.ongoingUserCourses(completionHandler: {
+            
+            (_ profile: [MyCoursesDataModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.ongoingCourses = profile
+                self.ongoingCount = profile.count
+            }
+        })
+    }
+    
+    func getCompletedCourses() {
+        
+        myCoursesViewModel.completedUserCourses(completionHandler: {
+            
+            (_ profile: [MyCoursesDataModel]) -> Void
+            in
+            DispatchQueue.main.async {
+                self.completedCourses = profile
+            }
+        })
+    }
+    
     
     func configureNavigationBar() {
         navigationController?.navigationBar.tintColor = .white
@@ -112,13 +144,6 @@ class HomeScreenViewController: UIViewController {
         if hamburgerStatus == true {
             sideMenuConstraint.constant = -350
             animateView()
-        }
-    }
-    
-    func getOngoingCourseCount() {
-        
-        viewModel.ongoingCourseCount { (courseCount) in
-            self.ongoingCount = courseCount
         }
     }
     
@@ -171,6 +196,8 @@ class HomeScreenViewController: UIViewController {
         } else {
             
             let myCoursesVC = myCoursesStoryboard.instantiateViewController(withIdentifier: "OngoingAndCompletedViewController") as? OngoingAndCompletedViewController
+            myCoursesVC?.ongoingCourses = self.ongoingCourses
+            myCoursesVC?.completedCourses = self.completedCourses
             self.navigationController?.pushViewController(myCoursesVC!, animated: true)
         }
     }

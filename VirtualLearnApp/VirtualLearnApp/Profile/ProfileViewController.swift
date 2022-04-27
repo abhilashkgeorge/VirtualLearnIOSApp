@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     var profileModel: ProfileDataModel?
    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         courseDetailsCollectionView.delegate = self
         courseDetailsCollectionView.dataSource = self
@@ -40,6 +41,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     override func viewDidLayoutSubviews() {
+        
         super.viewDidLayoutSubviews()
         self.privacyView.dropShadow(color: UIColor(red: 0, green: 0, blue: 0, alpha: 0.1), opacity: 0.5, offSet: CGSize(width: -1, height: 1), radius: 3, scale: true)
         privacyView.layer.borderColor = UIColor.clear.cgColor
@@ -47,15 +49,19 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         configureNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        
         super.viewWillDisappear(animated)
         configureNavigationBar()
     }
+    
     func configureNavigationBar() {
+        
         navigationController?.navigationBar.tintColor = .white
         
         navigationItem.rightBarButtonItems = [
@@ -67,16 +73,19 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     @objc func searchItemTapped() {
+        
         let searchStoryboard = UIStoryboard.init(name: "SearchStoryboard", bundle: Bundle.main)
         let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
         self.navigationController?.pushViewController(searchVC!, animated: true)
     }
     
     @objc func hamburgerButtonPressed(_ sender: Any) {
+        
         self.navigationController?.popViewController(animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return numberDetails.count
     }
     
@@ -85,13 +94,14 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = courseDetailsCollectionView.dequeueReusableCell(withReuseIdentifier: "CourseCell", for: indexPath) as! CoursesDetailsCollectionViewCell
         cell.numberInformation.text = numberDetails[indexPath.item]
         cell.typeInformation.text = typeDetails[indexPath.item]
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.cornerRadius = 2.0
+        cell.contentView.layer.borderColor = UIColor.black.cgColor
         return cell
     }
     
     func getDetails() {
         
-        
-            
             guard let profileModel = self.profileModel else { return }
         
                 self.name.text = profileModel.fullName
@@ -106,24 +116,12 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.numberDetails[0] = "\(profileModel.courses)"
                 self.numberDetails[1] = "\(profileModel.chapters)"
                 self.numberDetails[2] = "\(profileModel.tests)"
-                
-//                self.profileModel.fullName = profileModel.fullName
-//                self.profileModel.userName = profileModel.userName
-//                self.profileModel.profileImage = profileModel.profileImage
-//                self.profileModel.email = profileModel.email
-//                self.profileModel.mobileNumber = profileModel.mobileNumber
-//                self.profileModel.occupation = profileModel.occupation
-//                self.profileModel.dob = profileModel.dob
-//                self.profileModel.gender = profileModel.gender
-//                self.profileModel.twitterLink = profileModel.twitterLink
-//                self.profileModel.facebookLink = profileModel.facebookLink
-//                self.profileModel.courses = profileModel.courses
-//                self.profileModel.chapters = profileModel.chapters
-//                self.profileModel.tests = profileModel.tests
+
             }
     
     
     @IBAction func editProfileTapped(_ sender: Any) {
+        
         guard let profileModel = self.profileModel else { return }
         let editProfileVc = storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as? EditProfileViewController
         editProfileVc?.profileDetails = profileModel
@@ -159,6 +157,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
 extension ProfileViewController: Details {
     
     func passDetails(email: String, job: String, dob: String) {
+        
         self.email.text = email
         self.occupation.text = job
         self.dob.text = dob
@@ -168,6 +167,7 @@ extension ProfileViewController: Details {
 extension UIView {
     
     func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
+        
         self.layer.masksToBounds = false
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOpacity = opacity

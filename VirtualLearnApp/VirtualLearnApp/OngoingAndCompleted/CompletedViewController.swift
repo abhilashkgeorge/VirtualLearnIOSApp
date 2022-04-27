@@ -11,32 +11,14 @@ class CompletedViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var completedTable: UITableView!
     
-    var viewModel = MyCoursesViewModel()
-    
-    var courseList = [MyCoursesDataModel]() {
-        didSet {
-            completedTable.reloadData()
-        }
-    }
+    var courseList = [MyCoursesDataModel]()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        getCoursesList()
         completedTable.delegate = self
         completedTable.dataSource = self
-    }
-    
-    func getCoursesList() {
-        
-        viewModel.completedUserCourses(completionHandler: {
-            
-            (_ profile: [MyCoursesDataModel]) -> Void
-            in
-            DispatchQueue.main.async {
-                self.courseList = profile
-            }
-        })
+        completedTable.alwaysBounceHorizontal = false
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
