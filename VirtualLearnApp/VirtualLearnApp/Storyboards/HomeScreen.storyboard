@@ -391,7 +391,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="326" height="183"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_course1_design" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-GH-C4f">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_course1_design" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-GH-C4f">
                                                                         <rect key="frame" x="0.0" y="10" width="288" height="134"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="288" id="2gE-xU-yCL"/>
@@ -472,6 +472,64 @@
                                             <outlet property="fourthCellHeaderLbl" destination="F8o-yu-tLU" id="Avi-pn-vIh"/>
                                             <outlet property="fourthCollectionView" destination="cex-xc-H8X" id="UHP-I7-cXa"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ongoingTableCell" rowHeight="187" id="Pu5-jq-uw4" customClass="HomeScreenTableViewCell" customModule="VirtualLearnApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="924" width="414" height="187"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pu5-jq-uw4" id="aZ5-vm-YnH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_course_ongoing1" translatesAutoresizingMaskIntoConstraints="NO" id="G55-eu-hR3">
+                                                    <rect key="frame" x="24" y="14" width="366" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="140" id="D8u-Ah-NdJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ongoing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XB7-3g-MCj">
+                                                    <rect key="frame" x="60" y="24" width="46.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art &amp; Illustration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1n-0V-bFJ">
+                                                    <rect key="frame" x="60" y="70" width="113.5" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="ProximaNova-Medium" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/20 Chapters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3z-AL-UEy">
+                                                    <rect key="frame" x="61" y="89" width="80" height="12"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcQ-rL-cYE">
+                                                    <rect key="frame" x="62" y="110" width="80" height="24"/>
+                                                    <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="jyD-NN-Rjt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="12"/>
+                                                    <state key="normal" title="Continue">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G55-eu-hR3" firstAttribute="top" secondItem="aZ5-vm-YnH" secondAttribute="top" constant="14" id="1cH-z0-btr"/>
+                                                <constraint firstItem="RcQ-rL-cYE" firstAttribute="leading" secondItem="aZ5-vm-YnH" secondAttribute="leadingMargin" constant="42" id="KQ5-fK-3H6"/>
+                                                <constraint firstItem="XB7-3g-MCj" firstAttribute="leading" secondItem="aZ5-vm-YnH" secondAttribute="leadingMargin" constant="40" id="Oww-tl-wIr"/>
+                                                <constraint firstItem="RcQ-rL-cYE" firstAttribute="top" secondItem="L3z-AL-UEy" secondAttribute="bottom" constant="9" id="cOJ-hW-z1J"/>
+                                                <constraint firstItem="L3z-AL-UEy" firstAttribute="top" secondItem="Q1n-0V-bFJ" secondAttribute="bottom" constant="0.5" id="h6C-Xi-gss"/>
+                                                <constraint firstItem="Q1n-0V-bFJ" firstAttribute="top" secondItem="XB7-3g-MCj" secondAttribute="bottom" constant="32" id="kir-YP-S7R"/>
+                                                <constraint firstItem="L3z-AL-UEy" firstAttribute="leading" secondItem="aZ5-vm-YnH" secondAttribute="leadingMargin" constant="41" id="lKv-U2-W1x"/>
+                                                <constraint firstItem="XB7-3g-MCj" firstAttribute="top" secondItem="aZ5-vm-YnH" secondAttribute="top" constant="24" id="meR-d8-inO"/>
+                                                <constraint firstAttribute="trailing" secondItem="G55-eu-hR3" secondAttribute="trailing" constant="24" id="w36-EX-EEs"/>
+                                                <constraint firstItem="G55-eu-hR3" firstAttribute="leading" secondItem="aZ5-vm-YnH" secondAttribute="leading" constant="24" id="yLs-V0-PIF"/>
+                                                <constraint firstItem="Q1n-0V-bFJ" firstAttribute="leading" secondItem="aZ5-vm-YnH" secondAttribute="leadingMargin" constant="40" id="yhp-i0-ven"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -639,6 +697,7 @@
         <image name="img_banner1_home" width="300" height="180"/>
         <image name="img_course1_bg" width="160" height="100"/>
         <image name="img_course1_design" width="324" height="170"/>
+        <image name="img_course_ongoing1" width="367" height="180"/>
         <image name="img_menubg" width="312" height="178"/>
         <image name="img_profile pic_menu" width="64" height="64"/>
         <systemColor name="labelColor">

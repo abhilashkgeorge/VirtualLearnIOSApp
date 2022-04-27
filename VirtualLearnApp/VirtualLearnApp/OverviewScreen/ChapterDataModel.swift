@@ -13,13 +13,15 @@ class ChapterDataModel {
     var chapterName: String
     var chapterID: String
     var testID: String
+    var subChapterCount: Int
     
-    init(chapterNo: Int, chapterName: String, chapterID: String, testID: String) {
+    init(chapterNo: Int, chapterName: String, chapterID: String, testID: String, subChapterCount: Int ) {
         
         self.chapterNo = chapterNo
         self.chapterName = chapterName
         self.chapterID = chapterID
         self.testID = testID
+        self.subChapterCount = subChapterCount
         
     }
 }
