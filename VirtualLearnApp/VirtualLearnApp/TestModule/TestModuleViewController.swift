@@ -32,6 +32,7 @@ class TestModuleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         optionsUI()
+        configureNavigationBar()
         
     }
     
@@ -161,4 +162,19 @@ class TestModuleViewController: UIViewController {
         option4Uncheck.isHidden = true
     }
     
+    func configureNavigationBar() {
+        navigationController?.navigationBar.tintColor = .white
+        
+        
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.CloseIcon.rawValue), style: .plain, target: self, action: #selector(closeBtnTapped))
+        ]
+        
+        
+    }
+    
+    @objc func closeBtnTapped() {
+        let chapterVC = self.storyboard?.instantiateViewController(withIdentifier: "ChaptersViewController") as? ChaptersViewController
+        self.navigationController?.pushViewController(chapterVC!, animated: true)
+    }
 }
