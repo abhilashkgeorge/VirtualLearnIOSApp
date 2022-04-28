@@ -13,22 +13,12 @@ class ChaptersViewController: UIViewController {
     var courseID = ""
     var hiddenSections = Set<Int>()
     
-    var count = 0
+   static let tesrVcIdentifier = "TestModuleViewController"
+
+    var chapterData: [ChapterDataModel]?
+    var subChapterData: [SubChaptersDataModel]?
     
-    
-    static let tesrVcIdentifier = "TestModuleViewController"
     var chaptersViewModel = ChaptersViewModel()
-    var chapterData = [ChapterDataModel]() {
-        didSet {
-            self.chapterTableView.reloadData()
-        }
-    }
-    var subChapterData = [SubChaptersDataModel]() {
-        didSet {
-            self.chapterTableView.reloadData()
-        }
-    }
-    
 
     //MARK: TableView Outlets
     @IBOutlet weak var chapterTableView: UITableView!
@@ -92,38 +82,165 @@ extension ChaptersViewController: UITableViewDelegate, UITableViewDataSource {
 
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.chapterData.count
+        
+        guard let chapterData = chapterData else {
+            return 0
+        }
+        return chapterData.count  //2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
+        guard let chapterData = chapterData else {
+            return 0
+        }
+
+
         if self.hiddenSections.contains(section) {
             return 0
         }
+        if chapterData[section].testID == ""{
+            return chapterData[section].subChapterCount
+        } else {
+            return chapterData[section].subChapterCount + 1
+        }
+   
         
-        return chapterData[section].subChapterCount
+        
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let chapterData = chapterData else {
+            return UITableViewCell()
+        }
         
-                if indexPath.row == indexPath.endIndex {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as! ChapterCourseTableViewCell
-                    cell.secondCellTitle.text = "Module Test 1"
+        guard let subChapterData = subChapterData else {
+            return UITableViewCell()
+        }
         
-                    return cell
-                } else {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
-                    cell.firstCellChapterNumber.text = "\(subChapterData[indexPath.row].chapterNo)"
-                    cell.firstCellTitle.text = subChapterData[indexPath.row].videoName
-                    return cell
-                }
-        
-    
+        var cells = [UITableViewCell]()
+        if indexPath.section == 0 {
+            //subChapterData[indexPath.row].chapterNo
+            if chapterData[indexPath.section].chapterNo == subChapterData[indexPath.row].chapterNo{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+                cell.firstCellChapterNumber.text = "\(subChapterData[indexPath.row].serialNumber)"
+                cell.firstCellTitle.text = subChapterData[indexPath.row].videoName
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as! ChapterCourseTableViewCell
+                cell.secondCellTitle.text = "Module Test 1"
+                return cell
+            }
+        } else  if indexPath.section == 1{
+            if chapterData[indexPath.section].chapterNo == 2{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+                cell.firstCellChapterNumber.text = "\(subChapterData[indexPath.section].serialNumber)"
+                cell.firstCellTitle.text = subChapterData[indexPath.row].videoName
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as! ChapterCourseTableViewCell
+                cell.secondCellTitle.text = "Module Test 1"
+                return cell
+            }
+            
+        }
+       
+        return UITableViewCell()
     }
+//            cells.append(cell)
+//            for num in 0...chapterData[indexPath.section].subChapterCount {
+//
+//                print("\(indexPath.row)\(indexPath.section)")
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+//                cell.firstCellChapterNumber.text = "\(subChapterData[num].serialNumber)"
+//                cell.firstCellTitle.text = subChapterData[num].videoName
+//                cells.append(cell)
+//            }
+//            return cells[indexPath.row]
+//
+//        } else  if chapterData[indexPath.section].chapterNo == 1 {
+//            let num = 1
+//            for _ in 0...chapterData[indexPath.section].subChapterCount {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+//                cell.firstCellChapterNumber.text = "\(subChapterData[num].serialNumber)"
+//                cell.firstCellTitle.text = subChapterData[num].videoName
+//                cells.append(cell)
+//            }
+//            return cells[indexPath.row]
+//
+//        }
+//        return UITableViewCell()
+//    }
+        
+
+//        if chapterData[indexPath.section].chapterNo == 1 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+//            for item in 0...1 {
+//                for _ in 0...1 {
+//                    cell.firstCellChapterNumber.text = "\(subChapterData[item].chapterNo)"
+//                    cell.firstCellTitle.text = subChapterData[item].videoName
+//                    return cell
+//                }
+//            }
+//        }
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as! ChapterCourseTableViewCell
+//                            cell.secondCellTitle.text = "Module Test 1"
+//
+//                            return cell
+//
+//    }
+//
+//
+        
+        
+//
+//        if indexPath.row == subChapterData[indexPath.row].chapterNo {
+//        for number in 0...subChapterData.count {
+//            if chapterData[indexPath.row].chapterNo == subChapterData[number].chapterNo
+//            {
+//
+//                    let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+//                    cell.firstCellChapterNumber.text = "\(subChapterData[number].chapterNo)"
+//                    cell.firstCellTitle.text = subChapterData[number].videoName
+//                    return cell
+//            } else {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+//                cell.firstCellChapterNumber.text = "\(subChapterData[number].chapterNo)"
+//                cell.firstCellTitle.text = subChapterData[number].videoName
+//                return cell
+//                    let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as! ChapterCourseTableViewCell
+//                    cell.secondCellTitle.text = "Module Test 1"
+//
+//                    return cell
+//                        }
+//
+//            }
+//        return UITableViewCell()
+//    }
+           
+//        } else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "chapter") as! ChapterCourseTableViewCell
+//            cell.firstCellChapterNumber.text = "\(subChapterData[indexPath.row].chapterNo)"
+//            cell.firstCellTitle.text = subChapterData[indexPath.row].videoName
+//            return cell
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as! ChapterCourseTableViewCell
+//            cell.secondCellTitle.text = "Module Test 1"
+//
+//            return cell
+//        }
+//    }
+
+
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-              let button = UIButton()
+        guard let chapterData = chapterData else {
+            return UIView()
+        }
+
                let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 22))
+        let button = UIButton()
        
                let label = UILabel()
                label.frame = CGRect.init(x: 0, y: 0, width: headerView.frame.width, height: headerView.frame.height)
@@ -152,21 +269,22 @@ extension ChaptersViewController: UITableViewDelegate, UITableViewDataSource {
                return headerView
     }
     
-    @objc
-    private func hideSection(sender: UIButton) {
-//        button.setTitle("+", for: .normal)
+    @objc private func hideSection(sender: UIButton) {
+      //  button.setTitle("+", for: .normal)
+        
+        
+//        guard let subChapterData = subChapterData else {
+//           return
+//        }
         let section = sender.tag
         
         func indexPathsForSection() -> [IndexPath] {
             var indexPaths = [IndexPath]()
             
-            for row in 0..<self.subChapterData.count {
+            for row in 0..<subChapterData!.count {
                 indexPaths.append(IndexPath(row: row,
                                             section: section))
-//                chapterTableView.reloadData()
             }
-            
-            
             return indexPaths
         }
         
@@ -180,6 +298,9 @@ extension ChaptersViewController: UITableViewDelegate, UITableViewDataSource {
                                       with: .fade)
         }
     }
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == indexPath.last {
             let testStoryboard = UIStoryboard.init(name: "TestModule", bundle: Bundle.main)

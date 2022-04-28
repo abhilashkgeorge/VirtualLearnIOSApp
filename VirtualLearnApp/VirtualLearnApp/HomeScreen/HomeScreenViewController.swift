@@ -39,7 +39,11 @@ class HomeScreenViewController: UIViewController {
     var userLogout = Logout()
     var hamburgerStatus = false
     var ongoingCount = 0
-    
+    var nameString: String? {
+        didSet {
+            homeScreenTableview.reloadData()
+        }
+    }
     var categoryTopCourses : Set<String> = []
     var sortedCategory: [String] = ["Design", "Development", "Photography", "Lifestyle"]
     @IBOutlet weak var hamburgerView: UIView!
@@ -66,6 +70,7 @@ class HomeScreenViewController: UIViewController {
                 
                 self.profileData = [ProfileDataModel]
                 self.hamburgerNameLbl.text = ProfileDataModel.fullName
+                self.nameString = ProfileDataModel.fullName
                 self.occupationhamburgerLbl.text = ProfileDataModel.occupation
                 self.profileImage.image = ProfileDataModel.profileImage
                 
@@ -296,6 +301,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "firstTableCell") as! HomeScreenTableViewCell
             cell.allCourses = self.allCourses
+            cell.nameViewLabel.text = self.nameString
             cell.configureCells(indexPath: indexPath.row)
             return cell
         } else if indexPath.row == 1 {
