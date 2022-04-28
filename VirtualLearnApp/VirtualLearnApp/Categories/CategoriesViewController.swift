@@ -35,6 +35,19 @@ class CategoriesViewController: UIViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         categoriesCollectionView.delegate = self
         categoriesCollectionView.dataSource = self
+        configureNavigationBar()
+    }
+    
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
+    
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -37,7 +37,19 @@ class ChoiceYourCourseViewController: UIViewController,UITableViewDelegate,UITab
         choiceCourseCategoryCollectionView.delegate = self
         choiceCourseCategoryCollectionView.dataSource = self
         self.choiceCourseAllCourseTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        configureNavigationBar()
+    }
     
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
+    
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

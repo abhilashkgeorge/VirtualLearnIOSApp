@@ -37,8 +37,21 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         genderTableview.dataSource = self
         genderTableview.isHidden = true
         setDetails()
+        configureNavigationBar()
     }
-
+    
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
+    
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func dropDownButtonTapped(_ sender: Any) {
         if genderTableview.isHidden {
             animation(toogle: true)

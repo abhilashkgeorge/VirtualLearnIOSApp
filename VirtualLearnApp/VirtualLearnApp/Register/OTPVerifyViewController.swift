@@ -32,12 +32,25 @@ class OTPVerifyViewController: UIViewController,UITextFieldDelegate {
         if displayScreen == 0 {
             headerLabel.text = "Verify Account"
             verifyButton.setTitle("Verify", for: .normal)
+            configureNavigationBar()
         }
         else {
             headerLabel.text = "Verification"
             verifyButton.setTitle("Submit", for: .normal)
+            self.navigationItem.setHidesBackButton(true, animated: false)
         }
         
+    }
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
+    
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

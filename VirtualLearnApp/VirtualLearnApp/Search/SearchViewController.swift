@@ -48,6 +48,20 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
         searchCourseTableView.delegate = self
         searchCourseTableView.dataSource = self
         self.searchCourseTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        configureNavigationBar()
+        
+    }
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
+    
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func filterTapped(_ sender: Any) {

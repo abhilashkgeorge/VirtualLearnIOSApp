@@ -17,6 +17,7 @@ class ChangePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
     }
     
     func checkPasswordValidity() -> Bool {
@@ -27,7 +28,17 @@ class ChangePasswordViewController: UIViewController {
             return false
         }
     }
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
     
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func resetPasswordButtonTapped(_ sender: Any) {
         
         if checkPasswordValidity() {

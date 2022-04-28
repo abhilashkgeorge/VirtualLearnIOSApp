@@ -23,6 +23,7 @@ class PersonalDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberRegistration.text = phone
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     @IBAction func rgisterButtonTapped(_ sender: Any) {

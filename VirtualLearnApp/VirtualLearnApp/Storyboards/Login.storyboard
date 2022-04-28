@@ -34,24 +34,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_landing_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-Gm-J5W">
-                                        <rect key="frame" x="26" y="30" width="321" height="234"/>
+                                        <rect key="frame" x="46.666666666666657" y="30" width="321" height="234"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgz-Gd-hAn">
-                                        <rect key="frame" x="24" y="314" width="327" height="30.333333333333314"/>
+                                        <rect key="frame" x="24" y="314" width="348.66666666666669" height="30.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to study easily in a virtual way?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miJ-C7-SnN">
-                                        <rect key="frame" x="24" y="345.33333333333331" width="327" height="18.666666666666686"/>
+                                        <rect key="frame" x="24" y="345.33333333333331" width="325.66666666666669" height="18.666666666666686"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4r-bs-uVN" customClass="WelcomeScreenButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="419" width="327" height="40"/>
+                                        <rect key="frame" x="43.666666666666657" y="419" width="327" height="46"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="teK-bk-Paa"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="0Y5-8G-eLE"/>
+                                            <constraint firstAttribute="width" constant="327" id="ngJ-Ub-xZW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                         <state key="normal" title="Login">
@@ -62,15 +63,16 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id4-Jm-jzR">
-                                        <rect key="frame" x="181" y="479" width="13" height="16.333333333333314"/>
+                                        <rect key="frame" x="200.66666666666666" y="485" width="13" height="16.333333333333314"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                         <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-c7-fyT" customClass="WelcomeScreenButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="515.33333333333337" width="327" height="40"/>
+                                        <rect key="frame" x="43.666666666666657" y="521.33333333333337" width="327" height="46"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="fw8-GT-i5D"/>
+                                            <constraint firstAttribute="width" constant="327" id="Oxa-sF-I1Z"/>
+                                            <constraint firstAttribute="height" constant="46" id="fw8-GT-i5D"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                         <state key="normal" title="Register">
@@ -81,13 +83,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By creating new account, you agree to our " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-57-vkN">
-                                        <rect key="frame" x="53" y="572.33333333333337" width="269.33333333333331" height="16.333333333333371"/>
+                                        <rect key="frame" x="72.333333333333343" y="578.33333333333337" width="269.33333333333326" height="16.333333333333371"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                         <color key="textColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-Ya-CVY">
-                                        <rect key="frame" x="81.666666666666686" y="589.66666666666663" width="212" height="29"/>
+                                        <rect key="frame" x="101" y="595.66666666666663" width="212" height="29"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-cl-pte">
                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="29"/>
@@ -97,7 +99,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itR-yV-b8F">
-                                                <rect key="frame" x="112.99999999999999" y="0.0" width="9" height="29"/>
+                                                <rect key="frame" x="113" y="0.0" width="9" height="29"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                 <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -122,19 +124,16 @@
                                     <constraint firstItem="Zgz-Gd-hAn" firstAttribute="leading" secondItem="OOd-Vh-V4A" secondAttribute="leading" constant="24" id="FoB-Dz-LC6"/>
                                     <constraint firstItem="g3f-Gm-J5W" firstAttribute="top" secondItem="OOd-Vh-V4A" secondAttribute="top" constant="30" id="GkU-c0-NfY"/>
                                     <constraint firstItem="Zgz-Gd-hAn" firstAttribute="top" secondItem="g3f-Gm-J5W" secondAttribute="bottom" constant="50" id="HF8-dq-Ewg"/>
-                                    <constraint firstItem="g3f-Gm-J5W" firstAttribute="leading" secondItem="OOd-Vh-V4A" secondAttribute="leading" constant="26" id="RUv-0j-ums"/>
-                                    <constraint firstAttribute="trailing" secondItem="k4r-bs-uVN" secondAttribute="trailing" constant="24" id="VDG-k0-3iL"/>
-                                    <constraint firstAttribute="trailing" secondItem="g3f-Gm-J5W" secondAttribute="trailing" constant="28" id="W9L-Au-Y16"/>
-                                    <constraint firstItem="d0o-c7-fyT" firstAttribute="leading" secondItem="OOd-Vh-V4A" secondAttribute="leading" constant="24" id="WzE-I6-iT0"/>
+                                    <constraint firstItem="k4r-bs-uVN" firstAttribute="centerX" secondItem="OOd-Vh-V4A" secondAttribute="centerX" id="Lm7-y7-UIC"/>
                                     <constraint firstItem="Id4-Jm-jzR" firstAttribute="top" secondItem="k4r-bs-uVN" secondAttribute="bottom" constant="20" id="aDq-t2-EZn"/>
                                     <constraint firstItem="k4r-bs-uVN" firstAttribute="top" secondItem="miJ-C7-SnN" secondAttribute="bottom" constant="55" id="gri-ep-Lug"/>
                                     <constraint firstItem="ui3-Ya-CVY" firstAttribute="centerX" secondItem="VNr-57-vkN" secondAttribute="centerX" id="igL-uV-32e"/>
                                     <constraint firstAttribute="bottom" secondItem="ui3-Ya-CVY" secondAttribute="bottom" constant="1" id="lQt-GF-QgA"/>
-                                    <constraint firstAttribute="trailing" secondItem="d0o-c7-fyT" secondAttribute="trailing" constant="24" id="sZ4-6p-HKK"/>
+                                    <constraint firstItem="d0o-c7-fyT" firstAttribute="centerX" secondItem="OOd-Vh-V4A" secondAttribute="centerX" id="nRM-HD-Tuq"/>
+                                    <constraint firstItem="g3f-Gm-J5W" firstAttribute="centerX" secondItem="OOd-Vh-V4A" secondAttribute="centerX" id="u2R-ic-cQO"/>
                                     <constraint firstItem="Id4-Jm-jzR" firstAttribute="centerX" secondItem="k4r-bs-uVN" secondAttribute="centerX" id="uC2-vr-2jn"/>
                                     <constraint firstItem="ui3-Ya-CVY" firstAttribute="top" secondItem="VNr-57-vkN" secondAttribute="bottom" constant="1" id="uVj-sM-rPP"/>
-                                    <constraint firstItem="k4r-bs-uVN" firstAttribute="leading" secondItem="OOd-Vh-V4A" secondAttribute="leading" constant="24" id="wy3-hV-X72"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zgz-Gd-hAn" secondAttribute="trailing" constant="24" id="z0R-HU-Ts4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zgz-Gd-hAn" secondAttribute="trailing" constant="1" id="z0R-HU-Ts4"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -164,19 +163,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSF-Hk-eNE" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="30" width="259" height="30.333333333333329"/>
+                                        <rect key="frame" x="32" y="30" width="259" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="QbF-G9-wwU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must have at least 6 or more characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-eu-i3J" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="70.333333333333329" width="327" height="37.333333333333329"/>
+                                        <rect key="frame" x="43.666666666666657" y="75" width="327" height="37.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="jqC-uN-dxn"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-HS-iLJ" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="342.66666666666669" width="327" height="46"/>
+                                        <rect key="frame" x="43.666666666666657" y="347.33333333333331" width="327" height="46"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="8LI-JZ-Jux"/>
@@ -191,33 +196,55 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-E7-9Gg" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="229.66666666666666" width="327" height="22"/>
+                                        <rect key="frame" x="43.666666666666657" y="234.33333333333334" width="327" height="22.000000000000028"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="AKA-yt-sI8"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-5A-wB6" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="167.66666666666666" width="327" height="22"/>
+                                        <rect key="frame" x="43.666666666666657" y="172.33333333333334" width="327" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="7jm-zf-yu8"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7k-bG-S8j">
+                                        <rect key="frame" x="43.666666666666657" y="202.33333333333334" width="327" height="0.66666666666665719"/>
+                                        <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="drp-BV-zQC"/>
+                                            <constraint firstAttribute="height" constant="0.5" id="zee-oA-N6w"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxo-Og-aYe">
+                                        <rect key="frame" x="43.666666666666657" y="264.33333333333331" width="327" height="0.66666666666668561"/>
+                                        <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="kIP-n1-SEL"/>
+                                            <constraint firstAttribute="height" constant="0.5" id="vRs-CR-8dV"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="1ao-eu-i3J" firstAttribute="leading" secondItem="ajQ-V2-L4V" secondAttribute="leading" constant="24" id="2mS-qJ-oHl"/>
+                                    <constraint firstAttribute="trailing" secondItem="sSF-Hk-eNE" secondAttribute="trailing" constant="24" id="0pq-AD-pCX"/>
                                     <constraint firstItem="1ao-eu-i3J" firstAttribute="top" secondItem="sSF-Hk-eNE" secondAttribute="bottom" constant="10" id="2pI-Ma-E9m"/>
                                     <constraint firstAttribute="bottom" secondItem="lhT-HS-iLJ" secondAttribute="bottom" constant="320" id="5cz-dc-X3S"/>
                                     <constraint firstItem="sSF-Hk-eNE" firstAttribute="top" secondItem="ajQ-V2-L4V" secondAttribute="top" constant="30" id="6IQ-Li-2aW"/>
-                                    <constraint firstItem="E1T-5A-wB6" firstAttribute="leading" secondItem="ajQ-V2-L4V" secondAttribute="leading" constant="24" id="9WM-t1-aI3"/>
+                                    <constraint firstItem="X7k-bG-S8j" firstAttribute="centerX" secondItem="ajQ-V2-L4V" secondAttribute="centerX" id="6t7-yB-PHP"/>
                                     <constraint firstItem="lhT-HS-iLJ" firstAttribute="top" secondItem="nW3-E7-9Gg" secondAttribute="bottom" constant="91" id="Clx-8C-iKh"/>
                                     <constraint firstItem="nW3-E7-9Gg" firstAttribute="top" secondItem="E1T-5A-wB6" secondAttribute="bottom" constant="40" id="IBm-lf-RSI"/>
                                     <constraint firstItem="E1T-5A-wB6" firstAttribute="top" secondItem="1ao-eu-i3J" secondAttribute="bottom" constant="60" id="JQf-st-eZo"/>
-                                    <constraint firstAttribute="trailing" secondItem="E1T-5A-wB6" secondAttribute="trailing" constant="24" id="KGj-Jx-GM0"/>
-                                    <constraint firstItem="nW3-E7-9Gg" firstAttribute="leading" secondItem="ajQ-V2-L4V" secondAttribute="leading" constant="24" id="LXy-Kg-rh4"/>
-                                    <constraint firstItem="nW3-E7-9Gg" firstAttribute="leading" secondItem="ajQ-V2-L4V" secondAttribute="leading" constant="24" id="VNh-M1-0B1"/>
-                                    <constraint firstAttribute="trailing" secondItem="nW3-E7-9Gg" secondAttribute="trailing" constant="24" id="XEs-4c-pvT"/>
-                                    <constraint firstAttribute="trailing" secondItem="lhT-HS-iLJ" secondAttribute="trailing" constant="24" id="aUg-IB-YOe"/>
-                                    <constraint firstItem="lhT-HS-iLJ" firstAttribute="leading" secondItem="ajQ-V2-L4V" secondAttribute="leading" constant="24" id="cry-Qb-Q61"/>
-                                    <constraint firstAttribute="trailing" secondItem="1ao-eu-i3J" secondAttribute="trailing" constant="24" id="dhA-yg-4bz"/>
-                                    <constraint firstItem="sSF-Hk-eNE" firstAttribute="leading" secondItem="ajQ-V2-L4V" secondAttribute="leading" constant="24" id="kGq-G6-76c"/>
+                                    <constraint firstItem="nW3-E7-9Gg" firstAttribute="centerX" secondItem="ajQ-V2-L4V" secondAttribute="centerX" id="O8q-yV-p3c"/>
+                                    <constraint firstItem="X7k-bG-S8j" firstAttribute="top" secondItem="E1T-5A-wB6" secondAttribute="bottom" constant="8" id="PDC-q3-9Kb"/>
+                                    <constraint firstItem="E1T-5A-wB6" firstAttribute="centerX" secondItem="ajQ-V2-L4V" secondAttribute="centerX" id="WJf-2l-yyO"/>
+                                    <constraint firstItem="sSF-Hk-eNE" firstAttribute="leading" secondItem="ajQ-V2-L4V" secondAttribute="leading" constant="32" id="aDQ-JI-lwx"/>
+                                    <constraint firstItem="1ao-eu-i3J" firstAttribute="centerX" secondItem="ajQ-V2-L4V" secondAttribute="centerX" id="fJZ-YN-S2g"/>
+                                    <constraint firstItem="Kxo-Og-aYe" firstAttribute="centerX" secondItem="ajQ-V2-L4V" secondAttribute="centerX" id="khp-Fl-Tih"/>
+                                    <constraint firstItem="Kxo-Og-aYe" firstAttribute="top" secondItem="nW3-E7-9Gg" secondAttribute="bottom" constant="8" id="lYo-gJ-qbJ"/>
+                                    <constraint firstItem="lhT-HS-iLJ" firstAttribute="centerX" secondItem="ajQ-V2-L4V" secondAttribute="centerX" id="r7A-AF-exn"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -252,13 +279,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="025-Nb-VQS" customClass="CustomHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="30" width="327" height="30.333333333333329"/>
+                                        <rect key="frame" x="32" y="30" width="185.66666666666666" height="30.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Biko-Bold" family="Biko" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy to learn anytime and anywhere. Login to your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwL-yZ-HdG" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="28" y="70.333333333333329" width="327" height="37.333333333333329"/>
+                                        <rect key="frame" x="43.666666666666657" y="70.333333333333329" width="327" height="37.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="7UD-oW-7oh"/>
                                         </constraints>
@@ -266,24 +293,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-6B-WLr" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="167.66666666666666" width="157" height="41"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="157" id="CmC-vh-feQ"/>
-                                            <constraint firstAttribute="height" constant="41" id="cvM-id-3q5"/>
-                                        </constraints>
-                                        <state key="normal" image="facebook-1"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-pi-RQJ" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="196.66666666666663" y="167.66666666666666" width="157" height="41"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="157" id="EeM-Wk-Bic"/>
-                                            <constraint firstAttribute="height" constant="41" id="k3l-th-NcK"/>
-                                        </constraints>
-                                        <state key="normal" image="google-1"/>
-                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50T-lf-UQn" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="268.66666666666669" width="327" height="20.333333333333314"/>
+                                        <rect key="frame" x="43.666666666666657" y="252.66666666666666" width="327" height="20.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="iAe-vu-aCJ"/>
                                         </constraints>
@@ -291,7 +302,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-PT-MSZ" customClass="FloatingLabel" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="329" width="327" height="19"/>
+                                        <rect key="frame" x="43.666666666666657" y="313" width="327" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="SKg-NM-1Qg"/>
                                         </constraints>
@@ -299,7 +310,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-Na-zGc" customClass="MainOrangeFilledButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="441" width="327" height="46"/>
+                                        <rect key="frame" x="43.666666666666657" y="425" width="327" height="46"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="327" id="UEJ-jy-88E"/>
@@ -314,7 +325,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMc-SY-qQF" customClass="OrangeColorButton" customModule="VirtualLearnApp" customModuleProvider="target">
-                                        <rect key="frame" x="236" y="372" width="115" height="29"/>
+                                        <rect key="frame" x="233" y="356" width="115" height="29"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
@@ -322,7 +333,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-r9-B3Y">
-                                        <rect key="frame" x="76.666666666666671" y="511" width="221.66666666666663" height="31"/>
+                                        <rect key="frame" x="96.333333333333329" y="495" width="221.66666666666669" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have a account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22l-fa-NM7" customClass="CustomSubHeaderLabel" customModule="VirtualLearnApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="31"/>
@@ -340,31 +351,71 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nCV-wU-10u">
+                                        <rect key="frame" x="42.666666666666657" y="167.66666666666666" width="329" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-6B-WLr" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="157" id="CmC-vh-feQ"/>
+                                                    <constraint firstAttribute="height" constant="41" id="cvM-id-3q5"/>
+                                                </constraints>
+                                                <state key="normal" image="facebook-1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-pi-RQJ" customClass="FacebookButton" customModule="VirtualLearnApp" customModuleProvider="target">
+                                                <rect key="frame" x="172" y="0.0" width="157" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="157" id="EeM-Wk-Bic"/>
+                                                    <constraint firstAttribute="height" constant="41" id="k3l-th-NcK"/>
+                                                </constraints>
+                                                <state key="normal" image="google-1"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="329" id="QD1-yL-HOk"/>
+                                            <constraint firstAttribute="height" constant="41" id="hiL-AP-4RZ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0a6-YG-BsS">
+                                        <rect key="frame" x="43.666666666666657" y="281" width="327" height="0.66666666666668561"/>
+                                        <color key="backgroundColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="VFg-Jk-U7t"/>
+                                            <constraint firstAttribute="height" constant="0.5" id="c9e-0c-y33"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQt-Ae-Xt4">
+                                        <rect key="frame" x="43.666666666666657" y="340" width="327" height="0.66666666666668561"/>
+                                        <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="X6P-OK-3Bu"/>
+                                            <constraint firstAttribute="height" constant="0.5" id="w2l-Js-2fM"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="l9w-PT-MSZ" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="5OD-eq-6Mv"/>
-                                    <constraint firstAttribute="trailing" secondItem="UMc-SY-qQF" secondAttribute="trailing" constant="24" id="G2o-Nu-esv"/>
+                                    <constraint firstItem="4gw-Na-zGc" firstAttribute="centerX" secondItem="BNx-Rf-OQm" secondAttribute="centerX" id="1g5-R0-6c8"/>
+                                    <constraint firstItem="l9w-PT-MSZ" firstAttribute="centerX" secondItem="BNx-Rf-OQm" secondAttribute="centerX" id="4sc-AJ-TIv"/>
+                                    <constraint firstItem="nCV-wU-10u" firstAttribute="centerX" secondItem="BNx-Rf-OQm" secondAttribute="centerX" id="7VA-23-4dY"/>
+                                    <constraint firstItem="0a6-YG-BsS" firstAttribute="top" secondItem="50T-lf-UQn" secondAttribute="bottom" constant="8" id="Ios-4P-fS5"/>
                                     <constraint firstItem="4gw-Na-zGc" firstAttribute="top" secondItem="UMc-SY-qQF" secondAttribute="bottom" constant="40" id="MAD-W6-U0w"/>
                                     <constraint firstItem="xv2-r9-B3Y" firstAttribute="top" secondItem="4gw-Na-zGc" secondAttribute="bottom" constant="24" id="Plf-Tx-qGe"/>
-                                    <constraint firstItem="QFK-6B-WLr" firstAttribute="top" secondItem="RwL-yZ-HdG" secondAttribute="bottom" constant="60" id="QIy-zP-Cwg"/>
-                                    <constraint firstItem="mAy-pi-RQJ" firstAttribute="leading" secondItem="QFK-6B-WLr" secondAttribute="trailing" constant="15.5" id="R7O-W8-iQF"/>
-                                    <constraint firstAttribute="trailing" secondItem="4gw-Na-zGc" secondAttribute="trailing" constant="24" id="RMl-x6-ir0"/>
+                                    <constraint firstItem="UQt-Ae-Xt4" firstAttribute="centerX" secondItem="BNx-Rf-OQm" secondAttribute="centerX" id="QT7-bW-FUx"/>
                                     <constraint firstAttribute="trailing" secondItem="025-Nb-VQS" secondAttribute="trailing" constant="24" id="SJo-24-JWp"/>
-                                    <constraint firstAttribute="trailing" secondItem="50T-lf-UQn" secondAttribute="trailing" constant="24" id="Xkz-aw-ZfR"/>
-                                    <constraint firstItem="50T-lf-UQn" firstAttribute="top" secondItem="QFK-6B-WLr" secondAttribute="bottom" constant="60" id="Z9u-yT-jlB"/>
                                     <constraint firstItem="025-Nb-VQS" firstAttribute="top" secondItem="BNx-Rf-OQm" secondAttribute="top" constant="30" id="ZVz-Mh-gIA"/>
-                                    <constraint firstItem="mAy-pi-RQJ" firstAttribute="top" secondItem="RwL-yZ-HdG" secondAttribute="bottom" constant="60" id="ZuY-MW-MQw"/>
                                     <constraint firstAttribute="bottom" secondItem="xv2-r9-B3Y" secondAttribute="bottom" constant="175" id="aJD-tL-hIO"/>
-                                    <constraint firstItem="50T-lf-UQn" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="cZ3-gG-sEU"/>
+                                    <constraint firstItem="nCV-wU-10u" firstAttribute="top" secondItem="RwL-yZ-HdG" secondAttribute="bottom" constant="60" id="c3Q-fF-yNQ"/>
+                                    <constraint firstItem="UMc-SY-qQF" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="233" id="c5Z-Eo-OM8"/>
+                                    <constraint firstItem="RwL-yZ-HdG" firstAttribute="centerX" secondItem="BNx-Rf-OQm" secondAttribute="centerX" id="f07-P9-l8I"/>
                                     <constraint firstItem="l9w-PT-MSZ" firstAttribute="top" secondItem="50T-lf-UQn" secondAttribute="bottom" constant="40" id="fM0-SW-dzm"/>
+                                    <constraint firstItem="0a6-YG-BsS" firstAttribute="centerX" secondItem="BNx-Rf-OQm" secondAttribute="centerX" id="ghI-b0-Jrq"/>
                                     <constraint firstItem="UMc-SY-qQF" firstAttribute="top" secondItem="l9w-PT-MSZ" secondAttribute="bottom" constant="24" id="h2b-18-Pz4"/>
                                     <constraint firstItem="RwL-yZ-HdG" firstAttribute="top" secondItem="025-Nb-VQS" secondAttribute="bottom" constant="10" id="nBA-ai-KIj"/>
                                     <constraint firstItem="xv2-r9-B3Y" firstAttribute="centerX" secondItem="4gw-Na-zGc" secondAttribute="centerX" id="nZJ-ZE-prO"/>
-                                    <constraint firstAttribute="trailing" secondItem="l9w-PT-MSZ" secondAttribute="trailing" constant="24" id="o3u-Dk-Vhl"/>
-                                    <constraint firstItem="4gw-Na-zGc" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="pqF-TM-Fph"/>
-                                    <constraint firstItem="QFK-6B-WLr" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="qv8-mX-jtV"/>
-                                    <constraint firstItem="025-Nb-VQS" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="24" id="yJW-18-8DW"/>
-                                    <constraint firstItem="RwL-yZ-HdG" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="28" id="zcO-FT-Sj3"/>
+                                    <constraint firstItem="50T-lf-UQn" firstAttribute="centerX" secondItem="BNx-Rf-OQm" secondAttribute="centerX" id="nk0-72-hwx"/>
+                                    <constraint firstItem="50T-lf-UQn" firstAttribute="top" secondItem="nCV-wU-10u" secondAttribute="bottom" constant="44" id="uZ4-hC-7NZ"/>
+                                    <constraint firstItem="UQt-Ae-Xt4" firstAttribute="top" secondItem="l9w-PT-MSZ" secondAttribute="bottom" constant="8" id="y5Y-k6-ju1"/>
+                                    <constraint firstItem="025-Nb-VQS" firstAttribute="leading" secondItem="BNx-Rf-OQm" secondAttribute="leading" constant="32" id="yJW-18-8DW"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

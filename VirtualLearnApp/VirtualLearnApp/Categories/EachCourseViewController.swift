@@ -37,6 +37,19 @@ class EachCourseViewController: UIViewController, UITableViewDelegate, UITableVi
         
         coursesToGetStarted.delegate = self
         coursesToGetStarted.dataSource = self
+        configureNavigationBar()
+    }
+    
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
+    
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

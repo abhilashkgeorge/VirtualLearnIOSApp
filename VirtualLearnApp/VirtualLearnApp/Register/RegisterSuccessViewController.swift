@@ -31,7 +31,7 @@ class RegisterSuccessViewController: UIViewController {
             letsGetStartedButton.setTitle("Login", for: .normal)
             successImage.image = #imageLiteral(resourceName: "img_PasswordChange_sucess_illustration")
         }
-
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     @IBAction func letsGetStartedTapped(_ sender: Any) {
         let NewAccountstoryboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)
