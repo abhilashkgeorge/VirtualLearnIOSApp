@@ -26,7 +26,11 @@ class HomeScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var thirdTBCellPopularBtn: UIButton!
     @IBOutlet weak var thirdTBCellNewestBtn: UIButton!
     @IBOutlet weak var fourthCellHeaderLbl: UILabel!
-    @IBOutlet weak var nameViewLabel: UILabel!
+    @IBOutlet weak var nameViewLabel: UILabel! {
+        didSet {
+            homeScreenTV?.reloadData()
+        }
+    }
     
     weak var  navigationDelegate: NavigationDelegate?
     weak var delegate: HomeScreenNavigationDelegate?
