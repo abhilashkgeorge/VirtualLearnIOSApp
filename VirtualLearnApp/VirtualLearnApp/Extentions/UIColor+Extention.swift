@@ -40,5 +40,9 @@ extension UIColor {
     public class var buttonGreyBackground: UIColor {
         return UIColor(red: 223/255, green: 231/255, blue: 245/255, alpha: 1.0)
     }
-
+    
+    public class var shadowGreyBackground: UIColor {
+        return UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.6)
+    }
+    
 }

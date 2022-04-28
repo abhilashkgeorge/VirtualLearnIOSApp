@@ -163,7 +163,7 @@ class TestModuleViewController: UIViewController {
     }
     
     func configureNavigationBar() {
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .black
         
         
         navigationItem.leftBarButtonItems = [
@@ -174,7 +174,7 @@ class TestModuleViewController: UIViewController {
     }
     
     @objc func closeBtnTapped() {
-        let chapterVC = self.storyboard?.instantiateViewController(withIdentifier: "ChaptersViewController") as? ChaptersViewController
-        self.navigationController?.pushViewController(chapterVC!, animated: true)
+        print("Close Button Tapped")
     }
 }
+
