@@ -77,6 +77,8 @@
 		BA3D7B4428053A8B0092EDE1 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */; };
 		BA4AC10627FEB74D00A2AD4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */; };
 		BA4AC10927FEB8A600A2AD4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */; };
+		BA55DAD22819540A0046DF7B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55DAD12819540A0046DF7B /* ResultViewController.swift */; };
+		BA55DAD528198AA00046DF7B /* QuestionResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55DAD428198AA00046DF7B /* QuestionResultCell.swift */; };
 		BA5971B528152DA200079CCC /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5971B428152DA200079CCC /* NotificationViewModel.swift */; };
 		BA657B452800483100A334B3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA657B442800483100A334B3 /* NewAccountViewController.swift */; };
 		BAB1B6482803CB050020F6CE /* OTPVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */; };
@@ -202,6 +204,8 @@
 		BA3D7B4328053A8B0092EDE1 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		BA4AC10527FEB74D00A2AD4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BA4AC10827FEB8A600A2AD4C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BA55DAD12819540A0046DF7B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BA55DAD428198AA00046DF7B /* QuestionResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultCell.swift; sourceTree = "<group>"; };
 		BA5971B428152DA200079CCC /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		BA657B442800483100A334B3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		BAB1B6472803CB050020F6CE /* OTPVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyViewController.swift; sourceTree = "<group>"; };
@@ -459,6 +463,8 @@
 				BA08B4582817920F00C3460D /* TestModel.swift */,
 				BA283CEC2816662800539407 /* TestNetworkManager.swift */,
 				BA08B45B281794E200C3460D /* TestViewModel.swift */,
+				BA55DAD12819540A0046DF7B /* ResultViewController.swift */,
+				BA55DAD428198AA00046DF7B /* QuestionResultCell.swift */,
 			);
 			path = TestModule;
 			sourceTree = "<group>";
@@ -709,6 +715,7 @@
 				F57499EC280560A600695C3B /* HomeScreenViewController.swift in Sources */,
 				8BA75C43280FDAE8003CF45F /* ChangePasswordNetworkManager.swift in Sources */,
 				8827389427FEAF4800423E14 /* OnboardingViewController.swift in Sources */,
+				BA55DAD528198AA00046DF7B /* QuestionResultCell.swift in Sources */,
 				BAF9631228127A7A00969251 /* NotificationModel.swift in Sources */,
 				8B2531DB2803FEF100256714 /* ProfileViewController.swift in Sources */,
 				880823F4280A82A200152B3A /* SearchViewModel.swift in Sources */,
@@ -736,6 +743,7 @@
 				F57499D12803EA5C00695C3B /* NSAttributedString+Extention.swift in Sources */,
 				8857BB36280FC20A00757726 /* ForgotPasswordNetworkManager.swift in Sources */,
 				8B77F265281118F700DF8EC3 /* EmptyCourseViewController.swift in Sources */,
+				BA55DAD22819540A0046DF7B /* ResultViewController.swift in Sources */,
 				F5C316722800069C00F30001 /* CustomTextFeilds.swift in Sources */,
 				8B7963B0280E7FE100B9BA5A /* ApiImage.swift in Sources */,
 				8870D4BD281054B300367A83 /* CategoriesViewController.swift in Sources */,
