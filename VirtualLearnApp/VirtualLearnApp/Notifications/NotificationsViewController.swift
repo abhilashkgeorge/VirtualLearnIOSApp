@@ -25,6 +25,7 @@ class NotificationsViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
        
+        configureNavigationBar()
         loadNotification()
     }
     
@@ -37,6 +38,18 @@ class NotificationsViewController: UIViewController {
                 self.notificationList = profile
             }
         })
+    }
+    
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
+    
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 

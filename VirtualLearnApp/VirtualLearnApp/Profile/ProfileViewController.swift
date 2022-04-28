@@ -38,6 +38,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         courseDetailsCollectionView.delegate = self
         courseDetailsCollectionView.dataSource = self
         getDetails()
+        configureNavigationBar()
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,21 +49,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         privacyView.layer.borderWidth = 1
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        configureNavigationBar()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        super.viewWillDisappear(animated)
-        configureNavigationBar()
-    }
-    
     func configureNavigationBar() {
         
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .black
         
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.SearchIcon.rawValue), style: .done, target: self, action: #selector(searchItemTapped))
@@ -94,9 +83,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = courseDetailsCollectionView.dequeueReusableCell(withReuseIdentifier: "CourseCell", for: indexPath) as! CoursesDetailsCollectionViewCell
         cell.numberInformation.text = numberDetails[indexPath.item]
         cell.typeInformation.text = typeDetails[indexPath.item]
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.cornerRadius = 2.0
-        cell.contentView.layer.borderColor = UIColor.black.cgColor
         return cell
     }
     

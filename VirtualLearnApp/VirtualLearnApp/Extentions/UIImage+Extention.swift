@@ -19,7 +19,7 @@ extension UIImage {
         case Course3 = "img_banner2_home"
         case Course4 = "img_banner4_home"
         case CloseIcon = "icn_close_filter"
-        
+        case backButton = "icn_back_header"
         
     }
     

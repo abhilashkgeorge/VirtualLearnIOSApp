@@ -28,6 +28,7 @@ class NewAccountViewController: UIViewController {
             alreadyHaveAccLabel.isHidden = false
             loginButton.isHidden = false
             continueButton.setTitle("Continue", for: .normal)
+            self.navigationItem.setHidesBackButton(true, animated: false)
         }
         else {
             headerLabel.text = "Forgot Password"
@@ -35,10 +36,21 @@ class NewAccountViewController: UIViewController {
             alreadyHaveAccLabel.isHidden = true
             loginButton.isHidden = true
             continueButton.setTitle("Send", for: .normal)
+            configureNavigationBar()
         }
         
     }
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(image: UIImage(named: UIImage.AssetImages.backButton.rawValue), style: .plain, target: self, action: #selector(backBtnTapped))
+        ]
+    }
     
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func newAccountContinueTapped(_ sender: Any) {
         
         phone = newAccountPhoneNumber.text ?? "12"

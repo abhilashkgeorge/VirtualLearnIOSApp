@@ -15,6 +15,7 @@ class WelcomeBackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
     @IBAction func welcomeBackLoginTapped(_ sender: Any) {
