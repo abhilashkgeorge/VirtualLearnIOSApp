@@ -7,56 +7,31 @@
 
 import Foundation
 
+
+
 class ChaptersViewModel {
     
     var allChapters = [ChapterDataModel]()
     var allSubChapters = [SubChaptersDataModel]()
+    var chapterAndSubChapters = [ChapterAndSubChapters]()
     
     let manager = OverviewNetworkManager()
     let imageApi = ApiImage()
     
-    func serializeChaptersDetails(json: Any) -> [ChapterDataModel] {
+    func serializeChaptersDetails(json: Any) -> [ChapterAndSubChapters] {
         
         let jsonData = json as? [String: AnyObject]
         let chapters = jsonData!["chapters"] as? [[String: Any]] ?? [["chapters": "error"]]
         
         for chapter in chapters {
+            allSubChapters = [SubChaptersDataModel]()
             let subChapters = chapter["serialNumber"] as? [[String: Any]] ?? [["Sub chapters": "error"]]
             let number = chapter["chapterNo"] as? Int ?? 0
             let name = chapter["chapterName"]  as? String ?? "No chapter name"
             let id = chapter["_id"] as? String ?? "No chapter id"
-            let testID = chapter["testId"] as? String ?? "No test ID"        
+            let testID = chapter["testId"] as? String ?? "No test ID"
             let course = ChapterDataModel(chapterNo: number, chapterName: name, chapterID: id, testID: testID, subChapterCount: subChapters.count)
             allChapters.append(course)
-        }
-        print("All chapters from api")
-        print(allChapters[0].chapterName)
-        return allChapters
-    }
-    
-    func chapterDetail(name: String, id: String, completionHandler: @escaping (_ chapters: [ChapterDataModel]) -> Void) {
-        
-        let url = URL.fetchURLForOverview(courseID: id, courseTitle: name)
-
-        manager.courseOverview(url: url, completionHandler:
-                                {
-                                    (json: Any) -> Void
-                                    in
-                                    let details = self.serializeChaptersDetails(json: json)
-                                    completionHandler(details)
-                }
-        )
-    }
-    
-    func serializeSubChapters(json: Any) -> [SubChaptersDataModel] {
-        
-        let jsonData = json as? [String: AnyObject]
-        let chapters = jsonData!["chapters"] as? [[String: Any]] ?? [["chapters": "error"]]
-        
-        for chapter in chapters {
-            
-            let chapterNumber = chapter["chapterNo"] as? Int ?? 0
-            let subChapters = chapter["serialNumber"] as? [[String: Any]] ?? [["Sub chapters": "error"]]
             
             for eachSubChapter in subChapters {
                 
@@ -67,26 +42,30 @@ class ChaptersViewModel {
                 let pausedTime = eachSubChapter["pausedTime"] as? String ?? ""
                 let subChapterID = eachSubChapter["_id"] as? String ?? ""
                 
-                let subChapter = SubChaptersDataModel(chapterNo: chapterNumber, serialNumber: subChapterNumber, videoName: videoName, videoLink: videoLink, videoDuration: videoLength, videoPausedTime: pausedTime, serialNumberID: subChapterID)
+                let subChapter = SubChaptersDataModel(chapterNo: number, serialNumber: subChapterNumber, videoName: videoName, videoLink: videoLink, videoDuration: videoLength, videoPausedTime: pausedTime, serialNumberID: subChapterID)
+                
                 allSubChapters.append(subChapter)
             }
+            
+            let eachChapterAndSubChapters = ChapterAndSubChapters(chapterDetail: course, subChaptersDetails: allSubChapters)
+            chapterAndSubChapters.append(eachChapterAndSubChapters)
+            
         }
-        print("All sub chapters from api: \(allSubChapters.count)")
-        return allSubChapters
+        return chapterAndSubChapters
     }
     
-    func subChapterDetail(name: String, id: String, completionHandler: @escaping (_ chapters: [SubChaptersDataModel]) -> Void) {
+    func chapterDetail(name: String, id: String, completionHandler: @escaping (_ chapters: [ChapterAndSubChapters]) -> Void) {
         
         let url = URL.fetchURLForOverview(courseID: id, courseTitle: name)
-
+        
         manager.courseOverview(url: url, completionHandler:
                                 {
                                     (json: Any) -> Void
                                     in
-                                    let details = self.serializeSubChapters(json: json)
+                                    let details = self.serializeChaptersDetails(json: json)
                                     completionHandler(details)
-                }
+                                }
         )
     }
-    
 }
+
