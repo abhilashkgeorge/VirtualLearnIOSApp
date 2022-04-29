@@ -86,6 +86,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1453" id="oaC-fV-b00"/>
                                                 </constraints>
+                                                <connections>
+                                                    <segue destination="Rky-Nd-BbU" kind="embed" id="Zj1-TK-4ZP"/>
+                                                </connections>
                                             </containerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Figma - UI/UX Design Essential Training" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gby-eo-mUF">
                                                 <rect key="frame" x="24" y="108" width="334" height="52"/>
