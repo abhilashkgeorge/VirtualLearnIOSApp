@@ -30,6 +30,7 @@ class HomeScreenViewController: UIViewController {
     var viewModel = HomeViewModel()
     var profileViewModel = ProfileViewModel()
     var myCoursesViewModel = MyCoursesViewModel()
+    var testViewModel = ChapterTestViewModel()
     
     var profileData = [ProfileDataModel]()
     var allCourses = [HomeModel]()
@@ -187,6 +188,17 @@ class HomeScreenViewController: UIViewController {
         sideMenuConstraint.constant = 0
         animateView()
         configureNavigationBar()
+//        testViewModel.userAnswerKey(testId: "6231b26573a9ff43ed8fc056") { (AnswerKey) in
+//            print("answer key")
+//        }
+        
+//        testViewModel.userMarkedAnswers(id: "62274ebff5a5db4553d89454") { (UserMarkedAnswers) in
+//            print("marked answers")
+//        }
+        
+        testViewModel.finalGrade(id: "62274ebff5a5db4553d89454") { (Double) in
+            print("grade!!!")
+        }
     }
     
     

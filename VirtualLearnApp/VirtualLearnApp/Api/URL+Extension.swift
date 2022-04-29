@@ -170,6 +170,47 @@ extension URL {
         return url
         
     }
+    
+    static func fetchURLForChapterTest(id: String, chapterNumber: Int) -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myCourse/test/test_Chapter?courseId=\(id)&chapterNumber=\(chapterNumber)") else {
+            fatalError("Error getting url")
+        }
+        return url
+    }
+    
+    static func fetchURLForUserMarkedAnswer(id: String) -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myCourse/test/getUserAnswerInTest?courseId=\(id)") else {
+            fatalError("Error getting url")
+        }
+        return url
+    }
+    
+    static func fetchURLForUpdateFinalGrade(id: String) -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myCourse/test/UpdateFinalGrade?courseId=\(id)") else {
+            fatalError("Error getting url")
+        }
+        return url
+    }
+    
+    static func fetchURLForAnswerKey(testId: String) -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myCourse/test/testAnswers?testId=\(testId)") else {
+            fatalError("Error getting url")
+        }
+        return url
+    }
+    
+    static func fetchURLForFinalGrade(id: String) -> URL {
+        
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myCourse/test/UpdateFinalGrade?courseId=\(id)") else {
+            fatalError("Error getting url")
+        }
+        return url
+    }
+    
 }
 
 
