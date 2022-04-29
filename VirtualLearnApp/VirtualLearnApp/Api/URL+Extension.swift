@@ -162,13 +162,12 @@ extension URL {
         
     }
     
-    static func fetchURLForTest() -> URL {
+    static func fetchURLForTestUserAnswer() -> URL {
         
-        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/notification") else {
+        guard let url = URL(string: "https://virtuallearn2.herokuapp.com/api/v1/virtualLearn/myCourse/test/userAnswer") else {
             fatalError("Error getting URL")
         }
         return url
-        
     }
     
     static func fetchURLForChapterTest(id: String, chapterNumber: Int) -> URL {

@@ -9,47 +9,56 @@ import Foundation
 
 class TestNetworkManager {
     
-    func userTest(courseId: String, chapterNumber: String, testName: String, completionHandler: @escaping (_ token: String?) -> Void) {
+    func userAnswerNetworkManagerCall(courseId: String, testId: String, chapterNumber: Int, score: Int, markedAnswer: [[String:Any]]) {
         
-        let url = URL.fetchURLForTest()
-        let httpBody: [String: String] = [
-            
+        let url = URL.fetchURLForTestUserAnswer()
+        
+        let httpBody: Dictionary<String,Any> = [
             "courseId": courseId,
-            "chapterNumber": chapterNumber,
-            "testName": testName
-//            Question : questions,
-//            Duration : duration
-            
+            "testId": testId,
+            "chapterNo": chapterNumber,
+            "markedAnswer": markedAnswer,
+            "score": score,
         ]
+        
         let request = URLRequest.postRequestForTests(url: url, body: httpBody)
         let task =  URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No Data")
-                completionHandler(nil)
+               // completionHandler(nil)
                 return
             }
 
-            let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
+            do {
+                let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                if let jsonResponse = jsonResponse as? [String: Any],
+                   let meta = jsonResponse["meta"] as? [String: Any],
+                   let code = meta["code"] as? Int {
 
-            if let jsonResponse = jsonResponse as? [String: Any],
-               let meta = jsonResponse["meta"] as? [String: Any],
-               let code = meta["code"] as? Int {
-
-                if code == 200 {
-                    if let token = meta["token"] as? String {
-
-                        completionHandler(token)
-                    }else {
-                        completionHandler(nil)
+                    if code == 200 {
+                        if let msg = meta["message"] as? String {
+                            print("**********")
+                            print(msg)
+                          //  completionHandler(token)
+                        }else {
+                            print("error")
+                          //  completionHandler(nil)
+                        }
+                    }
+                    else if code == 400 {
+                        print("error")
+                        //completionHandler("Invalid credential or password")
+                    }
+                    else {
+                        print("error")
+                      //  completionHandler(nil)
                     }
                 }
-                else if code == 400 {
-                    completionHandler("Invalid credential or password")
-                }
-                else {
-                    completionHandler(nil)
-                }
-            }
+               } catch {
+                   print("HI")
+               }
+
+  
         }
         task.resume()
     }

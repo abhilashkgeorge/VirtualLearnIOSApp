@@ -170,7 +170,7 @@ extension URLRequest {
             return request
     }
     
-    static func postRequestForTests(url: URL,body: [String: String]) -> URLRequest {
+    static func postRequestForTests(url: URL,body: [String: Any]) -> URLRequest {
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
