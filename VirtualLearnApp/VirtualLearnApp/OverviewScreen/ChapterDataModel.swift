@@ -25,3 +25,17 @@ class ChapterDataModel {
         
     }
 }
+
+class ChapterAndSubChapters {
+   
+    var chapterDetail: ChapterDataModel
+    var subChaptersDetails: [SubChaptersDataModel]
+    
+    init(chapterDetail: ChapterDataModel, subChaptersDetails: [SubChaptersDataModel]) {
+        
+        self.chapterDetail = chapterDetail
+        self.subChaptersDetails = subChaptersDetails
+    }
+    
+}
+
