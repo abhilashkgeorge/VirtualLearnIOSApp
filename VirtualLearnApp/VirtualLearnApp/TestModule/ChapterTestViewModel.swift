@@ -142,19 +142,13 @@ class ChapterTestViewModel {
         )
     }
     
-    
-    func serializeGrade(json: Any) {
-        
-        let jsonData = json as? [String: AnyObject]
-    }
-    
-    func finalGrade(id: String, completionHandler: @escaping (_ grade: Any) -> Void) {
+    func finalGrade(id: String, completionHandler: @escaping (_ grade: Double) -> Void) {
         
         let url = URL.fetchURLForFinalGrade(id: id)
         
-        manager.courseTest(url: url, completionHandler:
+        manager.courseGrade(url: url, completionHandler:
                             {
-                                (json: Any) -> Void
+                                (json: Double) -> Void
                                 in
                                 
                                 let grade = json
