@@ -87,7 +87,7 @@
                                                     <constraint firstAttribute="height" constant="1453" id="oaC-fV-b00"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="Rky-Nd-BbU" kind="embed" id="Zj1-TK-4ZP"/>
+                                                    <segue destination="Rky-Nd-BbU" kind="embed" id="hJR-sQ-nNL"/>
                                                 </connections>
                                             </containerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Figma - UI/UX Design Essential Training" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gby-eo-mUF">
@@ -114,6 +114,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1453" id="6tO-BY-4Nx"/>
                                                 </constraints>
+                                                <connections>
+                                                    <segue destination="wi0-Wg-h9F" kind="embed" id="6z1-0W-68b"/>
+                                                </connections>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -47,7 +47,7 @@ class MasterOverviewChapterViewController: UIViewController {
 
     func configureView() {
         overviewContainerView.isHidden = false
-        chapterContainerView.isHidden = false
+        chapterContainerView.isHidden = true
         courseTitle.text = courseName
         courseTitle.text =  courseNameReference
         courseCatergoryLbl.text =  courseCategoryReference

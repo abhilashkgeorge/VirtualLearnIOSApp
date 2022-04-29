@@ -51,6 +51,8 @@ class ChaptersViewController: UIViewController {
         
     }
     @IBAction func certificateDownloadButtonTapped(_ sender: Any) {
+        
+        print ("/*/*//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*")
     }
 }
 
